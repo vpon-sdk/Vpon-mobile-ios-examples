@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="egX-hw-U5F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="oVj-Wu-56E">
+            <objects>
+                <tableViewController id="aSr-c3-eSB" customClass="VponMenuTableViewController" customModule="VponMopubSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FxY-Xd-Wye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="skO-5l-YWr" style="IBUITableViewCellStyleDefault" id="Nxm-yI-X3U">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nxm-yI-X3U" id="akb-TA-agS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="skO-5l-YWr">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aSr-c3-eSB" id="XYq-sP-0Dx"/>
+                            <outlet property="delegate" destination="aSr-c3-eSB" id="8Sy-Yu-DGY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ano-bU-6nS"/>
+                    <connections>
+                        <segue destination="OxL-9k-0J8" kind="show" identifier="goVponMopubBannerViewController" id="pA0-Jw-jWl">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="Ycj-VX-1MS" kind="show" identifier="goVponMopubInterstitialViewController" id="YVP-JB-h44">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="QcX-rg-cPE" kind="show" identifier="goVponMopubNativeViewController" id="dw7-tY-NhW">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOm-AI-GXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="-378"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Qk-ro-O0Y">
+            <objects>
+                <navigationController id="egX-hw-U5F" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oz4-Mq-JbY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aSr-c3-eSB" kind="relationship" relationship="rootViewController" id="fWV-Vk-HBQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHx-2u-X7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-918" y="-378"/>
+        </scene>
+        <!--Vpon Mopub Banner View Controller-->
+        <scene sceneID="Dvu-Ob-VVx">
+            <objects>
+                <viewController id="OxL-9k-0J8" customClass="VponMopubBannerViewController" customModule="VponMopubSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XZR-xW-Y4S"/>
+                        <viewControllerLayoutGuide type="bottom" id="hCl-2X-SWT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v6r-fg-HXd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYS-AO-W8Z">
+                                <rect key="frame" x="127.5" y="315" width="120" height="37"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kYS-AO-W8Z" secondAttribute="height" multiplier="120:37" id="f70-VC-5n9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="request">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" title="please wait"/>
+                                <connections>
+                                    <action selector="requestButtonDidTouch:" destination="OxL-9k-0J8" eventType="touchUpInside" id="ZvT-KZ-wQO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-k1-c70">
+                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Bas-6j-7gi">
+                                        <rect key="frame" x="149.5" y="15" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5Mh-T5-udK"/>
+                                    <constraint firstAttribute="height" constant="50" id="MX2-kl-TrW"/>
+                                    <constraint firstItem="Bas-6j-7gi" firstAttribute="centerX" secondItem="q3D-k1-c70" secondAttribute="centerX" id="OLl-md-0zo"/>
+                                    <constraint firstItem="Bas-6j-7gi" firstAttribute="centerY" secondItem="q3D-k1-c70" secondAttribute="centerY" id="nca-J6-T3x"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q3D-k1-c70" firstAttribute="centerX" secondItem="v6r-fg-HXd" secondAttribute="centerX" id="4n3-ZO-nth"/>
+                            <constraint firstItem="kYS-AO-W8Z" firstAttribute="centerY" secondItem="v6r-fg-HXd" secondAttribute="centerY" id="6z9-aI-Yxx"/>
+                            <constraint firstItem="kYS-AO-W8Z" firstAttribute="width" secondItem="v6r-fg-HXd" secondAttribute="width" multiplier="120:375" id="SoF-xY-WFD"/>
+                            <constraint firstItem="kYS-AO-W8Z" firstAttribute="centerX" secondItem="v6r-fg-HXd" secondAttribute="centerX" id="Xm0-kI-kRn"/>
+                            <constraint firstItem="hCl-2X-SWT" firstAttribute="top" secondItem="q3D-k1-c70" secondAttribute="bottom" id="oX4-iS-Qfn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadBannerView" destination="q3D-k1-c70" id="HTj-j0-UkC"/>
+                        <outlet property="requestButton" destination="kYS-AO-W8Z" id="DQ7-dT-FBN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQz-ab-m4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="-378"/>
+        </scene>
+        <!--Vpon Mopub Interstitial View Controller-->
+        <scene sceneID="JBR-Zd-A60">
+            <objects>
+                <viewController id="Ycj-VX-1MS" customClass="VponMopubInterstitialViewController" customModule="VponMopubSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2uO-q5-eju"/>
+                        <viewControllerLayoutGuide type="bottom" id="iXL-va-zFp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wvp-ga-J1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-M7-02q">
+                                <rect key="frame" x="127" y="315" width="120" height="37"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="request">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" title="please wait"/>
+                                <connections>
+                                    <action selector="actionButtonDidTouch:" destination="Ycj-VX-1MS" eventType="touchUpInside" id="AvY-7d-fV7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ahC-M7-02q" firstAttribute="centerX" secondItem="Wvp-ga-J1c" secondAttribute="centerX" id="AN4-gS-bFD"/>
+                            <constraint firstItem="ahC-M7-02q" firstAttribute="width" secondItem="Wvp-ga-J1c" secondAttribute="width" multiplier="120:375" id="VP7-TA-IDg"/>
+                            <constraint firstItem="ahC-M7-02q" firstAttribute="width" secondItem="ahC-M7-02q" secondAttribute="height" multiplier="120:37" id="ine-Z6-ogT"/>
+                            <constraint firstItem="ahC-M7-02q" firstAttribute="centerY" secondItem="Wvp-ga-J1c" secondAttribute="centerY" id="vtb-ax-CT8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="ahC-M7-02q" id="n8Z-dd-W2G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juK-XP-hxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="383"/>
+        </scene>
+        <!--Vpon Mopub Native View Controller-->
+        <scene sceneID="DuY-9v-DDQ">
+            <objects>
+                <viewController id="QcX-rg-cPE" customClass="VponMopubNativeViewController" customModule="VponMopubSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nzd-ge-CEP"/>
+                        <viewControllerLayoutGuide type="bottom" id="GJz-Vd-7er"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uNF-g2-Qwg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1s-WH-fMK">
+                                <rect key="frame" x="127" y="489" width="120" height="37"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="request">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" title="please wait"/>
+                                <connections>
+                                    <action selector="requestButtonDidTouch:" destination="QcX-rg-cPE" eventType="touchUpInside" id="WSe-m3-I9w"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRF-ux-kYT" customClass="MPVponNativeAdView">
+                                <rect key="frame" x="29" y="186" width="316" height="295"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="uot-Vf-fq0">
+                                        <rect key="frame" x="148" y="137" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="U9U-O7-APO"/>
+                                    <constraint firstAttribute="width" constant="316" id="uvG-QV-5rD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZRF-ux-kYT" firstAttribute="centerY" secondItem="uNF-g2-Qwg" secondAttribute="centerY" id="047-gp-xou"/>
+                            <constraint firstItem="O1s-WH-fMK" firstAttribute="top" secondItem="ZRF-ux-kYT" secondAttribute="bottom" constant="8" id="1hx-fy-RgL"/>
+                            <constraint firstItem="O1s-WH-fMK" firstAttribute="width" secondItem="O1s-WH-fMK" secondAttribute="height" multiplier="120:37" id="P9l-zI-uVp"/>
+                            <constraint firstItem="ZRF-ux-kYT" firstAttribute="centerX" secondItem="uNF-g2-Qwg" secondAttribute="centerX" id="V7o-ai-sUM"/>
+                            <constraint firstItem="O1s-WH-fMK" firstAttribute="centerX" secondItem="uNF-g2-Qwg" secondAttribute="centerX" id="hHu-me-5tz"/>
+                            <constraint firstItem="O1s-WH-fMK" firstAttribute="width" secondItem="uNF-g2-Qwg" secondAttribute="width" multiplier="120:375" id="kL7-DH-5d4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadNativeView" destination="ZRF-ux-kYT" id="9Nd-mV-SVR"/>
+                        <outlet property="requestButton" destination="O1s-WH-fMK" id="sNV-y2-uxm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4a-d0-1XH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="1134"/>
+        </scene>
+    </scenes>
+</document>

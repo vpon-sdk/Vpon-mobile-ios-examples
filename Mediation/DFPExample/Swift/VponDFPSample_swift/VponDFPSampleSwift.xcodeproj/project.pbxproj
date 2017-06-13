@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009F97CC7AB6B8BCF18DBB95 /* Pods_VponDFPSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BA992456F1E6F810A1414D /* Pods_VponDFPSampleSwift.framework */; };
+		06BE59C11EEE66940003F751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59C01EEE66940003F751 /* AppDelegate.swift */; };
+		06BE59C61EEE66940003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59C41EEE66940003F751 /* Main.storyboard */; };
+		06BE59C81EEE66940003F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59C71EEE66940003F751 /* Assets.xcassets */; };
+		06BE59CB1EEE66940003F751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59C91EEE66940003F751 /* LaunchScreen.storyboard */; };
+		06BE59D41EEE68A20003F751 /* VponDFPInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59D31EEE68A20003F751 /* VponDFPInterstitialViewController.swift */; };
+		06BE59D61EEE68B70003F751 /* VponDFPBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59D51EEE68B70003F751 /* VponDFPBannerViewController.swift */; };
+		06BE59D81EEE68F60003F751 /* VponMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59D71EEE68F60003F751 /* VponMenuTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06BE59BD1EEE66940003F751 /* VponDFPSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponDFPSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06BE59C01EEE66940003F751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06BE59C51EEE66940003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06BE59C71EEE66940003F751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06BE59CA1EEE66940003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06BE59CC1EEE66940003F751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06BE59D31EEE68A20003F751 /* VponDFPInterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponDFPInterstitialViewController.swift; sourceTree = "<group>"; };
+		06BE59D51EEE68B70003F751 /* VponDFPBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponDFPBannerViewController.swift; sourceTree = "<group>"; };
+		06BE59D71EEE68F60003F751 /* VponMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponMenuTableViewController.swift; sourceTree = "<group>"; };
+		3F55B4FBA65CDFA0F1254776 /* Pods-VponDFPSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponDFPSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponDFPSampleSwift/Pods-VponDFPSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		566F101AB697CF292F7EE190 /* Pods-VponDFPSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponDFPSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponDFPSampleSwift/Pods-VponDFPSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B9BA992456F1E6F810A1414D /* Pods_VponDFPSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponDFPSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06BE59BA1EEE66940003F751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				009F97CC7AB6B8BCF18DBB95 /* Pods_VponDFPSampleSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06BE59B41EEE66940003F751 = {
+			isa = PBXGroup;
+			children = (
+				06BE59BF1EEE66940003F751 /* VponDFPSampleSwift */,
+				06BE59BE1EEE66940003F751 /* Products */,
+				2D47398776ED21999F5B597C /* Pods */,
+				4859CC92F93BF81ADADFAFB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06BE59BE1EEE66940003F751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06BE59BD1EEE66940003F751 /* VponDFPSampleSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06BE59BF1EEE66940003F751 /* VponDFPSampleSwift */ = {
+			isa = PBXGroup;
+			children = (
+				06BE59C01EEE66940003F751 /* AppDelegate.swift */,
+				06BE59D71EEE68F60003F751 /* VponMenuTableViewController.swift */,
+				06BE59D21EEE68870003F751 /* DFP */,
+				06BE59C41EEE66940003F751 /* Main.storyboard */,
+				06BE59C71EEE66940003F751 /* Assets.xcassets */,
+				06BE59C91EEE66940003F751 /* LaunchScreen.storyboard */,
+				06BE59CC1EEE66940003F751 /* Info.plist */,
+			);
+			path = VponDFPSampleSwift;
+			sourceTree = "<group>";
+		};
+		06BE59D21EEE68870003F751 /* DFP */ = {
+			isa = PBXGroup;
+			children = (
+				06BE59D31EEE68A20003F751 /* VponDFPInterstitialViewController.swift */,
+				06BE59D51EEE68B70003F751 /* VponDFPBannerViewController.swift */,
+			);
+			path = DFP;
+			sourceTree = "<group>";
+		};
+		2D47398776ED21999F5B597C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F55B4FBA65CDFA0F1254776 /* Pods-VponDFPSampleSwift.debug.xcconfig */,
+				566F101AB697CF292F7EE190 /* Pods-VponDFPSampleSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4859CC92F93BF81ADADFAFB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BA992456F1E6F810A1414D /* Pods_VponDFPSampleSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06BE59BC1EEE66940003F751 /* VponDFPSampleSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06BE59CF1EEE66940003F751 /* Build configuration list for PBXNativeTarget "VponDFPSampleSwift" */;
+			buildPhases = (
+				CA59AA6003A58B9ECB09E2C9 /* [CP] Check Pods Manifest.lock */,
+				06BE59B91EEE66940003F751 /* Sources */,
+				06BE59BA1EEE66940003F751 /* Frameworks */,
+				06BE59BB1EEE66940003F751 /* Resources */,
+				B2E4AA43354DDEA0C61EE634 /* [CP] Embed Pods Frameworks */,
+				35BC00BF8ACC3ADD6586F444 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VponDFPSampleSwift;
+			productName = VponDFPSampleSwift;
+			productReference = 06BE59BD1EEE66940003F751 /* VponDFPSampleSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06BE59B51EEE66940003F751 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Soul;
+				TargetAttributes = {
+					06BE59BC1EEE66940003F751 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 9Y4UWUH2H6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 06BE59B81EEE66940003F751 /* Build configuration list for PBXProject "VponDFPSampleSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06BE59B41EEE66940003F751;
+			productRefGroup = 06BE59BE1EEE66940003F751 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06BE59BC1EEE66940003F751 /* VponDFPSampleSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06BE59BB1EEE66940003F751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06BE59CB1EEE66940003F751 /* LaunchScreen.storyboard in Resources */,
+				06BE59C81EEE66940003F751 /* Assets.xcassets in Resources */,
+				06BE59C61EEE66940003F751 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35BC00BF8ACC3ADD6586F444 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponDFPSampleSwift/Pods-VponDFPSampleSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2E4AA43354DDEA0C61EE634 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponDFPSampleSwift/Pods-VponDFPSampleSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA59AA6003A58B9ECB09E2C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06BE59B91EEE66940003F751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06BE59D41EEE68A20003F751 /* VponDFPInterstitialViewController.swift in Sources */,
+				06BE59D61EEE68B70003F751 /* VponDFPBannerViewController.swift in Sources */,
+				06BE59C11EEE66940003F751 /* AppDelegate.swift in Sources */,
+				06BE59D81EEE68F60003F751 /* VponMenuTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06BE59C41EEE66940003F751 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06BE59C51EEE66940003F751 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06BE59C91EEE66940003F751 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06BE59CA1EEE66940003F751 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06BE59CD1EEE66940003F751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06BE59CE1EEE66940003F751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06BE59D01EEE66940003F751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F55B4FBA65CDFA0F1254776 /* Pods-VponDFPSampleSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponDFPSampleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponDFPSampleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		06BE59D11EEE66940003F751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 566F101AB697CF292F7EE190 /* Pods-VponDFPSampleSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponDFPSampleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponDFPSampleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06BE59B81EEE66940003F751 /* Build configuration list for PBXProject "VponDFPSampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BE59CD1EEE66940003F751 /* Debug */,
+				06BE59CE1EEE66940003F751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06BE59CF1EEE66940003F751 /* Build configuration list for PBXNativeTarget "VponDFPSampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BE59D01EEE66940003F751 /* Debug */,
+				06BE59D11EEE66940003F751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06BE59B51EEE66940003F751 /* Project object */;
+}

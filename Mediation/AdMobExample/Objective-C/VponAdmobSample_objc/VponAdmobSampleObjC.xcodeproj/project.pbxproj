@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06BE5A171EEE8A370003F751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A161EEE8A370003F751 /* main.m */; };
+		06BE5A1A1EEE8A370003F751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A191EEE8A370003F751 /* AppDelegate.m */; };
+		06BE5A201EEE8A370003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A1E1EEE8A370003F751 /* Main.storyboard */; };
+		06BE5A221EEE8A370003F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A211EEE8A370003F751 /* Assets.xcassets */; };
+		06BE5A251EEE8A370003F751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A231EEE8A370003F751 /* LaunchScreen.storyboard */; };
+		06BE5A2F1EEE8B9A0003F751 /* VponMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */; };
+		06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */; };
+		06BE5A351EEE8C1E0003F751 /* VponAdmobBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */; };
+		42C1EE2FAAD9ECC0FE642F9C /* libPods-VponAdmobSampleObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VponAdmobSampleObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06BE5A121EEE8A370003F751 /* VponAdmobSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponAdmobSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06BE5A161EEE8A370003F751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06BE5A181EEE8A370003F751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06BE5A191EEE8A370003F751 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06BE5A1F1EEE8A370003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06BE5A211EEE8A370003F751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06BE5A241EEE8A370003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06BE5A261EEE8A370003F751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06BE5A2D1EEE8B9A0003F751 /* VponMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponMenuTableViewController.h; sourceTree = "<group>"; };
+		06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponMenuTableViewController.m; sourceTree = "<group>"; };
+		06BE5A301EEE8C090003F751 /* VponAdmobInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobInterstitialViewController.h; sourceTree = "<group>"; };
+		06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobInterstitialViewController.m; sourceTree = "<group>"; };
+		06BE5A331EEE8C1E0003F751 /* VponAdmobBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobBannerViewController.h; sourceTree = "<group>"; };
+		06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobBannerViewController.m; sourceTree = "<group>"; };
+		2DEEBAD690352D8B4008A5D8 /* Pods-VponAdmobSampleObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		A5945F09D3EF2A485F1B12E1 /* Pods-VponAdmobSampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06BE5A0F1EEE8A370003F751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C1EE2FAAD9ECC0FE642F9C /* libPods-VponAdmobSampleObjC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06BE5A091EEE8A370003F751 = {
+			isa = PBXGroup;
+			children = (
+				06BE5A141EEE8A370003F751 /* VponAdmobSampleObjC */,
+				06BE5A131EEE8A370003F751 /* Products */,
+				1C824532EEE3E7EB84D8AF9C /* Pods */,
+				480430DB72E06B780D3950CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06BE5A131EEE8A370003F751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06BE5A121EEE8A370003F751 /* VponAdmobSampleObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06BE5A141EEE8A370003F751 /* VponAdmobSampleObjC */ = {
+			isa = PBXGroup;
+			children = (
+				06BE5A181EEE8A370003F751 /* AppDelegate.h */,
+				06BE5A191EEE8A370003F751 /* AppDelegate.m */,
+				06BE5A2D1EEE8B9A0003F751 /* VponMenuTableViewController.h */,
+				06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */,
+				06BE5A2C1EEE8ABA0003F751 /* AdMob */,
+				06BE5A1E1EEE8A370003F751 /* Main.storyboard */,
+				06BE5A211EEE8A370003F751 /* Assets.xcassets */,
+				06BE5A231EEE8A370003F751 /* LaunchScreen.storyboard */,
+				06BE5A261EEE8A370003F751 /* Info.plist */,
+				06BE5A151EEE8A370003F751 /* Supporting Files */,
+			);
+			path = VponAdmobSampleObjC;
+			sourceTree = "<group>";
+		};
+		06BE5A151EEE8A370003F751 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06BE5A161EEE8A370003F751 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06BE5A2C1EEE8ABA0003F751 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				06BE5A301EEE8C090003F751 /* VponAdmobInterstitialViewController.h */,
+				06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */,
+				06BE5A331EEE8C1E0003F751 /* VponAdmobBannerViewController.h */,
+				06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
+		1C824532EEE3E7EB84D8AF9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DEEBAD690352D8B4008A5D8 /* Pods-VponAdmobSampleObjC.debug.xcconfig */,
+				A5945F09D3EF2A485F1B12E1 /* Pods-VponAdmobSampleObjC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		480430DB72E06B780D3950CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06BE5A111EEE8A370003F751 /* VponAdmobSampleObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06BE5A291EEE8A370003F751 /* Build configuration list for PBXNativeTarget "VponAdmobSampleObjC" */;
+			buildPhases = (
+				CE4A4431119CBC6E33430529 /* [CP] Check Pods Manifest.lock */,
+				06BE5A0E1EEE8A370003F751 /* Sources */,
+				06BE5A0F1EEE8A370003F751 /* Frameworks */,
+				06BE5A101EEE8A370003F751 /* Resources */,
+				CDDF3BCED1DC10FB7E47A05C /* [CP] Embed Pods Frameworks */,
+				A315C575AAB769225AA942CF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VponAdmobSampleObjC;
+			productName = VponAdmobSampleObjC;
+			productReference = 06BE5A121EEE8A370003F751 /* VponAdmobSampleObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06BE5A0A1EEE8A370003F751 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Soul;
+				TargetAttributes = {
+					06BE5A111EEE8A370003F751 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 9Y4UWUH2H6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 06BE5A0D1EEE8A370003F751 /* Build configuration list for PBXProject "VponAdmobSampleObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06BE5A091EEE8A370003F751;
+			productRefGroup = 06BE5A131EEE8A370003F751 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06BE5A111EEE8A370003F751 /* VponAdmobSampleObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06BE5A101EEE8A370003F751 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06BE5A251EEE8A370003F751 /* LaunchScreen.storyboard in Resources */,
+				06BE5A221EEE8A370003F751 /* Assets.xcassets in Resources */,
+				06BE5A201EEE8A370003F751 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A315C575AAB769225AA942CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDDF3BCED1DC10FB7E47A05C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4A4431119CBC6E33430529 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06BE5A0E1EEE8A370003F751 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06BE5A1A1EEE8A370003F751 /* AppDelegate.m in Sources */,
+				06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */,
+				06BE5A171EEE8A370003F751 /* main.m in Sources */,
+				06BE5A2F1EEE8B9A0003F751 /* VponMenuTableViewController.m in Sources */,
+				06BE5A351EEE8C1E0003F751 /* VponAdmobBannerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06BE5A1E1EEE8A370003F751 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06BE5A1F1EEE8A370003F751 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06BE5A231EEE8A370003F751 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06BE5A241EEE8A370003F751 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06BE5A271EEE8A370003F751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06BE5A281EEE8A370003F751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06BE5A2A1EEE8A370003F751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DEEBAD690352D8B4008A5D8 /* Pods-VponAdmobSampleObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponAdmobSampleObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponAdmobSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06BE5A2B1EEE8A370003F751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5945F09D3EF2A485F1B12E1 /* Pods-VponAdmobSampleObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponAdmobSampleObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponAdmobSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06BE5A0D1EEE8A370003F751 /* Build configuration list for PBXProject "VponAdmobSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BE5A271EEE8A370003F751 /* Debug */,
+				06BE5A281EEE8A370003F751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06BE5A291EEE8A370003F751 /* Build configuration list for PBXNativeTarget "VponAdmobSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BE5A2A1EEE8A370003F751 /* Debug */,
+				06BE5A2B1EEE8A370003F751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06BE5A0A1EEE8A370003F751 /* Project object */;
+}
