@@ -11,8 +11,8 @@
 #import "MPLogging.h"
 #import "MPInstanceProvider.h"
 
-#define EXTRA_INFO_ZONE         @"TW"
-#define EXTRA_INFO_BANNER_ID    @"8a808182447617bf0144d414ff2a3db1"
+#define EXTRA_INFO_ZONE         @"zone"
+#define EXTRA_INFO_BANNER_ID    @"strBannerId"
 
 @interface MPInstanceProvider (VponBanners)
 - (VpadnBanner *)buildVpadnBannerViewWithFrame:(VpadnAdSize)adSize;
@@ -77,8 +77,8 @@
         self.adBannerView = nil;
     }
     self.adBannerView               = [[MPInstanceProvider sharedProvider] buildVpadnBannerViewWithFrame:adSize];
-    self.adBannerView.strBannerId   = [info objectForKey:@"strBannerId"];
-    self.adBannerView.platform      = @"TW";
+    self.adBannerView.strBannerId   = [info objectForKey:EXTRA_INFO_BANNER_ID];
+    self.adBannerView.platform      = [info objectForKey:EXTRA_INFO_ZONE];
     self.adBannerView.delegate      = self;
     self.adBannerView.rootViewController = [[UIApplication sharedApplication]keyWindow].rootViewController;
     

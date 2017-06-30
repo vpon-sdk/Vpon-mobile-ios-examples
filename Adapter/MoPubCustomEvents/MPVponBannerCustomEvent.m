@@ -5,13 +5,14 @@
 //  Copyright (c) 2013 MoPub. All rights reserved.
 //
 
-#import "VpadnBanner.h"
+@import VpadnSDKAdKit;
+
 #import "MPVponBannerCustomEvent.h"
 #import "MPLogging.h"
 #import "MPInstanceProvider.h"
 
 #define EXTRA_INFO_ZONE         @"zone"
-#define EXTRA_INFO_BANNER_ID    @"bannerid"
+#define EXTRA_INFO_BANNER_ID    @"strBannerId"
 
 @interface MPInstanceProvider (VponBanners)
 - (VpadnBanner *)buildVpadnBannerViewWithFrame:(VpadnAdSize)adSize;

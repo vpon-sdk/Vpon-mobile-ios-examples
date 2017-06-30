@@ -5,7 +5,8 @@
 //  Copyright (c) 2012 MoPub, Inc. All rights reserved.
 //
 
-#import "VpadnInterstitial.h"
+@import VpadnSDKAdKit;
+
 #import "MPVponInterstitialCustomEvent.h"
 #import "MPInterstitialAdController.h"
 #import "MPLogging.h"
@@ -13,7 +14,7 @@
 #import "MPInstanceProvider.h"
 
 #define EXTRA_INFO_ZONE         @"zone"
-#define EXTRA_INFO_BANNER_ID    @"bannerid"
+#define EXTRA_INFO_BANNER_ID    @"strBannerId"
 
 @interface MPInstanceProvider (VponInterstitials)
 - (VpadnInterstitial *)buildVponInterstitialAd;
@@ -99,6 +100,8 @@
     {
         [self.delegate interstitialCustomEventDidDisappear:self];
     }
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 @end

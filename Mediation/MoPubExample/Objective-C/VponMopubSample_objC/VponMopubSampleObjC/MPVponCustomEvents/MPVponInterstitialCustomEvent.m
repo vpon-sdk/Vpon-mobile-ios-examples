@@ -13,8 +13,8 @@
 #import "MPAdConfiguration.h"
 #import "MPInstanceProvider.h"
 
-#define EXTRA_INFO_ZONE         @"TW"
-#define EXTRA_INFO_BANNER_ID    @"8a80818242128afc014226580d4e0bf0"
+#define EXTRA_INFO_ZONE         @"zone"
+#define EXTRA_INFO_BANNER_ID    @"strBannerId"
 
 @interface MPInstanceProvider (VponInterstitials)
 - (VpadnInterstitial *)buildVponInterstitialAd;
@@ -51,9 +51,9 @@
     }
     self.interstitial = [[MPInstanceProvider sharedProvider] buildVponInterstitialAd];
 
-    [self.interstitial setStrBannerId:[info objectForKey:@"strBannerId"]];
+    [self.interstitial setStrBannerId:[info objectForKey:EXTRA_INFO_BANNER_ID]];
     self.interstitial.delegate = self;
-    self.interstitial.platform = @"TW";
+    self.interstitial.platform = [info objectForKey:EXTRA_INFO_ZONE];
     [self.interstitial getInterstitial:[self getTestIdentifiers]];
 }
 
