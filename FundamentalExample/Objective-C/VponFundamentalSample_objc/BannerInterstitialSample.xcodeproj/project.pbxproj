@@ -38,9 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2AA4E7971D7E9D0900898E86 /* VpadnNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAd.h; sourceTree = "<group>"; };
-		2AA4E7981D7E9D0900898E86 /* VpadnNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdsManager.h; sourceTree = "<group>"; };
-		2AA4E7991D7E9D0900898E86 /* VpadnNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
 		F88933041BE06C5F00BD2E29 /* BannerInterstitialSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerInterstitialSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88933081BE06C5F00BD2E29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F889330A1BE06C5F00BD2E29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,8 +47,6 @@
 		F88933131BE06C5F00BD2E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F88933161BE06C5F00BD2E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F88933181BE06C5F00BD2E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F88933221BE0731400BD2E29 /* VpadnBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VpadnBanner.h; sourceTree = "<group>"; };
-		F88933231BE0731400BD2E29 /* VpadnInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VpadnInterstitial.h; sourceTree = "<group>"; };
 		F889332A1BE0745100BD2E29 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F889332B1BE0745100BD2E29 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F889332C1BE0745100BD2E29 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -113,11 +108,6 @@
 		F88932FB1BE06C5F00BD2E29 = {
 			isa = PBXGroup;
 			children = (
-				F88933221BE0731400BD2E29 /* VpadnBanner.h */,
-				F88933231BE0731400BD2E29 /* VpadnInterstitial.h */,
-				2AA4E7971D7E9D0900898E86 /* VpadnNativeAd.h */,
-				2AA4E7981D7E9D0900898E86 /* VpadnNativeAdsManager.h */,
-				2AA4E7991D7E9D0900898E86 /* VpadnNativeAdTableViewAdProvider.h */,
 				F88933061BE06C5F00BD2E29 /* BannerInterstitialSample */,
 				F88933051BE06C5F00BD2E29 /* Products */,
 				F88933581BE0749000BD2E29 /* Frameworks */,

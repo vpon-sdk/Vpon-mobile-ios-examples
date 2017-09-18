@@ -24,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSUInteger uniqueNativeAdCount;
 @property (nonatomic, copy, readonly) NSString *strBannerID;
 @property (nonatomic, copy, readonly) NSString *platform;
-@property (nonatomic, assign, readonly) BOOL bShowTestLog;
 
 - (id)initWithBannerID:(NSString *)bannerID platform:(NSString *)platform forNumAdsRequested:(NSUInteger)numAdsRequested;
 - (id)initWithBannerID:(NSString *)bannerID forNumAdsRequested:(NSUInteger)numAdsRequested;

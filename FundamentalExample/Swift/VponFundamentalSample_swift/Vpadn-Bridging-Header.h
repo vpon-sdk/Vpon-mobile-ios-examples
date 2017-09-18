@@ -4,3 +4,7 @@
 
 #import "VpadnBanner.h"
 #import "VpadnInterstitial.h"
+#import "VpadnNativeAd.h"
+#import "VpadnNativeAdsManager.h"
+#import "VpadnNativeAdTableViewAdProvider.h"
+#import "VponAppConfig.h"

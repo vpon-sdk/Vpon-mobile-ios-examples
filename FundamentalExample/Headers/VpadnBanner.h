@@ -42,6 +42,7 @@ typedef enum {
     SMART,
     STANDARD_PORTRAIT,
     SMART_PORTRAIT,
+    CUSTOM_SIZE,
     INTERSTITIAL,
     SPLASH,
     MEDIUM_RECTANGLE,
@@ -53,8 +54,11 @@ typedef enum {
 #pragma mark VpadnAdSize
 typedef struct  VpadnAdSize {
     CGSize size;
+    CGSize showSize;
     int    adType;
 }VpadnAdSize;
+
+#pragma mark Standard Sizes
 
 extern VpadnAdSize const VpadnAdSizeBanner;               // use for 320 * 50
 extern VpadnAdSize const VpadnAdSizeFullBanner;           // use for 468 * 60   for iPad
@@ -63,8 +67,13 @@ extern VpadnAdSize const VpadnAdSizeMediumRectangle;      // use for 300 * 250  
 extern VpadnAdSize const VpadnAdSizeSmartBannerLandscape; // use for landscape smart banner
 extern VpadnAdSize const VpadnAdSizeSmartBannerPortrait;  // use for portrait smart banner
 
-CGSize CGSizeFromVpadnAdSize(VpadnAdSize size);   // get banner size
+#pragma mark Custom Sizes
 
+VpadnAdSize VpadnAdSizeFromCGSize(CGSize size);
+
+#pragma mark Convenience Functions
+
+CGSize CGSizeFromVpadnAdSize(VpadnAdSize size);   // get banner size
 
 #pragma mark VpadnBannerDelegate
 @protocol VpadnBannerDelegate <NSObject>
@@ -95,9 +104,9 @@ CGSize CGSizeFromVpadnAdSize(VpadnAdSize size);   // get banner size
 @interface VpadnBanner : NSObject<VpadnBannerDelegate>
 
 @property (nonatomic, copy) NSString *strBannerId;
-@property (nonatomic, retain) UIViewController *rootViewController;
-@property (nonatomic, assign) NSObject<VpadnBannerDelegate> *delegate;
-@property (nonatomic, retain) NSString* platform;
+@property (nonatomic, weak) UIViewController *rootViewController;
+@property (nonatomic, weak) NSObject<VpadnBannerDelegate> *delegate;
+@property (nonatomic, copy) NSString* platform;
 @property (nonatomic, copy) NSArray* arrayTestIdentifiers;
 
 #pragma mark 回傳Vpadn SDK版本
