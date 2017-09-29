@@ -15,13 +15,6 @@
  *
  * @brief   support publisher to use Vpadn ad
  *
- * @author  Alan(alan.tseng@vpon.com)
- *
- *
- * @date    2013/2/14
- *
- * @version 4.2.0
- *
  * @remark
  *
  **/
