@@ -18,9 +18,9 @@
  * @author  Alan(alan.tseng@vpon.com)
  *
  *
- * @date    2017/9/26
+ * @date    2017/12/18
  *
- * @version 4.6.7
+ * @version 4.7.0
  *
  * @remark
  *
@@ -35,6 +35,7 @@ typedef enum {
     VpadnLogLevelOfDefault,
     VpadnLogLevelOfWarning,
     VpadnLogLevelOfOnlyError,
+    VpadnLogLevelOfDontShow = 99,
 } VpadnLogLevel;
 
 @interface VponAppConfig : NSObject

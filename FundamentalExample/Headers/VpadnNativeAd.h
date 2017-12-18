@@ -55,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showTestLog:(BOOL)bShow;
 - (void)setLocationOnOff:(BOOL)isOn;
 - (BOOL)isReady;
+- (void)dontUseWVForNA;
 
 #pragma mark - UserInfomation
 #pragma mark 設定使用者資訊-年齡

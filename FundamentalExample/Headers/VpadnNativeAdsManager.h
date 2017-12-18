@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isReady;
 - (nullable VpadnNativeAd *)nextNativeAd;
 - (void)showTestLog:(BOOL)bShow;
+- (void)dontUseWVForNA;
 
 @end
 NS_ASSUME_NONNULL_END
