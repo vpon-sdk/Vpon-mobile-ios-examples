@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06018B2F2022EDC300C8DAA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B2E2022EDC300C8DAA8 /* AppDelegate.m */; };
+		06018B352022EDC300C8DAA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06018B332022EDC300C8DAA8 /* Main.storyboard */; };
+		06018B372022EDC300C8DAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06018B362022EDC300C8DAA8 /* Assets.xcassets */; };
+		06018B3A2022EDC300C8DAA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06018B382022EDC300C8DAA8 /* LaunchScreen.storyboard */; };
+		06018B3D2022EDC300C8DAA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B3C2022EDC300C8DAA8 /* main.m */; };
+		06018B5B2022EDFA00C8DAA8 /* VponMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B4F2022EDFA00C8DAA8 /* VponMenuTableViewController.m */; };
+		06018B5C2022EDFA00C8DAA8 /* VponSdkSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B512022EDFA00C8DAA8 /* VponSdkSplashViewController.m */; };
+		06018B5D2022EDFA00C8DAA8 /* VponSdkInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B522022EDFA00C8DAA8 /* VponSdkInterstitialViewController.m */; };
+		06018B5E2022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B542022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.m */; };
+		06018B5F2022EDFA00C8DAA8 /* VponSdkNativeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B572022EDFA00C8DAA8 /* VponSdkNativeTableViewController.m */; };
+		06018B602022EDFA00C8DAA8 /* VponSdkBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06018B5A2022EDFA00C8DAA8 /* VponSdkBannerViewController.m */; };
+		06018B632022EF7300C8DAA8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B622022EF7300C8DAA8 /* AdSupport.framework */; };
+		06018B652022EF7900C8DAA8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B642022EF7900C8DAA8 /* AssetsLibrary.framework */; };
+		06018B672022EF7E00C8DAA8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B662022EF7E00C8DAA8 /* AudioToolbox.framework */; };
+		06018B692022EF8200C8DAA8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B682022EF8200C8DAA8 /* AVFoundation.framework */; };
+		06018B702022EF9900C8DAA8 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6A2022EF9800C8DAA8 /* CoreFoundation.framework */; };
+		06018B712022EF9900C8DAA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6B2022EF9800C8DAA8 /* CoreGraphics.framework */; };
+		06018B722022EF9900C8DAA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6C2022EF9800C8DAA8 /* CoreLocation.framework */; };
+		06018B732022EF9900C8DAA8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6D2022EF9900C8DAA8 /* CoreMedia.framework */; };
+		06018B742022EF9900C8DAA8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6E2022EF9900C8DAA8 /* CoreMotion.framework */; };
+		06018B752022EF9900C8DAA8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B6F2022EF9900C8DAA8 /* CoreTelephony.framework */; };
+		06018B772022EFA100C8DAA8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B762022EFA100C8DAA8 /* EventKit.framework */; };
+		06018B792022EFA900C8DAA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B782022EFA900C8DAA8 /* Foundation.framework */; };
+		06018B7B2022EFB500C8DAA8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B7A2022EFB500C8DAA8 /* MediaPlayer.framework */; };
+		06018B7D2022EFBC00C8DAA8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B7C2022EFBC00C8DAA8 /* MessageUI.framework */; };
+		06018B7F2022EFC100C8DAA8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B7E2022EFC100C8DAA8 /* MobileCoreServices.framework */; };
+		06018B812022EFC600C8DAA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B802022EFC600C8DAA8 /* QuartzCore.framework */; };
+		06018B832022EFCB00C8DAA8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B822022EFCB00C8DAA8 /* Security.framework */; };
+		06018B852022EFCF00C8DAA8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B842022EFCF00C8DAA8 /* StoreKit.framework */; };
+		06018B872022EFD400C8DAA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B862022EFD400C8DAA8 /* SystemConfiguration.framework */; };
+		06018B892022EFDA00C8DAA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06018B882022EFD900C8DAA8 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06018B2A2022EDC300C8DAA8 /* VponFundamentalSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponFundamentalSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06018B2D2022EDC300C8DAA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06018B2E2022EDC300C8DAA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06018B342022EDC300C8DAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06018B362022EDC300C8DAA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06018B392022EDC300C8DAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06018B3B2022EDC300C8DAA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06018B3C2022EDC300C8DAA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06018B452022EDEE00C8DAA8 /* VpadnBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnBanner.h; sourceTree = "<group>"; };
+		06018B462022EDEE00C8DAA8 /* VpadnNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAd.h; sourceTree = "<group>"; };
+		06018B472022EDEE00C8DAA8 /* VpadnMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnMediaView.h; sourceTree = "<group>"; };
+		06018B482022EDEE00C8DAA8 /* VpadnSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnSplash.h; sourceTree = "<group>"; };
+		06018B492022EDEE00C8DAA8 /* VpadnNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
+		06018B4A2022EDEE00C8DAA8 /* VpadnNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdsManager.h; sourceTree = "<group>"; };
+		06018B4B2022EDEE00C8DAA8 /* VpadnInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnInterstitial.h; sourceTree = "<group>"; };
+		06018B4C2022EDEE00C8DAA8 /* VponAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAppConfig.h; sourceTree = "<group>"; };
+		06018B4E2022EDFA00C8DAA8 /* VponMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponMenuTableViewController.h; sourceTree = "<group>"; };
+		06018B4F2022EDFA00C8DAA8 /* VponMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponMenuTableViewController.m; sourceTree = "<group>"; };
+		06018B512022EDFA00C8DAA8 /* VponSdkSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkSplashViewController.m; sourceTree = "<group>"; };
+		06018B522022EDFA00C8DAA8 /* VponSdkInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkInterstitialViewController.m; sourceTree = "<group>"; };
+		06018B532022EDFA00C8DAA8 /* VponSdkNativeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkNativeTableViewController.h; sourceTree = "<group>"; };
+		06018B542022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkNativeCustomTabCell.m; sourceTree = "<group>"; };
+		06018B552022EDFA00C8DAA8 /* VponSdkBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkBannerViewController.h; sourceTree = "<group>"; };
+		06018B562022EDFA00C8DAA8 /* VponSdkSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkSplashViewController.h; sourceTree = "<group>"; };
+		06018B572022EDFA00C8DAA8 /* VponSdkNativeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkNativeTableViewController.m; sourceTree = "<group>"; };
+		06018B582022EDFA00C8DAA8 /* VponSdkInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkInterstitialViewController.h; sourceTree = "<group>"; };
+		06018B592022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkNativeCustomTabCell.h; sourceTree = "<group>"; };
+		06018B5A2022EDFA00C8DAA8 /* VponSdkBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkBannerViewController.m; sourceTree = "<group>"; };
+		06018B622022EF7300C8DAA8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		06018B642022EF7900C8DAA8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		06018B662022EF7E00C8DAA8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		06018B682022EF8200C8DAA8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		06018B6A2022EF9800C8DAA8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		06018B6B2022EF9800C8DAA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		06018B6C2022EF9800C8DAA8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		06018B6D2022EF9900C8DAA8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		06018B6E2022EF9900C8DAA8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		06018B6F2022EF9900C8DAA8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		06018B762022EFA100C8DAA8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		06018B782022EFA900C8DAA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		06018B7A2022EFB500C8DAA8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		06018B7C2022EFBC00C8DAA8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		06018B7E2022EFC100C8DAA8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		06018B802022EFC600C8DAA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		06018B822022EFCB00C8DAA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		06018B842022EFCF00C8DAA8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		06018B862022EFD400C8DAA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		06018B882022EFD900C8DAA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06018B272022EDC300C8DAA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06018B892022EFDA00C8DAA8 /* UIKit.framework in Frameworks */,
+				06018B872022EFD400C8DAA8 /* SystemConfiguration.framework in Frameworks */,
+				06018B852022EFCF00C8DAA8 /* StoreKit.framework in Frameworks */,
+				06018B832022EFCB00C8DAA8 /* Security.framework in Frameworks */,
+				06018B812022EFC600C8DAA8 /* QuartzCore.framework in Frameworks */,
+				06018B7F2022EFC100C8DAA8 /* MobileCoreServices.framework in Frameworks */,
+				06018B7D2022EFBC00C8DAA8 /* MessageUI.framework in Frameworks */,
+				06018B7B2022EFB500C8DAA8 /* MediaPlayer.framework in Frameworks */,
+				06018B792022EFA900C8DAA8 /* Foundation.framework in Frameworks */,
+				06018B772022EFA100C8DAA8 /* EventKit.framework in Frameworks */,
+				06018B702022EF9900C8DAA8 /* CoreFoundation.framework in Frameworks */,
+				06018B712022EF9900C8DAA8 /* CoreGraphics.framework in Frameworks */,
+				06018B722022EF9900C8DAA8 /* CoreLocation.framework in Frameworks */,
+				06018B732022EF9900C8DAA8 /* CoreMedia.framework in Frameworks */,
+				06018B742022EF9900C8DAA8 /* CoreMotion.framework in Frameworks */,
+				06018B752022EF9900C8DAA8 /* CoreTelephony.framework in Frameworks */,
+				06018B692022EF8200C8DAA8 /* AVFoundation.framework in Frameworks */,
+				06018B672022EF7E00C8DAA8 /* AudioToolbox.framework in Frameworks */,
+				06018B652022EF7900C8DAA8 /* AssetsLibrary.framework in Frameworks */,
+				06018B632022EF7300C8DAA8 /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06018B212022EDC300C8DAA8 = {
+			isa = PBXGroup;
+			children = (
+				06018B2C2022EDC300C8DAA8 /* VponFundamentalSampleObjC */,
+				06018B2B2022EDC300C8DAA8 /* Products */,
+				06018B612022EF7300C8DAA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06018B2B2022EDC300C8DAA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06018B2A2022EDC300C8DAA8 /* VponFundamentalSampleObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06018B2C2022EDC300C8DAA8 /* VponFundamentalSampleObjC */ = {
+			isa = PBXGroup;
+			children = (
+				06018B2D2022EDC300C8DAA8 /* AppDelegate.h */,
+				06018B2E2022EDC300C8DAA8 /* AppDelegate.m */,
+				06018B4E2022EDFA00C8DAA8 /* VponMenuTableViewController.h */,
+				06018B4F2022EDFA00C8DAA8 /* VponMenuTableViewController.m */,
+				06018B442022EDEE00C8DAA8 /* Headers */,
+				06018B502022EDFA00C8DAA8 /* Sdk */,
+				06018B332022EDC300C8DAA8 /* Main.storyboard */,
+				06018B362022EDC300C8DAA8 /* Assets.xcassets */,
+				06018B382022EDC300C8DAA8 /* LaunchScreen.storyboard */,
+				06018B3B2022EDC300C8DAA8 /* Info.plist */,
+				06018B3C2022EDC300C8DAA8 /* main.m */,
+			);
+			path = VponFundamentalSampleObjC;
+			sourceTree = "<group>";
+		};
+		06018B442022EDEE00C8DAA8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				06018B452022EDEE00C8DAA8 /* VpadnBanner.h */,
+				06018B462022EDEE00C8DAA8 /* VpadnNativeAd.h */,
+				06018B472022EDEE00C8DAA8 /* VpadnMediaView.h */,
+				06018B482022EDEE00C8DAA8 /* VpadnSplash.h */,
+				06018B492022EDEE00C8DAA8 /* VpadnNativeAdTableViewAdProvider.h */,
+				06018B4A2022EDEE00C8DAA8 /* VpadnNativeAdsManager.h */,
+				06018B4B2022EDEE00C8DAA8 /* VpadnInterstitial.h */,
+				06018B4C2022EDEE00C8DAA8 /* VponAppConfig.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		06018B502022EDFA00C8DAA8 /* Sdk */ = {
+			isa = PBXGroup;
+			children = (
+				06018B562022EDFA00C8DAA8 /* VponSdkSplashViewController.h */,
+				06018B512022EDFA00C8DAA8 /* VponSdkSplashViewController.m */,
+				06018B552022EDFA00C8DAA8 /* VponSdkBannerViewController.h */,
+				06018B5A2022EDFA00C8DAA8 /* VponSdkBannerViewController.m */,
+				06018B582022EDFA00C8DAA8 /* VponSdkInterstitialViewController.h */,
+				06018B522022EDFA00C8DAA8 /* VponSdkInterstitialViewController.m */,
+				06018B532022EDFA00C8DAA8 /* VponSdkNativeTableViewController.h */,
+				06018B572022EDFA00C8DAA8 /* VponSdkNativeTableViewController.m */,
+				06018B592022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.h */,
+				06018B542022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.m */,
+			);
+			path = Sdk;
+			sourceTree = "<group>";
+		};
+		06018B612022EF7300C8DAA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06018B882022EFD900C8DAA8 /* UIKit.framework */,
+				06018B862022EFD400C8DAA8 /* SystemConfiguration.framework */,
+				06018B842022EFCF00C8DAA8 /* StoreKit.framework */,
+				06018B822022EFCB00C8DAA8 /* Security.framework */,
+				06018B802022EFC600C8DAA8 /* QuartzCore.framework */,
+				06018B7E2022EFC100C8DAA8 /* MobileCoreServices.framework */,
+				06018B7C2022EFBC00C8DAA8 /* MessageUI.framework */,
+				06018B7A2022EFB500C8DAA8 /* MediaPlayer.framework */,
+				06018B782022EFA900C8DAA8 /* Foundation.framework */,
+				06018B762022EFA100C8DAA8 /* EventKit.framework */,
+				06018B6A2022EF9800C8DAA8 /* CoreFoundation.framework */,
+				06018B6B2022EF9800C8DAA8 /* CoreGraphics.framework */,
+				06018B6C2022EF9800C8DAA8 /* CoreLocation.framework */,
+				06018B6D2022EF9900C8DAA8 /* CoreMedia.framework */,
+				06018B6E2022EF9900C8DAA8 /* CoreMotion.framework */,
+				06018B6F2022EF9900C8DAA8 /* CoreTelephony.framework */,
+				06018B682022EF8200C8DAA8 /* AVFoundation.framework */,
+				06018B662022EF7E00C8DAA8 /* AudioToolbox.framework */,
+				06018B642022EF7900C8DAA8 /* AssetsLibrary.framework */,
+				06018B622022EF7300C8DAA8 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06018B292022EDC300C8DAA8 /* VponFundamentalSampleObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06018B402022EDC300C8DAA8 /* Build configuration list for PBXNativeTarget "VponFundamentalSampleObjC" */;
+			buildPhases = (
+				06018B262022EDC300C8DAA8 /* Sources */,
+				06018B272022EDC300C8DAA8 /* Frameworks */,
+				06018B282022EDC300C8DAA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VponFundamentalSampleObjC;
+			productName = VponFundamentalSampleObjC;
+			productReference = 06018B2A2022EDC300C8DAA8 /* VponFundamentalSampleObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06018B222022EDC300C8DAA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Soul;
+				TargetAttributes = {
+					06018B292022EDC300C8DAA8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 06018B252022EDC300C8DAA8 /* Build configuration list for PBXProject "VponFundamentalSampleObjC" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06018B212022EDC300C8DAA8;
+			productRefGroup = 06018B2B2022EDC300C8DAA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06018B292022EDC300C8DAA8 /* VponFundamentalSampleObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06018B282022EDC300C8DAA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06018B3A2022EDC300C8DAA8 /* LaunchScreen.storyboard in Resources */,
+				06018B372022EDC300C8DAA8 /* Assets.xcassets in Resources */,
+				06018B352022EDC300C8DAA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06018B262022EDC300C8DAA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06018B3D2022EDC300C8DAA8 /* main.m in Sources */,
+				06018B5D2022EDFA00C8DAA8 /* VponSdkInterstitialViewController.m in Sources */,
+				06018B602022EDFA00C8DAA8 /* VponSdkBannerViewController.m in Sources */,
+				06018B2F2022EDC300C8DAA8 /* AppDelegate.m in Sources */,
+				06018B5B2022EDFA00C8DAA8 /* VponMenuTableViewController.m in Sources */,
+				06018B5C2022EDFA00C8DAA8 /* VponSdkSplashViewController.m in Sources */,
+				06018B5F2022EDFA00C8DAA8 /* VponSdkNativeTableViewController.m in Sources */,
+				06018B5E2022EDFA00C8DAA8 /* VponSdkNativeCustomTabCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06018B332022EDC300C8DAA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06018B342022EDC300C8DAA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06018B382022EDC300C8DAA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06018B392022EDC300C8DAA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06018B3E2022EDC300C8DAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06018B3F2022EDC300C8DAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06018B412022EDC300C8DAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponFundamentalSampleObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VponFundamentalSampleObjC",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.ragnarok.VponFundamentalSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06018B422022EDC300C8DAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponFundamentalSampleObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VponFundamentalSampleObjC",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myproject.ragnarok.VponFundamentalSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06018B252022EDC300C8DAA8 /* Build configuration list for PBXProject "VponFundamentalSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06018B3E2022EDC300C8DAA8 /* Debug */,
+				06018B3F2022EDC300C8DAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06018B402022EDC300C8DAA8 /* Build configuration list for PBXNativeTarget "VponFundamentalSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06018B412022EDC300C8DAA8 /* Debug */,
+				06018B422022EDC300C8DAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06018B222022EDC300C8DAA8 /* Project object */;
+}
