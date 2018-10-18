@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0647E9491F832F8600B51B9F /* VponSdkNativeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647E9481F832F8600B51B9F /* VponSdkNativeTableViewController.m */; };
 		0647E94F1F83356600B51B9F /* VponSdkNativeCustomTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647E94E1F83356600B51B9F /* VponSdkNativeCustomTabCell.m */; };
+		0672201521367AB800159ACB /* VponSdkVastCustomAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201421367AB800159ACB /* VponSdkVastCustomAdViewController.m */; };
+		0672201A21367B7B00159ACB /* VponSdkVastInScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201921367B7B00159ACB /* VponSdkVastInScrollViewController.m */; };
+		0672201D21367B8F00159ACB /* VponSdkVastInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */; };
+		0672202021367BA300159ACB /* VponSdkVastInTableRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */; };
 		0686D7A91FCEA2F500493E81 /* VponSdkSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0686D7A81FCEA2F500493E81 /* VponSdkSplashViewController.m */; };
 		06F7AA881F1DE9BC00A74B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AA871F1DE9BC00A74B6D /* main.m */; };
 		06F7AA8B1F1DE9BC00A74B6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AA8A1F1DE9BC00A74B6D /* AppDelegate.m */; };
@@ -26,6 +30,14 @@
 		0647E9481F832F8600B51B9F /* VponSdkNativeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkNativeTableViewController.m; sourceTree = "<group>"; };
 		0647E94D1F83356600B51B9F /* VponSdkNativeCustomTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkNativeCustomTabCell.h; sourceTree = "<group>"; };
 		0647E94E1F83356600B51B9F /* VponSdkNativeCustomTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkNativeCustomTabCell.m; sourceTree = "<group>"; };
+		0672201321367AB800159ACB /* VponSdkVastCustomAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkVastCustomAdViewController.h; sourceTree = "<group>"; };
+		0672201421367AB800159ACB /* VponSdkVastCustomAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkVastCustomAdViewController.m; sourceTree = "<group>"; };
+		0672201821367B7B00159ACB /* VponSdkVastInScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkVastInScrollViewController.h; sourceTree = "<group>"; };
+		0672201921367B7B00159ACB /* VponSdkVastInScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkVastInScrollViewController.m; sourceTree = "<group>"; };
+		0672201B21367B8F00159ACB /* VponSdkVastInTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkVastInTableViewController.h; sourceTree = "<group>"; };
+		0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkVastInTableViewController.m; sourceTree = "<group>"; };
+		0672201E21367BA300159ACB /* VponSdkVastInTableRepeatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkVastInTableRepeatViewController.h; sourceTree = "<group>"; };
+		0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkVastInTableRepeatViewController.m; sourceTree = "<group>"; };
 		0686D7A71FCEA2F500493E81 /* VponSdkSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkSplashViewController.h; sourceTree = "<group>"; };
 		0686D7A81FCEA2F500493E81 /* VponSdkSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkSplashViewController.m; sourceTree = "<group>"; };
 		06F7AA831F1DE9BC00A74B6D /* VponSdkSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponSdkSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +140,14 @@
 				06F7AAA21F1DEA9500A74B6D /* VponSdkInterstitialViewController.m */,
 				06F7AAA41F1DEADD00A74B6D /* VponSdkBannerViewController.h */,
 				06F7AAA51F1DEADD00A74B6D /* VponSdkBannerViewController.m */,
+				0672201321367AB800159ACB /* VponSdkVastCustomAdViewController.h */,
+				0672201421367AB800159ACB /* VponSdkVastCustomAdViewController.m */,
+				0672201821367B7B00159ACB /* VponSdkVastInScrollViewController.h */,
+				0672201921367B7B00159ACB /* VponSdkVastInScrollViewController.m */,
+				0672201B21367B8F00159ACB /* VponSdkVastInTableViewController.h */,
+				0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */,
+				0672201E21367BA300159ACB /* VponSdkVastInTableRepeatViewController.h */,
+				0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */,
 				0647E9471F832F8600B51B9F /* VponSdkNativeTableViewController.h */,
 				0647E9481F832F8600B51B9F /* VponSdkNativeTableViewController.m */,
 				0647E94D1F83356600B51B9F /* VponSdkNativeCustomTabCell.h */,
@@ -147,8 +167,6 @@
 				06F7AA7F1F1DE9BC00A74B6D /* Sources */,
 				06F7AA801F1DE9BC00A74B6D /* Frameworks */,
 				06F7AA811F1DE9BC00A74B6D /* Resources */,
-				4EA58F543E2F3DE326CE9723 /* [CP] Embed Pods Frameworks */,
-				FDF670CB37B1FC435ED9ED04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,36 +243,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4EA58F543E2F3DE326CE9723 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDF670CB37B1FC435ED9ED04 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -263,13 +251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F7AA8B1F1DE9BC00A74B6D /* AppDelegate.m in Sources */,
+				0672202021367BA300159ACB /* VponSdkVastInTableRepeatViewController.m in Sources */,
 				06F7AA881F1DE9BC00A74B6D /* main.m in Sources */,
+				0672201D21367B8F00159ACB /* VponSdkVastInTableViewController.m in Sources */,
+				0672201A21367B7B00159ACB /* VponSdkVastInScrollViewController.m in Sources */,
 				06F7AAA31F1DEA9500A74B6D /* VponSdkInterstitialViewController.m in Sources */,
 				06F7AA9F1F1DEA3700A74B6D /* VponMenuTableViewController.m in Sources */,
 				0647E94F1F83356600B51B9F /* VponSdkNativeCustomTabCell.m in Sources */,
 				0647E9491F832F8600B51B9F /* VponSdkNativeTableViewController.m in Sources */,
 				06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */,
 				0686D7A91FCEA2F500493E81 /* VponSdkSplashViewController.m in Sources */,
+				0672201521367AB800159ACB /* VponSdkVastCustomAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

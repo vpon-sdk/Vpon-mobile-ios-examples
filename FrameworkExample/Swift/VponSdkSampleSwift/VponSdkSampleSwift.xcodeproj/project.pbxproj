@@ -16,6 +16,10 @@
 		069AD90D1F8387D000166267 /* VponSdkBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AD90C1F8387D000166267 /* VponSdkBannerViewController.swift */; };
 		069AD90F1F8387E100166267 /* VponSdkNativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AD90E1F8387E100166267 /* VponSdkNativeTableViewController.swift */; };
 		069AD9111F8387F500166267 /* VponSdkNativeCustomTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069AD9101F8387F500166267 /* VponSdkNativeCustomTabCell.swift */; };
+		06ACFA7E215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA7D215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift */; };
+		06ACFA80215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA7F215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift */; };
+		06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */; };
+		06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA8321538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift */; };
 		3F907D3F8D94AC55B2519DAD /* Pods_VponSdkSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		069AD90C1F8387D000166267 /* VponSdkBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VponSdkBannerViewController.swift; sourceTree = "<group>"; };
 		069AD90E1F8387E100166267 /* VponSdkNativeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VponSdkNativeTableViewController.swift; sourceTree = "<group>"; };
 		069AD9101F8387F500166267 /* VponSdkNativeCustomTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VponSdkNativeCustomTabCell.swift; sourceTree = "<group>"; };
+		06ACFA7D215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpadnSdkVastCustomAdViewController.swift; sourceTree = "<group>"; };
+		06ACFA7F215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpadnSdkVastInScrollViewController.swift; sourceTree = "<group>"; };
+		06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpadnSdkVastInTableViewController.swift; sourceTree = "<group>"; };
+		06ACFA8321538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpadnSdkVastInTableRepeatViewController.swift; sourceTree = "<group>"; };
 		134B9BE4F0AC3885622AFB30 /* Pods-VponSdkSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		5B41417A4A661FF17A351E56 /* Pods-VponSdkSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponSdkSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,10 @@
 				069AD90C1F8387D000166267 /* VponSdkBannerViewController.swift */,
 				069AD90E1F8387E100166267 /* VponSdkNativeTableViewController.swift */,
 				069AD9101F8387F500166267 /* VponSdkNativeCustomTabCell.swift */,
+				06ACFA7D215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift */,
+				06ACFA7F215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift */,
+				06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */,
+				06ACFA8321538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift */,
 			);
 			path = Sdk;
 			sourceTree = "<group>";
@@ -119,8 +131,6 @@
 				0647E9551F83431A00B51B9F /* Sources */,
 				0647E9561F83431A00B51B9F /* Frameworks */,
 				0647E9571F83431A00B51B9F /* Resources */,
-				45A701C3171A9EEA6270DC6D /* [CP] Embed Pods Frameworks */,
-				020D35729AB88199AE7F0AB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,36 +189,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		020D35729AB88199AE7F0AB5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45A701C3171A9EEA6270DC6D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9D758AAD0A8AAE890D3AED1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,7 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */,
+				06ACFA7E215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift in Sources */,
+				06ACFA80215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift in Sources */,
 				069AD9081F83870500166267 /* VponMenuTableViewController.swift in Sources */,
+				06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */,
 				0647E95D1F83431A00B51B9F /* AppDelegate.swift in Sources */,
 				069AD90D1F8387D000166267 /* VponSdkBannerViewController.swift in Sources */,
 				069AD90F1F8387E100166267 /* VponSdkNativeTableViewController.swift in Sources */,
@@ -382,6 +366,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VponSdkSampleSwift",
 				);
 				INFOPLIST_FILE = VponSdkSampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -403,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/VponSdkSampleSwift",
 				);
 				INFOPLIST_FILE = VponSdkSampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -8,6 +8,9 @@
 
 #import "VponMenuTableViewController.h"
 
+#import "VponSdkVastInTableRepeatViewController.h"
+#import "VponSdkVastInTableViewController.h"
+
 @interface VponMenuTableViewController ()
 
 @property (strong, nonatomic) NSDictionary *data;
@@ -18,7 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = [[NSDictionary alloc] initWithObjectsAndKeys: @"goVponSdkBannerViewController", @"SDK - Banner", @"goVponSdkInterstitialViewController", @"SDK - Interstitial", @"goVponSdkNativeTableViewController", @"SDK - Native",  nil];
+    self.data = [[NSDictionary alloc] initWithObjectsAndKeys:
+                 @"goVponSdkBannerViewController", @"SDK - Banner",
+                 @"goVponSdkInterstitialViewController", @"SDK - Interstitial",
+                 @"goVponSdkNativeTableViewController", @"SDK - Native",
+                 @"goVponSdkVastCustomAdViewController", @"SDK - VastCustomAd",
+                 @"goVponSdkVastInScrollViewController", @"SDK - VastInScroll",
+                 @"goVponSdkVastInTableViewController", @"SDK - VastInTable",
+                 @"goVponSdkVastInTableRepeatViewController", @"SDK - VastInTableRepeat",  nil];
     self.title = @"Menu";
 }
 

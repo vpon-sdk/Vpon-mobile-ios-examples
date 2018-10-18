@@ -6,6 +6,6 @@ target 'VponSdkSampleObjC' do
   # use_frameworks!
 
   # Pods for VponSdkSampleObjC
-  pod 'VpadnSDK’
+  # pod 'VpadnSDK'
 
 end

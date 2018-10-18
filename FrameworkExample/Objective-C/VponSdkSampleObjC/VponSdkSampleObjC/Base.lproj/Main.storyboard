@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nY-Ui-Wl9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nY-Ui-Wl9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -86,11 +86,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="PG9-Tz-97J"/>
                     <connections>
-                        <segue destination="aOW-8l-daj" kind="show" identifier="goVponSdkBannerViewController" id="EEz-TR-bdl">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="aOW-8l-daj" kind="show" identifier="goVponSdkBannerViewController" id="EEz-TR-bdl"/>
                         <segue destination="s4S-fR-iqd" kind="show" identifier="goVponSdkInterstitialViewController" id="gho-FC-RMW"/>
                         <segue destination="hmY-oc-Qhy" kind="show" identifier="goVponSdkNativeTableViewController" id="9fu-G4-cXb"/>
+                        <segue destination="Fch-VW-tkB" kind="show" identifier="goVponSdkVastCustomAdViewController" id="cDn-Lt-2RJ"/>
+                        <segue destination="Izt-gD-bK0" kind="show" identifier="goVponSdkVastInScrollViewController" id="vgH-vs-T65"/>
+                        <segue destination="anp-0P-rCg" kind="show" identifier="goVponSdkVastInTableViewController" id="A8a-0h-adK"/>
+                        <segue destination="Nh9-Qs-emQ" kind="show" identifier="goVponSdkVastInTableRepeatViewController" id="mpk-8H-i5m"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czy-F4-Wpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +176,405 @@
             </objects>
             <point key="canvasLocation" x="1109.5999999999999" y="-378.26086956521743"/>
         </scene>
+        <!--Vpon Sdk Vast Custom Ad View Controller-->
+        <scene sceneID="CN5-eq-8c1">
+            <objects>
+                <viewController id="Fch-VW-tkB" customClass="VponSdkVastCustomAdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBS-qq-C5s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Trn-ki-HQC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qx8-lY-PfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Data Drives Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-sY-Zky">
+                                <rect key="frame" x="16" y="79" width="343" height="22"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnj-hP-YcP">
+                                <rect key="frame" x="16" y="117" width="343" height="248.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Through “VIP - Vpon Infinitive Prospect” process, Vpon accumulates, proceeds, and optimizes data continuously in Asia. Powered by machine learning, the data can formulate segmentation model, and hence optimize mobile marketing strategy through programmatic buying and real-time bidding (RTB) engine to maximum return on investment (ROI) for Vpon's clients. After campaigns, the refined data and predictive model will also be ingested into Vpon's database, resulting in an infinite loop to drive transactions even more effectively.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdV-GZ-lds">
+                                <rect key="frame" x="0.0" y="438.5" width="375" height="228.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="WXb-9g-ySI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DdV-GZ-lds" firstAttribute="leading" secondItem="qx8-lY-PfG" secondAttribute="leading" id="1QN-uG-0qo"/>
+                            <constraint firstItem="xnj-hP-YcP" firstAttribute="top" secondItem="bhh-sY-Zky" secondAttribute="bottom" constant="16" id="4eT-qQ-cvU"/>
+                            <constraint firstItem="bhh-sY-Zky" firstAttribute="top" secondItem="oBS-qq-C5s" secondAttribute="bottom" constant="15" id="ABG-P9-Kwn"/>
+                            <constraint firstItem="xnj-hP-YcP" firstAttribute="trailing" secondItem="bhh-sY-Zky" secondAttribute="trailing" id="FYw-lJ-cxm"/>
+                            <constraint firstItem="bhh-sY-Zky" firstAttribute="leading" secondItem="qx8-lY-PfG" secondAttribute="leadingMargin" id="IZ0-FC-A5e"/>
+                            <constraint firstItem="xnj-hP-YcP" firstAttribute="leading" secondItem="bhh-sY-Zky" secondAttribute="leading" id="R6G-cW-aTu"/>
+                            <constraint firstAttribute="trailing" secondItem="DdV-GZ-lds" secondAttribute="trailing" id="Rvv-e8-FQP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bhh-sY-Zky" secondAttribute="trailing" id="ZyL-6h-BW2"/>
+                            <constraint firstItem="Trn-ki-HQC" firstAttribute="top" secondItem="DdV-GZ-lds" secondAttribute="bottom" id="oXZ-wU-N5o"/>
+                            <constraint firstItem="DdV-GZ-lds" firstAttribute="width" secondItem="DdV-GZ-lds" secondAttribute="height" multiplier="320:195" priority="750" id="qec-iX-Z5J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoLoadedView" destination="DdV-GZ-lds" id="XPr-ad-eyM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfh-T2-Rvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.5999999999999" y="-378.26086956521743"/>
+        </scene>
+        <!--Vpon Sdk Vast In Scroll View Controller-->
+        <scene sceneID="9fX-n3-bO7">
+            <objects>
+                <viewController id="Izt-gD-bK0" customClass="VponSdkVastInScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dei-og-vcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjZ-QM-2CF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bnm-ut-TgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-Mq-uKW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vpon Big Data Seminar 2018 – Hong Kong: Keeping Up with the Unprecedented Data Explosion" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-vF-Vat">
+                                        <rect key="frame" x="9.5" y="16" width="356" height="79"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZf-eD-FmP">
+                                        <rect key="frame" x="9.5" y="110.5" width="356" height="538.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Vpon Big Data Group, an Asia’s leading big data ad technology company, held a seminar entitling ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Vpon Big Data Seminar 2018 – Hong Kong: Keeping Up with the Unprecedented Data Explosion">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content"> at blueprint on May 11.
+
+It is undoubted that big data explosion brings about great opportunities. Yet, it also comes with great challenges that business will need to overcome in order to keep up with its development. Acknowledging the sway of possible obstacles in data business, Vpon gathered nearly 200 players from various groups in the tech industry in the seminar and addressed these profound challenges in four major levels – applications, infrastructure, talents and sustainable development. The seminar also invited social representatives to discuss feasible solutions to the problem, exploiting Hong Kong’s synergies on big data development in Asia.
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Vpon’s Chief Operating Officer Arthur Chan, and General Manager, Japan Yoshitaka Shinohara, gave a glance on the application brought about by data explosion. Illustrated with the case on Japan National Tourism Organization (JNTO), Shinohara showed how Vpon Japan leveraged big data in collecting and analyzing user behavior and preference, which ultimately help JNTO increase repeated travelers from Asian market and attract new travelers from EU and the US.
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigDataSeminar18" translatesAutoresizingMaskIntoConstraints="NO" id="PHk-4f-wZw">
+                                        <rect key="frame" x="0.0" y="665" width="375" height="250"/>
+                                        <color key="backgroundColor" red="0.40784313729999999" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PHk-4f-wZw" secondAttribute="height" multiplier="320:213" id="4zN-B7-KdO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOj-0u-cvR">
+                                        <rect key="frame" x="0.0" y="923" width="375" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="750" id="FxF-3w-eP3"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X4-hJ-7nk">
+                                        <rect key="frame" x="9.5" y="931" width="356" height="621.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Vpon’s Senior Director of Data Science Dr. Hood Chang shared his expertise in demystifying the technological foundation behind data business later in the seminar. He explained how essential data and tech infrastructure, such as Data Management Platform (DMP), integrates big data and artificial intelligence (AI) to identify the best potential user for advertiser. The invaluable knowledge and insights demonstrated how big data can ultimately boost advertising campaign effectiveness when it is able to deliver the right advertising message to the right person at the right time and location.
+
+Besides sharing from Vpon, the seminar also had community to join in panel discussions and talk over the topics on Keeping Up with the Dynamic Big Data Development in Hong Kong and Asia, and What Will You Be Needing upon Data Talents and Professionals. They invited Victor Cheng (Vice President North Asia, comScore) as the session’s moderator, together with panelists Dr. Toa Charm (Chief Public Mission Officer, Cyberport Hong Kong), Emily Chow (Head of Marketing and Product, WeLend) and Bosco Lam (CEO, AlikeAudience), to join the stage with Arthur Chan and talk over how Hong Kong exploits the synergies in Asia under big data explosion with the support offered in the community, while the other panel was collaborated by moderator Cecilia Chan (Executive Director, IAB Hong Kong), panelists Dr. Benson Lam (Hang Seng Management College), Prof. Phillip Yam (The Chinese University of Hong Kong), and Prof. Philip Yu (The University of Hong Kong), advising how businesses could deal with this inevitable challenge in order to keep up with the development.
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HdN-vF-Vat" firstAttribute="centerX" secondItem="JBR-Mq-uKW" secondAttribute="centerX" id="1UT-Jw-UZJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HdN-vF-Vat" secondAttribute="trailing" constant="10.33" id="22k-2n-6y3"/>
+                                    <constraint firstItem="1X4-hJ-7nk" firstAttribute="width" secondItem="JBR-Mq-uKW" secondAttribute="width" multiplier="0.95" id="3Ba-nA-knz"/>
+                                    <constraint firstItem="PHk-4f-wZw" firstAttribute="centerX" secondItem="JBR-Mq-uKW" secondAttribute="centerX" id="5hC-lF-zjg"/>
+                                    <constraint firstItem="nOj-0u-cvR" firstAttribute="top" secondItem="PHk-4f-wZw" secondAttribute="bottom" constant="8" id="6N8-iS-YeH"/>
+                                    <constraint firstItem="PHk-4f-wZw" firstAttribute="width" secondItem="JBR-Mq-uKW" secondAttribute="width" id="7dj-Ln-gU0"/>
+                                    <constraint firstAttribute="bottom" secondItem="1X4-hJ-7nk" secondAttribute="bottom" constant="8" id="9J0-TU-sXv"/>
+                                    <constraint firstItem="sZf-eD-FmP" firstAttribute="top" secondItem="HdN-vF-Vat" secondAttribute="bottom" constant="16" id="9Kg-XM-ZxD"/>
+                                    <constraint firstItem="1X4-hJ-7nk" firstAttribute="centerX" secondItem="JBR-Mq-uKW" secondAttribute="centerX" id="Aib-ng-sgL"/>
+                                    <constraint firstItem="PHk-4f-wZw" firstAttribute="top" secondItem="sZf-eD-FmP" secondAttribute="bottom" constant="16" id="I1F-et-Qlx"/>
+                                    <constraint firstItem="HdN-vF-Vat" firstAttribute="top" secondItem="JBR-Mq-uKW" secondAttribute="top" constant="16" id="Oyv-qn-ZNs"/>
+                                    <constraint firstItem="1X4-hJ-7nk" firstAttribute="top" secondItem="nOj-0u-cvR" secondAttribute="bottom" constant="8" id="cBE-Hp-5Nn"/>
+                                    <constraint firstItem="HdN-vF-Vat" firstAttribute="width" secondItem="JBR-Mq-uKW" secondAttribute="width" multiplier="0.95" id="cNd-TF-9eN"/>
+                                    <constraint firstItem="sZf-eD-FmP" firstAttribute="centerX" secondItem="JBR-Mq-uKW" secondAttribute="centerX" id="deW-Fx-cd0"/>
+                                    <constraint firstItem="nOj-0u-cvR" firstAttribute="width" secondItem="JBR-Mq-uKW" secondAttribute="width" id="fvH-5g-QMw"/>
+                                    <constraint firstItem="nOj-0u-cvR" firstAttribute="centerX" secondItem="JBR-Mq-uKW" secondAttribute="centerX" id="t4B-SJ-URo"/>
+                                    <constraint firstItem="sZf-eD-FmP" firstAttribute="width" secondItem="JBR-Mq-uKW" secondAttribute="width" multiplier="0.95" id="zJk-AM-n0A"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JBR-Mq-uKW" firstAttribute="leading" secondItem="bnm-ut-TgQ" secondAttribute="leading" id="3C4-xn-YGj"/>
+                            <constraint firstAttribute="trailing" secondItem="JBR-Mq-uKW" secondAttribute="trailing" id="Asz-eg-YUA"/>
+                            <constraint firstItem="JBR-Mq-uKW" firstAttribute="top" secondItem="dei-og-vcg" secondAttribute="bottom" id="RoL-o7-2kK"/>
+                            <constraint firstItem="pjZ-QM-2CF" firstAttribute="top" secondItem="JBR-Mq-uKW" secondAttribute="bottom" id="ndn-te-WWu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inScrollHeightConstraint" destination="FxF-3w-eP3" id="NTu-2b-qFR"/>
+                        <outlet property="inScrollLoadedView" destination="nOj-0u-cvR" id="AFC-Yk-ECJ"/>
+                        <outlet property="inScrollView" destination="JBR-Mq-uKW" id="l2W-mY-bpz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ux7-6L-mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.5999999999999" y="389.95502248875567"/>
+        </scene>
+        <!--Vpon Sdk Vast In Table View Controller-->
+        <scene sceneID="1aj-la-MqY">
+            <objects>
+                <viewController id="anp-0P-rCg" customClass="VponSdkVastInTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NgK-3c-tbm"/>
+                        <viewControllerLayoutGuide type="bottom" id="zXJ-Ek-Zvc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v9j-vP-fwj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fIq-4b-AaU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceholderTabCell" rowHeight="66" id="VaG-ZU-KAQ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VaG-ZU-KAQ" id="fdD-22-3Bv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-kM-5lM">
+                                                    <rect key="frame" x="272.5" y="8" width="94.5" height="49.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="49.666666666666657" id="gOz-0r-JTF"/>
+                                                        <constraint firstAttribute="width" secondItem="UFo-kM-5lM" secondAttribute="height" multiplier="600:315" id="vuY-HH-sNQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big data-driven marketing solutions achieve business success." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWK-rj-zRs">
+                                                    <rect key="frame" x="8" y="8" width="256.5" height="49.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dWK-rj-zRs" firstAttribute="leading" secondItem="fdD-22-3Bv" secondAttribute="leading" constant="8" id="9Bn-D5-acy"/>
+                                                <constraint firstItem="dWK-rj-zRs" firstAttribute="height" secondItem="UFo-kM-5lM" secondAttribute="height" id="EWi-fE-xXR"/>
+                                                <constraint firstItem="dWK-rj-zRs" firstAttribute="top" secondItem="UFo-kM-5lM" secondAttribute="top" id="KkH-NM-DH8"/>
+                                                <constraint firstItem="UFo-kM-5lM" firstAttribute="top" secondItem="fdD-22-3Bv" secondAttribute="top" constant="8" id="NQT-qT-Vah"/>
+                                                <constraint firstAttribute="bottom" secondItem="UFo-kM-5lM" secondAttribute="bottom" constant="8" id="Zor-Su-nzN"/>
+                                                <constraint firstItem="UFo-kM-5lM" firstAttribute="leading" secondItem="dWK-rj-zRs" secondAttribute="trailing" constant="8" id="a6L-EJ-qAN"/>
+                                                <constraint firstAttribute="trailing" secondItem="UFo-kM-5lM" secondAttribute="trailing" constant="8" id="zbM-WL-lFU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentTabCell" rowHeight="66" id="4IN-aw-SZQ">
+                                        <rect key="frame" x="0.0" y="94" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4IN-aw-SZQ" id="uYE-iP-YQr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNN-UQ-uaw">
+                                                    <rect key="frame" x="60" y="11" width="307" height="44"/>
+                                                    <string key="text">With the help of Big Data Analytics, American Express successfully stimulated overseas consumptions of high-end Chinese customers.</string>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="UV2-Z7-EKs">
+                                                    <rect key="frame" x="8" y="11" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="69d-09-s0t"/>
+                                                        <constraint firstAttribute="width" secondItem="UV2-Z7-EKs" secondAttribute="height" id="rZp-63-539"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rNN-UQ-uaw" firstAttribute="top" secondItem="uYE-iP-YQr" secondAttribute="topMargin" id="2nn-pn-O4O"/>
+                                                <constraint firstItem="UV2-Z7-EKs" firstAttribute="top" secondItem="uYE-iP-YQr" secondAttribute="topMargin" id="KHC-gj-0QZ"/>
+                                                <constraint firstItem="rNN-UQ-uaw" firstAttribute="leading" secondItem="UV2-Z7-EKs" secondAttribute="trailing" constant="8" id="Khy-aj-1XI"/>
+                                                <constraint firstAttribute="trailing" secondItem="rNN-UQ-uaw" secondAttribute="trailing" constant="8" id="XxF-Ly-05b"/>
+                                                <constraint firstItem="UV2-Z7-EKs" firstAttribute="leading" secondItem="uYE-iP-YQr" secondAttribute="leading" constant="8" id="exB-Ef-22R"/>
+                                                <constraint firstItem="UV2-Z7-EKs" firstAttribute="bottom" secondItem="uYE-iP-YQr" secondAttribute="bottomMargin" id="pO6-XH-iJI"/>
+                                                <constraint firstItem="rNN-UQ-uaw" firstAttribute="height" secondItem="UV2-Z7-EKs" secondAttribute="height" id="w5H-by-KD4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="anp-0P-rCg" id="NAD-8B-YcR"/>
+                                    <outlet property="delegate" destination="anp-0P-rCg" id="SmH-5N-1pP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fIq-4b-AaU" firstAttribute="leading" secondItem="v9j-vP-fwj" secondAttribute="leading" id="HyZ-Ds-SKG"/>
+                            <constraint firstAttribute="trailing" secondItem="fIq-4b-AaU" secondAttribute="trailing" id="Jkh-ay-lxP"/>
+                            <constraint firstItem="fIq-4b-AaU" firstAttribute="top" secondItem="NgK-3c-tbm" secondAttribute="bottom" id="Nf9-Pn-Fau"/>
+                            <constraint firstItem="zXJ-Ek-Zvc" firstAttribute="top" secondItem="fIq-4b-AaU" secondAttribute="bottom" id="aDr-ss-mLy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fIq-4b-AaU" id="CJn-ug-Hg9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SX0-xR-yPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.5999999999999" y="1074.5127436281859"/>
+        </scene>
+        <!--Vpon Sdk Vast In Table Repeat View Controller-->
+        <scene sceneID="LKQ-Yj-Pws">
+            <objects>
+                <viewController id="Nh9-Qs-emQ" customClass="VponSdkVastInTableRepeatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mcm-Id-8pV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vok-Mx-xdV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gwm-4J-zuT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-sX-xJg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceholderTabCell" rowHeight="66" id="Wrw-Ip-K9u">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wrw-Ip-K9u" id="DyF-cR-MSj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="4e7-bY-4yE">
+                                                    <rect key="frame" x="272.5" y="8" width="94.5" height="49.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="49.666666666666657" id="c3Y-eS-6N4"/>
+                                                        <constraint firstAttribute="width" secondItem="4e7-bY-4yE" secondAttribute="height" multiplier="600:315" id="fp0-LE-bbi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big data-driven marketing solutions achieve business success." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COK-UK-W1W">
+                                                    <rect key="frame" x="8" y="8" width="256.5" height="49.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4e7-bY-4yE" secondAttribute="trailing" constant="8" id="1fO-ji-gO2"/>
+                                                <constraint firstItem="4e7-bY-4yE" firstAttribute="top" secondItem="DyF-cR-MSj" secondAttribute="top" constant="8" id="6Kz-QJ-jM5"/>
+                                                <constraint firstItem="4e7-bY-4yE" firstAttribute="leading" secondItem="COK-UK-W1W" secondAttribute="trailing" constant="8" id="eC9-NP-fkr"/>
+                                                <constraint firstItem="COK-UK-W1W" firstAttribute="leading" secondItem="DyF-cR-MSj" secondAttribute="leading" constant="8" id="eZI-b4-1uf"/>
+                                                <constraint firstItem="COK-UK-W1W" firstAttribute="top" secondItem="4e7-bY-4yE" secondAttribute="top" id="gcU-2h-Aoz"/>
+                                                <constraint firstItem="COK-UK-W1W" firstAttribute="height" secondItem="4e7-bY-4yE" secondAttribute="height" id="pwY-oe-B7m"/>
+                                                <constraint firstAttribute="bottom" secondItem="4e7-bY-4yE" secondAttribute="bottom" constant="8" id="sV4-84-yVV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentTabCell" rowHeight="66" id="nhk-Tw-WEp">
+                                        <rect key="frame" x="0.0" y="94" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nhk-Tw-WEp" id="VYR-PB-fxm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwm-ZN-G16">
+                                                    <rect key="frame" x="60" y="11" width="307" height="44"/>
+                                                    <string key="text">With the help of Big Data Analytics, American Express successfully stimulated overseas consumptions of high-end Chinese customers.</string>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dKJ-0H-847">
+                                                    <rect key="frame" x="8" y="11" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dKJ-0H-847" secondAttribute="height" id="6Ee-Qk-vf6"/>
+                                                        <constraint firstAttribute="height" constant="44" id="r0C-9m-rgP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dKJ-0H-847" firstAttribute="bottom" secondItem="VYR-PB-fxm" secondAttribute="bottomMargin" id="07n-z2-QBU"/>
+                                                <constraint firstItem="fwm-ZN-G16" firstAttribute="height" secondItem="dKJ-0H-847" secondAttribute="height" id="1QT-19-OV2"/>
+                                                <constraint firstItem="dKJ-0H-847" firstAttribute="leading" secondItem="VYR-PB-fxm" secondAttribute="leading" constant="8" id="1Xj-nb-flo"/>
+                                                <constraint firstAttribute="trailing" secondItem="fwm-ZN-G16" secondAttribute="trailing" constant="8" id="3bE-Gw-KCO"/>
+                                                <constraint firstItem="fwm-ZN-G16" firstAttribute="top" secondItem="VYR-PB-fxm" secondAttribute="topMargin" id="Z5c-L2-dlU"/>
+                                                <constraint firstItem="dKJ-0H-847" firstAttribute="top" secondItem="VYR-PB-fxm" secondAttribute="topMargin" id="iTb-uh-pxX"/>
+                                                <constraint firstItem="fwm-ZN-G16" firstAttribute="leading" secondItem="dKJ-0H-847" secondAttribute="trailing" constant="8" id="nBd-Rc-8Fb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nh9-Qs-emQ" id="qWW-1L-Mr8"/>
+                                    <outlet property="delegate" destination="Nh9-Qs-emQ" id="PgD-Et-eS8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rCh-sX-xJg" secondAttribute="trailing" id="I7R-ut-GsC"/>
+                            <constraint firstItem="rCh-sX-xJg" firstAttribute="top" secondItem="mcm-Id-8pV" secondAttribute="bottom" id="gUl-m6-si5"/>
+                            <constraint firstItem="rCh-sX-xJg" firstAttribute="leading" secondItem="Gwm-4J-zuT" secondAttribute="leading" id="ogt-cM-BPz"/>
+                            <constraint firstItem="Vok-Mx-xdV" firstAttribute="top" secondItem="rCh-sX-xJg" secondAttribute="bottom" id="y9G-R2-Z9p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rCh-sX-xJg" id="LcW-wG-5Vs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yua-uu-cAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="1783"/>
+        </scene>
         <!--Vpon Sdk Interstitial View Controller-->
         <scene sceneID="0nN-hI-X9a">
             <objects>
@@ -197,21 +598,12 @@
                                     <action selector="actionButtonDidTouch:" destination="s4S-fR-iqd" eventType="touchUpInside" id="ufl-xD-Jv0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPQ-9n-jwv">
-                                <rect key="frame" x="164" y="360" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="jzN-Sy-SGb" kind="show" id="zT6-4x-tfK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iPQ-9n-jwv" firstAttribute="top" secondItem="Fd5-iK-tca" secondAttribute="bottom" constant="8" id="5go-Gr-OG6"/>
                             <constraint firstItem="Fd5-iK-tca" firstAttribute="width" secondItem="43p-HY-XVq" secondAttribute="width" multiplier="120:375" id="Yyo-Wc-9nw"/>
                             <constraint firstItem="Fd5-iK-tca" firstAttribute="centerY" secondItem="43p-HY-XVq" secondAttribute="centerY" id="lhW-fU-GFg"/>
                             <constraint firstItem="Fd5-iK-tca" firstAttribute="centerX" secondItem="43p-HY-XVq" secondAttribute="centerX" id="vSO-s2-BYx"/>
-                            <constraint firstItem="iPQ-9n-jwv" firstAttribute="centerX" secondItem="43p-HY-XVq" secondAttribute="centerX" id="zOM-nb-iKG"/>
                             <constraint firstItem="Fd5-iK-tca" firstAttribute="width" secondItem="Fd5-iK-tca" secondAttribute="height" multiplier="120:37" id="zqv-v7-rpG"/>
                         </constraints>
                     </view>
@@ -222,24 +614,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgS-sJ-Mbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="390"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="TsO-3p-w9i">
-            <objects>
-                <viewController id="jzN-Sy-SGb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lrK-0d-czH"/>
-                        <viewControllerLayoutGuide type="bottom" id="PUL-xD-Cz4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vXv-FS-KDF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NzS-aB-lV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1961" y="390"/>
         </scene>
         <!--VpadnSDK Sample-->
         <scene sceneID="x2V-DT-O98">
@@ -378,6 +752,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BigDataSeminar18" width="320" height="213"/>
+        <image name="icon" width="76" height="76"/>
+        <image name="loading" width="300" height="157"/>
         <image name="logo" width="414" height="141"/>
     </resources>
 </document>
