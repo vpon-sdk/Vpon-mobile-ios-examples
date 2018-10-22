@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MoPub.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"AD_UNIT_ID"];
+    sdkConfig.globalMediationSettings = @[];
+    
+    Class<MPMediationSdkInitializable> banner = NSClassFromString(@"MPVponBannerCustomEvent");
+    Class<MPMediationSdkInitializable> is = NSClassFromString(@"MPVponInterstitialCustomEvent");
+    Class<MPMediationSdkInitializable> native = NSClassFromString(@"MPVponNativeCustomEvent");
+    sdkConfig.mediatedNetworks = @[banner, is, native];
+    
+    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
+    
     return YES;
 }
 

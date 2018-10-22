@@ -9,22 +9,9 @@
 
 #import "MPVponBannerCustomEvent.h"
 #import "MPLogging.h"
-#import "MPInstanceProvider.h"
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
-
-@interface MPInstanceProvider (VponBanners)
-- (VpadnBanner *)buildVpadnBannerViewWithFrame:(VpadnAdSize)adSize;
-@end
-
-@implementation MPInstanceProvider (AdMobBanners)
-
-- (VpadnBanner *)buildVpadnBannerViewWithFrame:(VpadnAdSize)adSize
-{
-    return [[VpadnBanner alloc] initWithAdSize:adSize];
-}
-@end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -76,7 +63,7 @@
         [self.adBannerView destroyBanner];
         self.adBannerView = nil;
     }
-    self.adBannerView               = [[MPInstanceProvider sharedProvider] buildVpadnBannerViewWithFrame:adSize];
+    self.adBannerView               = [[VpadnBanner alloc] initWithAdSize:adSize];
     self.adBannerView.strBannerId   = [info objectForKey:EXTRA_INFO_BANNER_ID];
     self.adBannerView.platform      = [info objectForKey:EXTRA_INFO_ZONE];
     self.adBannerView.delegate      = self;
