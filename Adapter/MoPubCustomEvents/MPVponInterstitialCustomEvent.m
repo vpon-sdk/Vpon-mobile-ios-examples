@@ -11,21 +11,9 @@
 #import "MPInterstitialAdController.h"
 #import "MPLogging.h"
 #import "MPAdConfiguration.h"
-#import "MPInstanceProvider.h"
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
-
-@interface MPInstanceProvider (VponInterstitials)
-- (VpadnInterstitial *)buildVponInterstitialAd;
-@end
-
-@implementation MPInstanceProvider (VponInterstitials)
-- (VpadnInterstitial *)buildVponInterstitialAd
-{
-    return [[VpadnInterstitial alloc] init];
-}
-@end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,7 +37,7 @@
         self.interstitial.delegate = nil;
         self.interstitial = nil;
     }
-    self.interstitial = [[MPInstanceProvider sharedProvider] buildVponInterstitialAd];
+    self.interstitial = [[VpadnInterstitial alloc] init];
 
     [self.interstitial setStrBannerId:[info objectForKey:EXTRA_INFO_BANNER_ID]];
     self.interstitial.delegate = self;
