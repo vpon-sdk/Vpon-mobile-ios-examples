@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06B919E421A3BCE300888CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919E321A3BCE300888CB6 /* AppDelegate.m */; };
+		06B919E721A3BCE300888CB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919E621A3BCE300888CB6 /* ViewController.m */; };
+		06B919EA21A3BCE300888CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B919E821A3BCE300888CB6 /* Main.storyboard */; };
+		06B919EC21A3BCE500888CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B919EB21A3BCE500888CB6 /* Assets.xcassets */; };
+		06B919EF21A3BCE500888CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B919ED21A3BCE500888CB6 /* LaunchScreen.storyboard */; };
+		06B919F221A3BCE500888CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919F121A3BCE500888CB6 /* main.m */; };
+		06B91A0321A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */; };
+		06B91A0621A3C3A500888CB6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B91A0521A3C3A500888CB6 /* AdSupport.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06B919DF21A3BCE300888CB6 /* VponDmpSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponDmpSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B919E221A3BCE300888CB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		06B919E321A3BCE300888CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		06B919E521A3BCE300888CB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		06B919E621A3BCE300888CB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		06B919E921A3BCE300888CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06B919EB21A3BCE500888CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06B919EE21A3BCE500888CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06B919F021A3BCE500888CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B919F121A3BCE500888CB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06B919FF21A3BD3600888CB6 /* VATracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VATracker.h; sourceTree = "<group>"; };
+		06B91A0021A3BD3600888CB6 /* VpadnDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnDictionaryBuilder.h; sourceTree = "<group>"; };
+		06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "vpadn-dmp-1.1.0-75b0d90.a"; sourceTree = "<group>"; };
+		06B91A0221A3BD3600888CB6 /* VpadnAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnAnalytics.h; sourceTree = "<group>"; };
+		06B91A0521A3C3A500888CB6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06B919DC21A3BCE300888CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B91A0621A3C3A500888CB6 /* AdSupport.framework in Frameworks */,
+				06B91A0321A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06B919D621A3BCE300888CB6 = {
+			isa = PBXGroup;
+			children = (
+				06B919E121A3BCE300888CB6 /* VponDmpSampleObjC */,
+				06B919E021A3BCE300888CB6 /* Products */,
+				06B91A0421A3C3A400888CB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06B919E021A3BCE300888CB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06B919DF21A3BCE300888CB6 /* VponDmpSampleObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06B919E121A3BCE300888CB6 /* VponDmpSampleObjC */ = {
+			isa = PBXGroup;
+			children = (
+				06B919E221A3BCE300888CB6 /* AppDelegate.h */,
+				06B919E321A3BCE300888CB6 /* AppDelegate.m */,
+				06B919E521A3BCE300888CB6 /* ViewController.h */,
+				06B919E621A3BCE300888CB6 /* ViewController.m */,
+				06B919FE21A3BD3600888CB6 /* sdk_vpadn */,
+				06B919E821A3BCE300888CB6 /* Main.storyboard */,
+				06B919EB21A3BCE500888CB6 /* Assets.xcassets */,
+				06B919ED21A3BCE500888CB6 /* LaunchScreen.storyboard */,
+				06B919F021A3BCE500888CB6 /* Info.plist */,
+				06B919F121A3BCE500888CB6 /* main.m */,
+			);
+			path = VponDmpSampleObjC;
+			sourceTree = "<group>";
+		};
+		06B919FE21A3BD3600888CB6 /* sdk_vpadn */ = {
+			isa = PBXGroup;
+			children = (
+				06B919FF21A3BD3600888CB6 /* VATracker.h */,
+				06B91A0021A3BD3600888CB6 /* VpadnDictionaryBuilder.h */,
+				06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */,
+				06B91A0221A3BD3600888CB6 /* VpadnAnalytics.h */,
+			);
+			path = sdk_vpadn;
+			sourceTree = "<group>";
+		};
+		06B91A0421A3C3A400888CB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06B91A0521A3C3A500888CB6 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06B919DE21A3BCE300888CB6 /* VponDmpSampleObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06B919F521A3BCE500888CB6 /* Build configuration list for PBXNativeTarget "VponDmpSampleObjC" */;
+			buildPhases = (
+				06B919DB21A3BCE300888CB6 /* Sources */,
+				06B919DC21A3BCE300888CB6 /* Frameworks */,
+				06B919DD21A3BCE300888CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VponDmpSampleObjC;
+			productName = VponDmpSampleObjC;
+			productReference = 06B919DF21A3BCE300888CB6 /* VponDmpSampleObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06B919D721A3BCE300888CB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Vpon;
+				TargetAttributes = {
+					06B919DE21A3BCE300888CB6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 06B919DA21A3BCE300888CB6 /* Build configuration list for PBXProject "VponDmpSampleObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06B919D621A3BCE300888CB6;
+			productRefGroup = 06B919E021A3BCE300888CB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06B919DE21A3BCE300888CB6 /* VponDmpSampleObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06B919DD21A3BCE300888CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B919EF21A3BCE500888CB6 /* LaunchScreen.storyboard in Resources */,
+				06B919EC21A3BCE500888CB6 /* Assets.xcassets in Resources */,
+				06B919EA21A3BCE300888CB6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06B919DB21A3BCE300888CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B919E721A3BCE300888CB6 /* ViewController.m in Sources */,
+				06B919F221A3BCE500888CB6 /* main.m in Sources */,
+				06B919E421A3BCE300888CB6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		06B919E821A3BCE300888CB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06B919E921A3BCE300888CB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06B919ED21A3BCE500888CB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06B919EE21A3BCE500888CB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06B919F321A3BCE500888CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		06B919F421A3BCE500888CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06B919F621A3BCE500888CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponDmpSampleObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VponDmpSampleObjC/VpadnDMP",
+					"$(PROJECT_DIR)/VponDmpSampleObjC/sdk_vpadn",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponDmpSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06B919F721A3BCE500888CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				INFOPLIST_FILE = VponDmpSampleObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VponDmpSampleObjC/VpadnDMP",
+					"$(PROJECT_DIR)/VponDmpSampleObjC/sdk_vpadn",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponDmpSampleObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06B919DA21A3BCE300888CB6 /* Build configuration list for PBXProject "VponDmpSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B919F321A3BCE500888CB6 /* Debug */,
+				06B919F421A3BCE500888CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06B919F521A3BCE500888CB6 /* Build configuration list for PBXNativeTarget "VponDmpSampleObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06B919F621A3BCE500888CB6 /* Debug */,
+				06B919F721A3BCE500888CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06B919D721A3BCE300888CB6 /* Project object */;
+}

@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = [[NSDictionary alloc] initWithObjectsAndKeys: @"goVponAdmobBannerViewController", @"AdMob - Banner", @"goVponAdmobInterstitialViewController", @"AdMob - Interstitial", nil];
+    self.data = [[NSDictionary alloc] initWithObjectsAndKeys: @"goVponAdmobBannerViewController", @"AdMob - Banner", @"goVponAdmobInterstitialViewController", @"AdMob - Interstitial", @"goVponAdmobNativeViewController", @"AdMob - Native",  nil];
     self.title = @"Menu";
 }
 
