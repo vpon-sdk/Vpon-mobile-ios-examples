@@ -45,7 +45,7 @@
     
     _vpadnBanner = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeFromCGSize(self.loadBannerView.frame.size) origin:CGPointZero];
 #warning set ad banner id
-    _vpadnBanner.strBannerId = @"";
+    _vpadnBanner.strBannerId = @"8a808182447617bf0144d414ff2a3db1";
     _vpadnBanner.delegate = self;
     _vpadnBanner.platform = @"TW";
     [_vpadnBanner setAdAutoRefresh:YES];

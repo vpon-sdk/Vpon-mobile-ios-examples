@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/cloud_firestore/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/cloud_firestore/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/cloud_firestore/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/cloud_firestore/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_admob/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_admob/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_admob/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_admob/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_core/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Mediation/flutterexample/ios/.symlinks/plugins/firebase_core/example/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
