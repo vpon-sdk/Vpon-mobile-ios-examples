@@ -17,6 +17,8 @@
 		06BE5A2F1EEE8B9A0003F751 /* VponMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */; };
 		06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */; };
 		06BE5A351EEE8C1E0003F751 /* VponAdmobBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */; };
+		06EC942021C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */; };
+		06EC942321C0E9380081AD6C /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC942221C0E9380081AD6C /* AdTableViewCell.m */; };
 		42C1EE2FAAD9ECC0FE642F9C /* libPods-VponAdmobSampleObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,10 @@
 		06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobInterstitialViewController.m; sourceTree = "<group>"; };
 		06BE5A331EEE8C1E0003F751 /* VponAdmobBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobBannerViewController.h; sourceTree = "<group>"; };
 		06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobBannerViewController.m; sourceTree = "<group>"; };
+		06EC941E21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponAdmobBannerInTableViewController.h; sourceTree = "<group>"; };
+		06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponAdmobBannerInTableViewController.m; sourceTree = "<group>"; };
+		06EC942121C0E9380081AD6C /* AdTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
+		06EC942221C0E9380081AD6C /* AdTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		2DEEBAD690352D8B4008A5D8 /* Pods-VponAdmobSampleObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		A5945F09D3EF2A485F1B12E1 /* Pods-VponAdmobSampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +112,10 @@
 				06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */,
 				06BE5A331EEE8C1E0003F751 /* VponAdmobBannerViewController.h */,
 				06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */,
+				06EC941E21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.h */,
+				06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */,
+				06EC942121C0E9380081AD6C /* AdTableViewCell.h */,
+				06EC942221C0E9380081AD6C /* AdTableViewCell.m */,
 				06558A6D218155B600FE767F /* VponAdmobNativeViewController.h */,
 				06558A6E218155B600FE767F /* VponAdmobNativeViewController.m */,
 			);
@@ -225,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BE5A1A1EEE8A370003F751 /* AppDelegate.m in Sources */,
+				06EC942021C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m in Sources */,
 				06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */,
+				06EC942321C0E9380081AD6C /* AdTableViewCell.m in Sources */,
 				06BE5A171EEE8A370003F751 /* main.m in Sources */,
 				06BE5A2F1EEE8B9A0003F751 /* VponMenuTableViewController.m in Sources */,
 				06558A6F218155B600FE767F /* VponAdmobNativeViewController.m in Sources */,
