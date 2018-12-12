@@ -55,7 +55,7 @@
     
     GADRequest *request = [GADRequest request];
     self.gadBannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(_loadBannerView.frame.size)];
-    self.gadBannerView.adUnitID = @"ca-app-pub-9118969380667719/2438325587";
+    self.gadBannerView.adUnitID = @"";
     self.gadBannerView.delegate = self;
     self.gadBannerView.rootViewController = self;
     [self.gadBannerView loadRequest:request];
