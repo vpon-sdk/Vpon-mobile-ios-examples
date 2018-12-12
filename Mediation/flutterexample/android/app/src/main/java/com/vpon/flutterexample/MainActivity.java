@@ -11,7 +11,6 @@ public class MainActivity extends FlutterActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     MultiDex.install(this);
-    MobileAds.initialize(this, "ca-app-pub-9118969380667719~8012579986");
     GeneratedPluginRegistrant.registerWith(this);
   }
 }

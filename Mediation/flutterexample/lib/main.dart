@@ -1,11 +1,13 @@
 import 'package:firebase_admob/firebase_admob.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-//  iOS
-//  FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-9118969380667719~9966222884');
-//  Android
-  FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-9118969380667719~1214538853');
+  if (defaultTargetPlatform == TargetPlatform.iOS) {
+    FirebaseAdMob.instance.initialize(appId: '');
+  } else if (defaultTargetPlatform == TargetPlatform.android)  {
+    FirebaseAdMob.instance.initialize(appId: '');
+  }
   runApp(MyApp());
 }
 
@@ -28,14 +30,20 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   BannerAd bannerAd;
   InterstitialAd interstitialAd;
-//   Use AdRequest.Builder.addTestDevice("69102B84C27E6B0385EB324C335C58DE") to get test ads on this device.
+
+
   loadBanner() {
     if (bannerAd != null) bannerAd.dispose();
+
+    var adUnitId = '';
+    if (defaultTargetPlatform == TargetPlatform.iOS) {
+      adUnitId = '';
+    } else if (defaultTargetPlatform == TargetPlatform.android)  {
+      adUnitId = '';
+    }
+
     bannerAd = BannerAd(
-//        iOS
-//        adUnitId: 'ca-app-pub-9118969380667719/7902332178',
-//        android
-        adUnitId: 'ca-app-pub-9118969380667719/9455743535',
+        adUnitId: adUnitId,
         size: AdSize.banner,
         listener: (event) {
           switch (event) {
@@ -51,11 +59,16 @@ class _HomeState extends State<Home> {
   }
 
   loadInterstitial() {
+
+    var adUnitId = '';
+    if (defaultTargetPlatform == TargetPlatform.iOS) {
+      adUnitId = '';
+    } else if (defaultTargetPlatform == TargetPlatform.android)  {
+      adUnitId = '';
+    }
+
     interstitialAd = InterstitialAd(
-//      iOS
-//      adUnitId: 'ca-app-pub-9118969380667719/5404817887',
-//      android
-      adUnitId: 'ca-app-pub-9118969380667719/1938126226',
+      adUnitId: adUnitId,
       listener: (MobileAdEvent event) {
         switch (event) {
           case MobileAdEvent.loaded:
