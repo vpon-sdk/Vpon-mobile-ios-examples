@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067440BE21DDE72F0040982D /* vpadn-dmp-1.1.1-26cc98c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 067440BB21DDE72E0040982D /* vpadn-dmp-1.1.1-26cc98c.a */; };
+		067440C021DDE7420040982D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067440BF21DDE7420040982D /* SystemConfiguration.framework */; };
+		067440C221DDE74A0040982D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067440C121DDE74A0040982D /* CoreLocation.framework */; };
+		067440C421DDE7860040982D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067440C321DDE7860040982D /* CoreTelephony.framework */; };
 		06B919E421A3BCE300888CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919E321A3BCE300888CB6 /* AppDelegate.m */; };
 		06B919E721A3BCE300888CB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919E621A3BCE300888CB6 /* ViewController.m */; };
 		06B919EA21A3BCE300888CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B919E821A3BCE300888CB6 /* Main.storyboard */; };
 		06B919EC21A3BCE500888CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B919EB21A3BCE500888CB6 /* Assets.xcassets */; };
 		06B919EF21A3BCE500888CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B919ED21A3BCE500888CB6 /* LaunchScreen.storyboard */; };
 		06B919F221A3BCE500888CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B919F121A3BCE500888CB6 /* main.m */; };
-		06B91A0321A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */; };
 		06B91A0621A3C3A500888CB6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B91A0521A3C3A500888CB6 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		067440BA21DDE72D0040982D /* VpadnAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnAnalytics.h; sourceTree = "<group>"; };
+		067440BB21DDE72E0040982D /* vpadn-dmp-1.1.1-26cc98c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "vpadn-dmp-1.1.1-26cc98c.a"; sourceTree = "<group>"; };
+		067440BC21DDE72F0040982D /* VATracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VATracker.h; sourceTree = "<group>"; };
+		067440BD21DDE72F0040982D /* VpadnDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnDictionaryBuilder.h; sourceTree = "<group>"; };
+		067440BF21DDE7420040982D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		067440C121DDE74A0040982D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		067440C321DDE7860040982D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		06B919DF21A3BCE300888CB6 /* VponDmpSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponDmpSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B919E221A3BCE300888CB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06B919E321A3BCE300888CB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,10 +38,6 @@
 		06B919EE21A3BCE500888CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06B919F021A3BCE500888CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B919F121A3BCE500888CB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		06B919FF21A3BD3600888CB6 /* VATracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VATracker.h; sourceTree = "<group>"; };
-		06B91A0021A3BD3600888CB6 /* VpadnDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnDictionaryBuilder.h; sourceTree = "<group>"; };
-		06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "vpadn-dmp-1.1.0-75b0d90.a"; sourceTree = "<group>"; };
-		06B91A0221A3BD3600888CB6 /* VpadnAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnAnalytics.h; sourceTree = "<group>"; };
 		06B91A0521A3C3A500888CB6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -40,8 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067440C421DDE7860040982D /* CoreTelephony.framework in Frameworks */,
 				06B91A0621A3C3A500888CB6 /* AdSupport.framework in Frameworks */,
-				06B91A0321A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a in Frameworks */,
+				067440C221DDE74A0040982D /* CoreLocation.framework in Frameworks */,
+				067440C021DDE7420040982D /* SystemConfiguration.framework in Frameworks */,
+				067440BE21DDE72F0040982D /* vpadn-dmp-1.1.1-26cc98c.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +94,10 @@
 		06B919FE21A3BD3600888CB6 /* sdk_vpadn */ = {
 			isa = PBXGroup;
 			children = (
-				06B919FF21A3BD3600888CB6 /* VATracker.h */,
-				06B91A0021A3BD3600888CB6 /* VpadnDictionaryBuilder.h */,
-				06B91A0121A3BD3600888CB6 /* vpadn-dmp-1.1.0-75b0d90.a */,
-				06B91A0221A3BD3600888CB6 /* VpadnAnalytics.h */,
+				067440BC21DDE72F0040982D /* VATracker.h */,
+				067440BB21DDE72E0040982D /* vpadn-dmp-1.1.1-26cc98c.a */,
+				067440BA21DDE72D0040982D /* VpadnAnalytics.h */,
+				067440BD21DDE72F0040982D /* VpadnDictionaryBuilder.h */,
 			);
 			path = sdk_vpadn;
 			sourceTree = "<group>";
@@ -96,6 +105,9 @@
 		06B91A0421A3C3A400888CB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				067440C321DDE7860040982D /* CoreTelephony.framework */,
+				067440C121DDE74A0040982D /* CoreLocation.framework */,
+				067440BF21DDE7420040982D /* SystemConfiguration.framework */,
 				06B91A0521A3C3A500888CB6 /* AdSupport.framework */,
 			);
 			name = Frameworks;
