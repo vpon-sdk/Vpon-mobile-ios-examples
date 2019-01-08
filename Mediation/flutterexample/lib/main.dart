@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   if (defaultTargetPlatform == TargetPlatform.iOS) {
-    FirebaseAdMob.instance.initialize(appId: 'ca-app-pub-9118969380667719~9966222884');
+    FirebaseAdMob.instance.initialize(appId: '');
   } else if (defaultTargetPlatform == TargetPlatform.android)  {
     FirebaseAdMob.instance.initialize(appId: '');
   }
@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
 
     var adUnitId = '';
     if (defaultTargetPlatform == TargetPlatform.iOS) {
-      adUnitId = 'ca-app-pub-9118969380667719/7902332178';
+      adUnitId = '';
     } else if (defaultTargetPlatform == TargetPlatform.android)  {
       adUnitId = '';
     }
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
 
     var adUnitId = '';
     if (defaultTargetPlatform == TargetPlatform.iOS) {
-      adUnitId = 'ca-app-pub-9118969380667719/5404817887';
+      adUnitId = '';
     } else if (defaultTargetPlatform == TargetPlatform.android)  {
       adUnitId = '';
     }
