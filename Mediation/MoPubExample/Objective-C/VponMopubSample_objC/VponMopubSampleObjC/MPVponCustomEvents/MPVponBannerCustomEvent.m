@@ -75,39 +75,36 @@
 // 請新增此function到您的程式內 如果為測試用 則在下方填入UUID
 -(NSArray*)getTestIdentifiers
 {
-    return [NSArray arrayWithObjects:
-            // add your test UUID
-            nil];
+    return @[];
 }
 
 #pragma mark -
 #pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
 - (void)onVpadnAdReceived:(UIView *)bannerView{
-    NSLog(@"廣告抓取成功");
+    MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate)
         [self.delegate bannerCustomEvent:self didLoadAd:bannerView];
 }
 
 - (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"廣告抓取失敗");
+    MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
     if(self.delegate)
         [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:error];
 }
 
 - (void)onVpadnPresent:(UIView *)bannerView{
-    NSLog(@"開啟vpadn廣告頁面 %@",bannerView);
+    MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate)
         [self.delegate bannerCustomEventWillBeginAction:self];
 }
 
 - (void)onVpadnDismiss:(UIView *)bannerView{
-    NSLog(@"關閉vpadn廣告頁面 %@",bannerView);
     if(self.delegate)
         [self.delegate bannerCustomEventDidFinishAction:self];
 }
 
 - (void)onVpadnLeaveApplication:(UIView *)bannerView{
-    NSLog(@"離開publisher application");
+    MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate)
         [self.delegate bannerCustomEventWillLeaveApplication:self];
 }

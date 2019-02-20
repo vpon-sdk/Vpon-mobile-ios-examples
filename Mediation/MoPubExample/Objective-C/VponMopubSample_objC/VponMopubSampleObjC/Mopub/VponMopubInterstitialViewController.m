@@ -43,7 +43,7 @@
         [self.mpInterstitial showFromViewController:self];
     } else {
         #warning set ad unit id
-        self.mpInterstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@""];
+        self.mpInterstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"dba466d07f6c4118a015ffc2c6c3be0e"];
         self.mpInterstitial.delegate = self;
         [self.mpInterstitial loadAd];
     }

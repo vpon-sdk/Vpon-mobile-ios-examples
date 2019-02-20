@@ -51,7 +51,7 @@
     config.supportedCustomEvents = @[@"MPVponNativeCustomEvent"];
     
     #warning set ad unit id
-    MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:@"" rendererConfigurations:@[config]];
+    MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:@"286551af51d64466959930cf08ec6d42" rendererConfigurations:@[config]];
     
     MPNativeAdRequestTargeting *targeting = [MPNativeAdRequestTargeting targeting];
     targeting.desiredAssets = [NSSet setWithObjects:kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey, nil];

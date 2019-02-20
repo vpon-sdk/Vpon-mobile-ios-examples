@@ -44,7 +44,7 @@
         [self.mpBannerView removeFromSuperview];
     }
     #warning set ad unit id
-    self.mpBannerView = [[MPAdView alloc] initWithAdUnitId:@"" size:MOPUB_BANNER_SIZE];
+    self.mpBannerView = [[MPAdView alloc] initWithAdUnitId:@"782ad2f7565e4241a51045a523f5e12d" size:MOPUB_BANNER_SIZE];
     self.mpBannerView.delegate = self;
     [self.mpBannerView loadAd];
 }

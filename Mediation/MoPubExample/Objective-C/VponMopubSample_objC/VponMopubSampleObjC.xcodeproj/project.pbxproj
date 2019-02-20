@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06303381221D4194005AE96B /* VponAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0630337F221D4193005AE96B /* VponAdapterConfiguration.m */; };
 		06B4BA8C1EEF79FB00888622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BA8B1EEF79FB00888622 /* main.m */; };
 		06B4BA8F1EEF79FB00888622 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BA8E1EEF79FB00888622 /* AppDelegate.m */; };
 		06B4BA951EEF79FB00888622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B4BA931EEF79FB00888622 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0630337F221D4193005AE96B /* VponAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdapterConfiguration.m; sourceTree = "<group>"; };
+		06303380221D4194005AE96B /* VponAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdapterConfiguration.h; sourceTree = "<group>"; };
 		06B4BA871EEF79FB00888622 /* VponMopubSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponMopubSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B4BA8B1EEF79FB00888622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06B4BA8D1EEF79FB00888622 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				06B4BA8E1EEF79FB00888622 /* AppDelegate.m */,
 				06B4BAB51EEF7B9C00888622 /* VponMenuTableViewController.h */,
 				06B4BAB61EEF7B9C00888622 /* VponMenuTableViewController.m */,
+				06303380221D4194005AE96B /* VponAdapterConfiguration.h */,
+				0630337F221D4193005AE96B /* VponAdapterConfiguration.m */,
 				06B4BAAE1EEF7B1F00888622 /* MPVponCustomEvents */,
 				06B4BAA21EEF7AF400888622 /* MPVponNativeAdapter */,
 				06B4BAA11EEF7A9E00888622 /* Mopub */,
@@ -204,6 +209,7 @@
 					06B4BA861EEF79FB00888622 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 9Y4UWUH2H6;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,6 +275,7 @@
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@2x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@3x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MRAID.bundle",
+				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPAdapters.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -293,6 +300,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdapters.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,6 +337,7 @@
 				06B4BAB41EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m in Sources */,
 				06B4BABD1EEF7C5800888622 /* VponMopubInterstitialViewController.m in Sources */,
 				06B4BAB31EEF7B1F00888622 /* MPVponBannerCustomEvent.m in Sources */,
+				06303381221D4194005AE96B /* VponAdapterConfiguration.m in Sources */,
 				06B4BAC01EEF7C6700888622 /* VponMopubNativeViewController.m in Sources */,
 				06B4BA8C1EEF79FB00888622 /* main.m in Sources */,
 				06B4BAAD1EEF7AF400888622 /* MPVponNativeCustomEvent.m in Sources */,
@@ -457,11 +466,14 @@
 			baseConfigurationReference = E310FDC06BE51C41AE4C097E /* Pods-VponMopubSampleObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
 				INFOPLIST_FILE = VponMopubSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponMopubSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -470,11 +482,13 @@
 			baseConfigurationReference = A09447F57C2969FC91599E24 /* Pods-VponMopubSampleObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
 				INFOPLIST_FILE = VponMopubSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponMopubSampleObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
