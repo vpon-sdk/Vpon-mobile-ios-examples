@@ -46,7 +46,7 @@ static NSString *const kAdCellIdentifier = @"adIdentifier";
     
     if (!self.adsManager) {
 #warning set ad banner id
-        self.adsManager = [[VpadnNativeAdsManager alloc] initWithBannerID:@"8a80818257ff669e0157ffa7bca60008" forNumAdsRequested:kRowStrideForAdCell];
+        self.adsManager = [[VpadnNativeAdsManager alloc] initWithBannerID:@"" forNumAdsRequested:kRowStrideForAdCell];
         self.adsManager.delegate = self;
         [self.adsManager dontUseWVForNA];
         [self.adsManager showTestLog:NO];

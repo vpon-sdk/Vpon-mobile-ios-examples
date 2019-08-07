@@ -53,7 +53,7 @@
     } else {
         _vpadnInterstitial = [[VpadnInterstitial alloc] init];
 #warning set ad banner id
-        _vpadnInterstitial.strBannerId = @"8a80818242128afc014226580d4e0bf0";
+        _vpadnInterstitial.strBannerId = @"";
         _vpadnInterstitial.platform = @"TW";
         _vpadnInterstitial.delegate = self;
         [_vpadnInterstitial setLocationOnOff:YES];
