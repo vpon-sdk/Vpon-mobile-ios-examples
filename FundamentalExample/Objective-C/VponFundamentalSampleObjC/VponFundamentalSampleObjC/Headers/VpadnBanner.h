@@ -97,8 +97,8 @@ CGSize CGSizeFromVpadnAdSize(VpadnAdSize size);   // get banner size
 @interface VpadnBanner : NSObject<VpadnBannerDelegate>
 
 @property (nonatomic, copy) NSString *strBannerId;
-@property (nonatomic, weak) UIViewController *rootViewController;
-@property (nonatomic, weak) NSObject<VpadnBannerDelegate> *delegate;
+@property (nonatomic, weak) id rootViewController;
+@property (nonatomic, weak) id<VpadnBannerDelegate> delegate;
 @property (nonatomic, copy) NSString* platform;
 @property (nonatomic, copy) NSArray* arrayTestIdentifiers;
 

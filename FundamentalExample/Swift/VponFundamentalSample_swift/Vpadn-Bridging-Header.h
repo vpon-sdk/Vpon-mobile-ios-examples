@@ -3,6 +3,7 @@
 //
 
 #import "VpadnBanner.h"
+#import "VpadnAdConfiguration.h"
 #import "VpadnInterstitial.h"
 #import "VpadnNativeAd.h"
 #import "VpadnNativeAdsManager.h"

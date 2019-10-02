@@ -25,6 +25,7 @@
 
 #pragma mark -
 #pragma mark VpadnInterstitialDelegate
+
 @protocol VpadnInterstitialDelegate <VpadnBannerDelegate>
 @optional
 #pragma mark 通知取得插屏廣告成功pre-fetch完成
@@ -38,9 +39,9 @@
 - (void)onVpadnInterstitialAdClicked;
 @end
 
-@interface VpadnInterstitial : NSObject<VpadnInterstitialDelegate>
+@interface VpadnInterstitial : NSObject
 
-@property (nonatomic, assign) NSObject<VpadnInterstitialDelegate> *delegate;
+@property (nonatomic, weak) id<VpadnInterstitialDelegate> delegate;
 @property (nonatomic, copy) NSString *strBannerId;
 @property (nonatomic, copy) NSArray* arrayTestIdentifiers;
 @property (nonatomic, retain) NSString* platform;

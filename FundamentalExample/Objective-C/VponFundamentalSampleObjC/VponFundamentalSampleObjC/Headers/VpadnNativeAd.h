@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unregisterView;
 - (void)loadAd;
 - (void)loadAdWithTestIdentifiers:(NSArray *)arrayTestIdentifiers;
-//- (void)setNativeAdData:(NSDictionary*)dicNativeInfo withViewController:(id)viewController;
+- (void)clickHandler:(id)sender;
 
 #pragma mark Log Switch (Default YES)
 - (void)showTestLog:(BOOL)bShow;

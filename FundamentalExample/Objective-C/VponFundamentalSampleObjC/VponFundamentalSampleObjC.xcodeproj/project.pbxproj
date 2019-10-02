@@ -49,14 +49,6 @@
 		06018B392022EDC300C8DAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06018B3B2022EDC300C8DAA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06018B3C2022EDC300C8DAA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		06018B452022EDEE00C8DAA8 /* VpadnBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnBanner.h; sourceTree = "<group>"; };
-		06018B462022EDEE00C8DAA8 /* VpadnNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAd.h; sourceTree = "<group>"; };
-		06018B472022EDEE00C8DAA8 /* VpadnMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnMediaView.h; sourceTree = "<group>"; };
-		06018B482022EDEE00C8DAA8 /* VpadnSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnSplash.h; sourceTree = "<group>"; };
-		06018B492022EDEE00C8DAA8 /* VpadnNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
-		06018B4A2022EDEE00C8DAA8 /* VpadnNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdsManager.h; sourceTree = "<group>"; };
-		06018B4B2022EDEE00C8DAA8 /* VpadnInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnInterstitial.h; sourceTree = "<group>"; };
-		06018B4C2022EDEE00C8DAA8 /* VponAppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAppConfig.h; sourceTree = "<group>"; };
 		06018B4E2022EDFA00C8DAA8 /* VponMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponMenuTableViewController.h; sourceTree = "<group>"; };
 		06018B4F2022EDFA00C8DAA8 /* VponMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponMenuTableViewController.m; sourceTree = "<group>"; };
 		06018B512022EDFA00C8DAA8 /* VponSdkSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkSplashViewController.m; sourceTree = "<group>"; };
@@ -89,6 +81,20 @@
 		06018B842022EFCF00C8DAA8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		06018B862022EFD400C8DAA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		06018B882022EFD900C8DAA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		06DF3F232342F1FE00FE10F7 /* VpadnNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdsManager.h; sourceTree = "<group>"; };
+		06DF3F242342F1FF00FE10F7 /* VpadnBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnBanner.h; sourceTree = "<group>"; };
+		06DF3F252342F1FF00FE10F7 /* VpadnInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnInterstitial.h; sourceTree = "<group>"; };
+		06DF3F262342F1FF00FE10F7 /* VpadnInReadAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnInReadAd.h; sourceTree = "<group>"; };
+		06DF3F272342F1FF00FE10F7 /* VpadnAdConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnAdConfiguration.h; sourceTree = "<group>"; };
+		06DF3F282342F1FF00FE10F7 /* VpadnInterstitial+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VpadnInterstitial+Internal.h"; sourceTree = "<group>"; };
+		06DF3F292342F1FF00FE10F7 /* VpadnAdLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnAdLogLevel.h; sourceTree = "<group>"; };
+		06DF3F2A2342F1FF00FE10F7 /* VpadnBanner+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VpadnBanner+Internal.h"; sourceTree = "<group>"; };
+		06DF3F2B2342F1FF00FE10F7 /* VpadnSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnSplash.h; sourceTree = "<group>"; };
+		06DF3F2C2342F1FF00FE10F7 /* VpadnSDKAdKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnSDKAdKit.h; sourceTree = "<group>"; };
+		06DF3F2D2342F1FF00FE10F7 /* VpadnVideoInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnVideoInterstitial.h; sourceTree = "<group>"; };
+		06DF3F2E2342F1FF00FE10F7 /* VpadnNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAd.h; sourceTree = "<group>"; };
+		06DF3F2F2342F1FF00FE10F7 /* VpadnNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
+		06DF3F302342F1FF00FE10F7 /* VpadnMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnMediaView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,14 +166,20 @@
 		06018B442022EDEE00C8DAA8 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				06018B452022EDEE00C8DAA8 /* VpadnBanner.h */,
-				06018B462022EDEE00C8DAA8 /* VpadnNativeAd.h */,
-				06018B472022EDEE00C8DAA8 /* VpadnMediaView.h */,
-				06018B482022EDEE00C8DAA8 /* VpadnSplash.h */,
-				06018B492022EDEE00C8DAA8 /* VpadnNativeAdTableViewAdProvider.h */,
-				06018B4A2022EDEE00C8DAA8 /* VpadnNativeAdsManager.h */,
-				06018B4B2022EDEE00C8DAA8 /* VpadnInterstitial.h */,
-				06018B4C2022EDEE00C8DAA8 /* VponAppConfig.h */,
+				06DF3F272342F1FF00FE10F7 /* VpadnAdConfiguration.h */,
+				06DF3F292342F1FF00FE10F7 /* VpadnAdLogLevel.h */,
+				06DF3F242342F1FF00FE10F7 /* VpadnBanner.h */,
+				06DF3F2A2342F1FF00FE10F7 /* VpadnBanner+Internal.h */,
+				06DF3F262342F1FF00FE10F7 /* VpadnInReadAd.h */,
+				06DF3F252342F1FF00FE10F7 /* VpadnInterstitial.h */,
+				06DF3F282342F1FF00FE10F7 /* VpadnInterstitial+Internal.h */,
+				06DF3F302342F1FF00FE10F7 /* VpadnMediaView.h */,
+				06DF3F2E2342F1FF00FE10F7 /* VpadnNativeAd.h */,
+				06DF3F232342F1FE00FE10F7 /* VpadnNativeAdsManager.h */,
+				06DF3F2F2342F1FF00FE10F7 /* VpadnNativeAdTableViewAdProvider.h */,
+				06DF3F2C2342F1FF00FE10F7 /* VpadnSDKAdKit.h */,
+				06DF3F2B2342F1FF00FE10F7 /* VpadnSplash.h */,
+				06DF3F2D2342F1FF00FE10F7 /* VpadnVideoInterstitial.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";

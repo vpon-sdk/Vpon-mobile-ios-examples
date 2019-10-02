@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <iSoma/iSoma.h>
+#import <VpadnSDKAdKit/VpadnSDKAdKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    VpadnAdConfiguration *config = [VpadnAdConfiguration sharedInstance];
+    config.logLevel = VpadnLogLevelDefault;
+    [config initializeSdk];
+    
     [iSoma init];
     return YES;
 }

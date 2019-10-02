@@ -11,36 +11,34 @@
  *          copyright laws and state trade secret laws, punishable by civil and
  *          criminal penalties.
  *
- * @file    VponAppConfig.h
+ * @file    VpadnVideoInterstitial.h
  *
  * @brief   support publisher to use Vpadn ad
- *
- * @author  Alan(alan.tseng@vpon.com)
- *
- *
- * @date    2018/02/01
- *
- * @version 4.7.1
  *
  * @remark
  *
  **/
 
-#pragma mark SDK 基本通用設定.
+#import "VpadnInterstitial.h"
 
-#import <Foundation/Foundation.h>
+@interface VpadnVideoInterstitial : NSObject <VpadnInterstitialDelegate>
 
-typedef enum {
-    VpadnLogLevelOfDebug = 0,
-    VpadnLogLevelOfDefault,
-    VpadnLogLevelOfWarning,
-    VpadnLogLevelOfOnlyError,
-    VpadnLogLevelOfDontShow = 99,
-} VpadnLogLevel;
-
-@interface VponAppConfig : NSObject
-
-+ (void) setVponLogLevel:(VpadnLogLevel)vpadnLogLevel;
-
+@property (nonatomic, assign) NSObject<VpadnInterstitialDelegate> *delegate;
+@property (nonatomic, copy) NSString *strBannerId;
+@property (nonatomic, copy) NSArray* arrayTestIdentifiers;
+@property (nonatomic, retain) NSString* platform;
+- (id)init;
+#pragma mark 取得插屏廣告
+- (void)getInterstitial:(NSArray*)arrayTestIdentifiers;
+#pragma mark isReady
+//- (BOOL)isReady;
+#pragma mark - 顯示插屏廣告
+- (void)show;
+#pragma mark Log Switch (Default YES)
+- (void)showTestLog:(BOOL)bShow;
+#pragma mark 設定Location開關
+- (void)setLocationOnOff:(BOOL)isOn;
+#pragma mark  回傳Location狀態
+- (BOOL)isUseLocation;
 
 @end

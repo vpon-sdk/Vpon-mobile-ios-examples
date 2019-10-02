@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <MoPub.h>
+#import <VpadnSDKAdKit/VpadnSDKAdKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    VpadnAdConfiguration *config = [VpadnAdConfiguration sharedInstance];
+    config.logLevel = VpadnLogLevelDefault;
+    [config initializeSdk];
+    
     // Override point for customization after application launch.
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"AD_UNIT_ID"];
     sdkConfig.globalMediationSettings = @[];

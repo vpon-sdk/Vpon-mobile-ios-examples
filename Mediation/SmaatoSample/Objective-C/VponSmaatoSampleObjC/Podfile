@@ -7,6 +7,6 @@ target 'VponSmaatoSampleObjC' do
 
   # Pods for VponSmaatoSampleObjC
   pod 'SmaatoSDK', '~> 8.2.3'
-  pod 'VpadnSDK’
+  pod 'VpadnSDK', '~> 4.9.3'
 
 end
