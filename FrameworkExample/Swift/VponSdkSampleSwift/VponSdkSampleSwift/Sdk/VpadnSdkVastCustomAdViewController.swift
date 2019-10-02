@@ -9,8 +9,9 @@
 import UIKit
 import VpadnSDKAdKit
 
-extension VpadnSdkVastCustomAdViewController: VpadnAdDelegate {
-    func vpadnAdDidLoad(_ ad: VpadnAd) {
+extension VpadnSdkVastCustomAdViewController : VpadnInReadAdDelegate {
+    func vpadnAdDidLoad(_ ad: VpadnInReadAd) {
+        print("廣告抓取成功")
         guard let videoView = ad.videoView() else {
             return
         }
@@ -22,36 +23,8 @@ extension VpadnSdkVastCustomAdViewController: VpadnAdDelegate {
         videoLoadedView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[videoView]-0-|", options: [], metrics: nil, views: ["videoView":videoView]))
     }
     
-    func vpadnAd(_ ad: VpadnAd, didFailLoading error: Error) {
+    func vpadn(_ ad: VpadnInReadAd, didFailLoading error: Error) {
         print("廣告抓取失敗:\(error.localizedDescription)")
-    }
-    
-    func vpadnAdDidStart(_ ad: VpadnAd) {
-        print("影片開始播放")
-    }
-    
-    func vpadnAdDidStop(_ ad: VpadnAd) {
-        print("影片播放結束")
-    }
-    
-    func vpadnAdDidMute(_ ad: VpadnAd) {
-        print("影片靜音")
-    }
-    
-    func vpadnAdDidUnmute(_ ad: VpadnAd) {
-        print("影片取消靜音")
-    }
-    
-    func vpadnAdWasClicked(_ ad: VpadnAd) {
-        print("廣告被點擊")
-    }
-    
-    func vpadnAdDidTakeOverFullScreen(_ ad: VpadnAd) {
-        print("影片全屏")
-    }
-    
-    func vpadnAdDidDismissFullscreen(_ ad: VpadnAd) {
-        print("影片離開全貧")
     }
 }
 
@@ -59,7 +32,7 @@ class VpadnSdkVastCustomAdViewController: UIViewController {
 
     @IBOutlet weak var videoLoadedView: UIView!
     
-    var vpadnAd: VpadnAd!
+    var vpadnAd: VpadnInRead!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +47,7 @@ class VpadnSdkVastCustomAdViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnAd.init(placementId: "", delegate: self)
+        vpadnAd = VpadnInRead.init(placementId: "", delegate: self)
         vpadnAd.load(withTestIdentifiers: [])
     }
 }

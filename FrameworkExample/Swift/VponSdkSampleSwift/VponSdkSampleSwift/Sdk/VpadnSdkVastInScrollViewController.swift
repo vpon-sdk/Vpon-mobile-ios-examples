@@ -9,41 +9,13 @@
 import UIKit
 import VpadnSDKAdKit
 
-extension VpadnSdkVastInScrollViewController : VpadnAdDelegate {
-    func vpadnAdDidLoad(_ ad: VpadnAd) {
+extension VpadnSdkVastInScrollViewController : VpadnInReadAdDelegate {
+    func vpadnAdDidLoad(_ ad: VpadnInReadAd) {
         print("廣告抓取成功")
     }
     
-    func vpadnAd(_ ad: VpadnAd, didFailLoading error: Error) {
+    func vpadn(_ ad: VpadnInReadAd, didFailLoading error: Error) {
         print("廣告抓取失敗:\(error.localizedDescription)")
-    }
-    
-    func vpadnAdDidStart(_ ad: VpadnAd) {
-        print("影片開始播放")
-    }
-    
-    func vpadnAdDidStop(_ ad: VpadnAd) {
-        print("影片播放結束")
-    }
-    
-    func vpadnAdDidMute(_ ad: VpadnAd) {
-        print("影片靜音")
-    }
-    
-    func vpadnAdDidUnmute(_ ad: VpadnAd) {
-        print("影片取消靜音")
-    }
-    
-    func vpadnAdWasClicked(_ ad: VpadnAd) {
-        print("廣告被點擊")
-    }
-    
-    func vpadnAdDidTakeOverFullScreen(_ ad: VpadnAd) {
-        print("影片全屏")
-    }
-    
-    func vpadnAdDidDismissFullscreen(_ ad: VpadnAd) {
-        print("影片離開全貧")
     }
 }
 
@@ -55,7 +27,7 @@ class VpadnSdkVastInScrollViewController: UIViewController {
     
     @IBOutlet weak var inScrollView: UIScrollView!
     
-    var vpadnAd: VpadnAd!
+    var vpadnAd: VpadnInRead!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +42,7 @@ class VpadnSdkVastInScrollViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnAd.init(placementId: "", placeholder: inScrollLoadedView, heightConstraint: inScrollHeightConstraint, scrollView: inScrollView, delegate: self)
+        vpadnAd = VpadnInRead.init(placementId: "", placeholder: inScrollLoadedView, heightConstraint: inScrollHeightConstraint, scrollView: inScrollView, delegate: self)
         vpadnAd.load(withTestIdentifiers: [])
     }
 
