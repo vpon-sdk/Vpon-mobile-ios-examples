@@ -17,99 +17,80 @@
 
 @interface MPVponBannerCustomEvent () <VpadnBannerDelegate>
 
-@property (nonatomic, strong) VpadnBanner *adBannerView;
+@property (strong, nonatomic) VpadnBanner *vpadnBanner;
 
 @end
 
 
 @implementation MPVponBannerCustomEvent
 
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    [self.adBannerView destroyBanner];
-    self.adBannerView = nil;
-}
-
-- (void)requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info
-{
+- (void) requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     MPLogInfo(@"Requesting Vpon banner");
+    
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
+    [request setTestDevices:@[]];
+    
+    
     VpadnAdSize adSize = VpadnAdSizeSmartBannerPortrait;
-    if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size)) {
+    if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size) || (size.height == 250.0 && size.width >= 300)) {
         adSize = VpadnAdSizeMediumRectangle;
     } else if (CGSizeEqualToSize(size, VpadnAdSizeFullBanner.size)) {
         adSize = VpadnAdSizeFullBanner;
-    } else if (size.width == VpadnAdSizeLeaderboard.size.width) {
+    } else if (CGSizeEqualToSize(size, VpadnAdSizeLeaderboard.size)) {
         adSize = VpadnAdSizeLeaderboard;
-    } else if (size.height == VpadnAdSizeBanner.size.height) {
-        adSize = VpadnAdSizeBanner;
     } else {
-        MPLogError(@"Invalid size for Vpon banner ad");
-        [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:nil];
-        return;
+        adSize = VpadnAdSizeBanner;
     }
-
-    if(self.adBannerView)
-    {
-        [self.adBannerView destroyBanner];
-        self.adBannerView = nil;
-    }
-    self.adBannerView               = [[VpadnBanner alloc] initWithAdSize:adSize];
-    self.adBannerView.strBannerId   = [info objectForKey:EXTRA_INFO_BANNER_ID];
-    self.adBannerView.platform      = [info objectForKey:EXTRA_INFO_ZONE];
-    self.adBannerView.delegate      = self;
-    self.adBannerView.rootViewController = [[UIApplication sharedApplication]keyWindow].rootViewController;
     
-    [self.adBannerView startGetAd:[self getTestIdentifiers]];
+    _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID] adSize:adSize];
+    _vpadnBanner.delegate = self;
+    [_vpadnBanner loadRequest:request];
 }
 
-// 請新增此function到您的程式內 如果為測試用 則在下方填入UUID
--(NSArray*)getTestIdentifiers
-{
-    return [NSArray arrayWithObjects:
-            // add your test UUID
-            nil];
+- (void) requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info {
+    [self requestAdWithSize:size customEventInfo:info adMarkup:nil];
 }
 
 #pragma mark -
 #pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
-- (void)onVpadnAdReceived:(UIView *)bannerView{
-    NSLog(@"廣告抓取成功");
-    if(self.delegate)
+
+/// 通知拉取廣告成功pre-fetch完成 call back
+- (void) onVpadnAdReceived:(UIView *)bannerView {
+    MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didLoadAd:)]) {
         [self.delegate bannerCustomEvent:self didLoadAd:bannerView];
+    }
 }
 
-- (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"廣告抓取失敗");
-    if(self.delegate)
+/// 通知拉取廣告失敗 call back
+- (void) onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
+    MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didFailToLoadAdWithError:)]) {
         [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:error];
+    }
 }
 
-- (void)onVpadnPresent:(UIView *)bannerView{
-    NSLog(@"開啟vpadn廣告頁面 %@",bannerView);
-    if(self.delegate)
+/// 通知開啟vpadn廣告頁面 call back
+- (void) onVpadnPresent:(UIView *)bannerView {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillBeginAction:)]) {
         [self.delegate bannerCustomEventWillBeginAction:self];
+    }
 }
 
-- (void)onVpadnDismiss:(UIView *)bannerView{
-    NSLog(@"關閉vpadn廣告頁面 %@",bannerView);
-    if(self.delegate)
+/// 通知關閉vpadn廣告頁面 call back
+- (void) onVpadnDismiss:(UIView *)bannerView {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventDidFinishAction:)]) {
         [self.delegate bannerCustomEventDidFinishAction:self];
+    }
 }
 
-- (void)onVpadnLeaveApplication:(UIView *)bannerView{
-    NSLog(@"離開publisher application");
-    if(self.delegate)
+/// 通知離開publisher應用程式 call back
+- (void) onVpadnLeaveApplication:(UIView *)bannerView {
+    MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillLeaveApplication:)]) {
         [self.delegate bannerCustomEventWillLeaveApplication:self];
+    }
 }
 
 @end

@@ -29,67 +29,57 @@
 
 #pragma mark - MPInterstitialCustomEvent Subclass Methods
 
-- (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info
-{
+- (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     MPLogInfo(@"Requesting Vpon interstitial");
-    if(self.interstitial)
-    {
-        self.interstitial.delegate = nil;
-        self.interstitial = nil;
+    if (_interstitial) {
+        _interstitial.delegate = nil;
+        _interstitial = nil;
     }
-    self.interstitial = [[VpadnInterstitial alloc] init];
-
-    [self.interstitial setStrBannerId:[info objectForKey:EXTRA_INFO_BANNER_ID]];
-    self.interstitial.delegate = self;
-    self.interstitial.platform = [info objectForKey:EXTRA_INFO_ZONE];
-    [self.interstitial getInterstitial:[self getTestIdentifiers]];
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
+    [request setTestDevices:@[]];
+    
+    _interstitial = [[VpadnInterstitial alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID]];
+    _interstitial.delegate = self;
+    [_interstitial loadRequest:request];
 }
 
-// 請新增此function到您的程式內 如果為測試用 則在下方填入UUID
--(NSArray*)getTestIdentifiers
-{
-    return [NSArray arrayWithObjects:
-            // add your test UUID
-            nil];
+- (void) requestInterstitialWithCustomEventInfo:(NSDictionary *)info {
+    [self requestInterstitialWithCustomEventInfo:info adMarkup:nil];
 }
 
-- (void)showInterstitialFromRootViewController:(UIViewController *)rootViewController
-{
-    if(self.interstitial)
-    {
-        [self.interstitial show];
+- (void)showInterstitialFromRootViewController:(UIViewController *)rootViewController {
+    if (_interstitial) {
         [self.delegate interstitialCustomEventWillAppear:self];
+        [_interstitial showFromRootViewController:rootViewController];
         [self.delegate interstitialCustomEventDidAppear:self];
     }
 }
 
-- (void)dealloc
-{
-    self.interstitial.delegate = nil;
-    self.interstitial = nil;
-}
-
 #pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
+
 - (void)onVpadnInterstitialAdReceived:(UIView *)bannerView{
-    NSLog(@"插屏廣告抓取成功");
-    if(self.delegate)
+    MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
+    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didLoadAd:)]) {
         [self.delegate interstitialCustomEvent:self didLoadAd:self];
+    }
 }
 
-- (void)onVpadnInterstitialAdFailed:(UIView *)bannerView{
-    NSLog(@"插屏廣告抓取失敗");
-    if(self.delegate)
-        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:nil];
+- (void)onVpadnInterstitialAdFailed:(UIView *)bannerView {
+    NSError *error = [NSError errorWithDomain:@"com.vpon.vpadnsdk" code:-999 userInfo:@{NSLocalizedDescriptionKey:@"get VpadnInterstitialAdFailed"}];
+    MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
+    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didFailToLoadAdWithError:)]) {
+        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:error];
+    }
 }
 
 - (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView{
-    NSLog(@"關閉插屏廣告頁面 %@",bannerView);
-    if(self.delegate)
-    {
+    MPLogAdEvent([MPLogEvent adDidDisappearForAdapter:NSStringFromClass(self.class)], nil);
+    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventDidDisappear:)]) {
         [self.delegate interstitialCustomEventDidDisappear:self];
     }
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+//    [UIApplication sharedApplication]
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 @end

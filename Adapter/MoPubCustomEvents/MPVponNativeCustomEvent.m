@@ -13,6 +13,9 @@
 #import "MPLogging.h"
 #import "MPNativeAdConstants.h"
 
+#define EXTRA_INFO_ZONE         @"zone"
+#define EXTRA_INFO_BANNER_ID    @"strBannerId"
+
 static const NSInteger VpadnNoFillErrorCode = -25;
 
 @interface MPVponNativeCustomEvent () <VpadnNativeAdDelegate>
@@ -23,21 +26,26 @@ static const NSInteger VpadnNoFillErrorCode = -25;
 
 @implementation MPVponNativeCustomEvent
 
-- (void)requestAdWithCustomEventInfo:(NSDictionary *)info
-{
-    NSString *strBannerId = [info objectForKey:@"strBannerId"];  //the placement set in the MoPub platform
+- (void) requestAdWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+    MPLogInfo(@"Requesting Vpon native");
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
+    [request setTestDevices:@[]];
+    
+    _vpadnNativeAd = [[VpadnNativeAd alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID]];
+    _vpadnNativeAd.delegate = self;
+    [_vpadnNativeAd loadRequest:request];
+}
 
-    if (strBannerId) {
-        _vpadnNativeAd = [[VpadnNativeAd alloc] initWithBannerID:strBannerId];
-        self.vpadnNativeAd.delegate = self;
-        
-        [self.vpadnNativeAd loadAdWithTestIdentifiers:@[@"please insert testing device's idfa"]];
-    } else {
-        [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidAdServerResponse(@"Invalid Vpadn Banner ID")];
-    }
+- (void) requestAdWithCustomEventInfo:(NSDictionary *)info {
+    [self requestAdWithCustomEventInfo:info adMarkup:nil];
 }
 
 #pragma mark - VpadnNativeAdDelegate
+
+/**
+ 通知拉取廣告成功pre-fetch完成 call back
+ */
 - (void)onVpadnNativeAdReceived:(VpadnNativeAd *)nativeAd {
     MPVponNativeAdAdapter  *adAdapter = [[MPVponNativeAdAdapter alloc] initWithNativeAd:nativeAd];
     MPNativeAd *interfaceAd = [[MPNativeAd alloc] initWithAdAdapter:adAdapter];
@@ -54,7 +62,6 @@ static const NSInteger VpadnNoFillErrorCode = -25;
     
     [super precacheImagesWithURLs:imageURLs completionBlock:^(NSArray *errors) {
         if (errors) {
-            MPLogDebug(@"%@", errors);
             [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];
         } else {
             [self.delegate nativeCustomEvent:self didLoadAd:interfaceAd];
@@ -62,12 +69,16 @@ static const NSInteger VpadnNoFillErrorCode = -25;
     }];
 }
 
+/**
+ 通知拉取廣告失敗 call back
+ */
 - (void)onVpadnNativeAd:(VpadnNativeAd *)nativeAd didFailToReceiveAdWithError:(NSError *)error {
-    
-    if (error.code == VpadnNoFillErrorCode) {
-        [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForNoInventory()];
-    } else {
-        [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidAdServerResponse([NSString stringWithFormat:@"Vpadn ad load error: %li", error.code])];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(nativeCustomEvent:didFailToLoadAdWithError:)]) {
+        if (error.code == VpadnNoFillErrorCode) {
+            [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForNoInventory()];
+        } else {
+            [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidAdServerResponse([NSString stringWithFormat:@"Vpadn ad load error: %li", error.code])];
+        }
     }
 }
 

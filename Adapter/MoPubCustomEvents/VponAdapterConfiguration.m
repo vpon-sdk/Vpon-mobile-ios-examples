@@ -18,7 +18,7 @@
 #pragma mark - MPAdapterConfiguration
 
 - (NSString *)adapterVersion {
-    return @"1.0.0";
+    return @"5.0.0";
 }
 
 - (NSString *)biddingToken {
@@ -30,15 +30,15 @@
 }
 
 - (NSString *)networkSdkVersion {
-    return [VpadnBanner getVersionVpadn];
+    return [VpadnAdRequest sdkVersion];
 }
 
 - (void)initializeNetworkWithConfiguration:(NSDictionary<NSString *, id> *)configuration
                                   complete:(void(^)(NSError *))complete {
     dispatch_async(dispatch_get_main_queue(), ^{
-        VpadnBanner *banner = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeSmartBannerPortrait];
-        VpadnInterstitial *interstitial = [[VpadnInterstitial alloc] init];
-        VpadnNativeAd *vpadnNativeAd = [[VpadnNativeAd alloc] initWithBannerID:@""];
+        VpadnBanner *banner = [[VpadnBanner alloc] initWithLicenseKey:@"" adSize:VpadnAdSizeSmartBannerPortrait];
+        VpadnInterstitial *interstitial = [[VpadnInterstitial alloc] initWithLicenseKey:@""];
+        VpadnNativeAd *vpadnNativeAd = [[VpadnNativeAd alloc] initWithLicenseKey:@""];
         if (banner && interstitial && vpadnNativeAd) {
             MPLogDebug(@"Initialized Vpadn");
         }

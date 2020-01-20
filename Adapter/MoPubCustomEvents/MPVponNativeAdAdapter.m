@@ -85,9 +85,12 @@
     return nil;
 }
 
-- (BOOL)enableThirdPartyClickTracking
-{
+- (BOOL)enableThirdPartyClickTracking {
     return YES;
+}
+
+- (void)willAttachToView:(UIView *)view withAdContentViews:(NSArray *)adContentViews {
+    [self.vpadnNativeAd registerViewForInteraction:view withViewController:[self.delegate viewControllerForPresentingModalView] withClickableViews:adContentViews];
 }
 
 - (void)willAttachToView:(UIView *)view
