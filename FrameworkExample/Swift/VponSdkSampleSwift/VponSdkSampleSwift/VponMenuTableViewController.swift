@@ -12,7 +12,9 @@ class VponMenuTableViewController: UITableViewController {
     
     let data = ["SDK - Banner" : "goVponSdkBannerViewController",
                 "SDK - Interstitial" : "goVponSdkInterstitialViewController",
-                "SDK - Native" : "goVponSdkNativeTableViewController",
+                "SDK - Native" : "goVponSdkNativeViewController",
+                "SDK - NativeInTable" : "goVponSdkNativeTableViewController",
+                "SDK - Splash" : "goVponSdkSplashViewController",
                 "SDK - VastCustomAd": "goVponSdkVastCustomAdViewController",
                 "SDK - VastInScroll": "goVponSdkVastInScrollViewController",
                 "SDK - VastInTable": "goVponSdkVastInTableViewController",
@@ -21,6 +23,10 @@ class VponMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Menu"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

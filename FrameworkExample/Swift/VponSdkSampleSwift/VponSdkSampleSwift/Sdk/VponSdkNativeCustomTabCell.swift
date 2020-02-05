@@ -30,22 +30,9 @@ class VponSdkNativeCustomTabCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        adAction.titleLabel?.minimumScaleFactor = 8.0/14.0;
-        adAction.titleLabel?.adjustsFontSizeToFitWidth = true;
-        
-        adTitle.minimumScaleFactor = 12.0/14.0;
-        adTitle.adjustsFontSizeToFitWidth = true;
-        
-        adSocialContext.minimumScaleFactor = 10.0/12.0;
-        adSocialContext.adjustsFontSizeToFitWidth = true;
-        
-        adBody.minimumScaleFactor = 8.0/10.0;
-        adBody.adjustsFontSizeToFitWidth = true;
     }
     
     public func setNativeAd(nativeAd : VpadnNativeAd) {
-        
         if (self.nativeAd != nativeAd) {
             self.nativeAd.unregisterView()
         }
@@ -56,12 +43,6 @@ class VponSdkNativeCustomTabCell: UITableViewCell {
             self.adIcon.image = image
         }
         
-//        Original Method
-//        self.nativeAd.coverImage.loadAsync { (image) in
-//            self.adCoverMedia.image = image
-//        }
-        
-//        New Method
         adMediaView.nativeAd = nativeAd
         adMediaView.delegate = self
         
@@ -70,7 +51,6 @@ class VponSdkNativeCustomTabCell: UITableViewCell {
         adSocialContext.text = self.nativeAd.socialContext
         adAction.setTitle(self.nativeAd.callToAction, for: .normal)
         adAction.setTitle(self.nativeAd.callToAction, for: .highlighted)
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

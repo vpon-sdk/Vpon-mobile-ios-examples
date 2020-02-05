@@ -60,5 +60,7 @@
 	<string>$(PRODUCT_NAME) use photo </string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>$(PRODUCT_NAME) add photo </string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

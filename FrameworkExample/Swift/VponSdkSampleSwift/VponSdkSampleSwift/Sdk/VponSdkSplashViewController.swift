@@ -1,9 +1,9 @@
 //
-//  VponSdkBannerViewController.swift
+//  VponSdkSplashViewController.swift
 //  VponSdkSampleSwift
 //
-//  Created by EricChien on 2017/10/3.
-//  Copyright © 2017年 EricChien. All rights reserved.
+//  Created by Yi-Hsiang, Chien on 2020/2/5.
+//  Copyright © 2020 EricChien. All rights reserved.
 //
 
 import UIKit
@@ -11,41 +11,41 @@ import UIKit
 import VpadnSDKAdKit
 import AdSupport
 
-extension VponSdkBannerViewController : VpadnBannerDelegate {
-    func onVpadnAdReceived(_ bannerView: UIView!) {
-        self.loadBannerView.addSubview(bannerView)
+extension VponSdkSplashViewController: VpadnSplashDelegate {
+    /// 通知廣告已取得且呈現
+    func onVpadnSplashReceived(_ vpadnSplash: VpadnSplash) {
+        self.requestButton.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    /// 通知廣告取得失敗
+    func onVpadnSplash(_ vpadnSplash: VpadnSplash, didFailToReceiveAdWithError error: Error?) {
         self.requestButton.isEnabled = true
     }
-    
-    func onVpadnAdFailed(_ bannerView: UIView!, didFailToReceiveAdWithError error: Error!) {
-        print("Failed to receive banner with error: \(error.localizedDescription))")
-        self.requestButton.isEnabled = true
+    /// 通知可以關閉廣告
+    func onVpadnSplashAllow(toDismiss vpadnSplash: VpadnSplash) {
+        self.navigationController?.popViewController(animated: true)
     }
-    
-    func onVpadnAdDidClicked(_ banner: VpadnBanner!) {
+    /// 通知廣告被點擊
+    func onVpadnSplashClicked(_ vpadnSplash: VpadnSplash) {
         
     }
-    
-    func onVpadnLeaveApplication(_ bannerView: UIView!) {
-        
-    }
-    
-    func onVpadnAdWillRefresh(_ banner: VpadnBanner!) {
+    /// 通知即將離開App
+    func onVpadnSplashLeaveApplication(_ vpadnSplash: VpadnSplash) {
         
     }
 }
 
-class VponSdkBannerViewController: UIViewController {
+class VponSdkSplashViewController: UIViewController {
+    
+    @IBOutlet weak var loadSplashView: UIView!
+    
+    var vpadnSplash: VpadnSplash!
     
     @IBOutlet weak var requestButton: UIButton!
-    
-    @IBOutlet weak var loadBannerView: UIView!
-    
-    var vpadnBanner: VpadnBanner!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "SDK - Banner"
+        self.title = "SDK - Splash"
         requestButtonDidTouch(requestButton)
     }
 
@@ -59,7 +59,6 @@ class VponSdkBannerViewController: UIViewController {
     func initialRequest() -> VpadnAdRequest {
         let request = VpadnAdRequest.init()
         request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
-        request.setAutoRefresh(true)                                                                //僅限於 Banner
         request.setUserInfoGender(.genderMale)                                                      //性別
         request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
         request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
@@ -75,13 +74,21 @@ class VponSdkBannerViewController: UIViewController {
     @IBAction func requestButtonDidTouch(_ sender: UIButton) {
         sender.isEnabled = false
         
-        if vpadnBanner != nil {
-            vpadnBanner.getVpadnAdView()?.removeFromSuperview()
-        }
-        
-        vpadnBanner = VpadnBanner.init(licenseKey: "8a80854b6a90b5bc016ad81a5059652d", adSize: VpadnAdSizeBanner)
-        vpadnBanner.delegate = self
-        vpadnBanner.load(initialRequest())
+        vpadnSplash = VpadnSplash.init(licenseKey: "8a80854b62d1fdc40162d205d0ff0005", target: loadSplashView)
+        vpadnSplash.delegate = self
+        vpadnSplash.setEndurableSecond(3)
+        vpadnSplash.load(initialRequest())
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

@@ -39,7 +39,7 @@ class VpadnSdkVastInTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var vpadnAd: VpadnInRead!
+    var vpadnAd: VpadnInReadAd!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class VpadnSdkVastInTableViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnInRead.init(placementId: "", insertionIndexPath: IndexPath.init(row: 0, section: 0), tableView: tableView, delegate: self)
+        vpadnAd = VpadnInReadAd.init(placementId: "", insertionIndexPath: IndexPath.init(row: 0, section: 0), tableView: tableView, delegate: self)
         vpadnAd.load(withTestIdentifiers: [])
     }
 

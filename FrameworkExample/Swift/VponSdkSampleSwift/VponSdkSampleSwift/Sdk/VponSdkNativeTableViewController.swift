@@ -9,8 +9,10 @@
 import UIKit
 
 import VpadnSDKAdKit
+import AdSupport
 
-let kRowStrideForAdCell = 5;
+let kRequestNumber = 5;
+let kRowStrideForAdCell = 10;
 let kDefaultCellIdentifier = "normalIdentifier";
 let kAdCellIdentifier = "adIdentifier";
 
@@ -57,24 +59,42 @@ class VponSdkNativeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addContents()
-
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
-        if adsManager == nil {
-            // TODO: set ad native id
-            adsManager = VpadnNativeAdsManager.init(bannerID: "", forNumAdsRequested: UInt(kRowStrideForAdCell))
-            adsManager.delegate = self
-            adsProvider = VpadnNativeAdTableViewAdProvider.init(manager: self.adsManager)
-            adsProvider.delegate = self
-        }
-        adsManager.loadAds(withTestIdentifiers: [])
+        addContents()
+        request()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Initial VpadnAdRequest
+    
+    func initialRequest() -> VpadnAdRequest {
+        let request = VpadnAdRequest.init()
+        request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
+        request.setAutoRefresh(true)                                                                //僅限於 Banner
+        request.setUserInfoGender(.genderMale)                                                      //性別
+        request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
+        request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
+        request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
+        request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
+        request.addKeyword("keywordA")                                                              //關鍵字
+        request.addKeyword("key1:value1")                                                           //鍵值
+        return request
+    }
+    
+    func request() {
+        if adsManager == nil {
+            // TODO: set ad native id
+            adsManager = VpadnNativeAdsManager.init(licenseKey: "8a80854b6a90b5bc016ad81ac68c6530", forNumAdsRequested: UInt(kRequestNumber))
+            adsManager.delegate = self
+            adsProvider = VpadnNativeAdTableViewAdProvider.init(manager: adsManager)
+            adsProvider.delegate = self
+        }
+        adsManager.load(initialRequest())
     }
 
     // MARK: - Table view data source
@@ -86,7 +106,6 @@ class VponSdkNativeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewContents.count + tableViewContents.count / kRowStrideForAdCell
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if adsManager.isReady() && indexPath.row > 0 && indexPath.row % kRowStrideForAdCell == 0 {
@@ -96,13 +115,10 @@ class VponSdkNativeTableViewController: UITableViewController {
             nativeAd.registerView(forInteraction: cell.contentView, with: self)
             return cell
         }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: kDefaultCellIdentifier, for: indexPath)
         let index = indexPath.row - indexPath.row / kRowStrideForAdCell
         cell.textLabel?.text = tableViewContents[index] as? String
         cell.backgroundColor = UIColor.white
         return cell
     }
-
-
 }

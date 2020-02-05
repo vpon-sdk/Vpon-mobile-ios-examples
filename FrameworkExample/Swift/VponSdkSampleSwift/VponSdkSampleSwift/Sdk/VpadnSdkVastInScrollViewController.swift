@@ -27,7 +27,7 @@ class VpadnSdkVastInScrollViewController: UIViewController {
     
     @IBOutlet weak var inScrollView: UIScrollView!
     
-    var vpadnAd: VpadnInRead!
+    var vpadnAd: VpadnInReadAd!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class VpadnSdkVastInScrollViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnInRead.init(placementId: "", placeholder: inScrollLoadedView, heightConstraint: inScrollHeightConstraint, scrollView: inScrollView, delegate: self)
+        vpadnAd = VpadnInReadAd.init(placementId: "", placeholder: inScrollLoadedView, heightConstraint: inScrollHeightConstraint, scrollView: inScrollView, delegate: self)
         vpadnAd.load(withTestIdentifiers: [])
     }
 

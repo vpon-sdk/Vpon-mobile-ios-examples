@@ -32,7 +32,7 @@ class VpadnSdkVastCustomAdViewController: UIViewController {
 
     @IBOutlet weak var videoLoadedView: UIView!
     
-    var vpadnAd: VpadnInRead!
+    var vpadnAd: VpadnInReadAd!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class VpadnSdkVastCustomAdViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnInRead.init(placementId: "", delegate: self)
+        vpadnAd = VpadnInReadAd.init(placementId: "", delegate: self)
         vpadnAd.load(withTestIdentifiers: [])
     }
 }

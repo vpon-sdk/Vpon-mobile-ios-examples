@@ -9,6 +9,7 @@
 import UIKit
 
 import VpadnSDKAdKit
+import AdSupport
 
 extension VponSdkInterstitialViewController : VpadnInterstitialDelegate {
     func onVpadnInterstitialAdReceived(_ bannerView: UIView!) {
@@ -23,10 +24,26 @@ extension VponSdkInterstitialViewController : VpadnInterstitialDelegate {
         actionButton.setTitle("request", for: .normal)
     }
     
+    func onVpadnInterstitialAdWillPresent(_ bannerView: UIView!) {
+        
+    }
+    
+    func onVpadnInterstitialAdWillDismiss(_ bannerView: UIView!) {
+        
+    }
+    
     func onVpadnInterstitialAdDismiss(_ bannerView: UIView!) {
         print("Interstitial did dismiss screen")
         actionButton.isEnabled = true
         actionButton.setTitle("request", for: .normal)
+    }
+    
+    func onVpadnInterstitialAdWillLeaveApplication(_ bannerView: UIView!) {
+        
+    }
+    
+    func onVpadnInterstitialAdClicked() {
+        
     }
 }
 
@@ -47,21 +64,31 @@ class VponSdkInterstitialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Initial VpadnAdRequest
+    
+    func initialRequest() -> VpadnAdRequest {
+        let request = VpadnAdRequest.init()
+        request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
+        request.setUserInfoGender(.genderMale)                                                      //性別
+        request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
+        request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
+        request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
+        request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
+        request.addKeyword("keywordA")                                                              //關鍵字
+        request.addKeyword("key1:value1")                                                           //鍵值
+        return request
+    }
+    
     // MARK: Button Method
     
     @IBAction func actionButtonDidTouch(_ sender: UIButton) {
         sender.isEnabled = false
-        
-        if vpadnInterstitial != nil && vpadnInterstitial.isReady() {
-            vpadnInterstitial.show()
+        if vpadnInterstitial != nil && vpadnInterstitial.isReady {
+            vpadnInterstitial.show(fromRootViewController: self)
         } else {
-            vpadnInterstitial = VpadnInterstitial.init()
-            // TODO: set ad banner id
-            vpadnInterstitial.strBannerId = "8a80818242128afc014226580d4e0bf0"
-            vpadnInterstitial.platform = "TW"
+            vpadnInterstitial = VpadnInterstitial.init(licenseKey:"8a80854b6a90b5bc016ad81a98cf652e")
             vpadnInterstitial.delegate = self
-            vpadnInterstitial.setLocationOnOff(true)
-            vpadnInterstitial.getInterstitial([])
+            vpadnInterstitial.load(initialRequest())
         }
     }
 }
