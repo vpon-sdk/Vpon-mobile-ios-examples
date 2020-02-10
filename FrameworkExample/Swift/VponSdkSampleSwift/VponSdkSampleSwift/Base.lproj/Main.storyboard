@@ -50,7 +50,7 @@
                         <segue destination="WDD-B1-ilo" kind="show" identifier="goVponSdkVastInTableViewController" id="16m-SH-5PF"/>
                         <segue destination="G9w-Ch-qGy" kind="show" identifier="goVponSdkVastInTableRepeatViewController" id="0yw-oh-xFq"/>
                         <segue destination="zpd-GO-74y" kind="show" identifier="goVponSdkNativeViewController" id="bzy-7P-1jh"/>
-                        <segue destination="Xbq-eG-aBw" kind="show" identifier="goVponSdkSplashViewController" id="PHc-le-e1n"/>
+                        <segue destination="BW6-zH-dwn" kind="show" identifier="goVponSdkSplashViewController" id="mge-GI-ngw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZL-md-JWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -846,54 +846,63 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
             <point key="canvasLocation" x="2044" y="1075"/>
         </scene>
         <!--Vpon Sdk Splash View Controller-->
-        <scene sceneID="23B-f7-W78">
+        <scene sceneID="YJ1-Dz-ma3">
             <objects>
-                <viewController id="Xbq-eG-aBw" customClass="VponSdkSplashViewController" customModule="VponSdkSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajB-9T-oyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SplashViewController" id="BW6-zH-dwn" customClass="VponSdkSplashViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tXU-AM-Yxr"/>
-                        <viewControllerLayoutGuide type="bottom" id="lL1-Ka-Yj2"/>
+                        <viewControllerLayoutGuide type="top" id="OTs-Uf-ysx"/>
+                        <viewControllerLayoutGuide type="bottom" id="LsH-Z7-IH6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jc5-pa-RBx">
+                    <view key="view" contentMode="scaleToFill" id="meX-dI-26l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWk-WP-fjw">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" white="0.7600682218" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18s-NZ-VbY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="495.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEN-sb-0gV">
+                                        <rect key="frame" x="132.5" y="230.5" width="110" height="34"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="request">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled" title="please wait"/>
+                                        <connections>
+                                            <action selector="requestButtonDidTouch:" destination="BW6-zH-dwn" eventType="touchUpInside" id="Ak8-b8-rHP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dEN-sb-0gV" firstAttribute="centerY" secondItem="18s-NZ-VbY" secondAttribute="centerY" id="IIH-WX-hek"/>
+                                    <constraint firstItem="dEN-sb-0gV" firstAttribute="centerX" secondItem="18s-NZ-VbY" secondAttribute="centerX" id="Znh-zF-c7b"/>
+                                    <constraint firstItem="dEN-sb-0gV" firstAttribute="width" secondItem="dEN-sb-0gV" secondAttribute="height" multiplier="120:37" id="nKZ-YT-vW9"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvi-4S-9xv">
-                                <rect key="frame" x="127.5" y="610" width="120" height="37"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="request">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="disabled" title="please wait"/>
-                                <connections>
-                                    <action selector="requestButtonDidTouch:" destination="Xbq-eG-aBw" eventType="touchUpInside" id="Y44-m3-jmB"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="S9e-ze-1dm">
+                                <rect key="frame" x="0.0" y="539.5" width="375" height="127.5"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KWk-WP-fjw" secondAttribute="trailing" id="7kq-ha-r8U"/>
-                            <constraint firstItem="lL1-Ka-Yj2" firstAttribute="top" secondItem="Bvi-4S-9xv" secondAttribute="bottom" constant="20" id="Gs5-zS-lNr"/>
-                            <constraint firstItem="Bvi-4S-9xv" firstAttribute="width" secondItem="Bvi-4S-9xv" secondAttribute="height" multiplier="120:37" id="Kfh-rx-MQb"/>
-                            <constraint firstItem="Bvi-4S-9xv" firstAttribute="width" secondItem="KWk-WP-fjw" secondAttribute="width" multiplier="120:375" id="RxY-mE-xf1"/>
-                            <constraint firstItem="KWk-WP-fjw" firstAttribute="top" secondItem="tXU-AM-Yxr" secondAttribute="bottom" id="W13-yM-0Ve"/>
-                            <constraint firstItem="KWk-WP-fjw" firstAttribute="leading" secondItem="jc5-pa-RBx" secondAttribute="leading" id="lZw-Q1-hsZ"/>
-                            <constraint firstItem="Bvi-4S-9xv" firstAttribute="centerX" secondItem="jc5-pa-RBx" secondAttribute="centerX" id="sB7-eg-H3y"/>
-                            <constraint firstItem="lL1-Ka-Yj2" firstAttribute="top" secondItem="KWk-WP-fjw" secondAttribute="bottom" id="zh7-0I-k4A"/>
+                            <constraint firstItem="S9e-ze-1dm" firstAttribute="top" secondItem="18s-NZ-VbY" secondAttribute="bottom" id="0tb-5Y-yqP"/>
+                            <constraint firstItem="18s-NZ-VbY" firstAttribute="top" secondItem="OTs-Uf-ysx" secondAttribute="bottom" id="4qV-ha-UJK"/>
+                            <constraint firstItem="18s-NZ-VbY" firstAttribute="leading" secondItem="meX-dI-26l" secondAttribute="leading" id="PfT-Sc-qv3"/>
+                            <constraint firstItem="S9e-ze-1dm" firstAttribute="width" secondItem="S9e-ze-1dm" secondAttribute="height" multiplier="414:141" id="SC9-KH-qJm"/>
+                            <constraint firstItem="LsH-Z7-IH6" firstAttribute="top" secondItem="S9e-ze-1dm" secondAttribute="bottom" id="T1N-Pz-77G"/>
+                            <constraint firstAttribute="trailing" secondItem="18s-NZ-VbY" secondAttribute="trailing" id="VYE-XS-gVR"/>
+                            <constraint firstItem="S9e-ze-1dm" firstAttribute="leading" secondItem="meX-dI-26l" secondAttribute="leading" id="dvM-dL-HRC"/>
+                            <constraint firstAttribute="trailing" secondItem="S9e-ze-1dm" secondAttribute="trailing" id="tjo-TX-FrY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LVO-fN-rVV"/>
+                        <viewLayoutGuide key="safeArea" id="kte-B7-9M2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Qu-77-It0"/>
+                    <navigationItem key="navigationItem" id="yyi-0e-tM8"/>
                     <connections>
-                        <outlet property="loadSplashView" destination="KWk-WP-fjw" id="vpx-Qw-nXA"/>
-                        <outlet property="requestButton" destination="Bvi-4S-9xv" id="DyD-tK-A6b"/>
+                        <outlet property="loadSplashView" destination="18s-NZ-VbY" id="eho-lh-3EJ"/>
+                        <outlet property="requestButton" destination="dEN-sb-0gV" id="Xni-Ka-MdZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rD2-VX-M7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="1075"/>
         </scene>
@@ -902,5 +911,6 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
         <image name="BigDataSeminar18" width="320" height="213"/>
         <image name="icon" width="76" height="76"/>
         <image name="loading" width="300" height="157.5"/>
+        <image name="logo" width="414" height="141"/>
     </resources>
 </document>

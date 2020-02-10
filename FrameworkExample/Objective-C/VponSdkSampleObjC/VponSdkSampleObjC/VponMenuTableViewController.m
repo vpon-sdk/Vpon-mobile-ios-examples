@@ -15,21 +15,35 @@
 
 @property (strong, nonatomic) NSDictionary *data;
 
+@property (strong, nonatomic) NSArray *sortKeys;
+
 @end
 
 @implementation VponMenuTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = [[NSDictionary alloc] initWithObjectsAndKeys:
+    self.title = @"Menu";
+    
+    _data = [[NSDictionary alloc] initWithObjectsAndKeys:
                  @"goVponSdkBannerViewController", @"SDK - Banner",
                  @"goVponSdkInterstitialViewController", @"SDK - Interstitial",
-                 @"goVponSdkNativeTableViewController", @"SDK - Native",
+                 @"goVponSdkNativeViewController", @"SDK - Native",
+                 @"goVponSdkNativeTableViewController", @"SDK - NativeInTable",
+                 @"goVponSdkSplashViewController", @"SDK - Splash",
                  @"goVponSdkVastCustomAdViewController", @"SDK - VastCustomAd",
                  @"goVponSdkVastInScrollViewController", @"SDK - VastInScroll",
                  @"goVponSdkVastInTableViewController", @"SDK - VastInTable",
                  @"goVponSdkVastInTableRepeatViewController", @"SDK - VastInTableRepeat",  nil];
-    self.title = @"Menu";
+    
+    _sortKeys = [_data.allKeys sortedArrayUsingDescriptors:@[
+        [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]
+    ]];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,21 +58,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data.count;
+    return _data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
-    
-    NSArray *titles = self.data.allKeys;
-    cell.textLabel.text = [titles objectAtIndex:indexPath.row];
-    
+    cell.textLabel.text = [_sortKeys objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *identifiers = self.data.allValues;
-    [self performSegueWithIdentifier:[identifiers objectAtIndex:indexPath.row] sender:nil];
+    NSString *key = [_sortKeys objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:[_data objectForKey:key] sender:nil];
 }
 
 @end

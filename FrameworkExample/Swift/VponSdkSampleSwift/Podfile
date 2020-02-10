@@ -6,6 +6,6 @@ target 'VponSdkSampleSwift' do
   use_frameworks!
 
   # Pods for VponSdkSampleSwift
-  pod 'VpadnSDK'
+  pod 'VpadnSDK', '~> 5.0.0'
 
 end

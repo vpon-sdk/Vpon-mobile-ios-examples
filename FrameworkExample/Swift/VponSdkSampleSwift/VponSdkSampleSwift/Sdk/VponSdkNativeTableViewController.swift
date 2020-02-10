@@ -18,6 +18,7 @@ let kAdCellIdentifier = "adIdentifier";
 
 extension VponSdkNativeTableViewController: VpadnNativeAdsManagerDelegate {
     func onVpadnNativeAdsReceived() {
+        print("Ads did loaded")
         tableView.reloadData()
     }
     
@@ -27,10 +28,6 @@ extension VponSdkNativeTableViewController: VpadnNativeAdsManagerDelegate {
 }
 
 extension VponSdkNativeTableViewController: VpadnNativeAdDelegate {
-    func onVpadnNativeGet(_ nativeAd: VpadnNativeAd) {
-        
-    }
-    
     func onVpadnNativeAdPresent(_ nativeAd: VpadnNativeAd) {
         print("Native Present \(nativeAd)")
     }

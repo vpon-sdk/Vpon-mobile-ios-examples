@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "VponSdkSplashViewController.h"
-#import <VpadnSDKAdKit/VpadnSDKAdKit.h>
+
+@import VpadnSDKAdKit;
 
 @interface AppDelegate ()
 
@@ -16,20 +16,11 @@
 
 @implementation AppDelegate
 
-- (void)gotoSplashAd {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    VponSdkSplashViewController *splashViewController = [storyboard instantiateViewControllerWithIdentifier:@"SplashViewController"];
-    self.window.rootViewController = splashViewController;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     VpadnAdConfiguration *config = [VpadnAdConfiguration sharedInstance];
     config.logLevel = VpadnLogLevelDefault;
     [config initializeSdk];
-    
-    // Override point for customization after application launch.
-    [self gotoSplashAd];
     
     return YES;
 }

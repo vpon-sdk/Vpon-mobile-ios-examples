@@ -14,6 +14,7 @@
 		0672201D21367B8F00159ACB /* VponSdkVastInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */; };
 		0672202021367BA300159ACB /* VponSdkVastInTableRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */; };
 		0686D7A91FCEA2F500493E81 /* VponSdkSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0686D7A81FCEA2F500493E81 /* VponSdkSplashViewController.m */; };
+		06936BE023F0ED9E0081D47A /* VponSdkNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */; };
 		06F7AA881F1DE9BC00A74B6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AA871F1DE9BC00A74B6D /* main.m */; };
 		06F7AA8B1F1DE9BC00A74B6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AA8A1F1DE9BC00A74B6D /* AppDelegate.m */; };
 		06F7AA911F1DE9BC00A74B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F7AA8F1F1DE9BC00A74B6D /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 		0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkVastInTableRepeatViewController.m; sourceTree = "<group>"; };
 		0686D7A71FCEA2F500493E81 /* VponSdkSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkSplashViewController.h; sourceTree = "<group>"; };
 		0686D7A81FCEA2F500493E81 /* VponSdkSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponSdkSplashViewController.m; sourceTree = "<group>"; };
+		06936BDE23F0ED9E0081D47A /* VponSdkNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponSdkNativeViewController.h; sourceTree = "<group>"; };
+		06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponSdkNativeViewController.m; sourceTree = "<group>"; };
 		06F7AA831F1DE9BC00A74B6D /* VponSdkSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponSdkSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F7AA871F1DE9BC00A74B6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F7AA891F1DE9BC00A74B6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */,
 				0672201E21367BA300159ACB /* VponSdkVastInTableRepeatViewController.h */,
 				0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */,
+				06936BDE23F0ED9E0081D47A /* VponSdkNativeViewController.h */,
+				06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */,
 				0647E9471F832F8600B51B9F /* VponSdkNativeTableViewController.h */,
 				0647E9481F832F8600B51B9F /* VponSdkNativeTableViewController.m */,
 				0647E94D1F83356600B51B9F /* VponSdkNativeCustomTabCell.h */,
@@ -198,6 +203,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -259,6 +265,7 @@
 				06F7AA9F1F1DEA3700A74B6D /* VponMenuTableViewController.m in Sources */,
 				0647E94F1F83356600B51B9F /* VponSdkNativeCustomTabCell.m in Sources */,
 				0647E9491F832F8600B51B9F /* VponSdkNativeTableViewController.m in Sources */,
+				06936BE023F0ED9E0081D47A /* VponSdkNativeViewController.m in Sources */,
 				06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */,
 				0686D7A91FCEA2F500493E81 /* VponSdkSplashViewController.m in Sources */,
 				0672201521367AB800159ACB /* VponSdkVastCustomAdViewController.m in Sources */,

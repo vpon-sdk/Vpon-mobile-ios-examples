@@ -9,6 +9,7 @@
 #import "VponSdkBannerViewController.h"
 
 @import VpadnSDKAdKit;
+@import AdSupport;
 
 @interface VponSdkBannerViewController () <VpadnBannerDelegate>
 
@@ -33,32 +34,36 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Initial VpadnAdRequest
+
+- (VpadnAdRequest *) initialRequest {
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];   //取得測試廣告
+    [request setUserInfoGender:VpadnGenderMale];                                                        //性別
+    [request setUserInfoBirthdayWithYear:2000 Month:8 andDay:17];                                       //生日
+    [request setMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                     //最高可投放的年齡(分類)限制
+    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentFalse];                             //是否專為特定年齡投放
+    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentFalse];                   //是否專為兒童投放
+    [request addKeyword:@"keywordA"];                                                                   //關鍵字
+    [request addKeyword:@"key1:value1"];                                                                //鍵值
+    return request;
+}
+
 #pragma mark - Button Method
 
 - (IBAction)requestButtonDidTouch:(UIButton *)sender {
-    
     sender.enabled = NO;
-    
-    if (self.vpadnBanner != nil) {
-        [self.vpadnBanner.getVpadnAdView removeFromSuperview];
+    if (_vpadnBanner != nil) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_vpadnBanner.getVpadnAdView removeFromSuperview];
+        });
     }
-    
-    _vpadnBanner = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeFromCGSize(self.loadBannerView.frame.size) origin:CGPointZero];
-#warning set ad banner id
-    _vpadnBanner.strBannerId = @"";
+    _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:@"8a80854b6a90b5bc016ad81a5059652d" adSize:VpadnAdSizeSmartBannerPortrait];
     _vpadnBanner.delegate = self;
-    _vpadnBanner.platform = @"TW";
-    [_vpadnBanner setAdAutoRefresh:YES];
-    [_vpadnBanner setLocationOnOff:YES];
-    [_vpadnBanner setRootViewController:self];
-    [_vpadnBanner startGetAd:@[]];
+    [_vpadnBanner loadRequest:[self initialRequest]];
 }
 
 #pragma mark - Vpadn Banner Delegate
-
-- (void)onVpadnGetAd:(UIView *)bannerView {
-    
-}
 
 - (void)onVpadnAdReceived:(UIView *)bannerView {
     NSLog(@"Received banner ad successfully");
@@ -69,6 +74,18 @@
 - (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
     NSLog(@"Failed to receive banner with error: %@", [error localizedFailureReason]);
     self.requestButton.enabled = YES;
+}
+
+- (void)onVpadnAdDidClicked:(VpadnBanner *)banner {
+    
+}
+
+- (void)onVpadnLeaveApplication:(UIView *)bannerView {
+    
+}
+
+- (void)onVpadnAdWillRefresh:(VpadnBanner *)banner {
+    
 }
 
 
