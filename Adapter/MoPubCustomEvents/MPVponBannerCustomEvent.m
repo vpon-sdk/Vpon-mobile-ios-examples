@@ -55,38 +55,35 @@
 #pragma mark -
 #pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
 
-/// 通知拉取廣告成功pre-fetch完成 call back
-- (void) onVpadnAdReceived:(UIView *)bannerView {
+- (void) onVpadnAdLoaded:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didLoadAd:)]) {
-        [self.delegate bannerCustomEvent:self didLoadAd:bannerView];
+        [self.delegate bannerCustomEvent:self didLoadAd:banner.getVpadnAdView];
     }
 }
 
-/// 通知拉取廣告失敗 call back
-- (void) onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
+- (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didFailToLoadAdWithError:)]) {
         [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:error];
     }
 }
 
-/// 通知開啟vpadn廣告頁面 call back
-- (void) onVpadnPresent:(UIView *)bannerView {
+- (void) onVpadnAdWillOpen:(VpadnBanner *)banner {
+    MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillBeginAction:)]) {
         [self.delegate bannerCustomEventWillBeginAction:self];
     }
 }
 
-/// 通知關閉vpadn廣告頁面 call back
-- (void) onVpadnDismiss:(UIView *)bannerView {
+- (void) onVpadnAdClosed:(VpadnBanner *)banner {
+    MPLogAdEvent([MPLogEvent adDidDismissModalForAdapter:NSStringFromClass(self.class)], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventDidFinishAction:)]) {
         [self.delegate bannerCustomEventDidFinishAction:self];
     }
 }
 
-/// 通知離開publisher應用程式 call back
-- (void) onVpadnLeaveApplication:(UIView *)bannerView {
+- (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillLeaveApplication:)]) {
         [self.delegate bannerCustomEventWillLeaveApplication:self];

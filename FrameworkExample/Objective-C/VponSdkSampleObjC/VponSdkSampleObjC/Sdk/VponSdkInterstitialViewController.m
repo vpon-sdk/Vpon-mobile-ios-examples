@@ -62,37 +62,36 @@
 
 #pragma mark - Vpadn Interstitial Delegate
 
-- (void) onVpadnInterstitialAdReceived:(UIView *)bannerView {
-    NSLog(@"Received interstitial ad successfully");
+/// 通知有廣告可供拉取 call back
+- (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     self.actionButton.enabled = YES;
     [self.actionButton setTitle:@"show" forState:UIControlStateNormal];
 }
 
-- (void) onVpadnInterstitialAdFailed:(UIView *)bannerView {
-    NSLog(@"Failed to receive interstitail");
+/// 通知拉取廣告失敗 call back
+- (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
     self.actionButton.enabled = YES;
     [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
 }
 
-- (void) onVpadnInterstitialAdWillPresent:(UIView *)bannerView {
+/// 通知即將離開Application
+- (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
     
 }
 
-- (void) onVpadnInterstitialAdWillDismiss:(UIView *)bannerView {
+/// 通知廣告即將被開啟
+- (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
     
 }
 
-- (void) onVpadnInterstitialAdDismiss:(UIView *)bannerView {
-    NSLog(@"Interstitial did dismiss screen");
+/// 通知廣告已被關閉
+- (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
     self.actionButton.enabled = YES;
     [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
 }
 
-- (void) onVpadnInterstitialAdWillLeaveApplication:(UIView *)bannerView {
-    
-}
-
-- (void) onVpadnInterstitialAdClicked {
+/// 通知廣告已送出點擊事件
+- (void) onVpadnInterstitialClicked:(VpadnInterstitial *)interstitial {
     
 }
 

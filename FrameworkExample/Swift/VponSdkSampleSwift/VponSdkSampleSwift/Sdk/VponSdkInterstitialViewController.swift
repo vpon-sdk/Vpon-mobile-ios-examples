@@ -12,37 +12,29 @@ import VpadnSDKAdKit
 import AdSupport
 
 extension VponSdkInterstitialViewController : VpadnInterstitialDelegate {
-    func onVpadnInterstitialAdReceived(_ bannerView: UIView!) {
-        print("Received interstitial ad successfully")
+    func onVpadnInterstitialLoaded(_ interstitial: VpadnInterstitial) {
         actionButton.isEnabled = true
         actionButton.setTitle("show", for: .normal)
     }
     
-    func onVpadnInterstitialAdFailed(_ bannerView: UIView!) {
-        print("Failed to receive interstitail")
+    func onVpadnInterstitial(_ interstitial: VpadnInterstitial, failedToLoad error: Error) {
         actionButton.isEnabled = true
         actionButton.setTitle("request", for: .normal)
     }
     
-    func onVpadnInterstitialAdWillPresent(_ bannerView: UIView!) {
+    func onVpadnInterstitialWillOpen(_ interstitial: VpadnInterstitial) {
         
     }
     
-    func onVpadnInterstitialAdWillDismiss(_ bannerView: UIView!) {
+    func onVpadnInterstitialClosed(_ interstitial: VpadnInterstitial) {
         
     }
     
-    func onVpadnInterstitialAdDismiss(_ bannerView: UIView!) {
-        print("Interstitial did dismiss screen")
-        actionButton.isEnabled = true
-        actionButton.setTitle("request", for: .normal)
-    }
-    
-    func onVpadnInterstitialAdWillLeaveApplication(_ bannerView: UIView!) {
+    func onVpadnInterstitialClicked(_ interstitial: VpadnInterstitial) {
         
     }
     
-    func onVpadnInterstitialAdClicked() {
+    func onVpadnInterstitialWillLeaveApplication(_ interstitial: VpadnInterstitial) {
         
     }
 }

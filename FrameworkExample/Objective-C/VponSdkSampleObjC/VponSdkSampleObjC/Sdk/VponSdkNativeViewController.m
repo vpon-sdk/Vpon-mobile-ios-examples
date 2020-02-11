@@ -85,47 +85,38 @@
     [_nativeAd registerViewForInteraction:_contentView withViewController:self];
 }
 
-#pragma mark -
+#pragma mark - VpadnNativeAd Delegate
 
 /// 通知有廣告可供拉取 call back
-- (void) onVpadnNativeAdReceived:(VpadnNativeAd *)nativeAd {
+- (void) onVpadnNativeAdLoaded:(VpadnNativeAd *)nativeAd {
     _requestButton.enabled = YES;
     [self setNativeAd];
 }
 
 /// 通知拉取廣告失敗 call back
-- (void) onVpadnNativeAd:(VpadnNativeAd *)nativeAd didFailToReceiveAdWithError:(NSError *)error {
+- (void) onVpadnNativeAd:(VpadnNativeAd *)nativeAd failedToLoad:(NSError *)error {
+    
     _requestButton.enabled = YES;
 }
 
-/// 通知廣告被點擊 call back
-- (void) onVpadnNativeAdDidClicked:(VpadnNativeAd *)nativeAd {
+/// 通知即將離開Application
+- (void) onVpadnNativeAdWillLeaveApplication:(VpadnNativeAd *)nativeAd {
     
 }
 
-/// 通知離開publisher應用程式 call back
-- (void) onVpadnNativeAdLeaveApplication:(VpadnNativeAd *)nativeAd {
+/// 通知廣告已送出點擊事件
+- (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
     
 }
 
-/// 多媒體素材讀取成功
+#pragma mark - VpadnMediaView Delegate
+
 - (void) mediaViewDidLoad:(VpadnMediaView *)mediaView {
     
 }
 
-/// 多媒體素材讀取失敗
 - (void) mediaViewDidFailed:(VpadnMediaView *)mediaView error:(NSError *)error {
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -60,38 +60,32 @@
     [_vpadnSplash loadRequest:[self initialRequest]];
 }
 
-
 #pragma mark -
-/// 通知廣告已取得且呈現
-- (void)onVpadnSplashReceived:(nonnull VpadnSplash *)vpadnSplash {
+
+/// 通知有廣告可供拉取 call back
+- (void) onVpadnSplashLoaded:(VpadnSplash *)vpadnSplash {
     _requestButton.hidden = YES;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
-/// 通知廣告取得失敗
-- (void)onVpadnSplash:(nonnull VpadnSplash *)vpadnSplash didFailToReceiveAdWithError:(nullable NSError *)error{
+
+/// 通知拉取廣告失敗 call back
+- (void) onVpadnSplash:(VpadnSplash *)vpadnSplash failedToLoad:(NSError *)error {
     _requestButton.enabled = YES;
 }
-/// 通知可以關閉廣告
-- (void)onVpadnSplashAllowToDismiss:(nonnull VpadnSplash *)vpadnSplash{
+
+/// 通知廣告已送出點擊事件
+- (void) onVpadnSplashClicked:(VpadnSplash *)vpadnSplash {
+    
+}
+
+/// 通知即將離開Application
+- (void) onVpadnSplashWillLeaveApplication:(VpadnSplash *)vpadnSplash {
+    
+}
+
+/// 通知廣告被允許關閉
+- (void) onVpadnSplashAllowToClose:(VpadnSplash *)vpadnSplash {
     [self.navigationController popViewControllerAnimated:YES];
 }
-/// 通知廣告被點擊
-- (void)onVpadnSplashClicked:(nonnull VpadnSplash *)vpadnSplash{
-    
-}
-/// 通知即將離開App
-- (void)onVpadnSplashLeaveApplication:(nonnull VpadnSplash *)vpadnSplash{
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

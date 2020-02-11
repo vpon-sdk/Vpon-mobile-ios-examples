@@ -12,7 +12,11 @@ import VpadnSDKAdKit
 
 extension VponSdkNativeCustomTabCell : VpadnMediaViewDelegate {
     func mediaViewDidLoad(_ mediaView: VpadnMediaView) {
-        print("mediaViewDidLoad");
+        
+    }
+    
+    func mediaViewDidFailed(_ mediaView: VpadnMediaView, error: Error) {
+        
     }
 }
 

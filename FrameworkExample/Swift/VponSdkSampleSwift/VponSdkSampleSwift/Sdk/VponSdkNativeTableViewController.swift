@@ -16,28 +16,21 @@ let kRowStrideForAdCell = 10;
 let kDefaultCellIdentifier = "normalIdentifier";
 let kAdCellIdentifier = "adIdentifier";
 
-extension VponSdkNativeTableViewController: VpadnNativeAdsManagerDelegate {
-    func onVpadnNativeAdsReceived() {
-        print("Ads did loaded")
+extension VponSdkNativeTableViewController: VpadnNativeAdsManagerDelegate, VpadnNativeAdDelegate {
+    func onVpadnNativeAdsLoaded(_ adsManager: VpadnNativeAdsManager) {
         tableView.reloadData()
     }
     
-    func onVpadnNativeAdsFailedToLoadWithError(_ error: Error) {
-        print("Ads did fail with error \(error.localizedDescription)")
-    }
-}
-
-extension VponSdkNativeTableViewController: VpadnNativeAdDelegate {
-    func onVpadnNativeAdPresent(_ nativeAd: VpadnNativeAd) {
-        print("Native Present \(nativeAd)")
+    func onVpadnNativeAds(_ adsManager: VpadnNativeAdsManager, failedToLoad error: Error) {
+        
     }
     
-    func onVpadnNativeAdLeaveApplication(_ nativeAd: VpadnNativeAd) {
-        print("Native Leave Application \(nativeAd)")
+    func onVpadnNativeAdClicked(_ nativeAd: VpadnNativeAd) {
+        
     }
     
-    func onVpadnNativeAdDismiss(_ nativeAd: VpadnNativeAd) {
-        print("Native Dismiss \(nativeAd)")
+    func onVpadnNativeAdWillLeaveApplication(_ nativeAd: VpadnNativeAd) {
+        
     }
 }
 

@@ -58,28 +58,39 @@
 
 #pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
 
-- (void)onVpadnInterstitialAdReceived:(UIView *)bannerView{
+- (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didLoadAd:)]) {
         [self.delegate interstitialCustomEvent:self didLoadAd:self];
     }
 }
 
-- (void)onVpadnInterstitialAdFailed:(UIView *)bannerView {
-    NSError *error = [NSError errorWithDomain:@"com.vpon.vpadnsdk" code:-999 userInfo:@{NSLocalizedDescriptionKey:@"get VpadnInterstitialAdFailed"}];
+- (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
     if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didFailToLoadAdWithError:)]) {
         [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:error];
     }
 }
 
-- (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView{
-    MPLogAdEvent([MPLogEvent adDidDisappearForAdapter:NSStringFromClass(self.class)], nil);
+- (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
+    MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
+    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventWillAppear:)]) {
+        [self.delegate interstitialCustomEventWillAppear:self];
+    }
+}
+
+- (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
+    MPLogAdEvent([MPLogEvent adDidDismissModalForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventDidDisappear:)]) {
         [self.delegate interstitialCustomEventDidDisappear:self];
     }
-//    [UIApplication sharedApplication]
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+}
+
+- (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
+    MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
+    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventWillLeaveApplication:)]) {
+        [self.delegate interstitialCustomEventWillLeaveApplication:self];
+    }
 }
 
 @end

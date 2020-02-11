@@ -12,25 +12,20 @@ import VpadnSDKAdKit
 import AdSupport
 
 extension VponSdkBannerViewController : VpadnBannerDelegate {
-    func onVpadnAdReceived(_ bannerView: UIView!) {
-        self.loadBannerView.addSubview(bannerView)
+    func onVpadnAdLoaded(_ banner: VpadnBanner) {
+        self.loadBannerView.addSubview(banner.getVpadnAdView())
         self.requestButton.isEnabled = true
     }
     
-    func onVpadnAdFailed(_ bannerView: UIView!, didFailToReceiveAdWithError error: Error!) {
-        print("Failed to receive banner with error: \(error.localizedDescription))")
+    func onVpadnAd(_ banner: VpadnBanner, failedToLoad error: Error) {
         self.requestButton.isEnabled = true
     }
     
-    func onVpadnAdDidClicked(_ banner: VpadnBanner!) {
+    func onVpadnAdClicked(_ banner: VpadnBanner) {
         
     }
     
-    func onVpadnLeaveApplication(_ bannerView: UIView!) {
-        
-    }
-    
-    func onVpadnAdWillRefresh(_ banner: VpadnBanner!) {
+    func onVpadnAdWillLeaveApplication(_ banner: VpadnBanner) {
         
     }
 }

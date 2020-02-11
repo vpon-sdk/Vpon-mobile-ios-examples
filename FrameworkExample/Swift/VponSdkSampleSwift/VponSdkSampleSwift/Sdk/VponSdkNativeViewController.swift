@@ -13,33 +13,27 @@ import AdSupport
 
 extension VponSdkNativeViewController: VpadnNativeAdDelegate, VpadnMediaViewDelegate {
     
-    /// 通知有廣告可供拉取 call back
-    func onVpadnNativeAdReceived(_ nativeAd: VpadnNativeAd) {
+    func onVpadnNativeAdLoaded(_ nativeAd: VpadnNativeAd) {
         self.requestButton.isEnabled = true
         self.setNativeAd()
     }
     
-    /// 通知拉取廣告失敗 call back
-    func onVpadnNativeAd(_ nativeAd: VpadnNativeAd, didFailToReceiveAdWithError error: Error) {
+    func onVpadnNativeAd(_ nativeAd: VpadnNativeAd, failedToLoad error: Error) {
         self.requestButton.isEnabled = true
     }
     
-    /// 通知廣告被點擊 call back
-    func onVpadnNativeAdDidClicked(_ nativeAd: VpadnNativeAd) {
+    func onVpadnNativeAdClicked(_ nativeAd: VpadnNativeAd) {
         
     }
     
-    /// 通知離開publisher應用程式 call back
-    func onVpadnNativeAdLeaveApplication(_ nativeAd: VpadnNativeAd) {
+    func onVpadnNativeAdWillLeaveApplication(_ nativeAd: VpadnNativeAd) {
         
     }
     
-    /// 多媒體素材讀取成功
     func mediaViewDidLoad(_ mediaView: VpadnMediaView) {
         
     }
     
-    /// 多媒體素材讀取失敗
     func mediaViewDidFailed(_ mediaView: VpadnMediaView, error: Error) {
         
     }

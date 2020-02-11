@@ -12,25 +12,24 @@ import VpadnSDKAdKit
 import AdSupport
 
 extension VponSdkSplashViewController: VpadnSplashDelegate {
-    /// 通知廣告已取得且呈現
-    func onVpadnSplashReceived(_ vpadnSplash: VpadnSplash) {
+    func onVpadnSplashLoaded(_ vpadnSplash: VpadnSplash) {
         self.requestButton.isHidden = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    /// 通知廣告取得失敗
-    func onVpadnSplash(_ vpadnSplash: VpadnSplash, didFailToReceiveAdWithError error: Error?) {
+    
+    func onVpadnSplash(_ vpadnSplash: VpadnSplash, failedToLoad error: Error) {
         self.requestButton.isEnabled = true
     }
-    /// 通知可以關閉廣告
-    func onVpadnSplashAllow(toDismiss vpadnSplash: VpadnSplash) {
+    
+    func onVpadnSplashAllow(toClose vpadnSplash: VpadnSplash) {
         self.navigationController?.popViewController(animated: true)
     }
-    /// 通知廣告被點擊
-    func onVpadnSplashClicked(_ vpadnSplash: VpadnSplash) {
+    
+    func onVpadnSplashWillLeaveApplication(_ vpadnSplash: VpadnSplash) {
         
     }
-    /// 通知即將離開App
-    func onVpadnSplashLeaveApplication(_ vpadnSplash: VpadnSplash) {
+    
+    func onVpadnSplashClicked(_ vpadnSplash: VpadnSplash) {
         
     }
 }

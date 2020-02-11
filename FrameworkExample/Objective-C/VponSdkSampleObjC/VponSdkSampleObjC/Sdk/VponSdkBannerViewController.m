@@ -65,26 +65,29 @@
 
 #pragma mark - Vpadn Banner Delegate
 
-- (void)onVpadnAdReceived:(UIView *)bannerView {
-    NSLog(@"Received banner ad successfully");
-    [self.loadBannerView addSubview:bannerView];
+/// 通知有廣告可供拉取 call back
+- (void) onVpadnAdLoaded:(VpadnBanner *)banner {
+    [self.loadBannerView addSubview:banner.getVpadnAdView];
     self.requestButton.enabled = YES;
 }
 
-- (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"Failed to receive banner with error: %@", [error localizedFailureReason]);
+/// 通知拉取廣告失敗 call back
+- (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
     self.requestButton.enabled = YES;
 }
 
-- (void)onVpadnAdDidClicked:(VpadnBanner *)banner {
+/// 通知即將離開 application
+- (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
     
 }
 
-- (void)onVpadnLeaveApplication:(UIView *)bannerView {
+/// 通知廣告已送出點擊事件
+- (void) onVpadnAdClicked:(VpadnBanner *)banner {
     
 }
 
-- (void)onVpadnAdWillRefresh:(VpadnBanner *)banner {
+/// 通知廣告將自動 refresh
+- (void) onVpadnAdRefreshed:(VpadnBanner *)banner {
     
 }
 

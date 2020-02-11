@@ -43,10 +43,7 @@ static const NSInteger VpadnNoFillErrorCode = -25;
 
 #pragma mark - VpadnNativeAdDelegate
 
-/**
- 通知拉取廣告成功pre-fetch完成 call back
- */
-- (void)onVpadnNativeAdReceived:(VpadnNativeAd *)nativeAd {
+- (void) onVpadnNativeAdLoaded:(VpadnNativeAd *)nativeAd {
     MPVponNativeAdAdapter  *adAdapter = [[MPVponNativeAdAdapter alloc] initWithNativeAd:nativeAd];
     MPNativeAd *interfaceAd = [[MPNativeAd alloc] initWithAdAdapter:adAdapter];
     
@@ -69,15 +66,12 @@ static const NSInteger VpadnNoFillErrorCode = -25;
     }];
 }
 
-/**
- 通知拉取廣告失敗 call back
- */
-- (void)onVpadnNativeAd:(VpadnNativeAd *)nativeAd didFailToReceiveAdWithError:(NSError *)error {
+- (void) onVpadnNativeAd:(VpadnNativeAd *)nativeAd failedToLoad:(NSError *)error {
     if (self.delegate && [self.delegate respondsToSelector:@selector(nativeCustomEvent:didFailToLoadAdWithError:)]) {
         if (error.code == VpadnNoFillErrorCode) {
             [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForNoInventory()];
         } else {
-            [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidAdServerResponse([NSString stringWithFormat:@"Vpadn ad load error: %li", error.code])];
+            [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForInvalidAdServerResponse([NSString stringWithFormat:@"Vpadn ad load error: %li", (long)error.code])];
         }
     }
 }

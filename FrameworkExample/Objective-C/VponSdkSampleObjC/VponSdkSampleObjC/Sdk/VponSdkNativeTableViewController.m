@@ -73,27 +73,24 @@ static NSString *const kAdCellIdentifier = @"adIdentifier";
     [_adsManager loadRequest:[self initialRequest]];
 }
 
+#pragma mark - VpadnNativeAdsManager Delegate
 
-#pragma mark - VpadnNativeAdsManagerDelegate
-
-- (void)onVpadnNativeAdsReceived {
-    NSLog(@"Ads did loaded");
+- (void) onVpadnNativeAdsLoaded:(VpadnNativeAdsManager *)adsManager {
     [self.tableView reloadData];
 }
 
-- (void)onVpadnNativeAdsFailedToLoadWithError:(NSError *)error {
-    NSLog(@"Ads did fail with error %@", [error localizedDescription]);
+- (void) onVpadnNativeAds:(VpadnNativeAdsManager *)adsManager failedToLoad:(NSError *)error {
+    
 }
 
-#pragma mark - VpadnNativeAdDelegate
-- (void)onVpadnNativeAdPresent:(VpadnNativeAd *)nativeAd {
-    NSLog(@"Native Present %@", nativeAd);
+#pragma mark - VpadnNativeAd Delegate
+
+- (void) onVpadnNativeAdWillLeaveApplication:(VpadnNativeAd *)nativeAd {
+    
 }
-- (void)onVpadnNativeAdLeaveApplication:(VpadnNativeAd *)nativeAd {
-    NSLog(@"Native Leave Application %@", nativeAd);
-}
-- (void)onVpadnNativeAdDismiss:(VpadnNativeAd *)nativeAd {
-    NSLog(@"Native Dismiss %@", nativeAd);
+
+- (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -123,15 +120,5 @@ static NSString *const kAdCellIdentifier = @"adIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

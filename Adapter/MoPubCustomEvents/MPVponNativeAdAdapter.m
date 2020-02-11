@@ -30,11 +30,11 @@
         NSNumber *starRating = nil;
 
         // Normalize star rating to 5 stars.
-        if (_vpadnNativeAd.starRating.scale != 0) {
+        if (_vpadnNativeAd.ratingScale!= 0) {
             CGFloat ratio = 0.0f;
             
-            ratio = kUniversalStarRatingScale / nativeAd.starRating.scale;
-            starRating = [NSNumber numberWithFloat:ratio * nativeAd.starRating.value];
+            ratio = kUniversalStarRatingScale / nativeAd.ratingScale;
+            starRating = [NSNumber numberWithFloat:ratio * nativeAd.ratingValue];
         }
 
         NSMutableDictionary *properties = [NSMutableDictionary dictionary];
@@ -99,16 +99,13 @@
 }
 
 #pragma mark - VpadnNativeAdDelegate
-- (void)onVpadnNativeAdPresent:(VpadnNativeAd *)nativeAd {
-    [self.delegate nativeAdWillPresentModalForAdapter:self];
-}
 
-- (void)onVpadnNativeAdLeaveApplication:(VpadnNativeAd *)nativeAd {
+- (void) onVpadnNativeAdWillLeaveApplication:(VpadnNativeAd *)nativeAd {
     [self.delegate nativeAdWillLeaveApplicationFromAdapter:self];
 }
 
-- (void)onVpadnNativeAdDismiss:(VpadnNativeAd *)nativeAd {
-    [self.delegate nativeAdDidDismissModalForAdapter:self];
+- (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
+    [self.delegate nativeAdDidClick:self];
 }
 
 @end
