@@ -28,6 +28,10 @@ extension VponSdkBannerViewController : VpadnBannerDelegate {
     func onVpadnAdWillLeaveApplication(_ banner: VpadnBanner) {
         
     }
+    
+    func onVpadnAdRefreshed(_ banner: VpadnBanner) {
+        
+    }
 }
 
 class VponSdkBannerViewController: UIViewController {
