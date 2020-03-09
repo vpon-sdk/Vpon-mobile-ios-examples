@@ -29,30 +29,39 @@
     return self;
 }
 
+- (VpadnAdRequest *) initialRequest {
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    return request;
+}
+
 - (void) loadBanner {
-    _vpadnBanner = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeSmartBannerPortrait origin:CGPointZero];
     NSDictionary *customData = [self parseCustomData:self.network.customClassData];
-    _vpadnBanner.strBannerId = customData[@"BANNER_ID"];
+    
+    VpadnAdSize adSize = VpadnAdSizeSmartBannerPortrait;
+    if (CGSizeEqualToSize(self.somaBannerSize, VpadnAdSizeMediumRectangle.size) || (self.somaBannerSize.height == 250.0 && self.somaBannerSize.width >= 300)) {
+        adSize = VpadnAdSizeMediumRectangle;
+    } else if (CGSizeEqualToSize(self.somaBannerSize, VpadnAdSizeFullBanner.size)) {
+        adSize = VpadnAdSizeFullBanner;
+    } else if (CGSizeEqualToSize(self.somaBannerSize, VpadnAdSizeLeaderboard.size)) {
+        adSize = VpadnAdSizeLeaderboard;
+    } else {
+        adSize = VpadnAdSizeBanner;
+    }
+    
+    _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:customData[@"BANNER_ID"] adSize:adSize];
     _vpadnBanner.delegate = self;
-    _vpadnBanner.platform = @"TW";
-    [_vpadnBanner setAdAutoRefresh:YES];
-    [_vpadnBanner setLocationOnOff:YES];
-    [_vpadnBanner setRootViewController:[super rootViewController]];
-    [_vpadnBanner startGetAd:@[]];
+    [_vpadnBanner loadRequest:[self initialRequest]];
 }
 
 - (void)loadInterstitial{
-    _vpadnInterstitial = [[VpadnInterstitial alloc] init];
     NSDictionary *customData = [self parseCustomData:self.network.customClassData];
-    _vpadnInterstitial.strBannerId = customData[@"BANNER_ID"];
-    _vpadnInterstitial.platform = @"TW";
+    _vpadnInterstitial = [[VpadnInterstitial alloc] initWithLicenseKey:customData[@"BANNER_ID"]];
     _vpadnInterstitial.delegate = self;
-    [_vpadnInterstitial setLocationOnOff:YES];
-    [_vpadnInterstitial getInterstitial:@[]];
+    [_vpadnInterstitial loadRequest:[self initialRequest]];
 }
 
-- (void)presentInterstitial{
-    [_vpadnInterstitial show];
+- (void)presentInterstitial {
+    [_vpadnInterstitial showFromRootViewController:[self rootViewController]];
 }
 
 - (NSDictionary *) parseCustomData:(NSString *)string {
@@ -68,44 +77,52 @@
 
 #pragma mark - Vpadn Banner Delegate
 
-- (void)onVpadnAdReceived:(UIView *)bannerView {
-    [self adLoadedWithView:bannerView];
+- (void) onVpadnAdLoaded:(VpadnBanner *)banner {
+    [self adLoadedWithView:[banner getVpadnAdView]];
 }
 
-- (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
+- (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
     [self adLoadFailedWithError:error];
 }
 
-- (void)onVpadnPresent:(UIView *)bannerView {
+- (void) onVpadnAdWillOpen:(VpadnBanner *)banner {
     [self adWillPresentFullscreen];
 }
 
-- (void)onVpadnDismiss:(UIView *)bannerView {
+- (void) onVpadnAdClosed:(VpadnBanner *)banner {
     [self adDidDismissFullscreen];
 }
 
-- (void)onVpadnLeaveApplication:(UIView *)bannerView {
+- (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
     [self adWillLeaveApplication];
 }
 
 #pragma mark - Vpadn Interstitial Delegate
 
-- (void)onVpadnInterstitialAdReceived:(UIView *)bannerView {
+- (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     [self adLoadedWithView:nil];
 }
 
-- (void)onVpadnInterstitialAdFailed:(UIView *)bannerView {
+- (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
     [self adLoadFailedWithError:nil];
 }
 
-- (void)onVpadnInterstitialAdDismiss:(UIView *)bannerView {
+- (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
+    [self adWillPresentFullscreen];
+}
+
+- (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
     [self adDidDismissFullscreen];
 }
 
-- (void)onVpadnInterstitialAdClicked {
+- (void) onVpadnInterstitialClicked:(VpadnInterstitial *)interstitial {
     if ([self.delegate respondsToSelector:@selector(mediationPluginClicked:)]) {
         [self.delegate mediationPluginClicked:self];
     }
+}
+
+- (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
+    [self adWillLeaveApplication];
 }
 
 @end

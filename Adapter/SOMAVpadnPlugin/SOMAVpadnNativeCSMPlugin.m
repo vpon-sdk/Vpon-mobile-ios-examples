@@ -28,15 +28,16 @@ static NSMutableDictionary *adChoicesViews = nil;
     return self;
 }
 
-- (void)dealloc{
-    
+- (VpadnAdRequest *) initialRequest {
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    return request;
 }
 
 - (void) load {
     NSDictionary *customData = [self parseCustomData:self.network.customClassData];
-    _vponNativeAd = [[VpadnNativeAd alloc] initWithBannerID:customData[@"BANNER_ID"] platform:@"TW"];
+    _vponNativeAd = [[VpadnNativeAd alloc] initWithLicenseKey:customData[@"BANNER_ID"]];
     _vponNativeAd.delegate = self;
-    [_vponNativeAd loadAd];
+    [_vponNativeAd loadRequest:[self initialRequest]];
 }
 
 - (NSDictionary *) parseCustomData:(NSString *)string {
@@ -56,21 +57,20 @@ static NSMutableDictionary *adChoicesViews = nil;
 
 #pragma mark VpadnNativeAdDelegate
 
-- (void)onVpadnNativeAdReceived:(VpadnNativeAd *)nativeAd {
-    SOMANativeAdDTO *dto = [SOMANativeAdDTO new];
-    dto.iconImageURL = nativeAd.icon.url;
-    dto.mainImageURL = nativeAd.coverImage.url;
-    dto.callToAction = nativeAd.callToAction;
-    dto.title = nativeAd.title;
-    dto.text = nativeAd.body;
-    dto.starrating = 5 * nativeAd.starRating.value / nativeAd.starRating.scale;
+- (void) onVpadnNativeAdLoaded:(VpadnNativeAd *)nativeAd {
+    SOMANativeAdObject *object = [SOMANativeAdObject nativeAdObjectWithURL:nativeAd.coverImage.url
+                                                                     title:nativeAd.title
+                                                           descriptionText:nativeAd.body
+                                                                   CTAText:nativeAd.callToAction
+                                                                    rating:5 * nativeAd.ratingValue / nativeAd.ratingScale];
+    object.mediaView = [[VpadnMediaView alloc] initWithNativeAd:nativeAd];
     
-    if ([self.csmDelegate respondsToSelector:@selector(nativeCSMPluginDidLoad:withDTO:)]) {
-        [self.csmDelegate nativeCSMPluginDidLoad:self withDTO:dto];
+    if ([self.csmDelegate respondsToSelector:@selector(nativeCSMPluginDidLoad:withObject:)]) {
+        [self.csmDelegate nativeCSMPluginDidLoad:self withObject:object];
     }
 }
 
-- (void)onVpadnNativeAd:(VpadnNativeAd *)nativeAd didFailToReceiveAdWithError:(NSError *)error {
+- (void) onVpadnNativeAd:(VpadnNativeAd *)nativeAd failedToLoad:(NSError *)error {
     if ([self.csmDelegate respondsToSelector:@selector(nativeCSMPluginDidFail:)]) {
         [self.csmDelegate nativeCSMPluginDidFail:self];
     }

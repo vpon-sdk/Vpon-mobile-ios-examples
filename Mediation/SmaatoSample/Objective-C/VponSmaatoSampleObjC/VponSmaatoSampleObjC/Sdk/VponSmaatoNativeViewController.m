@@ -17,7 +17,7 @@
 @property IBOutlet UILabel *nativeAdTitle;
 @property IBOutlet UILabel *nativeAdDescription;
 @property IBOutlet UIImageView *nativeAdIcon;
-@property IBOutlet UIImageView *nativeAdImage;
+@property IBOutlet UIView *nativeAdImage;
 
 @property SOMANativeAd* nativeAd;
 
@@ -36,7 +36,6 @@
     nativeAd.delegate = self;
     nativeAd.labelForTitle = self.nativeAdTitle;
     nativeAd.labelForDescription = self.nativeAdDescription;
-    nativeAd.imageViewForIcon = self.nativeAdIcon;
     nativeAd.viewForMainImage = self.nativeAdImage;
     [nativeAd load];
     self.nativeAd = nativeAd;
