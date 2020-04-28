@@ -16,6 +16,13 @@
 
 @property (nonatomic, readonly) VpadnNativeAd *vpadnNativeAd;
 
+@property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, weak) UIView *adContainer;
+
+@property (nonatomic, weak) NSArray *adContentViews;
+
+
 @end
 
 @implementation MPVponNativeAdAdapter
@@ -89,13 +96,40 @@
     return YES;
 }
 
-- (void)willAttachToView:(UIView *)view withAdContentViews:(NSArray *)adContentViews {
-    [self.vpadnNativeAd registerViewForInteraction:view withViewController:[self.delegate viewControllerForPresentingModalView] withClickableViews:adContentViews];
+- (void) registerViewForInteraction {
+    if (_adContainer.superview) {
+        [self cancelRegisterTimer];
+        if (_adContentViews) {
+            [self.vpadnNativeAd registerViewForInteraction:_adContainer withViewController:[self.delegate viewControllerForPresentingModalView] withClickableViews:_adContentViews];
+        } else {
+            [self.vpadnNativeAd registerViewForInteraction:_adContainer withViewController:[self.delegate viewControllerForPresentingModalView]];
+        }
+    } else {
+        [self startRegisterTimer];
+    }
 }
 
-- (void)willAttachToView:(UIView *)view
-{
-    [self.vpadnNativeAd registerViewForInteraction:view withViewController:[self.delegate viewControllerForPresentingModalView]];
+- (void) cancelRegisterTimer {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+- (void) startRegisterTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(registerViewForInteraction) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)willAttachToView:(UIView *)view withAdContentViews:(NSArray *)adContentViews {
+    _adContainer = view;
+    _adContentViews = adContentViews;
+    [self startRegisterTimer];
+}
+
+- (void)willAttachToView:(UIView *)view {
+    _adContainer = view;
+    [self startRegisterTimer];
 }
 
 #pragma mark - VpadnNativeAdDelegate

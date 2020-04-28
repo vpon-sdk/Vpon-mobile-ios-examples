@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06303381221D4194005AE96B /* VponAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0630337F221D4193005AE96B /* VponAdapterConfiguration.m */; };
+		068BC3FD2457D5C300483B06 /* MPVponNativeCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3F12457D5C200483B06 /* MPVponNativeCustomEvent.m */; };
+		068BC3FE2457D5C300483B06 /* MPVponNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068BC3F52457D5C300483B06 /* MPVponNativeAdView.xib */; };
+		068BC3FF2457D5C300483B06 /* VponAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3F62457D5C300483B06 /* VponAdapterConfiguration.m */; };
+		068BC4002457D5C300483B06 /* MPVponNativeAdAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3F82457D5C300483B06 /* MPVponNativeAdAdapter.m */; };
+		068BC4012457D5C300483B06 /* MPVponInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3F92457D5C300483B06 /* MPVponInterstitialCustomEvent.m */; };
+		068BC4022457D5C300483B06 /* MPVponBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3FA2457D5C300483B06 /* MPVponBannerCustomEvent.m */; };
+		068BC4032457D5C300483B06 /* MPVponNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3FC2457D5C300483B06 /* MPVponNativeAdView.m */; };
 		06B4BA8C1EEF79FB00888622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BA8B1EEF79FB00888622 /* main.m */; };
 		06B4BA8F1EEF79FB00888622 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BA8E1EEF79FB00888622 /* AppDelegate.m */; };
 		06B4BA951EEF79FB00888622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B4BA931EEF79FB00888622 /* Main.storyboard */; };
 		06B4BA971EEF79FB00888622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B4BA961EEF79FB00888622 /* Assets.xcassets */; };
 		06B4BA9A1EEF79FB00888622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B4BA981EEF79FB00888622 /* LaunchScreen.storyboard */; };
-		06B4BAAA1EEF7AF400888622 /* MPVponNativeAdAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAA41EEF7AF400888622 /* MPVponNativeAdAdapter.m */; };
-		06B4BAAB1EEF7AF400888622 /* MPVponNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAA61EEF7AF400888622 /* MPVponNativeAdView.m */; };
-		06B4BAAC1EEF7AF400888622 /* MPVponNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B4BAA71EEF7AF400888622 /* MPVponNativeAdView.xib */; };
-		06B4BAAD1EEF7AF400888622 /* MPVponNativeCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAA91EEF7AF400888622 /* MPVponNativeCustomEvent.m */; };
-		06B4BAB31EEF7B1F00888622 /* MPVponBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAB01EEF7B1F00888622 /* MPVponBannerCustomEvent.m */; };
-		06B4BAB41EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAB21EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m */; };
 		06B4BAB71EEF7B9C00888622 /* VponMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAB61EEF7B9C00888622 /* VponMenuTableViewController.m */; };
 		06B4BABA1EEF7C4600888622 /* VponMopubBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAB91EEF7C4600888622 /* VponMopubBannerViewController.m */; };
 		06B4BABD1EEF7C5800888622 /* VponMopubInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BABC1EEF7C5800888622 /* VponMopubInterstitialViewController.m */; };
@@ -27,8 +27,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0630337F221D4193005AE96B /* VponAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdapterConfiguration.m; sourceTree = "<group>"; };
-		06303380221D4194005AE96B /* VponAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdapterConfiguration.h; sourceTree = "<group>"; };
+		068BC3F02457D5C200483B06 /* MPVponNativeAdAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeAdAdapter.h; sourceTree = "<group>"; };
+		068BC3F12457D5C200483B06 /* MPVponNativeCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeCustomEvent.m; sourceTree = "<group>"; };
+		068BC3F22457D5C200483B06 /* MPVponBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponBannerCustomEvent.h; sourceTree = "<group>"; };
+		068BC3F32457D5C300483B06 /* MPVponInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponInterstitialCustomEvent.h; sourceTree = "<group>"; };
+		068BC3F42457D5C300483B06 /* MPVponNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeAdView.h; sourceTree = "<group>"; };
+		068BC3F52457D5C300483B06 /* MPVponNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVponNativeAdView.xib; sourceTree = "<group>"; };
+		068BC3F62457D5C300483B06 /* VponAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdapterConfiguration.m; sourceTree = "<group>"; };
+		068BC3F72457D5C300483B06 /* MPVponNativeCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeCustomEvent.h; sourceTree = "<group>"; };
+		068BC3F82457D5C300483B06 /* MPVponNativeAdAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdAdapter.m; sourceTree = "<group>"; };
+		068BC3F92457D5C300483B06 /* MPVponInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponInterstitialCustomEvent.m; sourceTree = "<group>"; };
+		068BC3FA2457D5C300483B06 /* MPVponBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponBannerCustomEvent.m; sourceTree = "<group>"; };
+		068BC3FB2457D5C300483B06 /* VponAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdapterConfiguration.h; sourceTree = "<group>"; };
+		068BC3FC2457D5C300483B06 /* MPVponNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdView.m; sourceTree = "<group>"; };
 		06B4BA871EEF79FB00888622 /* VponMopubSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponMopubSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B4BA8B1EEF79FB00888622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06B4BA8D1EEF79FB00888622 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,17 +48,6 @@
 		06B4BA961EEF79FB00888622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06B4BA991EEF79FB00888622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06B4BA9B1EEF79FB00888622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06B4BAA31EEF7AF400888622 /* MPVponNativeAdAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeAdAdapter.h; sourceTree = "<group>"; };
-		06B4BAA41EEF7AF400888622 /* MPVponNativeAdAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdAdapter.m; sourceTree = "<group>"; };
-		06B4BAA51EEF7AF400888622 /* MPVponNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeAdView.h; sourceTree = "<group>"; };
-		06B4BAA61EEF7AF400888622 /* MPVponNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdView.m; sourceTree = "<group>"; };
-		06B4BAA71EEF7AF400888622 /* MPVponNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVponNativeAdView.xib; sourceTree = "<group>"; };
-		06B4BAA81EEF7AF400888622 /* MPVponNativeCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeCustomEvent.h; sourceTree = "<group>"; };
-		06B4BAA91EEF7AF400888622 /* MPVponNativeCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeCustomEvent.m; sourceTree = "<group>"; };
-		06B4BAAF1EEF7B1F00888622 /* MPVponBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponBannerCustomEvent.h; sourceTree = "<group>"; };
-		06B4BAB01EEF7B1F00888622 /* MPVponBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponBannerCustomEvent.m; sourceTree = "<group>"; };
-		06B4BAB11EEF7B1F00888622 /* MPVponInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponInterstitialCustomEvent.h; sourceTree = "<group>"; };
-		06B4BAB21EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponInterstitialCustomEvent.m; sourceTree = "<group>"; };
 		06B4BAB51EEF7B9C00888622 /* VponMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponMenuTableViewController.h; sourceTree = "<group>"; };
 		06B4BAB61EEF7B9C00888622 /* VponMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponMenuTableViewController.m; sourceTree = "<group>"; };
 		06B4BAB81EEF7C4600888622 /* VponMopubBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponMopubBannerViewController.h; sourceTree = "<group>"; };
@@ -73,6 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		068BC3EF2457D5C200483B06 /* MopubAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				068BC3F02457D5C200483B06 /* MPVponNativeAdAdapter.h */,
+				068BC3F82457D5C300483B06 /* MPVponNativeAdAdapter.m */,
+				068BC3F72457D5C300483B06 /* MPVponNativeCustomEvent.h */,
+				068BC3F12457D5C200483B06 /* MPVponNativeCustomEvent.m */,
+				068BC3F32457D5C300483B06 /* MPVponInterstitialCustomEvent.h */,
+				068BC3F92457D5C300483B06 /* MPVponInterstitialCustomEvent.m */,
+				068BC3F22457D5C200483B06 /* MPVponBannerCustomEvent.h */,
+				068BC3FA2457D5C300483B06 /* MPVponBannerCustomEvent.m */,
+				068BC3F42457D5C300483B06 /* MPVponNativeAdView.h */,
+				068BC3F52457D5C300483B06 /* MPVponNativeAdView.xib */,
+				068BC3F62457D5C300483B06 /* VponAdapterConfiguration.m */,
+				068BC3FB2457D5C300483B06 /* VponAdapterConfiguration.h */,
+				068BC3FC2457D5C300483B06 /* MPVponNativeAdView.m */,
+			);
+			path = MopubAdapter;
+			sourceTree = "<group>";
+		};
 		06B4BA7E1EEF79FB00888622 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +118,7 @@
 				06B4BA8E1EEF79FB00888622 /* AppDelegate.m */,
 				06B4BAB51EEF7B9C00888622 /* VponMenuTableViewController.h */,
 				06B4BAB61EEF7B9C00888622 /* VponMenuTableViewController.m */,
-				06303380221D4194005AE96B /* VponAdapterConfiguration.h */,
-				0630337F221D4193005AE96B /* VponAdapterConfiguration.m */,
-				06B4BAAE1EEF7B1F00888622 /* MPVponCustomEvents */,
-				06B4BAA21EEF7AF400888622 /* MPVponNativeAdapter */,
+				068BC3EF2457D5C200483B06 /* MopubAdapter */,
 				06B4BAA11EEF7A9E00888622 /* Mopub */,
 				06B4BA931EEF79FB00888622 /* Main.storyboard */,
 				06B4BA961EEF79FB00888622 /* Assets.xcassets */,
@@ -131,31 +148,6 @@
 				06B4BABF1EEF7C6700888622 /* VponMopubNativeViewController.m */,
 			);
 			path = Mopub;
-			sourceTree = "<group>";
-		};
-		06B4BAA21EEF7AF400888622 /* MPVponNativeAdapter */ = {
-			isa = PBXGroup;
-			children = (
-				06B4BAA31EEF7AF400888622 /* MPVponNativeAdAdapter.h */,
-				06B4BAA41EEF7AF400888622 /* MPVponNativeAdAdapter.m */,
-				06B4BAA51EEF7AF400888622 /* MPVponNativeAdView.h */,
-				06B4BAA61EEF7AF400888622 /* MPVponNativeAdView.m */,
-				06B4BAA71EEF7AF400888622 /* MPVponNativeAdView.xib */,
-				06B4BAA81EEF7AF400888622 /* MPVponNativeCustomEvent.h */,
-				06B4BAA91EEF7AF400888622 /* MPVponNativeCustomEvent.m */,
-			);
-			path = MPVponNativeAdapter;
-			sourceTree = "<group>";
-		};
-		06B4BAAE1EEF7B1F00888622 /* MPVponCustomEvents */ = {
-			isa = PBXGroup;
-			children = (
-				06B4BAAF1EEF7B1F00888622 /* MPVponBannerCustomEvent.h */,
-				06B4BAB01EEF7B1F00888622 /* MPVponBannerCustomEvent.m */,
-				06B4BAB11EEF7B1F00888622 /* MPVponInterstitialCustomEvent.h */,
-				06B4BAB21EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m */,
-			);
-			path = MPVponCustomEvents;
 			sourceTree = "<group>";
 		};
 		06BEE5632A1F6BBBBA722DDF /* Pods */ = {
@@ -219,6 +211,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -239,7 +232,7 @@
 			files = (
 				06B4BA9A1EEF79FB00888622 /* LaunchScreen.storyboard in Resources */,
 				06B4BA971EEF79FB00888622 /* Assets.xcassets in Resources */,
-				06B4BAAC1EEF7AF400888622 /* MPVponNativeAdView.xib in Resources */,
+				068BC3FE2457D5C300483B06 /* MPVponNativeAdView.xib in Resources */,
 				06B4BA951EEF79FB00888622 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,15 +246,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VponMopubSampleObjC/Pods-VponMopubSampleObjC-resources.sh",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Internal/Common/MPAdBrowserController.xib",
+				"${PODS_ROOT}/Target Support Files/Pods-VponMopubSampleObjC/Pods-VponMopubSampleObjC-resources.sh",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@2x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@3x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@2x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCountdownTimer.html",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@2x.png",
 				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@3x.png",
@@ -279,14 +270,12 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdBrowserController.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCountdownTimer.html",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@3x.png",
@@ -304,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VponMopubSampleObjC/Pods-VponMopubSampleObjC-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponMopubSampleObjC/Pods-VponMopubSampleObjC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97E0CA04DF7ACFA9A78E928D /* [CP] Check Pods Manifest.lock */ = {
@@ -332,18 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06B4BAAB1EEF7AF400888622 /* MPVponNativeAdView.m in Sources */,
+				068BC3FD2457D5C300483B06 /* MPVponNativeCustomEvent.m in Sources */,
 				06B4BA8F1EEF79FB00888622 /* AppDelegate.m in Sources */,
-				06B4BAB41EEF7B1F00888622 /* MPVponInterstitialCustomEvent.m in Sources */,
+				068BC3FF2457D5C300483B06 /* VponAdapterConfiguration.m in Sources */,
 				06B4BABD1EEF7C5800888622 /* VponMopubInterstitialViewController.m in Sources */,
-				06B4BAB31EEF7B1F00888622 /* MPVponBannerCustomEvent.m in Sources */,
-				06303381221D4194005AE96B /* VponAdapterConfiguration.m in Sources */,
 				06B4BAC01EEF7C6700888622 /* VponMopubNativeViewController.m in Sources */,
 				06B4BA8C1EEF79FB00888622 /* main.m in Sources */,
-				06B4BAAD1EEF7AF400888622 /* MPVponNativeCustomEvent.m in Sources */,
+				068BC4022457D5C300483B06 /* MPVponBannerCustomEvent.m in Sources */,
 				06B4BABA1EEF7C4600888622 /* VponMopubBannerViewController.m in Sources */,
-				06B4BAAA1EEF7AF400888622 /* MPVponNativeAdAdapter.m in Sources */,
 				06B4BAB71EEF7B9C00888622 /* VponMenuTableViewController.m in Sources */,
+				068BC4002457D5C300483B06 /* MPVponNativeAdAdapter.m in Sources */,
+				068BC4032457D5C300483B06 /* MPVponNativeAdView.m in Sources */,
+				068BC4012457D5C300483B06 /* MPVponInterstitialCustomEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

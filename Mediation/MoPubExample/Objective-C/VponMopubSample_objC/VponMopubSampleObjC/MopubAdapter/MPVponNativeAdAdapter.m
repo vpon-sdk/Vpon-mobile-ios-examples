@@ -16,6 +16,13 @@
 
 @property (nonatomic, readonly) VpadnNativeAd *vpadnNativeAd;
 
+@property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, weak) UIView *adContainer;
+
+@property (nonatomic, weak) NSArray *adContentViews;
+
+
 @end
 
 @implementation MPVponNativeAdAdapter
@@ -30,11 +37,11 @@
         NSNumber *starRating = nil;
 
         // Normalize star rating to 5 stars.
-        if (_vpadnNativeAd.starRating.scale != 0) {
+        if (_vpadnNativeAd.ratingScale!= 0) {
             CGFloat ratio = 0.0f;
             
-            ratio = kUniversalStarRatingScale / nativeAd.starRating.scale;
-            starRating = [NSNumber numberWithFloat:ratio * nativeAd.starRating.value];
+            ratio = kUniversalStarRatingScale / nativeAd.ratingScale;
+            starRating = [NSNumber numberWithFloat:ratio * nativeAd.ratingValue];
         }
 
         NSMutableDictionary *properties = [NSMutableDictionary dictionary];
@@ -85,27 +92,54 @@
     return nil;
 }
 
-- (BOOL)enableThirdPartyClickTracking
-{
+- (BOOL)enableThirdPartyClickTracking {
     return YES;
 }
 
-- (void)willAttachToView:(UIView *)view
-{
-    [self.vpadnNativeAd registerViewForInteraction:view withViewController:[self.delegate viewControllerForPresentingModalView]];
+- (void) registerViewForInteraction {
+    if (_adContainer.superview) {
+        [self cancelRegisterTimer];
+        if (_adContentViews) {
+            [self.vpadnNativeAd registerViewForInteraction:_adContainer withViewController:[self.delegate viewControllerForPresentingModalView] withClickableViews:_adContentViews];
+        } else {
+            [self.vpadnNativeAd registerViewForInteraction:_adContainer withViewController:[self.delegate viewControllerForPresentingModalView]];
+        }
+    } else {
+        [self startRegisterTimer];
+    }
+}
+
+- (void) cancelRegisterTimer {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+- (void) startRegisterTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(registerViewForInteraction) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)willAttachToView:(UIView *)view withAdContentViews:(NSArray *)adContentViews {
+    _adContainer = view;
+    _adContentViews = adContentViews;
+    [self startRegisterTimer];
+}
+
+- (void)willAttachToView:(UIView *)view {
+    _adContainer = view;
+    [self startRegisterTimer];
 }
 
 #pragma mark - VpadnNativeAdDelegate
-- (void)onVpadnNativeAdPresent:(VpadnNativeAd *)nativeAd {
-    [self.delegate nativeAdWillPresentModalForAdapter:self];
-}
 
-- (void)onVpadnNativeAdLeaveApplication:(VpadnNativeAd *)nativeAd {
+- (void) onVpadnNativeAdWillLeaveApplication:(VpadnNativeAd *)nativeAd {
     [self.delegate nativeAdWillLeaveApplicationFromAdapter:self];
 }
 
-- (void)onVpadnNativeAdDismiss:(VpadnNativeAd *)nativeAd {
-    [self.delegate nativeAdDidDismissModalForAdapter:self];
+- (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
+    [self.delegate nativeAdDidClick:self];
 }
 
 @end

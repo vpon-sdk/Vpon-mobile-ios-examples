@@ -24,10 +24,12 @@
     [config initializeSdk];
     
     // Override point for customization after application launch.
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"AD_UNIT_ID"];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"vpontestapp"];
     sdkConfig.globalMediationSettings = @[];
-    sdkConfig.loggingLevel = MPLogLevelInfo;
-    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:nil];
+    sdkConfig.loggingLevel = MPBLogLevelInfo;
+    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
+        
+    }];
     
     return YES;
 }

@@ -9,6 +9,7 @@
 #ifndef VponMopubSampleSwift_Bridging_Header_h
 #define VponMopubSampleSwift_Bridging_Header_h
 
+#import "VponAdapterConfiguration.h"
 #import "MPVponBannerCustomEvent.h"
 #import "MPVponInterstitialCustomEvent.h"
 #import "MPVponNativeCustomEvent.h"

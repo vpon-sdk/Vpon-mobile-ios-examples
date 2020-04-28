@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#if __has_include(<MoPub/MoPub.h>)
-#import <MoPub/MoPub.h>
-#else
-#import "MPNativeAdAdapter.h"
-#endif
+#import "MPNativeAdRendering.h"
 
 @interface MPVponNativeAdView : UIView <MPNativeAdRendering>
 
