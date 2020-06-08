@@ -16,6 +16,7 @@ Mopub Custom Event
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.0.2|mopub-ios-sdk 5.10.0+, VpadnSDK 5.1.1+|新增LocalExtra傳入VponSDK的功能。|
 |2.0.1|mopub-ios-sdk 5.10.0+, VpadnSDK 5.0.2+|調整Native registerViewForInteraction的邏輯，原因Mopub告知SDK Register的時候尚未加載至superview。|
 |2.0.0|mopub-ios-sdk 5.10.0+, VpadnSDK 5.0.2+|此版本使用Vpon SDK 5.0.0的Interface。|
 
