@@ -42,9 +42,15 @@
         [self.gadInterstitialView presentFromRootViewController:self];
     } else {
         GADRequest *request = [GADRequest request];
+//        GADExtras *extra = [[GADExtras alloc] init];
+//        extra.additionalParameters = @{
+//            @"contentURL": @"https://www.vpon.com",
+//            @"contentData": @{@"key1": @"Admob - Interstitial", @"key2": @(1.2), @"key3": @(YES)}
+//        };
+//        [request registerAdNetworkExtras:extra];
 //        request.testDevices = @[kGADSimulatorID];
         
-        self.gadInterstitialView = [[GADInterstitial alloc] initWithAdUnitID:@""];
+        self.gadInterstitialView = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7987617251221645/3519729727"];
         self.gadInterstitialView.delegate = self;
         [self.gadInterstitialView loadRequest:request];
     }

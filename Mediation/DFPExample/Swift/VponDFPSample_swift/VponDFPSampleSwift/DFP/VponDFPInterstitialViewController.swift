@@ -34,9 +34,13 @@ class VponDFPInterstitialViewController: UIViewController {
             dfpInterstitialView.present(fromRootViewController: self);
         } else {
             let request = GADRequest()
-//            request.testDevices = [kGADSimulatorID]
+            //            let extra = GADCustomEventExtras()
+            //            extra.setExtras(["contentURL":"https://www.vpon.com", "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]], forLabel: "Vpon")
+            //            request.register(extra)
+            //            request.testDevices = [kGADSimulatorID]
+            
             // TODO: set ad unit id
-            dfpInterstitialView = DFPInterstitial.init(adUnitID: "")
+            dfpInterstitialView = DFPInterstitial(adUnitID: "")
             dfpInterstitialView.delegate = self
             dfpInterstitialView.load(request)
         }

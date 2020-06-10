@@ -38,7 +38,7 @@
     [super viewWillAppear:animated];
     
     
-    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:@""
+    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-7987617251221645/4222032724"
                                        rootViewController:self
                                                   adTypes:@[kGADAdLoaderAdTypeUnifiedNative]
                                                   options:@[]];
@@ -49,7 +49,17 @@
 
 - (IBAction)requestButtonDidTouch:(UIButton *)sender {
     sender.enabled = NO;
-    [self.adLoader loadRequest:[GADRequest request]];
+    
+    GADRequest *request = [GADRequest request];
+//    GADExtras *extra = [[GADExtras alloc] init];
+//    extra.additionalParameters = @{
+//        @"contentURL": @"https://www.vpon.com",
+//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
+//    };
+//    [request registerAdNetworkExtras:extra];
+//    request.testDevices = @[kGADSimulatorID];
+    
+    [self.adLoader loadRequest:request];
 }
 
 - (void)setAdView:(GADUnifiedNativeAdView *)view {

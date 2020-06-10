@@ -44,7 +44,13 @@
     }
     
     GADRequest *request = [GADRequest request];
-//    request.testDevices = @[kGADSimulatorID];
+    //    GADExtras *extra = [[GADExtras alloc] init];
+    //    extra.additionalParameters = @{
+    //        @"contentURL": @"https://www.vpon.com",
+    //        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
+    //    };
+    //    [request registerAdNetworkExtras:extra];
+    //    request.testDevices = @[kGADSimulatorID];
     
     self.dfpBannerView = [[DFPBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     self.dfpBannerView.adUnitID = @"";

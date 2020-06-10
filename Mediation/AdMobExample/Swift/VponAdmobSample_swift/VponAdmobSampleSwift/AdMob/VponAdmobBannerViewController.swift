@@ -38,11 +38,14 @@ class VponAdmobBannerViewController: UIViewController {
         }
         
         let request = GADRequest()
+//        let extra = GADCustomEventExtras()
+//        extra.setExtras(["contentURL":"https://www.vpon.com", "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]], forLabel: "Vpon")
+//        request.register(extra)
 //        request.testDevices = [kGADSimulatorID]
         
-        gadBannerView = GADBannerView.init(adSize: kGADAdSizeSmartBannerPortrait)
-        // TODO: set ad unit id
-        gadBannerView.adUnitID = ""
+        gadBannerView = GADBannerView(adSize: GADAdSizeFromCGSize(loadBannerView.frame.size))
+// TODO: set ad unit id
+        gadBannerView.adUnitID = "ca-app-pub-7987617251221645/3532457573"
         gadBannerView.delegate = self
         gadBannerView.rootViewController = self
         gadBannerView.load(request)

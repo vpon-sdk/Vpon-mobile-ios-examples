@@ -44,8 +44,12 @@
         [self.mpBannerView removeFromSuperview];
     }
     #warning set ad unit id
-    self.mpBannerView = [[MPAdView alloc] initWithAdUnitId:@"" size:MOPUB_BANNER_SIZE];
+    self.mpBannerView = [[MPAdView alloc] initWithAdUnitId:@"e036eb60cb694fe7b987f1af41a76eb9" size:MOPUB_BANNER_SIZE];
     self.mpBannerView.delegate = self;
+    self.mpBannerView.localExtras = @{
+        @"contentURL": @"https://www.vpon.com",
+        @"contentData": @{@"key1": @"MoPub", @"key2": @(1.2), @"key3": @(YES)}
+    };
     [self.mpBannerView loadAd];
 }
 

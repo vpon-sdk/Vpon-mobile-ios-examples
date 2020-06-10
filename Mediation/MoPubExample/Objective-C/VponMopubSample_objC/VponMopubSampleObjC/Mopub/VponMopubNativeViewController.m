@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"MoPub - Banner";
+    self.title = @"MoPub - Native";
     [self requestButtonDidTouch:self.requestButton];
 }
 
@@ -51,10 +51,14 @@
     config.supportedCustomEvents = @[@"MPVponNativeCustomEvent"];
     
     #warning set ad unit id
-    MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:@"" rendererConfigurations:@[config]];
+    MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:@"ddeaeccecddf44cea7732465a9138239" rendererConfigurations:@[config]];
     
     MPNativeAdRequestTargeting *targeting = [MPNativeAdRequestTargeting targeting];
     targeting.desiredAssets = [NSSet setWithObjects:kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey, nil];
+    targeting.localExtras = @{
+        @"contentURL": @"https://www.vpon.com",
+        @"contentData": @{@"key1": @"Mopub", @"key2": @(1.2), @"key3": @(YES)}
+    };
     adRequest.targeting = targeting;
     
     __block typeof(self) weakSelf = self;

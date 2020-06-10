@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +12,6 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,11 +22,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Od-Iv-sQW" secondAttribute="trailing" id="HJu-sQ-g40"/>
-                            <constraint firstItem="2Od-Iv-sQW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aWh-Af-OJf"/>
-                            <constraint firstItem="2Od-Iv-sQW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="b2q-32-fZm"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2Od-Iv-sQW" secondAttribute="bottom" id="fm2-Zk-DHV"/>
+                            <constraint firstItem="tZw-lO-d02" firstAttribute="trailing" secondItem="2Od-Iv-sQW" secondAttribute="trailing" id="HJu-sQ-g40"/>
+                            <constraint firstItem="2Od-Iv-sQW" firstAttribute="leading" secondItem="tZw-lO-d02" secondAttribute="leading" id="aWh-Af-OJf"/>
+                            <constraint firstItem="2Od-Iv-sQW" firstAttribute="top" secondItem="tZw-lO-d02" secondAttribute="top" id="egr-fY-895"/>
+                            <constraint firstItem="tZw-lO-d02" firstAttribute="bottom" secondItem="2Od-Iv-sQW" secondAttribute="bottom" id="fm2-Zk-DHV"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="tZw-lO-d02"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loading-page" width="416" height="739"/>
+        <image name="loading-page" width="416" height="739.5"/>
     </resources>
 </document>

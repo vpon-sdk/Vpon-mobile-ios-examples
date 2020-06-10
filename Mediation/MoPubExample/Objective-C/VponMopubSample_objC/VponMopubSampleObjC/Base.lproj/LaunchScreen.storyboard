@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +12,6 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,15 +22,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SQZ-IU-s3n" secondAttribute="bottom" id="0Cv-lG-dVG"/>
-                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2GI-lp-5jf"/>
-                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5j8-Lv-7nC"/>
-                            <constraint firstAttribute="trailing" secondItem="SQZ-IU-s3n" secondAttribute="trailing" id="6ps-uL-vCS"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SQZ-IU-s3n" secondAttribute="bottom" id="Mdk-c5-7bP"/>
-                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dpv-dg-IdV"/>
-                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="jzV-lL-Axb"/>
-                            <constraint firstAttribute="trailing" secondItem="SQZ-IU-s3n" secondAttribute="trailing" id="s47-u7-m2I"/>
+                            <constraint firstItem="eFK-f8-lba" firstAttribute="bottom" secondItem="SQZ-IU-s3n" secondAttribute="bottom" id="Mdk-c5-7bP"/>
+                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="leading" secondItem="eFK-f8-lba" secondAttribute="leading" id="dpv-dg-IdV"/>
+                            <constraint firstItem="SQZ-IU-s3n" firstAttribute="top" secondItem="eFK-f8-lba" secondAttribute="top" id="oXA-eQ-coK"/>
+                            <constraint firstItem="eFK-f8-lba" firstAttribute="trailing" secondItem="SQZ-IU-s3n" secondAttribute="trailing" id="s47-u7-m2I"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="eFK-f8-lba"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loading-page" width="416" height="739"/>
+        <image name="loading-page" width="416" height="739.5"/>
     </resources>
 </document>

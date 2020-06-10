@@ -34,9 +34,13 @@ class VponAdmobInterstitialViewController: UIViewController {
             gadInterstitialView.present(fromRootViewController: self);
         } else {
             let request = GADRequest()
+//            let extra = GADCustomEventExtras()
+//            extra.setExtras(["contentURL":"https://www.vpon.com", "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]], forLabel: "Vpon")
+//            request.register(extra)
 //            request.testDevices = [kGADSimulatorID]
-            // TODO: set ad unit id
-            gadInterstitialView = GADInterstitial.init(adUnitID: "")
+            
+// TODO: set ad unit id
+            gadInterstitialView = GADInterstitial(adUnitID: "ca-app-pub-7987617251221645/3519729727")
             gadInterstitialView.delegate = self
             gadInterstitialView.load(request)
         }

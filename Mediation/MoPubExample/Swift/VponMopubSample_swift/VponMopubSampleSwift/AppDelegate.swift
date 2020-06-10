@@ -8,6 +8,7 @@
 
 import UIKit
 import VpadnSDKAdKit
+import MoPub
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,13 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let config = VpadnAdConfiguration.sharedInstance()
         config.logLevel = .debug
         config.initializeSdk()
         
-        // Override point for customization after application launch.
+        let sdkConfig = MPMoPubConfiguration(adUnitIdForAppInitialization: "vpontestapp")
+        sdkConfig.globalMediationSettings = []
+        sdkConfig.loggingLevel = .info
+        MoPub.sharedInstance().initializeSdk(with: sdkConfig) {
+            
+        }
+        
         return true
     }
 

@@ -43,8 +43,12 @@
         [self.mpInterstitial showFromViewController:self];
     } else {
         #warning set ad unit id
-        self.mpInterstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@""];
+        self.mpInterstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"848bf4d03e7b4fdda02be232f8e6b4d1"];
         self.mpInterstitial.delegate = self;
+        self.mpInterstitial.localExtras = @{
+            @"contentURL": @"https://www.vpon.com",
+            @"contentData": @{@"key1": @"MoPub", @"key2": @(1.2), @"key3": @(YES)}
+        };
         [self.mpInterstitial loadAd];
     }
 }

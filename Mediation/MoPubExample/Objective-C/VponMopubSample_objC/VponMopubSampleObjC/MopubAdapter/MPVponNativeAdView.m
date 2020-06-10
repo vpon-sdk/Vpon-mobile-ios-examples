@@ -12,11 +12,27 @@
 
 @implementation MPVponNativeAdView
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
-    self.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    // layout your views
+}
+
+- (void) didMoveToSuperview {
+    if (self.superview) {
+        [self addConstraintToView:self];
+    }
+}
+
+- (void) addConstraintToView:(UIView *)view {
+    [view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [view.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[nativeAdView]|"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:@{@"nativeAdView": view}]];
+    
+    [view.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[nativeAdView]|"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:@{@"nativeAdView": view}]];
 }
 
 - (UILabel *)nativeMainTextLabel {
@@ -38,10 +54,6 @@
 - (UILabel *)nativeCallToActionTextLabel {
     return _adCallToActionLabel;
 }
-
-//- (UIImageView *)nativePrivacyInformationIconImageView {
-//    
-//}
 
 + (UINib *)nibForAd {
     return [UINib nibWithNibName:@"MPVponNativeAdView" bundle:nil];

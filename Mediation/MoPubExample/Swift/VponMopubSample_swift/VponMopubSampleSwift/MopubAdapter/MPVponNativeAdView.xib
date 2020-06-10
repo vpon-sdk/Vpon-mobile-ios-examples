@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -73,7 +70,6 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="zc6-xt-Ox6" secondAttribute="bottom" constant="32" id="0ZH-je-Rbu"/>
-                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="295" id="1KR-jb-7nd"/>
                 <constraint firstItem="VHJ-Jq-teG" firstAttribute="leading" secondItem="sUf-UH-MNW" secondAttribute="trailing" constant="6" id="30Q-VC-9go"/>
                 <constraint firstItem="VHJ-Jq-teG" firstAttribute="trailing" secondItem="YI4-4y-ilg" secondAttribute="trailing" id="3Yg-ud-VRI"/>
                 <constraint firstItem="YI4-4y-ilg" firstAttribute="top" secondItem="sUf-UH-MNW" secondAttribute="bottom" constant="7" id="5mh-xT-Y0l"/>
@@ -95,7 +91,6 @@
                 <constraint firstItem="zc6-xt-Ox6" firstAttribute="trailing" secondItem="zmz-MW-eLk" secondAttribute="trailing" id="omE-Gu-e9H"/>
                 <constraint firstItem="YI4-4y-ilg" firstAttribute="trailing" secondItem="zmz-MW-eLk" secondAttribute="trailing" id="reS-z6-0t2"/>
                 <constraint firstItem="sUf-UH-MNW" firstAttribute="top" secondItem="JN6-IN-KDj" secondAttribute="top" constant="8" id="sPs-qj-5gP"/>
-                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="xWC-5p-hr8"/>
                 <constraint firstItem="zc6-xt-Ox6" firstAttribute="top" secondItem="eUw-bs-MVh" secondAttribute="top" id="yQw-Oc-3Ew"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -6,6 +6,7 @@
 //
 
 @import VpadnSDKAdKit;
+
 #import "MPVponNativeCustomEvent.h"
 #import "MPVponNativeAdAdapter.h"
 #import "MPNativeAd.h"
@@ -15,6 +16,9 @@
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
+
+#define VP_CONTENT_URL @"contentURL"
+#define VP_CONTENT_DATA @"contentData"
 
 static const NSInteger VpadnNoFillErrorCode = -25;
 
@@ -28,13 +32,26 @@ static const NSInteger VpadnNoFillErrorCode = -25;
 
 - (void) requestAdWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     MPLogInfo(@"Requesting Vpon native");
-    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
-    // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
-    [request setTestDevices:@[]];
-    
     _vpadnNativeAd = [[VpadnNativeAd alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID]];
     _vpadnNativeAd.delegate = self;
-    [_vpadnNativeAd loadRequest:request];
+    [_vpadnNativeAd loadRequest:[self createRequest]];
+}
+
+- (VpadnAdRequest *) createRequest {
+    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
+    if ([request respondsToSelector:@selector(setContentData:)] &&
+        [self.localExtras.allKeys containsObject:VP_CONTENT_DATA] &&
+        [self.localExtras[VP_CONTENT_DATA] isKindOfClass:[NSDictionary class]]) {
+        [request setContentData:self.localExtras[VP_CONTENT_DATA]];
+    }
+    if ([request respondsToSelector:@selector(setContentUrl:)] &&
+        [self.localExtras.allKeys containsObject:VP_CONTENT_URL] &&
+        [self.localExtras[VP_CONTENT_URL] isKindOfClass:[NSString class]]) {
+        [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
+    }
+    // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
+    [request setTestDevices:@[]];
+    return request;
 }
 
 - (void) requestAdWithCustomEventInfo:(NSDictionary *)info {

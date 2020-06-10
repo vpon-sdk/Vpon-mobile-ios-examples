@@ -38,9 +38,12 @@ class VponDFPBannerViewController: UIViewController {
         }
         
         let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
+        //        let extra = GADCustomEventExtras()
+        //        extra.setExtras(["contentURL":"https://www.vpon.com", "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]], forLabel: "Vpon")
+        //        request.register(extra)
+        //        request.testDevices = [kGADSimulatorID]
         
-        dfpBannerView = DFPBannerView.init(adSize: kGADAdSizeSmartBannerPortrait)
+        dfpBannerView = DFPBannerView(adSize: GADAdSizeFromCGSize(loadBannerView.frame.size))
         // TODO: set ad unit id
         dfpBannerView.adUnitID = ""
         dfpBannerView.delegate = self
@@ -59,7 +62,7 @@ extension VponDFPBannerViewController: GADBannerViewDelegate {
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Failed to receive banner with error: \(error.localizedFailureReason!))")
+        print("Failed to receive banner with error: \(error.localizedFailureReason ?? ""))")
         self.requestButton.isEnabled = true
     }
     

@@ -44,10 +44,16 @@
     }
     
     GADRequest *request = [GADRequest request];
+//    GADExtras *extra = [[GADExtras alloc] init];
+//    extra.additionalParameters = @{
+//        @"contentURL": @"https://www.vpon.com",
+//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
+//    };
+//    [request registerAdNetworkExtras:extra];
 //    request.testDevices = @[kGADSimulatorID];
     
     self.gadBannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(_loadBannerView.frame.size)];
-    self.gadBannerView.adUnitID = @"";
+    self.gadBannerView.adUnitID = @"ca-app-pub-7987617251221645/3532457573";
     self.gadBannerView.delegate = self;
     self.gadBannerView.rootViewController = self;
     [self.gadBannerView loadRequest:request];

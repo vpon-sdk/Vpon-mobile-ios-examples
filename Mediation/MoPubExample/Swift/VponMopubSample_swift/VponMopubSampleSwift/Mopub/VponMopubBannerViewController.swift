@@ -19,6 +19,11 @@ extension VponMopubBannerViewController: MPAdViewDelegate {
     func adViewDidLoadAd(_ view: MPAdView!) {
         print("Received banner ad successfully")
         self.loadBannerView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let constrantX = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: [:], views: ["view": view])
+        let constrantY = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: [:], views: ["view": view])
+        self.loadBannerView.addConstraints(constrantX + constrantY)
+        view.layoutIfNeeded()
         self.requestButton.isEnabled = true
     }
     
@@ -68,7 +73,9 @@ class VponMopubBannerViewController: UIViewController {
             mpBannerView.removeFromSuperview()
         }
         
-        mpBannerView = MPAdView.init(adUnitId: "", size: MOPUB_BANNER_SIZE)
+        mpBannerView = MPAdView(adUnitId: "e036eb60cb694fe7b987f1af41a76eb9")
+        mpBannerView.maxAdSize = loadBannerView.frame.size
+        mpBannerView.localExtras = ["contentURL":"https://www.vpon.com", "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]]
         // TODO: set ad unit id
         mpBannerView.delegate = self
         mpBannerView.loadAd()

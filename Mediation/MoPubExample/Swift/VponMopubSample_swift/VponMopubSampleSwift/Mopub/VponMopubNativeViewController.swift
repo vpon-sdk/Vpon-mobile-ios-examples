@@ -41,13 +41,14 @@ class VponMopubNativeViewController: UIViewController {
         config.supportedCustomEvents = ["MPVponNativeCustomEvent"]
         
         // TODO: set ad unit id
-        let adRequest = MPNativeAdRequest.init(adUnitIdentifier: "", rendererConfigurations: [config])!
+        let adRequest = MPNativeAdRequest(adUnitIdentifier: "ddeaeccecddf44cea7732465a9138239", rendererConfigurations: [config])
         
-        let targeting = MPNativeAdRequestTargeting.init()
-        targeting.desiredAssets = NSSet.init(objects: kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey) as! Set<AnyHashable>
+        let targeting = MPNativeAdRequestTargeting()
+        targeting?.desiredAssets = NSSet(objects: kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey) as? Set<AnyHashable>
+        targeting?.localExtras = ["contentURL":"https://www.vpon.com", "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]]
         
-        adRequest.targeting = targeting
-        adRequest.start { (request, response, error) in
+        adRequest?.targeting = targeting
+        adRequest?.start { (request, response, error) in
             if error != nil {
                 print("Failed to receive banner")
             } else {
