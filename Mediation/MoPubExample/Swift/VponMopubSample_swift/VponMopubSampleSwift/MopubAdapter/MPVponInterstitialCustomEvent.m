@@ -11,6 +11,7 @@
 #import "MPInterstitialAdController.h"
 #import "MPLogging.h"
 #import "MPAdConfiguration.h"
+#import <AdSupport/AdSupport.h>
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
@@ -32,7 +33,7 @@
 
 #pragma mark - MPInterstitialCustomEvent Subclass Methods
 
-- (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+- (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString * _Nullable)adMarkup {
     MPLogInfo(@"Requesting Vpon interstitial");
     if (_interstitial) {
         _interstitial.delegate = nil;
@@ -44,8 +45,19 @@
     [_interstitial loadRequest:[self createRequest]];
 }
 
-- (void) requestInterstitialWithCustomEventInfo:(NSDictionary *)info {
-    [self requestInterstitialWithCustomEventInfo:info adMarkup:nil];
+- (void)presentAdFromViewController:(UIViewController *)viewController {
+    if (_interstitial) {
+        [_interstitial showFromRootViewController:viewController];
+        [self.delegate fullscreenAdAdapterAdDidAppear:self];
+    }
+}
+
+- (void)handleDidPlayAd {
+    
+}
+
+- (void)handleDidInvalidateAd {
+    
 }
 
 - (VpadnAdRequest *) createRequest {
@@ -62,52 +74,44 @@
         [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
     }
     // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
-    [request setTestDevices:@[]];
+    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];
     return request;
-}
-
-- (void)showInterstitialFromRootViewController:(UIViewController *)rootViewController {
-    if (_interstitial) {
-        [self.delegate interstitialCustomEventWillAppear:self];
-        [_interstitial showFromRootViewController:rootViewController];
-        [self.delegate interstitialCustomEventDidAppear:self];
-    }
 }
 
 #pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
 
 - (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
-    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didLoadAd:)]) {
-        [self.delegate interstitialCustomEvent:self didLoadAd:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterDidLoadAd:)]) {
+        [self.delegate fullscreenAdAdapterDidLoadAd:self];
     }
 }
 
 - (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
-    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEvent:didFailToLoadAdWithError:)]) {
-        [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:error];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapter:didFailToLoadAdWithError:)]) {
+        [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:error];
     }
 }
 
 - (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
-    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventWillAppear:)]) {
-        [self.delegate interstitialCustomEventWillAppear:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterAdWillAppear:)]) {
+        [self.delegate fullscreenAdAdapterAdWillAppear:self];
     }
 }
 
 - (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adDidDismissModalForAdapter:NSStringFromClass(self.class)], nil);
-    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventDidDisappear:)]) {
-        [self.delegate interstitialCustomEventDidDisappear:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterAdDidDisappear:)]) {
+        [self.delegate fullscreenAdAdapterAdDidDisappear:self];
     }
 }
 
 - (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
-    if(self.delegate && [self.delegate respondsToSelector:@selector(interstitialCustomEventWillLeaveApplication:)]) {
-        [self.delegate interstitialCustomEventWillLeaveApplication:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterWillLeaveApplication:)]) {
+        [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
     }
 }
 

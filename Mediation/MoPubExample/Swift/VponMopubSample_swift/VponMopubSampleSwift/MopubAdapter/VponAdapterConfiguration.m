@@ -17,24 +17,23 @@
 
 #pragma mark - MPAdapterConfiguration
 
-- (NSString *)adapterVersion {
-    return @"2.0.2";
+- (NSString *) adapterVersion {
+    return @"2.0.3";
 }
 
-- (NSString *)biddingToken {
+- (NSString *) biddingToken {
     return nil;
 }
 
-- (NSString *)moPubNetworkName {
+- (NSString *) moPubNetworkName {
     return @"Vpon";
 }
 
-- (NSString *)networkSdkVersion {
+- (NSString *) networkSdkVersion {
     return [VpadnAdRequest sdkVersion];
 }
 
-- (void)initializeNetworkWithConfiguration:(NSDictionary<NSString *, id> *)configuration
-                                  complete:(void(^)(NSError *))complete {
+- (void) initializeNetworkWithConfiguration:(NSDictionary<NSString *,id> *)configuration complete:(void (^)(NSError * _Nullable))complete {
     dispatch_async(dispatch_get_main_queue(), ^{
         VpadnBanner *banner = [[VpadnBanner alloc] initWithLicenseKey:@"" adSize:VpadnAdSizeSmartBannerPortrait];
         VpadnInterstitial *interstitial = [[VpadnInterstitial alloc] initWithLicenseKey:@""];
@@ -48,5 +47,6 @@
         complete(nil);
     }
 }
+
 
 @end

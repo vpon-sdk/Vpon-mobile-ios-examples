@@ -8,13 +8,13 @@
 #if __has_include(<MoPub/MoPub.h>)
     #import <MoPub/MoPub.h>
 #else
-    #import "MPInterstitialCustomEvent.h"
+    #import "MPFullscreenAdAdapter.h"
 #endif
 
 /*
  * Certified with version 7.1.0 of the Google AdMob Ads SDK.
  */
 
-@interface MPVponInterstitialCustomEvent : MPInterstitialCustomEvent
+@interface MPVponInterstitialCustomEvent : MPFullscreenAdAdapter
 
 @end

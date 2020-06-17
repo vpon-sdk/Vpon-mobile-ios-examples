@@ -9,6 +9,7 @@
 
 #import "MPVponBannerCustomEvent.h"
 #import "MPLogging.h"
+#import <AdSupport/AdSupport.h>
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
@@ -27,7 +28,7 @@
 
 @implementation MPVponBannerCustomEvent
 
-- (void) requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
+- (void) requestAdWithSize:(CGSize)size adapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     MPLogInfo(@"Requesting Vpon banner");
     VpadnAdSize adSize = VpadnAdSizeSmartBannerPortrait;
     if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size) || (size.height == 250.0 && size.width >= 300)) {
@@ -45,10 +46,6 @@
     [_vpadnBanner loadRequest:[self createRequest]];
 }
 
-- (void) requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info {
-    [self requestAdWithSize:size customEventInfo:info adMarkup:nil];
-}
-
 - (VpadnAdRequest *) createRequest {
     VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
     [request setAutoRefresh:NO];
@@ -63,7 +60,7 @@
         [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
     }
     // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
-    [request setTestDevices:@[]];
+    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];
     return request;
 }
 
@@ -72,36 +69,36 @@
 
 - (void) onVpadnAdLoaded:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didLoadAd:)]) {
-        [self.delegate bannerCustomEvent:self didLoadAd:banner.getVpadnAdView];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapter:didLoadAdWithAdView:)]) {
+        [self.delegate inlineAdAdapter:self didLoadAdWithAdView:banner.getVpadnAdView];
     }
 }
 
 - (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEvent:didFailToLoadAdWithError:)]) {
-        [self.delegate bannerCustomEvent:self didFailToLoadAdWithError:error];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapter:didFailToLoadAdWithError:)]) {
+        [self.delegate inlineAdAdapter:self didFailToLoadAdWithError:error];
     }
 }
 
 - (void) onVpadnAdWillOpen:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillBeginAction:)]) {
-        [self.delegate bannerCustomEventWillBeginAction:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterWillBeginUserAction:)]) {
+        [self.delegate inlineAdAdapterWillBeginUserAction:self];
     }
 }
 
 - (void) onVpadnAdClosed:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adDidDismissModalForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventDidFinishAction:)]) {
-        [self.delegate bannerCustomEventDidFinishAction:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterDidEndUserAction:)]) {
+        [self.delegate inlineAdAdapterDidEndUserAction:self];
     }
 }
 
 - (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(bannerCustomEventWillLeaveApplication:)]) {
-        [self.delegate bannerCustomEventWillLeaveApplication:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterWillLeaveApplication:)]) {
+        [self.delegate inlineAdAdapterWillLeaveApplication:self];
     }
 }
 
