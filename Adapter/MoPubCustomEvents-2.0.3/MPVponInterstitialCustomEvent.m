@@ -11,7 +11,6 @@
 #import "MPInterstitialAdController.h"
 #import "MPLogging.h"
 #import "MPAdConfiguration.h"
-#import <AdSupport/AdSupport.h>
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
@@ -74,7 +73,7 @@
         [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
     }
     // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];
+    [request setTestDevices:@[]];
     return request;
 }
 

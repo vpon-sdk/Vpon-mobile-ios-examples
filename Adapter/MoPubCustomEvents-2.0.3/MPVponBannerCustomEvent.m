@@ -9,7 +9,6 @@
 
 #import "MPVponBannerCustomEvent.h"
 #import "MPLogging.h"
-#import <AdSupport/AdSupport.h>
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
@@ -38,9 +37,8 @@
     } else if (CGSizeEqualToSize(size, VpadnAdSizeLeaderboard.size)) {
         adSize = VpadnAdSizeLeaderboard;
     } else {
-        adSize = VpadnAdSizeBanner;
+        adSize = VpadnAdSizeFromCGSize(size);
     }
-    
     _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID] adSize:adSize];
     _vpadnBanner.delegate = self;
     [_vpadnBanner loadRequest:[self createRequest]];
@@ -60,7 +58,7 @@
         [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
     }
     // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];
+    [request setTestDevices:@[]];
     return request;
 }
 
