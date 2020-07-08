@@ -66,8 +66,8 @@ class VponSdkInterstitialViewController: UIViewController {
         request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
         request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
         request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
-        request.addKeyword("keywordA")                                                              //關鍵字
-        request.addKeyword("key1:value1")                                                           //鍵值
+        request.setContentUrl("https://www.google.com.tw/")                                         //內容
+        request.setContentData(["key1": 1, "key2": true, "key3": "name", "key4": 123.31])           //內容鍵值
         return request
     }
     

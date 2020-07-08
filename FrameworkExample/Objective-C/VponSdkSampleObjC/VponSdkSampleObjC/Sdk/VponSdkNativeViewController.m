@@ -46,8 +46,8 @@
     [request setMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                     //最高可投放的年齡(分類)限制
     [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentFalse];                             //是否專為特定年齡投放
     [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentFalse];                   //是否專為兒童投放
-    [request addKeyword:@"keywordA"];                                                                   //關鍵字
-    [request addKeyword:@"key1:value1"];                                                                //鍵值
+    [request setContentUrl:@"https://www.vpon.com.tw/"];
+    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
     return request;
 }
 

@@ -52,10 +52,11 @@
     
     GADRequest *request = [GADRequest request];
 //    GADExtras *extra = [[GADExtras alloc] init];
-//    extra.additionalParameters = @{
-//        @"contentURL": @"https://www.vpon.com",
-//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
-//    };
+//    GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
+//    [extra setExtras:@{
+//        @"contentURL": @"https://www.google.com.tw/",
+//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}
+//    } forLabel:@"Vpon"];
 //    [request registerAdNetworkExtras:extra];
 //    request.testDevices = @[kGADSimulatorID];
     
