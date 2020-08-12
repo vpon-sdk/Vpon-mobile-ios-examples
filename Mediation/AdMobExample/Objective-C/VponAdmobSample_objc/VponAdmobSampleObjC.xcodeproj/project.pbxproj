@@ -171,7 +171,7 @@
 				TargetAttributes = {
 					06BE5A111EEE8A370003F751 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 9Y4UWUH2H6;
+						DevelopmentTeam = 55Z8U5LW3G;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -365,7 +365,7 @@
 			baseConfigurationReference = 2DEEBAD690352D8B4008A5D8 /* Pods-VponAdmobSampleObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VponAdmobSampleObjC",
@@ -376,7 +376,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VponAdmobSampleObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponAdmobSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationforadmob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -386,7 +386,7 @@
 			baseConfigurationReference = A5945F09D3EF2A485F1B12E1 /* Pods-VponAdmobSampleObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VponAdmobSampleObjC",
@@ -397,7 +397,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VponAdmobSampleObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponAdmobSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationforadmob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

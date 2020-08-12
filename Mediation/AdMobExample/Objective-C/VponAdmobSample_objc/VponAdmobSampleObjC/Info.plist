@@ -18,8 +18,27 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7987617251221645~6145893060</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>$(PRODUCT_NAME) use canlendar </string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) 需要使用掃描，希望能獲取您相機的使用權限。</string>
+	<key>NSLocationUsageDescription</key>
+	<string>$(PRODUCT_NAME) use location </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) use location </string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) add photo </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) use photo </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,24 +60,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSCalendarsUsageDescription</key>
-	<string>$(PRODUCT_NAME) use canlendar </string>
-	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) 需要使用掃描，希望能獲取您相機的使用權限。</string>
-	<key>NSLocationUsageDescription</key>
-	<string>$(PRODUCT_NAME) use location </string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) use location </string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) use photo </string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME) add photo </string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-7987617251221645~6145893060</string>
 </dict>
 </plist>

@@ -200,7 +200,7 @@
 				TargetAttributes = {
 					06B4BA861EEF79FB00888622 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 9Y4UWUH2H6;
+						DevelopmentTeam = 55Z8U5LW3G;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -456,10 +456,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponMopubSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponMopubSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationformopub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -472,10 +472,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9Y4UWUH2H6;
+				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponMopubSampleObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.VponMopubSampleObjC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationformopub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
