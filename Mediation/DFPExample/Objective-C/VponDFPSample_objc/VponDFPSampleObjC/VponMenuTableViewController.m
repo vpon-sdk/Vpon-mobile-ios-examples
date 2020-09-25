@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = [[NSDictionary alloc] initWithObjectsAndKeys: @"goVponDFPBannerViewController", @"DFP - Banner", @"goVponDFPInterstitialViewController", @"DFP - Interstitial", nil];
+    self.data = [[NSDictionary alloc] initWithObjectsAndKeys: @"goVponDFPBannerViewController", @"DFP - Banner", @"goVponDFPBannerInTableViewController", @"DFP - BannerInTable", @"goVponDFPInterstitialViewController", @"DFP - Interstitial", nil];
     self.title = @"Menu";
 }
 

@@ -114,10 +114,10 @@
 				06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */,
 				06EC941E21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.h */,
 				06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */,
-				06EC942121C0E9380081AD6C /* AdTableViewCell.h */,
-				06EC942221C0E9380081AD6C /* AdTableViewCell.m */,
 				06558A6D218155B600FE767F /* VponAdmobNativeViewController.h */,
 				06558A6E218155B600FE767F /* VponAdmobNativeViewController.m */,
+				06EC942121C0E9380081AD6C /* AdTableViewCell.h */,
+				06EC942221C0E9380081AD6C /* AdTableViewCell.m */,
 			);
 			path = AdMob;
 			sourceTree = "<group>";

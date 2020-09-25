@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		009F97CC7AB6B8BCF18DBB95 /* Pods_VponDFPSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BA992456F1E6F810A1414D /* Pods_VponDFPSampleSwift.framework */; };
+		06A33B3A251DD0F300D51B64 /* VponDFPBannerInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A33B39251DD0F300D51B64 /* VponDFPBannerInTableViewController.swift */; };
+		06A33B3D251DD10C00D51B64 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A33B3C251DD10C00D51B64 /* AdTableViewCell.swift */; };
 		06BE59C11EEE66940003F751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59C01EEE66940003F751 /* AppDelegate.swift */; };
 		06BE59C61EEE66940003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59C41EEE66940003F751 /* Main.storyboard */; };
 		06BE59C81EEE66940003F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59C71EEE66940003F751 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A33B39251DD0F300D51B64 /* VponDFPBannerInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VponDFPBannerInTableViewController.swift; sourceTree = "<group>"; };
+		06A33B3C251DD10C00D51B64 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		06BE59BD1EEE66940003F751 /* VponDFPSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponDFPSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BE59C01EEE66940003F751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06BE59C51EEE66940003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				06BE59D31EEE68A20003F751 /* VponDFPInterstitialViewController.swift */,
 				06BE59D51EEE68B70003F751 /* VponDFPBannerViewController.swift */,
+				06A33B39251DD0F300D51B64 /* VponDFPBannerInTableViewController.swift */,
+				06A33B3C251DD10C00D51B64 /* AdTableViewCell.swift */,
 			);
 			path = DFP;
 			sourceTree = "<group>";
@@ -221,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A33B3D251DD10C00D51B64 /* AdTableViewCell.swift in Sources */,
 				06BE59D41EEE68A20003F751 /* VponDFPInterstitialViewController.swift in Sources */,
 				06BE59D61EEE68B70003F751 /* VponDFPBannerViewController.swift in Sources */,
 				06BE59C11EEE66940003F751 /* AppDelegate.swift in Sources */,
+				06A33B3A251DD0F300D51B64 /* VponDFPBannerInTableViewController.swift in Sources */,
 				06BE59D81EEE68F60003F751 /* VponMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

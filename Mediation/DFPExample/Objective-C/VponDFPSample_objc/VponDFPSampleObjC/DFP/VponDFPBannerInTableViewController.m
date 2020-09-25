@@ -1,12 +1,12 @@
 //
-//  VponAdmobBannerInTableViewController.m
-//  VponAdmobSampleObjC
+//  VponDFPBannerInTableViewController.m
+//  VponDFPSampleObjC
 //
-//  Created by EricChien on 2018/12/12.
-//  Copyright © 2018 Soul. All rights reserved.
+//  Created by Yi-Hsiang, Chien on 2020/9/25.
+//  Copyright © 2020 Soul. All rights reserved.
 //
 
-#import "VponAdmobBannerInTableViewController.h"
+#import "VponDFPBannerInTableViewController.h"
 #import "AdTableViewCell.h"
 
 @import GoogleMobileAds;
@@ -16,17 +16,17 @@
 
 #define TITLE @"title"
 
-@interface VponAdmobBannerInTableViewController () <GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface VponDFPBannerInTableViewController () <GADBannerViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *datas;
 
-@property (nonatomic, strong) GADBannerView *gadBannerView;
+@property (strong, nonatomic) DFPBannerView *dfpBannerView;
 
 @property (nonatomic, weak) IBOutlet UITableView *mainTable;
 
 @end
 
-@implementation VponAdmobBannerInTableViewController
+@implementation VponDFPBannerInTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,24 +43,24 @@
 #pragma mark - Button Method
 
 - (IBAction) requestButtonDidTouch:(UIButton *)sender {
-    if (_gadBannerView.superview) {
-        [_gadBannerView removeFromSuperview];
+    if (_dfpBannerView != nil) {
+        [_dfpBannerView removeFromSuperview];
     }
     
     GADRequest *request = [GADRequest request];
-//    GADExtras *extra = [[GADExtras alloc] init];
-//    extra.additionalParameters = @{
-//        @"contentURL": @"https://www.vpon.com",
-//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
-//    };
-//    [request registerAdNetworkExtras:extra];
-//    request.testDevices = @[kGADSimulatorID];
+    //    GADExtras *extra = [[GADExtras alloc] init];
+    //    extra.additionalParameters = @{
+    //        @"contentURL": @"https://www.vpon.com",
+    //        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
+    //    };
+    //    [request registerAdNetworkExtras:extra];
+    //    request.testDevices = @[kGADSimulatorID];
     
-    _gadBannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeMediumRectangle];
-    _gadBannerView.adUnitID = @"ca-app-pub-7987617251221645/3532457573";
-    _gadBannerView.delegate = self;
-    _gadBannerView.rootViewController = self;
-    [_gadBannerView loadRequest:request];
+    _dfpBannerView = [[DFPBannerView alloc] initWithAdSize:kGADAdSizeMediumRectangle];
+    _dfpBannerView.adUnitID = @"";
+    _dfpBannerView.delegate = self;
+    _dfpBannerView.rootViewController = self;
+    [_dfpBannerView loadRequest:request];
 }
 
 #pragma mark - GADBannerView Delegate
@@ -88,9 +88,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == ADPOS) {
         AdTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AdTableViewCell" forIndexPath:indexPath];
-        if (_gadBannerView) {
-            [cell.contentView addSubview:_gadBannerView];
-            _gadBannerView.center = cell.contentView.center;
+        if (_dfpBannerView) {
+            [cell.contentView addSubview:_dfpBannerView];
+            _dfpBannerView.center = cell.contentView.center;
         }
         return cell;
     } else {
@@ -117,5 +117,15 @@
         return [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section];
     }
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

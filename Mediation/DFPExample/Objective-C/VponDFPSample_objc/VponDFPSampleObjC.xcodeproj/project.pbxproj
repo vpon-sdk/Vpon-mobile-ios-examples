@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A33B1E251DCF0000D51B64 /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A33B1D251DCF0000D51B64 /* AdTableViewCell.m */; };
+		06A33B22251DCF1800D51B64 /* VponDFPBannerInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A33B21251DCF1800D51B64 /* VponDFPBannerInTableViewController.m */; };
 		06BE59E71EEE7B740003F751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59E61EEE7B740003F751 /* main.m */; };
 		06BE59EA1EEE7B740003F751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE59E91EEE7B740003F751 /* AppDelegate.m */; };
 		06BE59F01EEE7B740003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE59EE1EEE7B740003F751 /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A33B1C251DCF0000D51B64 /* AdTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
+		06A33B1D251DCF0000D51B64 /* AdTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
+		06A33B20251DCF1800D51B64 /* VponDFPBannerInTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponDFPBannerInTableViewController.h; sourceTree = "<group>"; };
+		06A33B21251DCF1800D51B64 /* VponDFPBannerInTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponDFPBannerInTableViewController.m; sourceTree = "<group>"; };
 		06BE59E21EEE7B740003F751 /* VponDFPSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponDFPSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BE59E61EEE7B740003F751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06BE59E81EEE7B740003F751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +106,10 @@
 				06BE5A041EEE7C790003F751 /* VponDFPInterstitialViewController.m */,
 				06BE5A061EEE7C890003F751 /* VponDFPBannerViewController.h */,
 				06BE5A071EEE7C890003F751 /* VponDFPBannerViewController.m */,
+				06A33B20251DCF1800D51B64 /* VponDFPBannerInTableViewController.h */,
+				06A33B21251DCF1800D51B64 /* VponDFPBannerInTableViewController.m */,
+				06A33B1C251DCF0000D51B64 /* AdTableViewCell.h */,
+				06A33B1D251DCF0000D51B64 /* AdTableViewCell.m */,
 			);
 			path = DFP;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 				06BE59E71EEE7B740003F751 /* main.m in Sources */,
 				06BE5A051EEE7C790003F751 /* VponDFPInterstitialViewController.m in Sources */,
 				06BE5A081EEE7C890003F751 /* VponDFPBannerViewController.m in Sources */,
+				06A33B22251DCF1800D51B64 /* VponDFPBannerInTableViewController.m in Sources */,
+				06A33B1E251DCF0000D51B64 /* AdTableViewCell.m in Sources */,
 				06BE5A021EEE7C610003F751 /* VponMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

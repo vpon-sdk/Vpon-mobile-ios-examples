@@ -11,6 +11,7 @@ import UIKit
 class VponMenuTableViewController: UITableViewController {
     
     let data = ["DFP - Banner" : "goVponDFPBannerViewController",
+                "DFP - BannerInTable" : "goVponDFPBannerInTableViewController",
                 "DFP - Interstitial" : "goVponDFPInterstitialViewController"]
     
     override func viewDidLoad() {

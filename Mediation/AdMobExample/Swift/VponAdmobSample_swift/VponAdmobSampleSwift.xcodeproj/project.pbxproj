@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A33B19251DCCBA00D51B64 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A33B18251DCCBA00D51B64 /* AdTableViewCell.swift */; };
 		06BE5A431EEE8E9B0003F751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A421EEE8E9B0003F751 /* AppDelegate.swift */; };
 		06BE5A481EEE8E9B0003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A461EEE8E9B0003F751 /* Main.storyboard */; };
 		06BE5A4A1EEE8E9B0003F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A491EEE8E9B0003F751 /* Assets.xcassets */; };
@@ -14,10 +15,12 @@
 		06BE5A551EEE8EBA0003F751 /* VponMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A541EEE8EBA0003F751 /* VponMenuTableViewController.swift */; };
 		06BE5A581EEE8F400003F751 /* VponAdmobInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A571EEE8F400003F751 /* VponAdmobInterstitialViewController.swift */; };
 		06BE5A5A1EEE8F4D0003F751 /* VponAdmobBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A591EEE8F4D0003F751 /* VponAdmobBannerViewController.swift */; };
+		06C601B4251DC7B7004C2FE1 /* VponAdmobBannerInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C601B3251DC7B7004C2FE1 /* VponAdmobBannerInTableViewController.swift */; };
 		98439CC5200F79F3603B7ACA /* Pods_VponAdmobSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB369A9F95EA7C3B47B8BD2 /* Pods_VponAdmobSampleSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A33B18251DCCBA00D51B64 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		06BE5A3F1EEE8E9B0003F751 /* VponAdmobSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponAdmobSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BE5A421EEE8E9B0003F751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06BE5A471EEE8E9B0003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		06BE5A541EEE8EBA0003F751 /* VponMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponMenuTableViewController.swift; sourceTree = "<group>"; };
 		06BE5A571EEE8F400003F751 /* VponAdmobInterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponAdmobInterstitialViewController.swift; sourceTree = "<group>"; };
 		06BE5A591EEE8F4D0003F751 /* VponAdmobBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponAdmobBannerViewController.swift; sourceTree = "<group>"; };
+		06C601B3251DC7B7004C2FE1 /* VponAdmobBannerInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VponAdmobBannerInTableViewController.swift; sourceTree = "<group>"; };
 		7BB369A9F95EA7C3B47B8BD2 /* Pods_VponAdmobSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponAdmobSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFB33BBDE1D93BBDF40B7E6 /* Pods-VponAdmobSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleSwift/Pods-VponAdmobSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		EF7A02A6076277556CF7EF40 /* Pods-VponAdmobSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponAdmobSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponAdmobSampleSwift/Pods-VponAdmobSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,8 +83,10 @@
 		06BE5A561EEE8F170003F751 /* AdMob */ = {
 			isa = PBXGroup;
 			children = (
-				06BE5A571EEE8F400003F751 /* VponAdmobInterstitialViewController.swift */,
+				06A33B18251DCCBA00D51B64 /* AdTableViewCell.swift */,
 				06BE5A591EEE8F4D0003F751 /* VponAdmobBannerViewController.swift */,
+				06C601B3251DC7B7004C2FE1 /* VponAdmobBannerInTableViewController.swift */,
+				06BE5A571EEE8F400003F751 /* VponAdmobInterstitialViewController.swift */,
 			);
 			path = AdMob;
 			sourceTree = "<group>";
@@ -221,10 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A33B19251DCCBA00D51B64 /* AdTableViewCell.swift in Sources */,
 				06BE5A581EEE8F400003F751 /* VponAdmobInterstitialViewController.swift in Sources */,
 				06BE5A5A1EEE8F4D0003F751 /* VponAdmobBannerViewController.swift in Sources */,
 				06BE5A551EEE8EBA0003F751 /* VponMenuTableViewController.swift in Sources */,
 				06BE5A431EEE8E9B0003F751 /* AppDelegate.swift in Sources */,
+				06C601B4251DC7B7004C2FE1 /* VponAdmobBannerInTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

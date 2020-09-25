@@ -11,6 +11,7 @@ import UIKit
 class VponMenuTableViewController: UITableViewController {
     
     let data = ["Admob - Banner" : "goVponAdmobBannerViewController",
+                "Admob - BannerInTable" : "goVponAdmobBannerInTableViewController",
                 "Admob - Interstitial" : "goVponAdmobInterstitialViewController"]
     
     override func viewDidLoad() {

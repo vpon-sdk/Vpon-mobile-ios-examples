@@ -1,23 +1,18 @@
 //
 //  AdTableViewCell.m
-//  VponAdmobSampleObjC
+//  VponDFPSampleObjC
 //
-//  Created by EricChien on 2018/12/12.
-//  Copyright © 2018 Soul. All rights reserved.
+//  Created by Yi-Hsiang, Chien on 2020/9/25.
+//  Copyright © 2020 Soul. All rights reserved.
 //
 
 #import "AdTableViewCell.h"
-
-@import GoogleMobileAds;
-
-@interface AdTableViewCell ()
-
-@end
 
 @implementation AdTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

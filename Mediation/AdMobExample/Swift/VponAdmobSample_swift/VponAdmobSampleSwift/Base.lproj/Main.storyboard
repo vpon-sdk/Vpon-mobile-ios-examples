@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WEl-gI-Pgm">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WEl-gI-Pgm">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PWz-YN-q0B" id="ygc-tx-lNe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DO8-kx-5Nx">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -45,12 +41,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Lpp-mh-Pce"/>
                     <connections>
-                        <segue destination="cq2-IP-Big" kind="show" identifier="goVponAdmobBannerViewController" id="CIF-Gn-qa3">
-                            <nil key="action"/>
-                        </segue>
-                        <segue destination="V0z-JE-QOe" kind="show" identifier="goVponAdmobInterstitialViewController" id="KP5-pX-Z6z">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="cq2-IP-Big" kind="show" identifier="goVponAdmobBannerViewController" id="CIF-Gn-qa3"/>
+                        <segue destination="V0z-JE-QOe" kind="show" identifier="goVponAdmobInterstitialViewController" id="KP5-pX-Z6z"/>
+                        <segue destination="9TG-pN-zIQ" kind="show" identifier="goVponAdmobBannerInTableViewController" id="rEi-wC-yib"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmw-vc-qEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +97,7 @@
                                 <rect key="frame" x="27.5" y="617" width="320" height="50"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="MWY-OY-0xu">
-                                        <rect key="frame" x="149.5" y="15" width="20" height="20"/>
+                                        <rect key="frame" x="150" y="15" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yn-aq-abV">
-                                <rect key="frame" x="127" y="315" width="120" height="37"/>
+                                <rect key="frame" x="127.5" y="315" width="120" height="37"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="request">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,6 +166,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hL-xP-2Hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="383"/>
+        </scene>
+        <!--Vpon Admob Banner In Table View Controller-->
+        <scene sceneID="Ydj-Ca-Hed">
+            <objects>
+                <viewController id="9TG-pN-zIQ" customClass="VponAdmobBannerInTableViewController" customModule="VponAdmobSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uta-LK-Vez"/>
+                        <viewControllerLayoutGuide type="bottom" id="nX9-O3-I1Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Kw-Q9-WtH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GYr-tc-bu9">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="5kP-62-HCg" style="IBUITableViewCellStyleDefault" id="fCv-Cg-7rl">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCv-Cg-7rl" id="hMB-b5-gpC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5kP-62-HCg">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="adReuseIdentifier" rowHeight="120" id="yDr-ae-gUe" customClass="AdTableViewCell" customModule="VponAdmobSampleSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71.5" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yDr-ae-gUe" id="d2w-Qh-tLd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9TG-pN-zIQ" id="p3w-6a-TEr"/>
+                                    <outlet property="delegate" destination="9TG-pN-zIQ" id="LKd-W8-fpH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91960143390000004" green="0.91960143390000004" blue="0.91960143390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GYr-tc-bu9" firstAttribute="leading" secondItem="6Kw-Q9-WtH" secondAttribute="leading" id="OOV-2a-KOq"/>
+                            <constraint firstItem="nX9-O3-I1Z" firstAttribute="top" secondItem="GYr-tc-bu9" secondAttribute="bottom" id="bcp-HZ-OKW"/>
+                            <constraint firstItem="GYr-tc-bu9" firstAttribute="top" secondItem="uta-LK-Vez" secondAttribute="bottom" id="mwP-GZ-fVw"/>
+                            <constraint firstAttribute="trailing" secondItem="GYr-tc-bu9" secondAttribute="trailing" id="om8-Td-Uqo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QOE-2u-Q73"/>
+                    <connections>
+                        <outlet property="mainTable" destination="GYr-tc-bu9" id="GNq-yw-rGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4f-WT-zoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="1762.6686656671666"/>
         </scene>
     </scenes>
 </document>
