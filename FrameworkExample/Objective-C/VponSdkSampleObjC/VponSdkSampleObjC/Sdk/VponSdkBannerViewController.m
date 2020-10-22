@@ -46,6 +46,7 @@
     [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentFalse];                   //是否專為兒童投放
     [request setContentUrl:@"https://www.vpon.com.tw/"];
     [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
+//    [request addFriendlyObstruction:[[UIView alloc] init] purpose:VpadnFriendlyObstructionNotVisible description:@"not visible"];
     return request;
 }
 

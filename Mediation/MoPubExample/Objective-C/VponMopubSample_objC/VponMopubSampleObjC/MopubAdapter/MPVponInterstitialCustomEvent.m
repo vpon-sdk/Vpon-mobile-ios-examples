@@ -18,6 +18,11 @@
 #define VP_CONTENT_URL @"contentURL"
 #define VP_CONTENT_DATA @"contentData"
 
+#define VP_CONTENT_FRIENDLY_OBS @"friendlyObstructions"
+#define VP_CONTENT_FRIENDLY_VIEW @"view"
+#define VP_CONTENT_FRIENDLY_PURPOSE @"purpose"
+#define VP_CONTENT_FRIENDLY_DESC @"desc"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @interface MPVponInterstitialCustomEvent () <VpadnInterstitialDelegate>
@@ -71,6 +76,22 @@
         [self.localExtras.allKeys containsObject:VP_CONTENT_URL] &&
         [self.localExtras[VP_CONTENT_URL] isKindOfClass:[NSString class]]) {
         [request setContentUrl:self.localExtras[VP_CONTENT_URL]];
+    }
+    if ([request respondsToSelector:@selector(addFriendlyObstruction:purpose:description:)] &&
+        [self.localExtras.allKeys containsObject:VP_CONTENT_FRIENDLY_OBS] &&
+        [self.localExtras[VP_CONTENT_FRIENDLY_OBS] isKindOfClass:[NSArray class]]) {
+        NSArray *friendlyObstructions = self.localExtras[VP_CONTENT_FRIENDLY_OBS];
+        for (NSDictionary *friendlyObstruction in friendlyObstructions) {
+            if (![friendlyObstruction isKindOfClass:NSDictionary.class]) continue;
+            if (![friendlyObstruction[VP_CONTENT_FRIENDLY_VIEW] isKindOfClass:UIView.class]) continue;
+            UIView *view = friendlyObstruction[VP_CONTENT_FRIENDLY_VIEW];
+            NSString *desc = [friendlyObstruction[VP_CONTENT_FRIENDLY_DESC] isKindOfClass:NSString.class] ? friendlyObstruction[VP_CONTENT_FRIENDLY_DESC] : @"";
+            VpadnFriendlyObstructionType purpose = VpadnFriendlyObstructionOther;
+            if ([friendlyObstruction.allKeys containsObject:VP_CONTENT_FRIENDLY_PURPOSE]) {
+                purpose = [VpadnAdObstruction getVpadnPurpose:[friendlyObstruction[VP_CONTENT_FRIENDLY_PURPOSE] integerValue]];
+            }
+            [request addFriendlyObstruction:view purpose:purpose description:desc];
+        }
     }
     // 請新增此function到您的程式內 如果為測試用 則在下方填入IDFA
     [request setTestDevices:@[]];

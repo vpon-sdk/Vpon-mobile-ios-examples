@@ -47,7 +47,8 @@
 //    GADExtras *extra = [[GADExtras alloc] init];
 //    extra.additionalParameters = @{
 //        @"contentURL": @"https://www.vpon.com",
-//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)}
+//        @"contentData": @{@"key1": @"Admob", @"key2": @(1.2), @"key3": @(YES)},
+//        @"friendlyObstructions": @[@{ @"view": [[UIView alloc] init], @"purpose": @(2), @"desc": @"not_visible"}]
 //    };
 //    [request registerAdNetworkExtras:extra];
 //    request.testDevices = @[kGADSimulatorID];

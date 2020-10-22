@@ -51,11 +51,11 @@
     sender.enabled = NO;
     
     GADRequest *request = [GADRequest request];
-//    GADExtras *extra = [[GADExtras alloc] init];
 //    GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
 //    [extra setExtras:@{
 //        @"contentURL": @"https://www.google.com.tw/",
-//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}
+//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)},
+//        @"friendlyObstructions": @[@{ @"view": [[UIView alloc] init], @"purpose": @(2), @"desc": @"not_visible"}]
 //    } forLabel:@"Vpon"];
 //    [request registerAdNetworkExtras:extra];
 //    request.testDevices = @[kGADSimulatorID];

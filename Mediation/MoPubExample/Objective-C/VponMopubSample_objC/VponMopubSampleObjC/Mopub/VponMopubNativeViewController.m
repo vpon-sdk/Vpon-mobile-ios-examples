@@ -55,10 +55,11 @@
     
     MPNativeAdRequestTargeting *targeting = [MPNativeAdRequestTargeting targeting];
     targeting.desiredAssets = [NSSet setWithObjects:kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey, nil];
-    targeting.localExtras = @{
-        @"contentURL": @"https://www.vpon.com",
-        @"contentData": @{@"key1": @"Mopub", @"key2": @(1.2), @"key3": @(YES)}
-    };
+//    targeting.localExtras = @{
+//        @"contentURL": @"https://www.vpon.com",
+//        @"contentData": @{@"key1": @"Mopub", @"key2": @(1.2), @"key3": @(YES)},
+//        @"friendlyObstructions": @[@{ @"view": [[UIView alloc] init], @"purpose": @(2), @"desc": @"not_visible"}]
+//    };
     adRequest.targeting = targeting;
     
     __block typeof(self) weakSelf = self;

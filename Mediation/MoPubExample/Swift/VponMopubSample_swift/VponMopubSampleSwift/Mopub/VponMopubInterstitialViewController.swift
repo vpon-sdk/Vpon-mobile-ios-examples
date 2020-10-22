@@ -36,7 +36,10 @@ class VponMopubInterstitialViewController: UIViewController {
         } else {
             // TODO: set ad unit id
             mpInterstitial = MPInterstitialAdController(forAdUnitId: "848bf4d03e7b4fdda02be232f8e6b4d1")
-            mpInterstitial.localExtras = ["contentURL":"https://www.vpon.com", "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]]
+            mpInterstitial.localExtras = [
+                "contentURL":"https://www.vpon.com",
+                "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]
+            ]
             mpInterstitial.delegate = self
             mpInterstitial.loadAd()
         }

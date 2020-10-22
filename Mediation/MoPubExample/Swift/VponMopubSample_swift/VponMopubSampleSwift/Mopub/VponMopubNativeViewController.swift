@@ -45,7 +45,11 @@ class VponMopubNativeViewController: UIViewController {
         
         let targeting = MPNativeAdRequestTargeting()
         targeting?.desiredAssets = NSSet(objects: kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey) as? Set<AnyHashable>
-        targeting?.localExtras = ["contentURL":"https://www.vpon.com", "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]]
+        targeting?.localExtras = [
+            "contentURL":"https://www.vpon.com",
+            "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true],
+            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
+        ]
         
         adRequest?.targeting = targeting
         adRequest?.start { (request, response, error) in

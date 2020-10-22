@@ -6,6 +6,7 @@ Admob Adapter
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.0.2|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|支援FriendlyObstruction傳入VponSDK的功能。|
 |2.0.1|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.1+|新增Extra Data傳入VponSDK的功能。|
 |2.0.0|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.0.2+|此版本使用Vpon SDK 5.0.0的Interface。|
 |1.1.5|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 4.9.1+|因為4.9.4調整BannerView的Class造成stopBeingDelegate removeFromSuperView會Crash的問題，故調整stopBeingDelegate的實作。|
@@ -17,6 +18,7 @@ Mopub Custom Event
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.0.4|mopub-ios-sdk 5.13.0+, VpadnSDK 5.1.7+|支援FriendlyObstruction傳入VponSDK的功能。|
 |2.0.3|mopub-ios-sdk 5.13.0+, VpadnSDK 5.1.1+|CustomEvent調整成mopub 5.13.0 Adapter Protocol。|
 |2.0.2|mopub-ios-sdk 5.10.0+, VpadnSDK 5.1.1+|新增LocalExtra傳入VponSDK的功能。|
 |2.0.1|mopub-ios-sdk 5.10.0+, VpadnSDK 5.0.2+|調整Native registerViewForInteraction的邏輯，原因Mopub告知SDK Register的時候尚未加載至superview。|

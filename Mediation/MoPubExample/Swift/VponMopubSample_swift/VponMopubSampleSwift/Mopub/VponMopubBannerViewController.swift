@@ -75,7 +75,11 @@ class VponMopubBannerViewController: UIViewController {
         
         mpBannerView = MPAdView(adUnitId: "e036eb60cb694fe7b987f1af41a76eb9")
         mpBannerView.maxAdSize = loadBannerView.frame.size
-        mpBannerView.localExtras = ["contentURL":"https://www.vpon.com", "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true]]
+//        mpBannerView.localExtras = [
+//            "contentURL":"https://www.vpon.com",
+//            "contentData": ["key1": "Mopub", "key2": 1.2, "key3": true],
+//            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
+//        ]
         // TODO: set ad unit id
         mpBannerView.delegate = self
         mpBannerView.loadAd()

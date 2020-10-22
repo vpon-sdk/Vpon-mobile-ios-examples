@@ -38,10 +38,14 @@ class VponDFPBannerViewController: UIViewController {
         }
         
         let request = GADRequest()
-        //        let extra = GADCustomEventExtras()
-        //        extra.setExtras(["contentURL":"https://www.vpon.com", "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]], forLabel: "Vpon")
-        //        request.register(extra)
-        //        request.testDevices = [kGADSimulatorID]
+//        let extra = GADExtras()
+//        extra.additionalParameters = [
+//            "contentURL":"https://www.vpon.com",
+//            "contentData": ["key1": "Admob", "key2": 1.2, "key3": true],
+//            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
+//        ]
+//        request.register(extra)
+//        request.testDevices = [kGADSimulatorID]
         
         dfpBannerView = DFPBannerView(adSize: GADAdSizeFromCGSize(loadBannerView.frame.size))
         // TODO: set ad unit id
