@@ -35,12 +35,14 @@
 - (void) requestAdWithSize:(CGSize)size adapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
     MPLogInfo(@"Requesting Vpon banner");
     VpadnAdSize adSize = VpadnAdSizeSmartBannerPortrait;
-    if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size) || (size.height == 250.0 && size.width >= 300)) {
+    if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size) || (size.height >= 250.0 && size.width / size.height <= 300 / 250.0 )) {
         adSize = VpadnAdSizeMediumRectangle;
     } else if (CGSizeEqualToSize(size, VpadnAdSizeFullBanner.size)) {
         adSize = VpadnAdSizeFullBanner;
     } else if (CGSizeEqualToSize(size, VpadnAdSizeLeaderboard.size)) {
         adSize = VpadnAdSizeLeaderboard;
+    } else if (CGSizeEqualToSize(size, VpadnAdSizeLargeRectangle.size)) {
+        adSize = VpadnAdSizeLargeRectangle;
     } else {
         adSize = VpadnAdSizeFromCGSize(size);
     }

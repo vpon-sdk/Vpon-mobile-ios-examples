@@ -12,7 +12,7 @@
 @interface MPVponNativeAdView : UIView <MPNativeAdRendering>
 
 @property (weak, nonatomic) IBOutlet UIImageView *adIconImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *adCoverMediaView;
+@property (weak, nonatomic) IBOutlet UIView *adCoverMediaView;
 @property (weak, nonatomic) IBOutlet UILabel *adTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *adBodyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *adCallToActionLabel;

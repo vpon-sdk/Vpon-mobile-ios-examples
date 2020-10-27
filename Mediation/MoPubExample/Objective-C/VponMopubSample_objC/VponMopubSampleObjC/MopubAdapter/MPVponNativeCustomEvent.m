@@ -91,10 +91,6 @@ static const NSInteger VpadnNoFillErrorCode = -25;
         [imageURLs addObject:nativeAd.icon.url];
     }
     
-    if (nativeAd.coverImage.url) {
-        [imageURLs addObject:nativeAd.coverImage.url];
-    }
-    
     [super precacheImagesWithURLs:imageURLs completionBlock:^(NSArray *errors) {
         if (errors) {
             [self.delegate nativeCustomEvent:self didFailToLoadAdWithError:MPNativeAdNSErrorForImageDownloadFailure()];

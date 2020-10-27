@@ -12,9 +12,11 @@
 #import "MPLogging.h"
 
 
-@interface MPVponNativeAdAdapter () <VpadnNativeAdDelegate>
+@interface MPVponNativeAdAdapter () <VpadnNativeAdDelegate, VpadnMediaViewDelegate>
 
 @property (nonatomic, readonly) VpadnNativeAd *vpadnNativeAd;
+
+@property (nonatomic, strong) VpadnMediaView *vpadnMediaView;
 
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -33,6 +35,9 @@
     if (self = [super init]) {
         _vpadnNativeAd = nativeAd;
         _vpadnNativeAd.delegate = self;
+        
+        _vpadnMediaView = [[VpadnMediaView alloc] initWithNativeAd:_vpadnNativeAd];
+        _vpadnMediaView.delegate = self;
 
         NSNumber *starRating = nil;
 
@@ -78,6 +83,10 @@
             [properties setObject:nativeAd.coverImage.url.absoluteString forKey:kAdMainImageKey];
         }
         
+        if (_vpadnMediaView) {
+            [properties setObject:_vpadnMediaView forKey:kAdMainMediaViewKey];
+        }
+        
         _properties = properties;
     }
 
@@ -87,7 +96,11 @@
 
 #pragma mark - MPNativeAdAdapter
 
-- (NSURL *)defaultActionURL
+- (UIView *) mainMediaView {
+    return _vpadnMediaView;
+}
+
+- (NSURL *) defaultActionURL
 {
     return nil;
 }
@@ -140,6 +153,16 @@
 
 - (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
     [self.delegate nativeAdDidClick:self];
+}
+
+#pragma mark - VpadnMediaView Delegate
+
+- (void) mediaViewDidLoad:(VpadnMediaView *)mediaView{
+    MPLogInfo(@"Vpon media view is ready.");
+}
+
+- (void) mediaViewDidFailed:(VpadnMediaView *)mediaView error:(NSError *)error {
+    
 }
 
 @end
