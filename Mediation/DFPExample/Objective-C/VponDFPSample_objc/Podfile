@@ -8,7 +8,7 @@ target 'VponDFPSampleObjC' do
   # Pods for VponDFPSampleObjC
 
   pod 'Google-Mobile-Ads-SDK'
-  pod 'AdMobMediationAdapterVpadn', '~> 2.0.1'
-  pod 'VpadnSDK', '~> 5.1.1'
+  pod 'AdMobMediationAdapterVpadn', '~> 2.0.2'
+  pod 'VpadnSDK', '~> 5.1.7'
 
 end

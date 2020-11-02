@@ -8,6 +8,6 @@ target 'VponMopubSampleSwift' do
   # Pods for VponMopubSampleSwift
 
   pod 'mopub-ios-sdk', '~> 5.13.0'
-  pod 'VpadnSDK', '~> 5.1.1'
+  pod 'VpadnSDK', '~> 5.1.7'
 
 end
