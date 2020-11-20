@@ -6,6 +6,7 @@ Admob Adapter
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.0.3|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|修復Banner請求的Bug。|
 |2.0.2|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|支援FriendlyObstruction傳入VponSDK的功能。|
 |2.0.1|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.1+|新增Extra Data傳入VponSDK的功能。|
 |2.0.0|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.0.2+|此版本使用Vpon SDK 5.0.0的Interface。|
