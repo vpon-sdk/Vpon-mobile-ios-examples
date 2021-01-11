@@ -1,14 +1,16 @@
 //
-//  MPGoogleAdMobBannerCustomEvent.m
+//  MPInterstitialCustomEvent.m
 //  MoPub
 //
-//  Copyright (c) 2013 MoPub. All rights reserved.
+//  Copyright (c) 2012 MoPub, Inc. All rights reserved.
 //
 
 @import VpadnSDKAdKit;
 
-#import "MPVponBannerCustomEvent.h"
+#import "MPVponInterstitialCustomEvent.h"
+#import "MPInterstitialAdController.h"
 #import "MPLogging.h"
+#import "MPAdConfiguration.h"
 
 #define EXTRA_INFO_ZONE         @"zone"
 #define EXTRA_INFO_BANNER_ID    @"strBannerId"
@@ -23,32 +25,43 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@interface MPVponBannerCustomEvent () <VpadnBannerDelegate>
+@interface MPVponInterstitialCustomEvent () <VpadnInterstitialDelegate>
 
-@property (strong, nonatomic) VpadnBanner *vpadnBanner;
+@property (nonatomic, strong) VpadnInterstitial *interstitial;
 
 @end
 
+@implementation MPVponInterstitialCustomEvent
 
-@implementation MPVponBannerCustomEvent
+@synthesize interstitial = _interstitial;
 
-- (void) requestAdWithSize:(CGSize)size adapterInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
-    MPLogInfo(@"Requesting Vpon banner");
-    VpadnAdSize adSize = VpadnAdSizeSmartBannerPortrait;
-    if (CGSizeEqualToSize(size, VpadnAdSizeMediumRectangle.size) || (size.height >= 250.0 && size.width / size.height <= 300 / 250.0 )) {
-        adSize = VpadnAdSizeMediumRectangle;
-    } else if (CGSizeEqualToSize(size, VpadnAdSizeFullBanner.size)) {
-        adSize = VpadnAdSizeFullBanner;
-    } else if (CGSizeEqualToSize(size, VpadnAdSizeLeaderboard.size)) {
-        adSize = VpadnAdSizeLeaderboard;
-    } else if (CGSizeEqualToSize(size, VpadnAdSizeLargeRectangle.size)) {
-        adSize = VpadnAdSizeLargeRectangle;
-    } else {
-        adSize = VpadnAdSizeFromCGSize(size);
+#pragma mark - MPInterstitialCustomEvent Subclass Methods
+
+- (void)requestAdWithAdapterInfo:(NSDictionary *)info adMarkup:(NSString * _Nullable)adMarkup {
+    MPLogInfo(@"Requesting Vpon interstitial");
+    if (_interstitial) {
+        _interstitial.delegate = nil;
+        _interstitial = nil;
     }
-    _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID] adSize:adSize];
-    _vpadnBanner.delegate = self;
-    [_vpadnBanner loadRequest:[self createRequest]];
+    
+    _interstitial = [[VpadnInterstitial alloc] initWithLicenseKey:[info objectForKey:EXTRA_INFO_BANNER_ID]];
+    _interstitial.delegate = self;
+    [_interstitial loadRequest:[self createRequest]];
+}
+
+- (void)presentAdFromViewController:(UIViewController *)viewController {
+    if (_interstitial) {
+        [_interstitial showFromRootViewController:viewController];
+        [self.delegate fullscreenAdAdapterAdDidAppear:self];
+    }
+}
+
+- (void)handleDidPlayAd {
+    
+}
+
+- (void)handleDidInvalidateAd {
+    
 }
 
 - (VpadnAdRequest *) createRequest {
@@ -85,42 +98,53 @@
     return request;
 }
 
-#pragma mark -
-#pragma mark VpadnAdDelegate method 接一般Banner廣告就需要新增
+#pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
 
-- (void) onVpadnAdLoaded:(VpadnBanner *)banner {
+- (BOOL) enableAutomaticImpressionAndClickTracking {
+    return NO;
+}
+
+- (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapter:didLoadAdWithAdView:)]) {
-        [self.delegate inlineAdAdapter:self didLoadAdWithAdView:banner.getVpadnAdView];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterDidLoadAd:)]) {
+        [self.delegate fullscreenAdAdapterDidLoadAd:self];
     }
 }
 
-- (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
+- (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
     MPLogAdEvent([MPLogEvent adLoadFailedForAdapter:NSStringFromClass(self.class) error:error], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapter:didFailToLoadAdWithError:)]) {
-        [self.delegate inlineAdAdapter:self didFailToLoadAdWithError:error];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapter:didFailToLoadAdWithError:)]) {
+        [self.delegate fullscreenAdAdapter:self didFailToLoadAdWithError:error];
     }
 }
 
-- (void) onVpadnAdWillOpen:(VpadnBanner *)banner {
+- (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterWillBeginUserAction:)]) {
-        [self.delegate inlineAdAdapterWillBeginUserAction:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterAdWillAppear:)]) {
+        [self.delegate fullscreenAdAdapterAdWillAppear:self];
     }
 }
 
-- (void) onVpadnAdClosed:(VpadnBanner *)banner {
+- (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adDidDismissModalForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterDidEndUserAction:)]) {
-        [self.delegate inlineAdAdapterDidEndUserAction:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterAdDidDisappear:)]) {
+        [self.delegate fullscreenAdAdapterAdDidDisappear:self];
     }
 }
 
-- (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
+- (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adWillLeaveApplicationForAdapter:NSStringFromClass(self.class)], nil);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterWillLeaveApplication:)]) {
-        [self.delegate inlineAdAdapterWillLeaveApplication:self];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterWillLeaveApplication:)]) {
+        [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
     }
+}
+
+- (void) onVpadnInterstitialDidImpression:(VpadnInterstitial *)interstitial {
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
+}
+
+- (void) onVpadnInterstitialClicked:(VpadnInterstitial *)interstitial {
+    [self.delegate fullscreenAdAdapterDidTrackClick:self];
 }
 
 @end
