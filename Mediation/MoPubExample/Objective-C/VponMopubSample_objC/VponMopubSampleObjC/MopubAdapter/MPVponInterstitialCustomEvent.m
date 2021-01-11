@@ -1,5 +1,5 @@
 //
-//  MPGoogleAdMobInterstitialCustomEvent.m
+//  MPInterstitialCustomEvent.m
 //  MoPub
 //
 //  Copyright (c) 2012 MoPub, Inc. All rights reserved.
@@ -100,6 +100,10 @@
 
 #pragma mark VpadnInterstitial Delegate 有接Interstitial的廣告才需要新增
 
+- (BOOL) enableAutomaticImpressionAndClickTracking {
+    return NO;
+}
+
 - (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
     MPLogAdEvent([MPLogEvent adLoadSuccessForAdapter:NSStringFromClass(self.class)], nil);
     if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterDidLoadAd:)]) {
@@ -133,6 +137,14 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(fullscreenAdAdapterWillLeaveApplication:)]) {
         [self.delegate fullscreenAdAdapterWillLeaveApplication:self];
     }
+}
+
+- (void) onVpadnInterstitialDidImpression:(VpadnInterstitial *)interstitial {
+    [self.delegate fullscreenAdAdapterDidTrackImpression:self];
+}
+
+- (void) onVpadnInterstitialClicked:(VpadnInterstitial *)interstitial {
+    [self.delegate fullscreenAdAdapterDidTrackClick:self];
 }
 
 @end

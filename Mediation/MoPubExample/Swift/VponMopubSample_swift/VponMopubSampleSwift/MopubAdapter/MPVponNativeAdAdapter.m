@@ -105,7 +105,7 @@
     return nil;
 }
 
-- (BOOL)enableThirdPartyClickTracking {
+- (BOOL) enableThirdPartyClickTracking {
     return YES;
 }
 
@@ -153,6 +153,10 @@
 
 - (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
     [self.delegate nativeAdDidClick:self];
+}
+
+- (void) onVpadnNativeAdDidImpression:(VpadnNativeAd *)nativeAd {
+    [self.delegate nativeAdWillLogImpression:self];
 }
 
 #pragma mark - VpadnMediaView Delegate

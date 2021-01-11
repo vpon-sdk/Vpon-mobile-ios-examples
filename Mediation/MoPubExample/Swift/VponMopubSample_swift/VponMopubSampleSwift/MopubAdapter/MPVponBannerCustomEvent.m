@@ -1,5 +1,5 @@
 //
-//  MPGoogleAdMobBannerCustomEvent.m
+//  MPBannerCustomEvent.m
 //  MoPub
 //
 //  Copyright (c) 2013 MoPub. All rights reserved.
@@ -102,11 +102,23 @@
     }
 }
 
+- (void) onVpadnAdDidImpression:(VpadnBanner *)banner {
+    [self.delegate inlineAdAdapterDidTrackImpression:self];
+}
+
+- (void) onVpadnAdClicked:(VpadnBanner *)banner {
+    [self.delegate inlineAdAdapterDidTrackClick:self];
+}
+
 - (void) onVpadnAdWillOpen:(VpadnBanner *)banner {
     MPLogAdEvent([MPLogEvent adWillPresentModalForAdapter:NSStringFromClass(self.class)], nil);
     if (self.delegate && [self.delegate respondsToSelector:@selector(inlineAdAdapterWillBeginUserAction:)]) {
         [self.delegate inlineAdAdapterWillBeginUserAction:self];
     }
+}
+
+- (BOOL) enableAutomaticImpressionAndClickTracking {
+    return NO;
 }
 
 - (void) onVpadnAdClosed:(VpadnBanner *)banner {

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		068BC3E82457D59900483B06 /* MPVponNativeCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3DC2457D59900483B06 /* MPVponNativeCustomEvent.m */; };
 		068BC3E92457D59900483B06 /* MPVponNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068BC3E02457D59900483B06 /* MPVponNativeAdView.xib */; };
-		068BC3EA2457D59900483B06 /* VponAdapterConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3E12457D59900483B06 /* VponAdapterConfiguration.m */; };
 		068BC3EB2457D59900483B06 /* MPVponNativeAdAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3E32457D59900483B06 /* MPVponNativeAdAdapter.m */; };
 		068BC3EC2457D59900483B06 /* MPVponInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3E42457D59900483B06 /* MPVponInterstitialCustomEvent.m */; };
 		068BC3ED2457D59900483B06 /* MPVponBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 068BC3E52457D59900483B06 /* MPVponBannerCustomEvent.m */; };
@@ -22,6 +21,7 @@
 		06B4BAF61EEF8B2500888622 /* VponMopubBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAF51EEF8B2500888622 /* VponMopubBannerViewController.swift */; };
 		06B4BAF81EEF8B3700888622 /* VponMopubInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAF71EEF8B3700888622 /* VponMopubInterstitialViewController.swift */; };
 		06B4BAFA1EEF8B4300888622 /* VponMopubNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B4BAF91EEF8B4300888622 /* VponMopubNativeViewController.swift */; };
+		06D1491625ABECF300CE6D7E /* MPVponAdapterConfigutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D1491425ABECF300CE6D7E /* MPVponAdapterConfigutation.m */; };
 		F94A4175C1ADE696859593BD /* Pods_VponMopubSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA1F55BC193595C03126D55 /* Pods_VponMopubSampleSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,12 +32,10 @@
 		068BC3DE2457D59900483B06 /* MPVponInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponInterstitialCustomEvent.h; sourceTree = "<group>"; };
 		068BC3DF2457D59900483B06 /* MPVponNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeAdView.h; sourceTree = "<group>"; };
 		068BC3E02457D59900483B06 /* MPVponNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPVponNativeAdView.xib; sourceTree = "<group>"; };
-		068BC3E12457D59900483B06 /* VponAdapterConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdapterConfiguration.m; sourceTree = "<group>"; };
 		068BC3E22457D59900483B06 /* MPVponNativeCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponNativeCustomEvent.h; sourceTree = "<group>"; };
 		068BC3E32457D59900483B06 /* MPVponNativeAdAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdAdapter.m; sourceTree = "<group>"; };
 		068BC3E42457D59900483B06 /* MPVponInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponInterstitialCustomEvent.m; sourceTree = "<group>"; };
 		068BC3E52457D59900483B06 /* MPVponBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponBannerCustomEvent.m; sourceTree = "<group>"; };
-		068BC3E62457D59900483B06 /* VponAdapterConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdapterConfiguration.h; sourceTree = "<group>"; };
 		068BC3E72457D59900483B06 /* MPVponNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponNativeAdView.m; sourceTree = "<group>"; };
 		06B4BACA1EEF8A4A00888622 /* VponMopubSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponMopubSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B4BACD1EEF8A4A00888622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +48,8 @@
 		06B4BAF71EEF8B3700888622 /* VponMopubInterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponMopubInterstitialViewController.swift; sourceTree = "<group>"; };
 		06B4BAF91EEF8B4300888622 /* VponMopubNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VponMopubNativeViewController.swift; sourceTree = "<group>"; };
 		06B4BAFE1EEF8DF900888622 /* VponMopubSampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VponMopubSampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		06D1491425ABECF300CE6D7E /* MPVponAdapterConfigutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPVponAdapterConfigutation.m; sourceTree = "<group>"; };
+		06D1491525ABECF300CE6D7E /* MPVponAdapterConfigutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPVponAdapterConfigutation.h; sourceTree = "<group>"; };
 		3A169B3875639478109D6321 /* Pods-VponMopubSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponMopubSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponMopubSampleSwift/Pods-VponMopubSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		6BA1F55BC193595C03126D55 /* Pods_VponMopubSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponMopubSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72DDCB238E5522E47F95772 /* Pods-VponMopubSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponMopubSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponMopubSampleSwift/Pods-VponMopubSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,8 +70,8 @@
 		068BC3DA2457D59900483B06 /* MopubAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				068BC3E62457D59900483B06 /* VponAdapterConfiguration.h */,
-				068BC3E12457D59900483B06 /* VponAdapterConfiguration.m */,
+				06D1491525ABECF300CE6D7E /* MPVponAdapterConfigutation.h */,
+				06D1491425ABECF300CE6D7E /* MPVponAdapterConfigutation.m */,
 				068BC3DF2457D59900483B06 /* MPVponNativeAdView.h */,
 				068BC3E72457D59900483B06 /* MPVponNativeAdView.m */,
 				068BC3E02457D59900483B06 /* MPVponNativeAdView.xib */,
@@ -264,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D1491625ABECF300CE6D7E /* MPVponAdapterConfigutation.m in Sources */,
 				06B4BAFA1EEF8B4300888622 /* VponMopubNativeViewController.swift in Sources */,
 				068BC3ED2457D59900483B06 /* MPVponBannerCustomEvent.m in Sources */,
 				06B4BAF61EEF8B2500888622 /* VponMopubBannerViewController.swift in Sources */,
@@ -271,7 +272,6 @@
 				06B4BAF81EEF8B3700888622 /* VponMopubInterstitialViewController.swift in Sources */,
 				068BC3EE2457D59900483B06 /* MPVponNativeAdView.m in Sources */,
 				068BC3E82457D59900483B06 /* MPVponNativeCustomEvent.m in Sources */,
-				068BC3EA2457D59900483B06 /* VponAdapterConfiguration.m in Sources */,
 				06B4BAE01EEF8AC600888622 /* VponMenuTableViewController.swift in Sources */,
 				068BC3EC2457D59900483B06 /* MPVponInterstitialCustomEvent.m in Sources */,
 				068BC3EB2457D59900483B06 /* MPVponNativeAdAdapter.m in Sources */,
