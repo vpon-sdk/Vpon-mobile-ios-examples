@@ -6,6 +6,7 @@ Admob Adapter
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.0.5|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.2.0+|支援LargeBanner 320x100。|
 |2.0.4|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|修復Native Icon下載時卡線程問題。|
 |2.0.3|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|修復Banner請求的Bug。|
 |2.0.2|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 5.1.7+|支援FriendlyObstruction傳入VponSDK的功能。|

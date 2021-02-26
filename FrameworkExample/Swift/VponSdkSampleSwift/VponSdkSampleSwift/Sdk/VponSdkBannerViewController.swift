@@ -75,7 +75,7 @@ class VponSdkBannerViewController: UIViewController {
         sender.isEnabled = false
         
         if vpadnBanner != nil {
-            vpadnBanner.getVpadnAdView()?.removeFromSuperview()
+            vpadnBanner.getVpadnAdView().removeFromSuperview()
         }
         
         vpadnBanner = VpadnBanner.init(licenseKey: "8a80854b6a90b5bc016ad81a5059652d", adSize: VpadnAdSizeSmartBannerPortrait)

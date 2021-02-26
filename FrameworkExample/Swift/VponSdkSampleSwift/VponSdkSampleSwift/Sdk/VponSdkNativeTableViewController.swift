@@ -17,6 +17,14 @@ let kDefaultCellIdentifier = "normalIdentifier";
 let kAdCellIdentifier = "adIdentifier";
 
 extension VponSdkNativeTableViewController: VpadnNativeAdsManagerDelegate, VpadnNativeAdDelegate {
+    func onVpadnNativeAdsReceived() {
+        
+    }
+    
+    func onVpadnNativeAdsFailedToLoadWithError(_ error: Error) {
+        
+    }
+    
     func onVpadnNativeAdsLoaded(_ adsManager: VpadnNativeAdsManager) {
         tableView.reloadData()
     }

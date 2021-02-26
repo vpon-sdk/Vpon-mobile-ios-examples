@@ -75,7 +75,7 @@ class VponSdkInterstitialViewController: UIViewController {
     
     @IBAction func actionButtonDidTouch(_ sender: UIButton) {
         sender.isEnabled = false
-        if vpadnInterstitial != nil && vpadnInterstitial.isReady {
+        if vpadnInterstitial != nil && vpadnInterstitial.isReady() {
             vpadnInterstitial.show(fromRootViewController: self)
         } else {
             vpadnInterstitial = VpadnInterstitial.init(licenseKey:"8a80854b6a90b5bc016ad81a98cf652e")
