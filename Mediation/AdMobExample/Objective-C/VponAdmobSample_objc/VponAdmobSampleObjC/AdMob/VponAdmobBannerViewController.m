@@ -62,14 +62,19 @@
 
 #pragma mark - GADBannerView Delegate
 
-- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
-    NSLog(@"Received banner ad successfully");
-    [self.loadBannerView addSubview:bannerView];
+- (void)bannerViewDidReceiveAd:(nonnull GADBannerView *)bannerView {
     self.requestButton.enabled = YES;
+    [self.loadBannerView addSubview:bannerView];
+    bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(bannerView);
+    [bannerView.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bannerView]-0-|" options:0 metrics:nil views:viewDictionary]];
+    [bannerView.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bannerView]-0-|" options:0 metrics:nil views:viewDictionary]];
+    [bannerView.superview layoutIfNeeded];
 }
 
-- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
+- (void)bannerView:(nonnull GADBannerView *)bannerView didFailToReceiveAdWithError:(nonnull NSError *)error {
     NSLog(@"Failed to receive banner with error: %@", [error localizedFailureReason]);
     self.requestButton.enabled = YES;
 }
+
 @end

@@ -66,12 +66,12 @@
 
 #pragma mark - GADBannerView Delegate
 
-- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+- (void)bannerViewDidReceiveAd:(nonnull GADBannerView *)bannerView {
     NSLog(@"Received banner ad successfully");
     [_mainTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:ADPOS inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 }
 
-- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error {
+- (void)bannerView:(nonnull GADBannerView *)bannerView didFailToReceiveAdWithError:(nonnull NSError *)error {
     NSLog(@"Failed to receive banner with error: %@", [error localizedFailureReason]);
     [_mainTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:ADPOS inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 }

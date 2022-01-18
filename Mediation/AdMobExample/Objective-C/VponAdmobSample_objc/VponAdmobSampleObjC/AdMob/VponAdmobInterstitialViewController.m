@@ -10,11 +10,11 @@
 
 @import GoogleMobileAds;
 
-@interface VponAdmobInterstitialViewController () <GADInterstitialDelegate>
+@interface VponAdmobInterstitialViewController () <GADFullScreenContentDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
 
-@property (strong, nonatomic) GADInterstitial *gadInterstitialView;
+@property (strong, nonatomic) GADInterstitialAd *interstitialAd;
 
 @end
 
@@ -38,59 +38,42 @@
     
     sender.enabled = NO;
     
-    if (self.gadInterstitialView != nil && self.gadInterstitialView.isReady) {
-        [self.gadInterstitialView presentFromRootViewController:self];
-    } else {
-        GADRequest *request = [GADRequest request];
-//        GADExtras *extra = [[GADExtras alloc] init];
-//        extra.additionalParameters = @{
-//            @"contentURL": @"https://www.vpon.com",
-//            @"contentData": @{@"key1": @"Admob - Interstitial", @"key2": @(1.2), @"key3": @(YES)}
-//        };
-//        [request registerAdNetworkExtras:extra];
-//        request.testDevices = @[kGADSimulatorID];
-        
-        self.gadInterstitialView = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-7987617251221645/3519729727"];
-        self.gadInterstitialView.delegate = self;
-        [self.gadInterstitialView loadRequest:request];
-    }
+    GADRequest *request = [GADRequest request];
+//    GADExtras *extra = [[GADExtras alloc] init];
+//    extra.additionalParameters = @{
+//        @"contentURL": @"https://www.vpon.com",
+//        @"contentData": @{@"key1": @"Admob - Interstitial", @"key2": @(1.2), @"key3": @(YES)}
+//    };
+//    [request registerAdNetworkExtras:extra];
+//    request.testDevices = @[kGADSimulatorID];
+    
+    __block __weak typeof(self) weakSelf = self;
+    [GADInterstitialAd loadWithAdUnitID:@"ca-app-pub-7987617251221645/3519729727"
+                                request:request
+                      completionHandler:^(GADInterstitialAd * _Nullable interstitialAd, NSError * _Nullable error) {
+        if (error != nil) {
+            weakSelf.actionButton.enabled = YES;
+            NSLog(@"Failed to receive interstitail with error: %@", [error localizedFailureReason]);
+        }
+    }];
 }
 
-#pragma mark - GADInterstitial Delegate
 
-- (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-    NSLog(@"Received interstitial ad successfully");
+
+#pragma mark - GADFullScreenContent Delegate
+
+- (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     self.actionButton.enabled = YES;
     [self.actionButton setTitle:@"show" forState:UIControlStateNormal];
 }
 
-- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"Failed to receive interstitail with error: %@", [error localizedFailureReason]);
-    self.actionButton.enabled = YES;
-    [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
+- (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+    NSLog(@"Interstitial did present screen");
 }
 
-- (void)interstitialWillPresentScreen:(GADInterstitial *)ad {
-    NSLog(@"Interstitial will present screen");
-}
-
-- (void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad {
-    NSLog(@"Interstitial did fail to present screen");
-}
-
-- (void)interstitialWillDismissScreen:(GADInterstitial *)ad {
-    NSLog(@"Interstitial will dismiss screen");
-}
-
-- (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
+- (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     NSLog(@"Interstitial did dismiss screen");
-    self.actionButton.enabled = YES;
-    [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
-}
-
-- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
-    NSLog(@"Interstitial will leave application");
-    
+    _interstitialAd = nil;
 }
 
 @end

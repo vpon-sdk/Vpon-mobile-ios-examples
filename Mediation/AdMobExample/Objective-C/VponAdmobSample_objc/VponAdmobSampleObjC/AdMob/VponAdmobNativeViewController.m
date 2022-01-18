@@ -7,18 +7,31 @@
 //
 
 #import "VponAdmobNativeViewController.h"
+#import "VponAdmobNative.h"
 
 @import GoogleMobileAds;
 
-@interface VponAdmobNativeViewController () <GADUnifiedNativeAdLoaderDelegate, GADVideoControllerDelegate, GADUnifiedNativeAdDelegate>
+@interface VponAdmobNativeViewController () <GADNativeAdLoaderDelegate>
 
-@property (nonatomic, strong) GADAdLoader *adLoader;
+@property (strong, nonatomic) GADAdLoader *adLoader;
 
-/// The native ad view that is being presented.
-@property(nonatomic, strong) GADUnifiedNativeAdView *nativeAdView;
+@property (weak, nonatomic) IBOutlet UIImageView *adIcon;
 
-/// The height constraint applied to the ad view, where necessary.
-@property(nonatomic, strong) NSLayoutConstraint *heightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *adTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *adBody;
+
+@property (weak, nonatomic) IBOutlet UILabel *adSocialContext;
+
+@property (weak, nonatomic) IBOutlet UIButton *adAction;
+
+@property (weak, nonatomic) IBOutlet GADMediaView *adMediaView;
+
+@property (weak, nonatomic) IBOutlet GADAdChoicesView *adChoicesView;
+
+@property (weak, nonatomic) IBOutlet VponAdmobNative *nativeAdView;
+
+@property (weak, nonatomic) IBOutlet UIView *adContainerView;
 
 @end
 
@@ -26,51 +39,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.versionLabel.text = [GADRequest sdkVersion];
-    
-    NSArray *nibObjects =
-    [[NSBundle mainBundle] loadNibNamed:@"UnifiedNativeAdView" owner:nil options:nil];
-    [self setAdView:[nibObjects firstObject]];
+    self.title = @"Admob - Native";
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (IBAction) request:(id)sender {
+    GADNativeAdViewAdOptions *adOptions = [[GADNativeAdViewAdOptions alloc] init];
+    adOptions.preferredAdChoicesPosition = GADAdChoicesPositionTopRightCorner;
     
-    
-    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-7987617251221645/4222032724"
-                                       rootViewController:self
-                                                  adTypes:@[kGADAdLoaderAdTypeUnifiedNative]
-                                                  options:@[]];
-    self.adLoader.delegate = self;
-    
-    [self requestButtonDidTouch:_requestButton];
-}
-
-- (IBAction)requestButtonDidTouch:(UIButton *)sender {
-    sender.enabled = NO;
+    _adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/3986624511"
+                                   rootViewController:self
+                                              adTypes:@[GADAdLoaderAdTypeNative]
+                                              options:@[adOptions]];
+    _adLoader.delegate = self;
     
     GADRequest *request = [GADRequest request];
 //    GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
 //    [extra setExtras:@{
 //        @"contentURL": @"https://www.google.com.tw/",
-//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)},
-//        @"friendlyObstructions": @[@{ @"view": [[UIView alloc] init], @"purpose": @(2), @"desc": @"not_visible"}]
+//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}
 //    } forLabel:@"Vpon"];
 //    [request registerAdNetworkExtras:extra];
-//    request.testDevices = @[kGADSimulatorID];
     
-    [self.adLoader loadRequest:request];
+    [_adLoader loadRequest:request];
 }
 
-- (void)setAdView:(GADUnifiedNativeAdView *)view {
-    // Remove previous ad view.
-    [self.nativeAdView removeFromSuperview];
-    self.nativeAdView = view;
+- (void)setNativeAd:(GADNativeAd *)nativeAd {
     
-    // Add new ad view and set constraints to fill its container.
-    [self.nativeAdPlaceholder addSubview:view];
-    [self.nativeAdView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    VponAdmobNative *nativeAdView = [[NSBundle mainBundle] loadNibNamed:@"VponAdmobNative" owner:nil options:nil].firstObject;
+    [self setAdView:nativeAdView];
+    
+    nativeAdView.mediaView.mediaContent = nativeAd.mediaContent;
+    nativeAdView.mediaView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    ((UILabel *)nativeAdView.headlineView).text = nativeAd.headline;
+    ((UILabel *)nativeAdView.bodyView).text = nativeAd.body;
+    ((UILabel *)nativeAdView.advertiserView).text = nativeAd.advertiser;
+    
+    ((UIImageView *)nativeAdView.iconView).image = nativeAd.icon.image;
+    
+    [((UIButton *)nativeAdView.callToActionView)setTitle:nativeAd.callToAction forState:UIControlStateNormal];
+    nativeAdView.callToActionView.userInteractionEnabled = NO;
+    
+    nativeAdView.nativeAd = nativeAd;
+}
+
+- (void)setAdView:(GADNativeAdView *)view {
+    [_nativeAdView removeFromSuperview];
+    _nativeAdView = (VponAdmobNative *)view;
+    
+    [_adContainerView addSubview:view];
+    
+    [_nativeAdView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_nativeAdView);
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_nativeAdView]|"
@@ -83,98 +102,15 @@
                                                                         views:viewDictionary]];
 }
 
-#pragma mark GADUnifiedNativeAdLoaderDelegate implementation
+#pragma mark GADNativeAdLoaderDelegate implementation
 
-- (void)adLoader:(GADAdLoader *)adLoader didReceiveUnifiedNativeAd:(GADUnifiedNativeAd *)nativeAd {
-    self.requestButton.enabled = YES;
-    
-    GADUnifiedNativeAdView *nativeAdView = self.nativeAdView;
-    
-    // Deactivate the height constraint that was set when the previous video ad loaded.
-    self.heightConstraint.active = NO;
-    
-    nativeAdView.nativeAd = nativeAd;
-    
-    // Set ourselves as the ad delegate to be notified of native ad events.
-    nativeAd.delegate = self;
-    
-    // Populate the native ad view with the native ad assets.
-    // Some assets are guaranteed to be present in every native ad.
-    ((UILabel *)nativeAdView.headlineView).text = nativeAd.headline;
-    ((UILabel *)nativeAdView.bodyView).text = nativeAd.body;
-    [((UIButton *)nativeAdView.callToActionView)setTitle:nativeAd.callToAction
-                                                forState:UIControlStateNormal];
-    
-    // Some native ads will include a video asset, while others do not. Apps can
-    // use the GADVideoController's hasVideoContent property to determine if one
-    // is present, and adjust their UI accordingly.
-    if (nativeAd.videoController.hasVideoContent) {
-        // This app uses a fixed width for the GADMediaView and changes its height
-        // to match the aspect ratio of the video it displays.
-        if (nativeAd.videoController.aspectRatio > 0) {
-            self.heightConstraint =
-            [NSLayoutConstraint constraintWithItem:nativeAdView.mediaView
-                                         attribute:NSLayoutAttributeHeight
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:nativeAdView.mediaView
-                                         attribute:NSLayoutAttributeWidth
-                                        multiplier:(1 / nativeAd.videoController.aspectRatio)
-                                          constant:0];
-            self.heightConstraint.active = YES;
-        }
-        
-        // By acting as the delegate to the GADVideoController, this ViewController
-        // receives messages about events in the video lifecycle.
-        nativeAd.videoController.delegate = self;
-        
-        self.videoStatusLabel.text = @"Ad contains a video asset.";
-    } else {
-        self.videoStatusLabel.text = @"Ad does not contain a video.";
-    }
-    
-    // These assets are not guaranteed to be present, and should be checked first.
-    ((UIImageView *)nativeAdView.iconView).image = nativeAd.icon.image;
-    if (nativeAd.icon != nil) {
-        nativeAdView.iconView.hidden = NO;
-    } else {
-        nativeAdView.iconView.hidden = YES;
-    }
-    
-    ((UILabel *)nativeAdView.storeView).text = nativeAd.store;
-    if (nativeAd.store) {
-        nativeAdView.storeView.hidden = NO;
-    } else {
-        nativeAdView.storeView.hidden = YES;
-    }
-    
-    ((UILabel *)nativeAdView.priceView).text = nativeAd.price;
-    if (nativeAd.price) {
-        nativeAdView.priceView.hidden = NO;
-    } else {
-        nativeAdView.priceView.hidden = YES;
-    }
-    
-    ((UILabel *)nativeAdView.advertiserView).text = nativeAd.advertiser;
-    if (nativeAd.advertiser) {
-        nativeAdView.advertiserView.hidden = NO;
-    } else {
-        nativeAdView.advertiserView.hidden = YES;
-    }
-    
-    // In order for the SDK to process touch events properly, user interaction
-    // should be disabled.
-    nativeAdView.callToActionView.userInteractionEnabled = NO;
-}
-
-#pragma mark GADVideoControllerDelegate implementation
-
-- (void)videoControllerDidEndVideoPlayback:(GADVideoController *)videoController {
-    self.videoStatusLabel.text = @"Video playback has ended.";
-}
-
-- (void)adLoader:(GADAdLoader *)adLoader didFailToReceiveAdWithError:(GADRequestError *)error {
-    _requestButton.enabled = YES;
+- (void)adLoader:(nonnull GADAdLoader *)adLoader didFailToReceiveAdWithError:(nonnull NSError *)error {
     NSLog(@"Failed to receive native with error: %@", [error localizedFailureReason]);
+}
+
+- (void)adLoader:(GADAdLoader *)adLoader didReceiveNativeAd:(GADNativeAd *)nativeAd {
+    NSLog(@"Received native ad successfully");
+    [self setNativeAd:nativeAd];
 }
 
 @end

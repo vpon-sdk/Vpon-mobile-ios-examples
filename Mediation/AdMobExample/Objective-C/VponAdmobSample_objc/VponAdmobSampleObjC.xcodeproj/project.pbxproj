@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		06558A6F218155B600FE767F /* VponAdmobNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06558A6E218155B600FE767F /* VponAdmobNativeViewController.m */; };
-		06558A822181A9FB00FE767F /* UnifiedNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06558A812181A9FA00FE767F /* UnifiedNativeAdView.xib */; };
 		06BE5A171EEE8A370003F751 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A161EEE8A370003F751 /* main.m */; };
 		06BE5A1A1EEE8A370003F751 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A191EEE8A370003F751 /* AppDelegate.m */; };
 		06BE5A201EEE8A370003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A1E1EEE8A370003F751 /* Main.storyboard */; };
@@ -17,6 +16,8 @@
 		06BE5A2F1EEE8B9A0003F751 /* VponMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */; };
 		06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */; };
 		06BE5A351EEE8C1E0003F751 /* VponAdmobBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */; };
+		06C175602796981900C1E88A /* VponAdmobNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1755E2796981900C1E88A /* VponAdmobNative.m */; };
+		06C175612796981900C1E88A /* VponAdmobNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C1755F2796981900C1E88A /* VponAdmobNative.xib */; };
 		06EC942021C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */; };
 		06EC942321C0E9380081AD6C /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC942221C0E9380081AD6C /* AdTableViewCell.m */; };
 		42C1EE2FAAD9ECC0FE642F9C /* libPods-VponAdmobSampleObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */; };
@@ -26,7 +27,6 @@
 		01E118C242EDEF8E7D15CE28 /* libPods-VponAdmobSampleObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VponAdmobSampleObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06558A6D218155B600FE767F /* VponAdmobNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponAdmobNativeViewController.h; sourceTree = "<group>"; };
 		06558A6E218155B600FE767F /* VponAdmobNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponAdmobNativeViewController.m; sourceTree = "<group>"; };
-		06558A812181A9FA00FE767F /* UnifiedNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnifiedNativeAdView.xib; sourceTree = "<group>"; };
 		06BE5A121EEE8A370003F751 /* VponAdmobSampleObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponAdmobSampleObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BE5A161EEE8A370003F751 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06BE5A181EEE8A370003F751 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +41,9 @@
 		06BE5A311EEE8C090003F751 /* VponAdmobInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobInterstitialViewController.m; sourceTree = "<group>"; };
 		06BE5A331EEE8C1E0003F751 /* VponAdmobBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobBannerViewController.h; sourceTree = "<group>"; };
 		06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobBannerViewController.m; sourceTree = "<group>"; };
+		06C1755D2796981800C1E88A /* VponAdmobNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VponAdmobNative.h; sourceTree = "<group>"; };
+		06C1755E2796981900C1E88A /* VponAdmobNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VponAdmobNative.m; sourceTree = "<group>"; };
+		06C1755F2796981900C1E88A /* VponAdmobNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VponAdmobNative.xib; sourceTree = "<group>"; };
 		06EC941E21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponAdmobBannerInTableViewController.h; sourceTree = "<group>"; };
 		06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VponAdmobBannerInTableViewController.m; sourceTree = "<group>"; };
 		06EC942121C0E9380081AD6C /* AdTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 				06BE5A2E1EEE8B9A0003F751 /* VponMenuTableViewController.m */,
 				06BE5A2C1EEE8ABA0003F751 /* AdMob */,
 				06BE5A1E1EEE8A370003F751 /* Main.storyboard */,
-				06558A812181A9FA00FE767F /* UnifiedNativeAdView.xib */,
 				06BE5A211EEE8A370003F751 /* Assets.xcassets */,
 				06BE5A231EEE8A370003F751 /* LaunchScreen.storyboard */,
 				06BE5A261EEE8A370003F751 /* Info.plist */,
@@ -114,6 +116,9 @@
 				06BE5A341EEE8C1E0003F751 /* VponAdmobBannerViewController.m */,
 				06EC941E21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.h */,
 				06EC941F21C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m */,
+				06C1755D2796981800C1E88A /* VponAdmobNative.h */,
+				06C1755E2796981900C1E88A /* VponAdmobNative.m */,
+				06C1755F2796981900C1E88A /* VponAdmobNative.xib */,
 				06558A6D218155B600FE767F /* VponAdmobNativeViewController.h */,
 				06558A6E218155B600FE767F /* VponAdmobNativeViewController.m */,
 				06EC942121C0E9380081AD6C /* AdTableViewCell.h */,
@@ -147,7 +152,6 @@
 			buildConfigurationList = 06BE5A291EEE8A370003F751 /* Build configuration list for PBXNativeTarget "VponAdmobSampleObjC" */;
 			buildPhases = (
 				CE4A4431119CBC6E33430529 /* [CP] Check Pods Manifest.lock */,
-				CC29C73BBCD5F54A5B769AC8 /* [CP] Prepare Artifacts */,
 				06BE5A0E1EEE8A370003F751 /* Sources */,
 				06BE5A0F1EEE8A370003F751 /* Frameworks */,
 				06BE5A101EEE8A370003F751 /* Resources */,
@@ -204,8 +208,8 @@
 			files = (
 				06BE5A251EEE8A370003F751 /* LaunchScreen.storyboard in Resources */,
 				06BE5A221EEE8A370003F751 /* Assets.xcassets in Resources */,
+				06C175612796981900C1E88A /* VponAdmobNative.xib in Resources */,
 				06BE5A201EEE8A370003F751 /* Main.storyboard in Resources */,
-				06558A822181A9FB00FE767F /* UnifiedNativeAdView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,33 +223,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VpadnSDK/VpadnSDKAdKit.framework/VpadnSDKAdKit",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VpadnSDKAdKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CC29C73BBCD5F54A5B769AC8 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-artifacts.sh",
-				"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework",
-				"${PODS_ROOT}/GoogleUserMessagingPlatform/Frameworks/Release/UserMessagingPlatform.xcframework",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponAdmobSampleObjC/Pods-VponAdmobSampleObjC-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE4A4431119CBC6E33430529 /* [CP] Check Pods Manifest.lock */ = {
@@ -274,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BE5A1A1EEE8A370003F751 /* AppDelegate.m in Sources */,
+				06C175602796981900C1E88A /* VponAdmobNative.m in Sources */,
 				06EC942021C0E02B0081AD6C /* VponAdmobBannerInTableViewController.m in Sources */,
 				06BE5A321EEE8C090003F751 /* VponAdmobInterstitialViewController.m in Sources */,
 				06EC942321C0E9380081AD6C /* AdTableViewCell.m in Sources */,
