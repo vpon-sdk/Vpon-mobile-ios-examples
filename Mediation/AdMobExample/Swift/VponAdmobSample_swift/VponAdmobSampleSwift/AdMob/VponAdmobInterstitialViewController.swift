@@ -13,7 +13,7 @@ class VponAdmobInterstitialViewController: UIViewController {
     
     @IBOutlet weak var actionButton: UIButton!
     
-    var gadInterstitialView : GADInterstitial!
+    var interstitialAd : GADInterstitialAd!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +30,7 @@ class VponAdmobInterstitialViewController: UIViewController {
     @IBAction func actionButtonDidTouch(_ sender: UIButton) {
         sender.isEnabled = false
         
-        if gadInterstitialView != nil && gadInterstitialView.isReady {
-            gadInterstitialView.present(fromRootViewController: self);
-        } else {
-            let request = GADRequest()
+        let request = GADRequest()
 //            let extra = GADExtras()
 //            extra.additionalParameters = [
 //                "contentURL":"https://www.vpon.com",
@@ -41,48 +38,32 @@ class VponAdmobInterstitialViewController: UIViewController {
 //            ]
 //            request.register(extra)
 //            request.testDevices = [kGADSimulatorID]
-            
-// TODO: set ad unit id
-            gadInterstitialView = GADInterstitial(adUnitID: "ca-app-pub-7987617251221645/3519729727")
-            gadInterstitialView.delegate = self
-            gadInterstitialView.load(request)
+        
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-7987617251221645/3519729727", request: request) { ad, error in
+            if let error = error {
+                self.actionButton.isEnabled = true
+                print("Failed to receive interstitail with error: \(error.localizedDescription)")
+            } else {
+                self.interstitialAd = ad
+                self.interstitialAd.fullScreenContentDelegate = self
+                self.interstitialAd.present(fromRootViewController: self)
+            }
         }
     }
 }
 
-extension VponAdmobInterstitialViewController: GADInterstitialDelegate {
-    
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        print("Received interstitial ad successfully")
+extension VponAdmobInterstitialViewController: GADFullScreenContentDelegate {
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Interstitial did failed to present screen")
         actionButton.isEnabled = true
-        actionButton.setTitle("show", for: .normal)
     }
     
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Failed to receive interstitail with error: \(error.localizedFailureReason!)")
-        actionButton.isEnabled = true
-        actionButton.setTitle("request", for: .normal)
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Interstitial did present screen")
     }
     
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        print("Interstitial will present screen")
-    }
-    
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        print("Interstitial did fail to present screen")
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        print("Interstitial will dismiss screen")
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Interstitial did dismiss screen")
         actionButton.isEnabled = true
-        actionButton.setTitle("request", for: .normal)
-    }
-    
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        print("Interstitial will leave application")
     }
 }

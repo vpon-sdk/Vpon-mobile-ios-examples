@@ -34,14 +34,13 @@ extension VponAdmobBannerInTableViewController: UITableViewDataSource, UITableVi
 }
 
 extension VponAdmobBannerInTableViewController: GADBannerViewDelegate {
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Received banner ad successfully")
         mainTable.reloadRows(at: [IndexPath.init(row: adPos, section: 0)], with: .none)
     }
     
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Failed to receive banner with error: \(error.description)")
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("Failed to receive banner with error: \(error.localizedDescription)")
     }
 }
 
@@ -71,7 +70,7 @@ class VponAdmobBannerInTableViewController: UIViewController {
 //        request.register(extra)
 //        request.testDevices = [kGADSimulatorID]
         
-        gadBannerView = GADBannerView(adSize: kGADAdSizeMediumRectangle)
+        gadBannerView = GADBannerView(adSize: GADAdSizeMediumRectangle)
 // TODO: set ad unit id
         gadBannerView!.adUnitID = "ca-app-pub-7987617251221645/3532457573"
         gadBannerView!.delegate = self

@@ -58,16 +58,14 @@ class VponAdmobBannerViewController: UIViewController {
 }
 
 extension VponAdmobBannerViewController: GADBannerViewDelegate {
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("Received banner ad successfully")
         self.loadBannerView.addSubview(bannerView)
         self.requestButton.isEnabled = true
     }
     
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Failed to receive banner with error: \(error.localizedFailureReason!))")
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("Failed to receive banner with error: \(error.localizedDescription))")
         self.requestButton.isEnabled = true
     }
-    
 }

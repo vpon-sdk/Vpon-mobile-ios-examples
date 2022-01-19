@@ -54,6 +54,10 @@
         if (error != nil) {
             weakSelf.actionButton.enabled = YES;
             NSLog(@"Failed to receive interstitail with error: %@", [error localizedFailureReason]);
+        } else {
+            weakSelf.interstitialAd = interstitialAd;
+            weakSelf.interstitialAd.fullScreenContentDelegate = weakSelf;
+            [weakSelf.interstitialAd presentFromRootViewController:weakSelf];
         }
     }];
 }
@@ -63,8 +67,8 @@
 #pragma mark - GADFullScreenContent Delegate
 
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
-    self.actionButton.enabled = YES;
-    [self.actionButton setTitle:@"show" forState:UIControlStateNormal];
+    NSLog(@"Interstitial did failed to present screen");
+    _actionButton.enabled = YES;
 }
 
 - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
@@ -73,6 +77,7 @@
 
 - (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     NSLog(@"Interstitial did dismiss screen");
+    _actionButton.enabled = YES;
     _interstitialAd = nil;
 }
 
