@@ -14,6 +14,8 @@ FOUNDATION_EXPORT double VponAdapterKitVersionNumber;
 //! Project version string for VponAdapterKit.
 FOUNDATION_EXPORT const unsigned char VponAdapterKitVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <VponAdapterKit/PublicHeader.h>
-
+#import <AdMobMediationAdapterVpadn/GADMAdapterVpon.h>
+#import <AdMobMediationAdapterVpadn/GADVpadnNativeAdCustomEvent.h>
+#import <AdMobMediationAdapterVpadn/GADVpadnNativeAd.h>
+#import <AdMobMediationAdapterVpadn/GADVpadnDefinition.h>
 
