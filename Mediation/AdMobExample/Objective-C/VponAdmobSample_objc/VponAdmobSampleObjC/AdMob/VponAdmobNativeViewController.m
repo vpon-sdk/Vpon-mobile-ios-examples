@@ -48,7 +48,7 @@
     GADNativeAdViewAdOptions *adOptions = [[GADNativeAdViewAdOptions alloc] init];
     adOptions.preferredAdChoicesPosition = GADAdChoicesPositionTopRightCorner;
     
-    _adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-3940256099942544/3986624511"
+    _adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-7987617251221645/4222032724"
                                    rootViewController:self
                                               adTypes:@[GADAdLoaderAdTypeNative]
                                               options:@[adOptions]];

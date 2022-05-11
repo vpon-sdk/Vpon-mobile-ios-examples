@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html style=>
+
+
+ 
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="https://m.vpon.com/sdk/vpon-nativead-video-v2.js"></script>
+
+    <script>
+
+
+ 
+
+    </script>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+            font-family: Arial, SimHei;
+
+            font-size: 63%;
+
+            background: #000;
+        }
+
+        #collapse {
+
+            top: 20px;
+
+            left: 20px;
+
+            position: absolute;
+
+            z-index: 99999;
+
+        }
+
+        #collapse img{
+
+            width: 32px;
+
+        }
+
+        img {
+
+            border: none;
+
+            vertical-align: top
+
+        }
+
+
+ 
+
+        #ctaStr {
+
+            display: none;
+
+        }
+
+        #videoContainer {
+            position: relative;
+        }
+    </style>
+
+</head>
+
+
+ 
+
+<body>
+
+    <div id="collapse"  style="display: none;">
+
+        <img
+
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAASFBMVEVMaXEAAAAAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAC/v79gYGDPz88QEBCAgIDt7e1AQEAwMDAgICBwcHCvr69QUFCPj48k3ENwAAAACnRSTlMA3yD/EEBQgO+fGxWR4AAAATBJREFUeNqt1tlyhSAMBuAqYCAuuJ3T93/TTi2SxsHEDv1vvOEbZAt8/FNaBz9x7aP2XfBI8aFT2lvI7UmB1cFz5Bq8S+OKAlAKFERAOUERuuFCN/o4pn4eruNx5ZbLsh3f0RhzGJeFbYpkNGbekjD9MddW+a3vlksSZmBTbb1AmEBvhU4SeTORu/ECmblAf4gOBZIEpRNXkQm2nl4hY4z7xv6sRYmkzJjT0sqLxLDBwB8JSCSSiAWipYqEyl6mV5+zPiPRUF4ScUXS3xL3e/X3R6Rle2yP8VMj/rqTp1Ejgc4LCZl06VRyMQvEp7PPxdALBM4KwwQKxFtWx04hEeDV8hT4pt1+SWN5Tc6VF9dlvVt5ClB9FwIV94tgKm++UH8j6/d+/euCIx3oL6X699gXXUtEJQBdBRkAAAAASUVORK5CYII='  style="width: 32px;">
+
+    </div>
+
+    <div id="videoContainer">
+
+        </video>
+
+    </div>
+
+    <div id="ctaStr"></div>
+
+
+ 
+
+    <script>
+
+
+ 
+
+        var REPLACE_MACRO = 'REPLACE_MACRO_CONTENT';
+
+
+        var REPLACE_MARCRO_OBJ = JSON.parse(REPLACE_MACRO.replace('\\', ''));
+
+        
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+ 
+
+            console.log(REPLACE_MARCRO_OBJ);
+
+            if (REPLACE_MARCRO_OBJ.isIOS) {
+
+                console.log('[internal-video] Device is iOS');
+
+                var initVponAndroidVar = document.createElement("script");
+
+                var inlineScript = document.createTextNode("var _vpon_android = (window._vpon_android = {});");
+
+                initVponAndroidVar.appendChild(inlineScript);
+
+                document.body.appendChild(initVponAndroidVar);
+
+            }
+
+            document.querySelector('#ctaStr').text = REPLACE_MARCRO_OBJ.action_name;
+
+
+ 
+
+            var video = new VponVideo('videoContainer', {
+
+                'src': REPLACE_MARCRO_OBJ.cover_url,
+
+                'poster': 'poster.png',
+
+                'autoplay': true,
+
+                'loop': false,
+
+                'mutePosition': 'buttom',
+
+                'track': {
+                    'adid': REPLACE_MARCRO_OBJ.ad,
+                    'uid': REPLACE_MARCRO_OBJ.uid,
+                    'bid': REPLACE_MARCRO_OBJ.bid,
+                    'trackid': REPLACE_MARCRO_OBJ.vid_tid,
+                    'progress': REPLACE_MARCRO_OBJ.progress,
+                    'e': REPLACE_MARCRO_OBJ.e
+                }
+ 
+
+            });
+
+            video.create();
+
+        });
+
+    </script>
+
+    <script src="https://m.vpon.com/sdk/vpon-nativead-bridging-v2.js"></script>
+
+
+    
+</body>
+
+
+ 
+
+</html>
