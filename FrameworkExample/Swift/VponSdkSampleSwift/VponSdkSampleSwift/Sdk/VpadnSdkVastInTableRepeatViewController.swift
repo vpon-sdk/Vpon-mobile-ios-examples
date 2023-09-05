@@ -14,7 +14,7 @@ extension VpadnSdkVastInTableRepeatViewController : VpadnInReadAdDelegate {
         print("廣告抓取成功")
     }
     
-    func vpadn(_ ad: VpadnInReadAd, didFailLoading error: Error) {
+    func vpadnInReadAd(_ ad: VpadnInReadAd, didFailLoading error: Error) {
         print("廣告抓取失敗:\(error.localizedDescription)")
     }
 }
@@ -48,18 +48,7 @@ class VpadnSdkVastInTableRepeatViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnInReadAd.init(placementId: "", insertionIndexPath: IndexPath.init(row: 5, section: 0), repeatMode: true, tableView: tableView, delegate: self)
-        vpadnAd.load(withTestIdentifiers: [])
+        vpadnAd = VpadnInReadAd(placementId: "", insertionIndexPath: IndexPath.init(row: 5, section: 0), repeatMode: true, tableView: tableView, delegate: self)
+        vpadnAd.loadAdWithTestIdentifiers([])
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

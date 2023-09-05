@@ -34,7 +34,7 @@ extension VponSdkNativeViewController: VpadnNativeAdDelegate, VpadnMediaViewDele
         
     }
     
-    func mediaViewDidFailed(_ mediaView: VpadnMediaView, error: Error) {
+    func mediaViewDidFail(_ mediaView: VpadnMediaView, error: Error) {
         
     }
     
@@ -70,11 +70,11 @@ class VponSdkNativeViewController: UIViewController {
     func initialRequest() -> VpadnAdRequest {
         let request = VpadnAdRequest.init()
         request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
-        request.setUserInfoGender(.genderMale)                                                      //性別
-        request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
-        request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
-        request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
-        request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
+        request.setUserInfoGender(.unspecified)                                                     //性別
+        request.setUserInfoBirthday(year: 2000, month: 1, day: 1)                                   //生日
+        request.setTagFor(maxAdContentRating: .general)                                             //最高可投放的年齡(分類)限制
+        request.setTagFor(underAgeOfConsent: .notForUnderAgeOfConsent)                              //是否專為特定年齡投放
+        request.setTagFor(childDirectedTreatment: .notForChildDirectedTreatment)                    //是否專為兒童投放
         request.setContentUrl("https://www.google.com.tw/")                                         //內容
         request.setContentData(["key1": 1, "key2": true, "key3": "name", "key4": 123.31])           //內容鍵值
         return request
@@ -89,17 +89,17 @@ class VponSdkNativeViewController: UIViewController {
             vpadnNative.unregisterView()
         }
         
-        vpadnNative = VpadnNativeAd.init(licenseKey: "8a80854b6a90b5bc016ad81ac68c6530")
+        vpadnNative = VpadnNativeAd(licenseKey: "")
         vpadnNative.delegate = self
-        vpadnNative.load(initialRequest())
+        vpadnNative.loadRequest(initialRequest())
     }
     
     func setNativeAd() {
         adIcon.image = nil
             
-        vpadnNative.icon.loadAsync { (image) in
+        vpadnNative.icon?.loadImageAsync(withBlock: { image in
             self.adIcon.image = image
-        }
+        })
         
         adMediaView.nativeAd = vpadnNative
         adMediaView.delegate = self
@@ -110,18 +110,6 @@ class VponSdkNativeViewController: UIViewController {
         adAction.setTitle(vpadnNative.callToAction, for: .normal)
         adAction.setTitle(vpadnNative.callToAction, for: .highlighted)
         
-        vpadnNative.registerView(forInteraction: contentView, with: self)
+        vpadnNative.registerViewForInteraction(contentView, withViewController: self)
     }
-        
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

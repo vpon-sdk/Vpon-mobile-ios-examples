@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let config = VpadnAdConfiguration.sharedInstance()
-        config.logLevel = .debug
+        let config = VpadnAdConfiguration.shared
+        config.logLevel = .defaultLevel
         config.initializeSdk()
         
         // Override point for customization after application launch.

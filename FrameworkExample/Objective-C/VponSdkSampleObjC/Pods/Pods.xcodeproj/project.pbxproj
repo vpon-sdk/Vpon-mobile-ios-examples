@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F6721818C052B988DB458C4837D36B19 /* Build configuration list for PBXAggregateTarget "VpadnSDK" */;
 			buildPhases = (
-				88A4A7B6D152FEDE49A57DC00931058C /* [CP] Copy XCFrameworks */,
+				C88F724EB0582268162BD22E69845E52 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -44,8 +44,8 @@
 		ABBF4B3AF56576B7299E0E0CEF84129D /* VpadnSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "VpadnSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		BA2D497EDC7BAF431E204A8D93D8081F /* Pods-VponSdkSampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VponSdkSampleObjC.release.xcconfig"; sourceTree = "<group>"; };
 		BE5D3AD924171849A39AFE5642B70664 /* Pods-VponSdkSampleObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VponSdkSampleObjC-dummy.m"; sourceTree = "<group>"; };
+		E8626B8DA623CB38D2904DEEAE458F19 /* VpadnSDKAdKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = VpadnSDKAdKit.xcframework; path = "VpadnSDKiOS-5.5.0/VpadnSDKAdKit.xcframework"; sourceTree = "<group>"; };
 		F3A06596C4C7023E2706B20262EC9523 /* Pods-VponSdkSampleObjC */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-VponSdkSampleObjC"; path = "libPods-VponSdkSampleObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3A7AF3328A924529DA1C86D5AE811A4 /* VpadnSDKAdKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = VpadnSDKAdKit.xcframework; path = "VpadnSDKiOS-5.3.4/VpadnSDKAdKit.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		4EB6AC34E211CAE2A85B7727967A87B8 /* VpadnSDK */ = {
 			isa = PBXGroup;
 			children = (
-				C4FB96EE6B70530FE07EFF9EEA44D693 /* Frameworks */,
+				E77D2C7FC87B0D1B68828A19B32522D0 /* Frameworks */,
 				80CD85A9ED3E93298E30D416E3D6C1E8 /* Support Files */,
 			);
 			name = VpadnSDK;
@@ -110,14 +110,6 @@
 			path = "Target Support Files/Pods-VponSdkSampleObjC";
 			sourceTree = "<group>";
 		};
-		C4FB96EE6B70530FE07EFF9EEA44D693 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3A7AF3328A924529DA1C86D5AE811A4 /* VpadnSDKAdKit.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +132,14 @@
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77D2C7FC87B0D1B68828A19B32522D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8626B8DA623CB38D2904DEEAE458F19 /* VpadnSDKAdKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,8 +181,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -204,14 +204,14 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		88A4A7B6D152FEDE49A57DC00931058C /* [CP] Copy XCFrameworks */ = {
+		C88F724EB0582268162BD22E69845E52 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/VpadnSDK/VpadnSDK-xcframeworks.sh",
-				"${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.3.4/VpadnSDKAdKit.xcframework",
+				"${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.5.0/VpadnSDKAdKit.xcframework",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputPaths = (

@@ -49,7 +49,7 @@ class VponAdmobBannerViewController: UIViewController {
         
         gadBannerView = GADBannerView(adSize: GADAdSizeFromCGSize(loadBannerView.frame.size))
 // TODO: set ad unit id
-        gadBannerView.adUnitID = "ca-app-pub-7987617251221645/3532457573"
+        gadBannerView.adUnitID = ""
         gadBannerView.delegate = self
         gadBannerView.rootViewController = self
         gadBannerView.load(request)

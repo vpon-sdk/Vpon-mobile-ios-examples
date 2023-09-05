@@ -48,7 +48,7 @@
 //    request.testDevices = @[kGADSimulatorID];
     
     __block __weak typeof(self) weakSelf = self;
-    [GADInterstitialAd loadWithAdUnitID:@"ca-app-pub-7987617251221645/3519729727"
+    [GADInterstitialAd loadWithAdUnitID:@""
                                 request:request
                       completionHandler:^(GADInterstitialAd * _Nullable interstitialAd, NSError * _Nullable error) {
         if (error != nil) {

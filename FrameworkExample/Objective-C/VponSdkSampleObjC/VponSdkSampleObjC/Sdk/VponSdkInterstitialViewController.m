@@ -36,12 +36,12 @@
 
 - (VpadnAdRequest *) initialRequest {
     VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];   //取得測試廣告
-    [request setUserInfoGender:VpadnGenderMale];                                                        //性別
-    [request setUserInfoBirthdayWithYear:2000 Month:8 andDay:17];                                       //生日
-    [request setMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                     //最高可投放的年齡(分類)限制
-    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentFalse];                             //是否專為特定年齡投放
-    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentFalse];                   //是否專為兒童投放
+    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];          //取得測試廣告
+    [request setUserInfoGender:VpadnUserGenderMale];                                                           //性別
+    [request setUserInfoBirthdayWithYear:2000 month:8 day:17];                                                 //生日
+    [request setTagForMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                      //最高可投放的年齡(分類)限制
+    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentNotForUnderAgeOfConsent];                  //是否專為特定年齡投放
+    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentNotForChildDirectedTreatment];   //是否專為兒童投放
     [request setContentUrl:@"https://www.vpon.com.tw/"];
     [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
     return request;
@@ -54,7 +54,7 @@
     if (_vpadnInterstitial != nil && _vpadnInterstitial.isReady) {
         [_vpadnInterstitial showFromRootViewController:self];
     } else {
-        _vpadnInterstitial = [[VpadnInterstitial alloc] initWithLicenseKey:@"8a80854b6a90b5bc016ad81a98cf652e"];
+        _vpadnInterstitial = [[VpadnInterstitial alloc] initWithLicenseKey:@""];
         _vpadnInterstitial.delegate = self;
         [_vpadnInterstitial loadRequest:[self initialRequest]];
     }

@@ -54,7 +54,7 @@
 //    request.testDevices = @[kGADSimulatorID];
     
     self.gadBannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeFromCGSize(_loadBannerView.frame.size)];
-    self.gadBannerView.adUnitID = @"ca-app-pub-7987617251221645/3532457573";
+    self.gadBannerView.adUnitID = @"";
     self.gadBannerView.delegate = self;
     self.gadBannerView.rootViewController = self;
     [self.gadBannerView loadRequest:request];

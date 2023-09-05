@@ -1,0 +1,16 @@
+PODS:
+  - VpadnSDK (5.5.0)
+
+DEPENDENCIES:
+  - VpadnSDK (= 5.5.0)
+
+SPEC REPOS:
+  trunk:
+    - VpadnSDK
+
+SPEC CHECKSUMS:
+  VpadnSDK: bdbbbae7d2fdd273986ae3fb90088dee23ab3d41
+
+PODFILE CHECKSUM: 95cfb6d2f487c9b903fff47e5c52126e28edf222
+
+COCOAPODS: 1.12.1

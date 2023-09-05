@@ -17,10 +17,10 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "VpadnSDKAdKit.xcframework/ios-arm64_armv7")
+  "VpadnSDKAdKit.xcframework/ios-arm64")
     echo ""
     ;;
-  "VpadnSDKAdKit.xcframework/ios-arm64_i386_x86_64-simulator")
+  "VpadnSDKAdKit.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   esac
@@ -29,11 +29,11 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
-  "VpadnSDKAdKit.xcframework/ios-arm64_armv7")
-    echo "arm64 armv7"
+  "VpadnSDKAdKit.xcframework/ios-arm64")
+    echo "arm64"
     ;;
-  "VpadnSDKAdKit.xcframework/ios-arm64_i386_x86_64-simulator")
-    echo "arm64 i386 x86_64"
+  "VpadnSDKAdKit.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   esac
 }
@@ -117,5 +117,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.3.0/VpadnSDKAdKit.xcframework" "VpadnSDK" "framework" "ios-arm64_armv7" "ios-arm64_i386_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.5.0/VpadnSDKAdKit.xcframework" "VpadnSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 

@@ -1,6 +1,0 @@
-framework module VpadnSDKAdKit {
-  umbrella header "VpadnSDKAdKit.h"
-
-  export *
-  module * { export * }
-}

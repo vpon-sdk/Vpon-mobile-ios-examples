@@ -13,8 +13,6 @@ class VponMenuTableViewController: UITableViewController {
     let data = ["SDK - Banner" : "goVponSdkBannerViewController",
                 "SDK - Interstitial" : "goVponSdkInterstitialViewController",
                 "SDK - Native" : "goVponSdkNativeViewController",
-                "SDK - NativeInTable" : "goVponSdkNativeTableViewController",
-                "SDK - Splash" : "goVponSdkSplashViewController",
                 "SDK - VastCustomAd": "goVponSdkVastCustomAdViewController",
                 "SDK - VastInScroll": "goVponSdkVastInScrollViewController",
                 "SDK - VastInTable": "goVponSdkVastInTableViewController",

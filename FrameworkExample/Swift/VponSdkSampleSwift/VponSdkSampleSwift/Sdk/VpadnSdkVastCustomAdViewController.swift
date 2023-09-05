@@ -23,7 +23,7 @@ extension VpadnSdkVastCustomAdViewController : VpadnInReadAdDelegate {
         videoLoadedView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[videoView]-0-|", options: [], metrics: nil, views: ["videoView":videoView]))
     }
     
-    func vpadn(_ ad: VpadnInReadAd, didFailLoading error: Error) {
+    func vpadnInReadAd(_ ad: VpadnInReadAd, didFailLoading error: Error) {
         print("廣告抓取失敗:\(error.localizedDescription)")
     }
 }
@@ -47,7 +47,7 @@ class VpadnSdkVastCustomAdViewController: UIViewController {
     }
     
     func requestVpadnAd() {
-        vpadnAd = VpadnInReadAd.init(placementId: "", delegate: self)
-        vpadnAd.load(withTestIdentifiers: [])
+        vpadnAd = VpadnInReadAd(placementId: "", delegate: self)
+        vpadnAd.loadAdWithTestIdentifiers([])
     }
 }

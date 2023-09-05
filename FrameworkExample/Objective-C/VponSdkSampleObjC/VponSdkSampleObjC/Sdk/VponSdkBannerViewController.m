@@ -39,14 +39,14 @@
 - (VpadnAdRequest *) initialRequest {
     VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
     [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];   //取得測試廣告
-    [request setUserInfoGender:VpadnGenderMale];                                                        //性別
-    [request setUserInfoBirthdayWithYear:2000 Month:8 andDay:17];                                       //生日
-    [request setMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                     //最高可投放的年齡(分類)限制
-    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentFalse];                             //是否專為特定年齡投放
-    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentFalse];                   //是否專為兒童投放
+    [request setUserInfoGender: VpadnUserGenderUnspecified];                                            //性別
+    [request setUserInfoBirthdayWithYear:2000 month:8 day:17];                                          //生日
+    [request setTagForMaxAdContentRating:VpadnMaxAdContentRatingUnspecified];                           //最高可投放的年齡(分類)限制
+    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentUnspecified];                       //是否專為特定年齡投放
+    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentUnspecified];             //是否專為兒童投放
     [request setContentUrl:@"https://www.vpon.com.tw/"];
     [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
-//    [request addFriendlyObstruction:[[UIView alloc] init] purpose:VpadnFriendlyObstructionNotVisible description:@"not visible"];
+    [request addFriendlyObstruction:[[UIView alloc] init] purpose:VpadnFriendlyObstructionTypeNotVisible description:@"not visible"];
     return request;
 }
 
@@ -59,7 +59,7 @@
             [_vpadnBanner.getVpadnAdView removeFromSuperview];
         });
     }
-    _vpadnBanner = [[VpadnBanner alloc] initWithLicenseKey:@"8a80854b6a90b5bc016ad81a5059652d" adSize:VpadnAdSizeSmartBannerPortrait];
+    _vpadnBanner = [[VpadnBanner alloc]initWithLicenseKey:@"" adSize:VpadnAdSize.banner];
     _vpadnBanner.delegate = self;
     [_vpadnBanner loadRequest:[self initialRequest]];
 }
@@ -91,16 +91,5 @@
 - (void) onVpadnAdRefreshed:(VpadnBanner *)banner {
     
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

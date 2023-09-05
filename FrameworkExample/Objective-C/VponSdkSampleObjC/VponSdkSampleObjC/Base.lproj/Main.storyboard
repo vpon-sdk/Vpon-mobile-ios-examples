@@ -1,73 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nY-Ui-Wl9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nY-Ui-Wl9">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vpon Sdk Splash View Controller-->
-        <scene sceneID="GIX-0D-ZV9">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Flj-yp-DHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SplashViewController" id="TZP-dl-rge" customClass="VponSdkSplashViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zXo-Qp-UDO"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jfl-4O-Weg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QyP-wm-3q1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-1Q-Rb9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="495.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIA-A2-Uin">
-                                        <rect key="frame" x="132.5" y="230.5" width="110" height="34"/>
-                                        <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="request">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="disabled" title="please wait"/>
-                                        <connections>
-                                            <action selector="requestButtonDidTouch:" destination="TZP-dl-rge" eventType="touchUpInside" id="sb2-lq-DSZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="rIA-A2-Uin" firstAttribute="centerY" secondItem="2q6-1Q-Rb9" secondAttribute="centerY" id="Ia0-3u-e0l"/>
-                                    <constraint firstItem="rIA-A2-Uin" firstAttribute="width" secondItem="rIA-A2-Uin" secondAttribute="height" multiplier="120:37" id="Qbj-WZ-xP2"/>
-                                    <constraint firstItem="rIA-A2-Uin" firstAttribute="centerX" secondItem="2q6-1Q-Rb9" secondAttribute="centerX" id="hUb-oN-YJc"/>
-                                </constraints>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TBH-3d-vPR">
-                                <rect key="frame" x="0.0" y="539.5" width="375" height="127.5"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="TBH-3d-vPR" firstAttribute="width" secondItem="TBH-3d-vPR" secondAttribute="height" multiplier="414:141" id="Ig2-oi-QLn"/>
-                            <constraint firstItem="TBH-3d-vPR" firstAttribute="leading" secondItem="QyP-wm-3q1" secondAttribute="leading" id="UNv-pc-hAS"/>
-                            <constraint firstItem="2q6-1Q-Rb9" firstAttribute="leading" secondItem="QyP-wm-3q1" secondAttribute="leading" id="c0Q-En-Kxe"/>
-                            <constraint firstItem="TBH-3d-vPR" firstAttribute="top" secondItem="2q6-1Q-Rb9" secondAttribute="bottom" id="gR1-jc-7c8"/>
-                            <constraint firstAttribute="trailing" secondItem="TBH-3d-vPR" secondAttribute="trailing" id="joF-Xy-qoM"/>
-                            <constraint firstAttribute="trailing" secondItem="2q6-1Q-Rb9" secondAttribute="trailing" id="ndi-9z-HVN"/>
-                            <constraint firstItem="Jfl-4O-Weg" firstAttribute="top" secondItem="TBH-3d-vPR" secondAttribute="bottom" id="nud-3a-ShO"/>
-                            <constraint firstItem="2q6-1Q-Rb9" firstAttribute="top" secondItem="zXo-Qp-UDO" secondAttribute="bottom" id="xvf-di-JpA"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Mrp-HX-JQy"/>
-                    <connections>
-                        <outlet property="loadSplashView" destination="2q6-1Q-Rb9" id="oIB-6f-prz"/>
-                        <outlet property="requestButton" destination="rIA-A2-Uin" id="FI6-ia-lei"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="33" y="1075"/>
-        </scene>
         <!--Root View Controller-->
         <scene sceneID="Z5k-dJ-BmI">
             <objects>
@@ -78,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="flA-1b-szO" style="IBUITableViewCellStyleDefault" id="BsL-Ev-S9Z">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BsL-Ev-S9Z" id="APE-Ry-KAW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -104,12 +44,10 @@
                     <connections>
                         <segue destination="aOW-8l-daj" kind="show" identifier="goVponSdkBannerViewController" id="EEz-TR-bdl"/>
                         <segue destination="s4S-fR-iqd" kind="show" identifier="goVponSdkInterstitialViewController" id="gho-FC-RMW"/>
-                        <segue destination="hmY-oc-Qhy" kind="show" identifier="goVponSdkNativeTableViewController" id="9fu-G4-cXb"/>
                         <segue destination="Fch-VW-tkB" kind="show" identifier="goVponSdkVastCustomAdViewController" id="cDn-Lt-2RJ"/>
                         <segue destination="Izt-gD-bK0" kind="show" identifier="goVponSdkVastInScrollViewController" id="vgH-vs-T65"/>
                         <segue destination="anp-0P-rCg" kind="show" identifier="goVponSdkVastInTableViewController" id="A8a-0h-adK"/>
                         <segue destination="Nh9-Qs-emQ" kind="show" identifier="goVponSdkVastInTableRepeatViewController" id="mpk-8H-i5m"/>
-                        <segue destination="TZP-dl-rge" kind="show" identifier="goVponSdkSplashViewController" id="h7C-ip-rPR"/>
                         <segue destination="1uy-WC-35y" kind="show" identifier="goVponSdkNativeViewController" id="chM-0P-mUk"/>
                     </connections>
                 </tableViewController>
@@ -122,7 +60,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MainViewController" id="7nY-Ui-Wl9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GgF-3A-ONZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -207,14 +145,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Data Drives Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhh-sY-Zky">
-                                <rect key="frame" x="16" y="59" width="343" height="22"/>
+                                <rect key="frame" x="16" y="79" width="343" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnj-hP-YcP">
-                                <rect key="frame" x="16" y="97" width="343" height="248.5"/>
+                                <rect key="frame" x="16" y="117" width="343" height="248.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Through “VIP - Vpon Infinitive Prospect” process, Vpon accumulates, proceeds, and optimizes data continuously in Asia. Powered by machine learning, the data can formulate segmentation model, and hence optimize mobile marketing strategy through programmatic buying and real-time bidding (RTB) engine to maximum return on investment (ROI) for Vpon's clients. After campaigns, the refined data and predictive model will also be ingested into Vpon's database, resulting in an infinite loop to drive transactions even more effectively.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -264,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-Mq-uKW">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vpon Big Data Seminar 2018 – Hong Kong: Keeping Up with the Unprecedented Data Explosion" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-vF-Vat">
                                         <rect key="frame" x="9.5" y="16" width="356" height="79"/>
@@ -398,11 +336,11 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fIq-4b-AaU">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceholderTabCell" rowHeight="66" id="VaG-ZU-KAQ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VaG-ZU-KAQ" id="fdD-22-3Bv">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -434,7 +372,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentTabCell" rowHeight="66" id="4IN-aw-SZQ">
-                                        <rect key="frame" x="0.0" y="94" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4IN-aw-SZQ" id="uYE-iP-YQr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -502,11 +440,11 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-sX-xJg">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceholderTabCell" rowHeight="66" id="Wrw-Ip-K9u">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wrw-Ip-K9u" id="DyF-cR-MSj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -538,7 +476,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentTabCell" rowHeight="66" id="nhk-Tw-WEp">
-                                        <rect key="frame" x="0.0" y="94" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nhk-Tw-WEp" id="VYR-PB-fxm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -633,141 +571,6 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
             </objects>
             <point key="canvasLocation" x="1110" y="390"/>
         </scene>
-        <!--VpadnSDK Sample-->
-        <scene sceneID="x2V-DT-O98">
-            <objects>
-                <tableViewController id="hmY-oc-Qhy" customClass="VponSdkNativeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FuB-xs-9h9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adIdentifier" rowHeight="290" id="Ofo-8t-hTY" customClass="VponSdkNativeCustomTabCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="290"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ofo-8t-hTY" id="5TG-Y1-40q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifE-by-fZg">
-                                            <rect key="frame" x="239" y="245" width="120" height="30"/>
-                                            <color key="backgroundColor" red="0.50232862359999997" green="0.87078148570000002" blue="0.084953270590000005" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="BGA-rX-e5h"/>
-                                                <constraint firstAttribute="height" constant="30" id="DZe-w6-qYf"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                            <state key="normal" title="Install Now">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                        </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hbx-JT-cOo">
-                                            <rect key="frame" x="8" y="8" width="42" height="42"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="Hbx-JT-cOo" secondAttribute="height" id="BVZ-5L-sas"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ad integration works. Woohoo!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68o-1k-8LO">
-                                            <rect key="frame" x="8" y="238" width="172" height="44"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vpon Test Ad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLm-dd-n7m">
-                                            <rect key="frame" x="58" y="8" width="256" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Sponsored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjO-J8-3ZP">
-                                            <rect key="frame" x="322" y="0.0" width="53" height="15"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="W2m-Wk-bV2"/>
-                                                <constraint firstAttribute="height" constant="15" id="c6K-Xd-VHz"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Available on the App Store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-5k-53L">
-                                            <rect key="frame" x="58" y="29" width="305" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05w-9V-04i" customClass="VpadnMediaView">
-                                            <rect key="frame" x="16" y="54" width="343" height="179"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="05w-9V-04i" secondAttribute="height" multiplier="1200:627" id="3Yo-Qx-oLu"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Hbx-JT-cOo" firstAttribute="top" secondItem="5TG-Y1-40q" secondAttribute="top" constant="8" id="6p6-2a-psf"/>
-                                        <constraint firstItem="ifE-by-fZg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="68o-1k-8LO" secondAttribute="trailing" constant="4" id="81i-XT-S1r"/>
-                                        <constraint firstItem="68o-1k-8LO" firstAttribute="height" relation="greaterThanOrEqual" secondItem="ifE-by-fZg" secondAttribute="height" id="9Eh-mf-3G1"/>
-                                        <constraint firstItem="68o-1k-8LO" firstAttribute="top" secondItem="05w-9V-04i" secondAttribute="bottom" constant="5" id="AUj-JL-4hF"/>
-                                        <constraint firstItem="ifE-by-fZg" firstAttribute="trailing" secondItem="5TG-Y1-40q" secondAttribute="trailingMargin" id="B8K-0z-DsX"/>
-                                        <constraint firstItem="ifE-by-fZg" firstAttribute="centerY" secondItem="68o-1k-8LO" secondAttribute="centerY" id="Bi1-dB-285"/>
-                                        <constraint firstItem="VLm-dd-n7m" firstAttribute="top" secondItem="Hbx-JT-cOo" secondAttribute="top" id="Ch2-UB-2Bd"/>
-                                        <constraint firstItem="VLm-dd-n7m" firstAttribute="leading" secondItem="Hbx-JT-cOo" secondAttribute="trailing" constant="8" id="EHm-s6-DRl"/>
-                                        <constraint firstItem="68o-1k-8LO" firstAttribute="leading" secondItem="5TG-Y1-40q" secondAttribute="leading" constant="8" id="Ihl-hs-YT7"/>
-                                        <constraint firstAttribute="trailing" secondItem="WjO-J8-3ZP" secondAttribute="trailing" id="LNR-Qx-cys"/>
-                                        <constraint firstItem="HL6-5k-53L" firstAttribute="trailing" secondItem="5TG-Y1-40q" secondAttribute="trailingMargin" constant="4" id="Obd-zL-Akf"/>
-                                        <constraint firstItem="05w-9V-04i" firstAttribute="leading" secondItem="5TG-Y1-40q" secondAttribute="leadingMargin" id="RZ1-8w-m8I"/>
-                                        <constraint firstAttribute="bottom" secondItem="68o-1k-8LO" secondAttribute="bottom" constant="8" id="Skm-cI-GR0"/>
-                                        <constraint firstItem="05w-9V-04i" firstAttribute="top" secondItem="Hbx-JT-cOo" secondAttribute="bottom" constant="4" id="Wkx-3l-bge"/>
-                                        <constraint firstItem="WjO-J8-3ZP" firstAttribute="top" secondItem="5TG-Y1-40q" secondAttribute="top" id="Xa6-NX-1H0"/>
-                                        <constraint firstItem="Hbx-JT-cOo" firstAttribute="leading" secondItem="5TG-Y1-40q" secondAttribute="leading" constant="8" id="aID-zT-2sU"/>
-                                        <constraint firstItem="HL6-5k-53L" firstAttribute="top" secondItem="VLm-dd-n7m" secondAttribute="bottom" constant="4" id="bg5-sE-jr4"/>
-                                        <constraint firstItem="WjO-J8-3ZP" firstAttribute="leading" secondItem="VLm-dd-n7m" secondAttribute="trailing" constant="8" id="gsy-zm-xT9"/>
-                                        <constraint firstItem="HL6-5k-53L" firstAttribute="leading" secondItem="Hbx-JT-cOo" secondAttribute="trailing" constant="8" id="tYT-b1-Xwd"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="05w-9V-04i" secondAttribute="trailing" id="uJp-HL-FXO"/>
-                                        <constraint firstItem="HL6-5k-53L" firstAttribute="bottom" secondItem="Hbx-JT-cOo" secondAttribute="bottom" id="vtA-J4-Ewj"/>
-                                        <constraint firstItem="Hbx-JT-cOo" firstAttribute="width" secondItem="5TG-Y1-40q" secondAttribute="width" multiplier="42:375" id="wjq-IH-S4Z"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="adAction" destination="ifE-by-fZg" id="LXy-JH-zNU"/>
-                                    <outlet property="adBody" destination="68o-1k-8LO" id="nbS-2q-Omi"/>
-                                    <outlet property="adIcon" destination="Hbx-JT-cOo" id="UzG-YW-hHh"/>
-                                    <outlet property="adMediaView" destination="05w-9V-04i" id="skm-HR-XXH"/>
-                                    <outlet property="adSocialContext" destination="HL6-5k-53L" id="cXr-Zq-jkO"/>
-                                    <outlet property="adTitle" destination="VLm-dd-n7m" id="KIV-re-ZpZ"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="normalIdentifier" textLabel="5lK-3g-4in" style="IBUITableViewCellStyleDefault" id="w7G-Sh-LGe">
-                                <rect key="frame" x="0.0" y="318" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w7G-Sh-LGe" id="HIh-pP-e63">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5lK-3g-4in">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hmY-oc-Qhy" id="bMR-zc-scO"/>
-                            <outlet property="delegate" destination="hmY-oc-Qhy" id="src-rJ-eI5"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="VpadnSDK Sample" id="FGH-YV-i0K"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sjn-7M-yac" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1110" y="1076"/>
-        </scene>
         <!--Vpon Sdk Native View Controller-->
         <scene sceneID="2ED-Id-O3H">
             <objects>
@@ -781,7 +584,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nme-du-bFM">
-                                <rect key="frame" x="16" y="64" width="343" height="240.5"/>
+                                <rect key="frame" x="16" y="84" width="343" height="240.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-su-yqP">
                                         <rect key="frame" x="203" y="202.5" width="120" height="30"/>
@@ -828,7 +631,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83u-6h-3E8" customClass="VpadnMediaView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83u-6h-3E8" customClass="VpadnMediaView" customModule="VpadnSDKAdKit">
                                         <rect key="frame" x="31" y="50.5" width="281" height="147"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -861,7 +664,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-YG-FRw">
-                                <rect key="frame" x="132.5" y="324.5" width="110" height="34"/>
+                                <rect key="frame" x="132.5" y="344.5" width="110" height="34"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.43921568630000002" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="request">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -872,6 +675,7 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nsP-i1-BuW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nme-du-bFM" firstAttribute="centerX" secondItem="yby-wq-9EZ" secondAttribute="centerX" id="9dD-OW-DHg"/>
@@ -881,7 +685,6 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
                             <constraint firstItem="Oaf-YG-FRw" firstAttribute="centerX" secondItem="yby-wq-9EZ" secondAttribute="centerX" id="rOy-cK-mIF"/>
                             <constraint firstItem="nme-du-bFM" firstAttribute="leading" secondItem="yby-wq-9EZ" secondAttribute="leadingMargin" id="tgg-v8-wRa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nsP-i1-BuW"/>
                     </view>
                     <navigationItem key="navigationItem" id="YOY-wZ-9rK"/>
                     <connections>
@@ -904,6 +707,5 @@ Besides sharing from Vpon, the seminar also had community to join in panel discu
         <image name="BigDataSeminar18" width="320" height="213"/>
         <image name="icon" width="76" height="76"/>
         <image name="loading" width="300" height="157.5"/>
-        <image name="logo" width="414" height="141"/>
     </resources>
 </document>

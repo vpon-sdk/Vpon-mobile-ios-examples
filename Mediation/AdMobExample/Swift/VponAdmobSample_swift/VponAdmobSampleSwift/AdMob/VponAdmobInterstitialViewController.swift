@@ -39,7 +39,7 @@ class VponAdmobInterstitialViewController: UIViewController {
 //            request.register(extra)
 //            request.testDevices = [kGADSimulatorID]
         
-        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-7987617251221645/3519729727", request: request) { ad, error in
+        GADInterstitialAd.load(withAdUnitID: "", request: request) { ad, error in
             if let error = error {
                 self.actionButton.isEnabled = true
                 print("Failed to receive interstitail with error: \(error.localizedDescription)")
@@ -56,10 +56,6 @@ extension VponAdmobInterstitialViewController: GADFullScreenContentDelegate {
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         print("Interstitial did failed to present screen")
         actionButton.isEnabled = true
-    }
-    
-    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Interstitial did present screen")
     }
     
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {

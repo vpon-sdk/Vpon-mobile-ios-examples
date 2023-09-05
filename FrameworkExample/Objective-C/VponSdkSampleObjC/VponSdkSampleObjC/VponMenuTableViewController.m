@@ -29,8 +29,6 @@
                  @"goVponSdkBannerViewController", @"SDK - Banner",
                  @"goVponSdkInterstitialViewController", @"SDK - Interstitial",
                  @"goVponSdkNativeViewController", @"SDK - Native",
-                 @"goVponSdkNativeTableViewController", @"SDK - NativeInTable",
-                 @"goVponSdkSplashViewController", @"SDK - Splash",
                  @"goVponSdkVastCustomAdViewController", @"SDK - VastCustomAd",
                  @"goVponSdkVastInScrollViewController", @"SDK - VastInScroll",
                  @"goVponSdkVastInTableViewController", @"SDK - VastInTable",
