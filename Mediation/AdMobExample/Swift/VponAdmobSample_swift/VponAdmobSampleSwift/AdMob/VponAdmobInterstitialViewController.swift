@@ -21,10 +21,6 @@ class VponAdmobInterstitialViewController: UIViewController {
         actionButtonDidTouch(actionButton)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: Button Method
     
     @IBAction func actionButtonDidTouch(_ sender: UIButton) {

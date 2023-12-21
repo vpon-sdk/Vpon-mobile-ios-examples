@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    VpadnAdConfiguration *config = VpadnAdConfiguration.shared;
-    config.logLevel = VpadnLogLevelDefaultLevel;
+    VponAdConfiguration *config = VponAdConfiguration.shared;
+    config.logLevel = VponLogLevelDebug;
     [config initializeSdk];
     
     return YES;

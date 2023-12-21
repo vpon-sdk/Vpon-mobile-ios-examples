@@ -1,0 +1,161 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/GADVpadnNativeAdCustomEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1659,
+      "length": 15,
+      "value": "\"socialContext\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 300,
+      "length": 7,
+      "value": "\"2.1.0\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 361,
+      "length": 7,
+      "value": "\"5.6.0\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 423,
+      "length": 11,
+      "value": "\"parameter\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 522,
+      "length": 6,
+      "value": "\"Vpon\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 586,
+      "length": 12,
+      "value": "\"contentURL\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 658,
+      "length": 13,
+      "value": "\"contentData\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 749,
+      "length": 22,
+      "value": "\"friendlyObstructions\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 837,
+      "length": 6,
+      "value": "\"view\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 915,
+      "length": 9,
+      "value": "\"purpose\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 990,
+      "length": 6,
+      "value": "\"desc\""
+    },
+    {
+      "filePath": "\/Users\/judy.tsai\/ios-admob-adapter-clear\/VponAdapter\/Adapter\/GADMAdapterVpon.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 15,
+      "value": "\"AdMobMediationAdapterVpadn.GADMAdapterVpon\""
+    }
+  ]
+}

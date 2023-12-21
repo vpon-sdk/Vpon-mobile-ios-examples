@@ -7,22 +7,20 @@
 //
 
 #import "VponSdkNativeViewController.h"
+#import <VpadnSDKAdKit/VpadnSDKAdKit.h>
+#import <AdSupport/AdSupport.h>
+#import "VponSdkSampleObjC-Swift.h"
 
 @import VpadnSDKAdKit;
 @import AdSupport;
 
-@interface VponSdkNativeViewController () <VpadnMediaViewDelegate, VpadnNativeAdDelegate>
+@interface VponSdkNativeViewController () <VponNativeAdLoaderDelegate, VponNativeAdDelegate, VponVideoControllerDelegate>
 
-@property (strong, nonatomic) VpadnNativeAd *nativeAd;
+@property (weak, nonatomic) IBOutlet UIView *adContainerView;
 
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) VponNativeAdLoader *adLoader;
 
-@property (weak, nonatomic) IBOutlet UIImageView *adIcon;
-@property (weak, nonatomic) IBOutlet UILabel *adTitle;
-@property (weak, nonatomic) IBOutlet UILabel *adBody;
-@property (weak, nonatomic) IBOutlet UILabel *adSocialContext;
-@property (weak, nonatomic) IBOutlet UIButton *adAction;
-@property (weak, nonatomic) IBOutlet VpadnMediaView *adMediaView;
+@property (strong, nonatomic) CustomNativeAdView *customNativeAdView;
 
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
@@ -33,91 +31,105 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"SDK - Native";
+    
+    _customNativeAdView = [[CustomNativeAdView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    [_adContainerView addSubview:_customNativeAdView];
+    _customNativeAdView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [_customNativeAdView.heightAnchor constraintEqualToAnchor: _adContainerView.heightAnchor],
+        [_customNativeAdView.widthAnchor constraintEqualToAnchor: _adContainerView.widthAnchor]
+    ]];
+    
     [self requestButtonDidTouch:_requestButton];
 }
 
-#pragma mark - Initial VpadnAdRequest
+// MARK: - Create VponAdRequest
 
-- (VpadnAdRequest *) initialRequest {
-    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];   //取得測試廣告
-    [request setUserInfoGender: VpadnUserGenderUnspecified];                                            //性別
-    [request setUserInfoBirthdayWithYear:2000 month:8 day:17];                                          //生日
-    [request setTagForMaxAdContentRating:VpadnMaxAdContentRatingUnspecified];                           //最高可投放的年齡(分類)限制
-    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentUnspecified];                       //是否專為特定年齡投放
-    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentUnspecified];             //是否專為兒童投放
-    [request setContentUrl:@"https://www.vpon.com.tw/"];
-    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
-    [request addFriendlyObstruction:[[UIView alloc] init] purpose:VpadnFriendlyObstructionTypeNotVisible description:@"not visible"];
+- (VponAdRequest *) createRequest {
+    VponAdRequest *request = [[VponAdRequest alloc] init];
+    [request setUserInfoGender:VponUserGenderMale]; // 性別
+    [request setUserInfoBirthdayWithYear:2000 month:8 day:17]; // 生日
+    [request setContentUrl:@"https://www.vpon.com.tw/"]; // 內容
+    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}]; // 內容鍵值
+   
+    VponAdRequestConfiguration *config = VponAdRequestConfiguration.shared;
+    [config setTestDeviceIdentifiers:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]]; // 取得測試廣告
+    [config setTagForUnderAgeOfConsent:VponTagForUnderAgeOfConsentNotForUnderAgeOfConsent]; // 是否專為特定年齡投放
+    [config setTagForChildDirectedTreatment:VponTagForChildDirectedTreatmentNotForChildDirectedTreatment]; // 是否專為兒童投放
+    [config setMaxAdContentRating:VponMaxAdContentRatingGeneral]; // 最高可投放的年齡(分類)限制
+  
     return request;
 }
 
-#pragma mark - Button Method
+// MARK: - Button Method
 
 - (IBAction)requestButtonDidTouch:(UIButton *)sender {
     sender.enabled = NO;
     
-    if (_nativeAd) {
-        [_nativeAd unregisterView];
+    _adLoader = [[VponNativeAdLoader alloc]initWithLicenseKey:@"" rootViewController:self];
+    _adLoader.delegate = self;
+    [_adLoader load:[self createRequest]];
+}
+
+// MARK: - VponNativeAdLoaderDelegate
+
+- (void)adLoader:(VponNativeAdLoader *)adLoader didReceive:(VponNativeAd *)nativeAd {
+    NSLog(@"adLoader didReceive nativeAd");
+    _requestButton.enabled = YES;
+    
+    nativeAd.delegate = self;
+    
+    ((UILabel *)_customNativeAdView.headlineView).text = nativeAd.headline;
+    _customNativeAdView.mediaView.mediaContent = nativeAd.mediaContent;
+    
+    if (nativeAd.mediaContent.hasVideoContent) {
+        nativeAd.mediaContent.videoController.delegate = self;
     }
     
-    _nativeAd = [[VpadnNativeAd alloc] initWithLicenseKey:@""];
-    _nativeAd.delegate = self;
-    [_nativeAd loadRequest:[self initialRequest]];
+    ((UILabel *)_customNativeAdView.bodyView).text = nativeAd.body;
+    [((UIButton *)_customNativeAdView.callToActionView) setTitle:nativeAd.callToAction
+                                                 forState:UIControlStateNormal];
+    ((UIImageView *)_customNativeAdView.iconView).image = nativeAd.icon.image;
+    
+    _customNativeAdView.nativeAd = nativeAd;
 }
 
-- (void)setNativeAd {
-    _adIcon.image = nil;
-    
-    __block typeof(self) safeSelf = self;
-    [_nativeAd.icon loadImageAsyncWithBlock:^(UIImage * _Nullable image) {
-        safeSelf.adIcon.image = image;
-    }];
-    
-    [_adMediaView setNativeAd:_nativeAd];
-    _adMediaView.delegate = self;
-    
-    _adTitle.text = [_nativeAd.title copy];
-    _adBody.text = [_nativeAd.body copy];
-    _adSocialContext.text = [_nativeAd.socialContext copy];
-    [_adAction setTitle:[_nativeAd.callToAction copy] forState:UIControlStateNormal];
-    [_adAction setTitle:[_nativeAd.callToAction copy] forState:UIControlStateHighlighted];
-    
-    [_nativeAd registerViewForInteraction:_contentView withViewController:self];
-}
-
-#pragma mark - VpadnNativeAd Delegate
-
-/// 通知有廣告可供拉取 call back
-- (void) onVpadnNativeAdLoaded:(VpadnNativeAd *)nativeAd {
-    _requestButton.enabled = YES;
-    [self setNativeAd];
-}
-
-/// 通知拉取廣告失敗 call back
-- (void) onVpadnNativeAd:(VpadnNativeAd *)nativeAd failedToLoad:(NSError *)error {
-    
+- (void)adLoader:(VponNativeAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"adLoader didFailToReceiveAdWithError: %@", error.localizedDescription);
     _requestButton.enabled = YES;
 }
 
-/// 通知即將離開Application
-- (void) onVpadnNativeAdWillLeaveApplication:(VpadnNativeAd *)nativeAd {
-    
+// MARK: - VponNativeAdDelegate
+
+- (void)nativeAdDidRecordImpression:(VponNativeAd *)nativeAd {
+    NSLog(@"nativeAdDidRecordImpression");
 }
 
-/// 通知廣告已送出點擊事件
-- (void) onVpadnNativeAdClicked:(VpadnNativeAd *)nativeAd {
-    
+- (void)nativeAdDidRecordClick:(VponNativeAd *)nativeAd {
+    NSLog(@"nativeAdDidRecordClick");
 }
 
-#pragma mark - VpadnMediaView Delegate
+// MARK: - VponVideoControllerDelegate
 
-- (void) mediaViewDidLoad:(VpadnMediaView *)mediaView {
-    
+- (void)videoControllerDidPlayVideo:(VponVideoController *)videoController {
+    NSLog(@"videoControllerDidPlayVideo");
 }
 
-- (void)mediaViewDidFail:(VpadnMediaView *)mediaView error:(NSError *)error {
-    
+- (void)videoControllerDidPauseVideo:(VponVideoController *)videoController {
+    NSLog(@"videoControllerDidPauseVideo");
+}
+
+- (void)videoControllerDidMuteVideo:(VponVideoController *)videoController {
+    NSLog(@"videoControllerDidMuteVideo");
+}
+
+- (void)videoControllerDidUnmuteVideo:(VponVideoController *)videoController {
+    NSLog(@"videoControllerDidUnmuteVideo");
+}
+
+- (void)videoControllerDidEndVideoPlayback:(VponVideoController *)videoController {
+    NSLog(@"videoControllerDidEndVideoPlayback");
 }
 
 @end

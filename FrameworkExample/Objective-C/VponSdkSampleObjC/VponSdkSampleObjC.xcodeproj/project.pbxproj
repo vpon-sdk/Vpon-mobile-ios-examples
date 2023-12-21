@@ -21,7 +21,22 @@
 		06F7AAA31F1DEA9500A74B6D /* VponSdkInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AAA21F1DEA9500A74B6D /* VponSdkInterstitialViewController.m */; };
 		06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AAA51F1DEADD00A74B6D /* VponSdkBannerViewController.m */; };
 		5BBBA8A41261D31CC3629A5F /* libPods-VponSdkSampleObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E7520753EFE2BCF9CAEA30 /* libPods-VponSdkSampleObjC.a */; };
+		D0C486EF2B2A9E7600454109 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */; };
+		D0C486F02B2A9E7600454109 /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0864BA02B29514D00ACBCE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0672201321367AB800159ACB /* VponSdkVastCustomAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VponSdkVastCustomAdViewController.h; sourceTree = "<group>"; };
@@ -51,6 +66,9 @@
 		A5452114BEB3F7E44BD3D73D /* Pods-VponSdkSampleObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B82428EECEA3F43B6956D3C9 /* Pods-VponSdkSampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC.release.xcconfig"; sourceTree = "<group>"; };
 		B8E7520753EFE2BCF9CAEA30 /* libPods-VponSdkSampleObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VponSdkSampleObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0864BA32B29819600ACBCE9 /* VponSdkSampleObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VponSdkSampleObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
+		D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNativeAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +150,10 @@
 				06F7AAA21F1DEA9500A74B6D /* VponSdkInterstitialViewController.m */,
 				06F7AAA41F1DEADD00A74B6D /* VponSdkBannerViewController.h */,
 				06F7AAA51F1DEADD00A74B6D /* VponSdkBannerViewController.m */,
+				06936BDE23F0ED9E0081D47A /* VponSdkNativeViewController.h */,
+				06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */,
+				D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */,
+				D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */,
 				0672201321367AB800159ACB /* VponSdkVastCustomAdViewController.h */,
 				0672201421367AB800159ACB /* VponSdkVastCustomAdViewController.m */,
 				0672201821367B7B00159ACB /* VponSdkVastInScrollViewController.h */,
@@ -140,8 +162,7 @@
 				0672201C21367B8F00159ACB /* VponSdkVastInTableViewController.m */,
 				0672201E21367BA300159ACB /* VponSdkVastInTableRepeatViewController.h */,
 				0672201F21367BA300159ACB /* VponSdkVastInTableRepeatViewController.m */,
-				06936BDE23F0ED9E0081D47A /* VponSdkNativeViewController.h */,
-				06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */,
+				D0864BA32B29819600ACBCE9 /* VponSdkSampleObjC-Bridging-Header.h */,
 			);
 			path = Sdk;
 			sourceTree = "<group>";
@@ -157,7 +178,7 @@
 				06F7AA7F1F1DE9BC00A74B6D /* Sources */,
 				06F7AA801F1DE9BC00A74B6D /* Frameworks */,
 				06F7AA811F1DE9BC00A74B6D /* Resources */,
-				551FA01FE01635EA0901BD14 /* [CP] Embed Pods Frameworks */,
+				D0864BA02B29514D00ACBCE9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +201,7 @@
 					06F7AA821F1DE9BC00A74B6D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 55Z8U5LW3G;
+						LastSwiftMigration = 1500;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F7AA961F1DE9BC00A74B6D /* LaunchScreen.storyboard in Resources */,
+				D0C486EF2B2A9E7600454109 /* CustomNativeAdView.xib in Resources */,
 				06F7AA931F1DE9BC00A74B6D /* Assets.xcassets in Resources */,
 				06F7AA911F1DE9BC00A74B6D /* Main.storyboard in Resources */,
 			);
@@ -235,24 +258,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		551FA01FE01635EA0901BD14 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VpadnSDK/VpadnSDKAdKit.framework/VpadnSDKAdKit",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VpadnSDKAdKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,6 +271,7 @@
 				0672201D21367B8F00159ACB /* VponSdkVastInTableViewController.m in Sources */,
 				0672201A21367B7B00159ACB /* VponSdkVastInScrollViewController.m in Sources */,
 				06F7AAA31F1DEA9500A74B6D /* VponSdkInterstitialViewController.m in Sources */,
+				D0C486F02B2A9E7600454109 /* CustomNativeAdView.swift in Sources */,
 				06F7AA9F1F1DEA3700A74B6D /* VponMenuTableViewController.m in Sources */,
 				06936BE023F0ED9E0081D47A /* VponSdkNativeViewController.m in Sources */,
 				06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */,
@@ -404,6 +410,8 @@
 			baseConfigurationReference = A5452114BEB3F7E44BD3D73D /* Pods-VponSdkSampleObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,7 +420,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = VponSdkSampleObjC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,6 +433,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.sdkexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VponSdkSampleObjC/Sdk/VponSdkSampleObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7 i386 x86_64";
 			};
 			name = Debug;
@@ -434,6 +445,8 @@
 			baseConfigurationReference = B82428EECEA3F43B6956D3C9 /* Pods-VponSdkSampleObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -442,7 +455,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = VponSdkSampleObjC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +468,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.sdkexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VponSdkSampleObjC/Sdk/VponSdkSampleObjC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7 i386 x86_64";
 			};
 			name = Release;

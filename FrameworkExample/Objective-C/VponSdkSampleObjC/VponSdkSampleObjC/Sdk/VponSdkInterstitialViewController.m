@@ -11,11 +11,11 @@
 @import VpadnSDKAdKit;
 @import AdSupport;
 
-@interface VponSdkInterstitialViewController () <VpadnInterstitialDelegate>
+@interface VponSdkInterstitialViewController () <VponFullScreenContentDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *actionButton;
 
-@property (strong, nonatomic) VpadnInterstitial *vpadnInterstitial;
+@property (strong, nonatomic) VponInterstitialAd *interstitial;
 
 @end
 
@@ -27,72 +27,80 @@
     [self actionButtonDidTouch:self.actionButton];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+// MARK: - Create VponAdRequest
 
-#pragma mark - Initial VpadnAdRequest
-
-- (VpadnAdRequest *) initialRequest {
-    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];          //取得測試廣告
-    [request setUserInfoGender:VpadnUserGenderMale];                                                           //性別
-    [request setUserInfoBirthdayWithYear:2000 month:8 day:17];                                                 //生日
-    [request setTagForMaxAdContentRating:VpadnMaxAdContentRatingGeneral];                                      //最高可投放的年齡(分類)限制
-    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentNotForUnderAgeOfConsent];                  //是否專為特定年齡投放
-    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentNotForChildDirectedTreatment];   //是否專為兒童投放
-    [request setContentUrl:@"https://www.vpon.com.tw/"];
-    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
+- (VponAdRequest *) createRequest {
+    VponAdRequest *request = [[VponAdRequest alloc] init];
+    [request setUserInfoGender:VponUserGenderMale]; // 性別
+    [request setUserInfoBirthdayWithYear:2000 month:8 day:17]; // 生日
+    [request setContentUrl:@"https://www.vpon.com.tw/"]; // 內容
+    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}]; // 內容鍵值
+   
+    VponAdRequestConfiguration *config = VponAdRequestConfiguration.shared;
+    [config setTestDeviceIdentifiers:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]]; // 取得測試廣告
+    [config setTagForUnderAgeOfConsent:VponTagForUnderAgeOfConsentNotForUnderAgeOfConsent]; // 是否專為特定年齡投放
+    [config setTagForChildDirectedTreatment:VponTagForChildDirectedTreatmentNotForChildDirectedTreatment]; // 是否專為兒童投放
+    [config setMaxAdContentRating:VponMaxAdContentRatingGeneral]; // 最高可投放的年齡(分類)限制
+  
     return request;
 }
 
-#pragma mark - Button Method
+// MARK: - Button Method
 
 - (IBAction)actionButtonDidTouch:(UIButton *)sender {
     sender.enabled = NO;
-    if (_vpadnInterstitial != nil && _vpadnInterstitial.isReady) {
-        [_vpadnInterstitial showFromRootViewController:self];
+    if (_interstitial != nil) {
+        [_interstitial presentFromRootViewController:self];
     } else {
-        _vpadnInterstitial = [[VpadnInterstitial alloc] initWithLicenseKey:@""];
-        _vpadnInterstitial.delegate = self;
-        [_vpadnInterstitial loadRequest:[self initialRequest]];
+        [VponInterstitialAd loadWithLicenseKey:@""
+                                       request:[self createRequest]
+                                    completion:^(VponInterstitialAd *interstitial, NSError *error) {
+            
+            if (error != nil) {
+                NSLog(@"Failed to load ad with error: %@", error.localizedDescription);
+                self.actionButton.enabled = YES;
+                [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
+                return;
+            }
+            
+            self.interstitial = interstitial;
+            self.interstitial.delegate = self;
+            
+            if (_interstitial != nil) {
+                NSLog(@"Received ad successfully");
+                self.actionButton.enabled = YES;
+                [self.actionButton setTitle:@"show" forState:UIControlStateNormal];
+            }
+        }];
     }
 }
 
-#pragma mark - Vpadn Interstitial Delegate
+// MARK: - VponFullScreenContentDelegate
 
-/// 通知有廣告可供拉取 call back
-- (void) onVpadnInterstitialLoaded:(VpadnInterstitial *)interstitial {
-    self.actionButton.enabled = YES;
-    [self.actionButton setTitle:@"show" forState:UIControlStateNormal];
+- (void)adWillPresentScreen:(id<VponFullScreenContentAd>)ad {
+    NSLog(@"Ad will present full screen content.");
 }
 
-/// 通知拉取廣告失敗 call back
-- (void) onVpadnInterstitial:(VpadnInterstitial *)interstitial failedToLoad:(NSError *)error {
-    self.actionButton.enabled = YES;
-    [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
+- (void)ad:(id<VponFullScreenContentAd>)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
+    NSLog(@"Ad did fail to present full screen content with error: %@", error.localizedDescription);
 }
 
-/// 通知即將離開Application
-- (void) onVpadnInterstitialWillLeaveApplication:(VpadnInterstitial *)interstitial {
-    
+- (void)adWillDismissScreen:(id<VponFullScreenContentAd>)ad {
+    NSLog(@"Ad will dismiss full screen content.");
 }
 
-/// 通知廣告即將被開啟
-- (void) onVpadnInterstitialWillOpen:(VpadnInterstitial *)interstitial {
-    
-}
-
-/// 通知廣告已被關閉
-- (void) onVpadnInterstitialClosed:(VpadnInterstitial *)interstitial {
+- (void)adDidDismissScreen:(id<VponFullScreenContentAd>)ad {
+    NSLog(@"Ad did dismiss full screen content.");
     self.actionButton.enabled = YES;
     [self.actionButton setTitle:@"request" forState:UIControlStateNormal];
 }
 
-/// 通知廣告已送出點擊事件
-- (void) onVpadnInterstitialClicked:(VpadnInterstitial *)interstitial {
-    
+- (void)adDidRecordImpression:(id<VponFullScreenContentAd>)ad {
+    NSLog(@"Ad did record an impression.");
+}
+
+- (void)adDidRecordClick:(id<VponFullScreenContentAd>)ad {
+    NSLog(@"Ad did record a click.");
 }
 
 @end

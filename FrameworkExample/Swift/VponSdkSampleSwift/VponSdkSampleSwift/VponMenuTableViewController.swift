@@ -44,14 +44,14 @@ class VponMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        let titles = Array(data.keys)
+        let titles = data.keys.sorted()
         cell.textLabel?.text = titles[indexPath.row]
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let identifiers = Array(data.values)
+        let identifiers = data.values.sorted()
         self.performSegue(withIdentifier: identifiers[indexPath.row], sender: nil)
     }
 }

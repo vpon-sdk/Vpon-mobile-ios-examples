@@ -11,13 +11,13 @@
 @import VpadnSDKAdKit;
 @import AdSupport;
 
-@interface VponSdkBannerViewController () <VpadnBannerDelegate>
+@interface VponSdkBannerViewController () <VponBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
 @property (weak, nonatomic) IBOutlet UIView *loadBannerView;
 
-@property (strong, nonatomic) VpadnBanner *vpadnBanner;
+@property (strong, nonatomic) VponBannerView *bannerView;
 
 @end
 
@@ -30,66 +30,74 @@
     [self requestButtonDidTouch:self.requestButton];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+// MARK: - Create VponAdRequest
 
-#pragma mark - Initial VpadnAdRequest
-
-- (VpadnAdRequest *) initialRequest {
-    VpadnAdRequest *request = [[VpadnAdRequest alloc] init];
-    [request setTestDevices:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]];   //取得測試廣告
-    [request setUserInfoGender: VpadnUserGenderUnspecified];                                            //性別
-    [request setUserInfoBirthdayWithYear:2000 month:8 day:17];                                          //生日
-    [request setTagForMaxAdContentRating:VpadnMaxAdContentRatingUnspecified];                           //最高可投放的年齡(分類)限制
-    [request setTagForUnderAgeOfConsent:VpadnTagForUnderAgeOfConsentUnspecified];                       //是否專為特定年齡投放
-    [request setTagForChildDirectedTreatment:VpadnTagForChildDirectedTreatmentUnspecified];             //是否專為兒童投放
-    [request setContentUrl:@"https://www.vpon.com.tw/"];
-    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}];
-    [request addFriendlyObstruction:[[UIView alloc] init] purpose:VpadnFriendlyObstructionTypeNotVisible description:@"not visible"];
+- (VponAdRequest *) createRequest {
+    VponAdRequest *request = [[VponAdRequest alloc] init];
+    [request setUserInfoGender:VponUserGenderMale]; // 性別
+    [request setUserInfoBirthdayWithYear:2000 month:8 day:17]; // 生日
+    [request setContentUrl:@"https://www.vpon.com.tw/"]; // 內容
+    [request setContentData:@{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}]; // 內容鍵值
+   
+    VponAdRequestConfiguration *config = VponAdRequestConfiguration.shared;
+    [config setTestDeviceIdentifiers:@[[ASIdentifierManager sharedManager].advertisingIdentifier.UUIDString]]; // 取得測試廣告
+    [config setTagForUnderAgeOfConsent:VponTagForUnderAgeOfConsentNotForUnderAgeOfConsent]; // 是否專為特定年齡投放
+    [config setTagForChildDirectedTreatment:VponTagForChildDirectedTreatmentNotForChildDirectedTreatment]; // 是否專為兒童投放
+    [config setMaxAdContentRating:VponMaxAdContentRatingGeneral]; // 最高可投放的年齡(分類)限制
+  
     return request;
 }
 
-#pragma mark - Button Method
+// MARK: - Button Method
 
 - (IBAction)requestButtonDidTouch:(UIButton *)sender {
     sender.enabled = NO;
-    if (_vpadnBanner != nil) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [_vpadnBanner.getVpadnAdView removeFromSuperview];
-        });
+    _bannerView = [[VponBannerView alloc]initWithAdSize:[VponAdSize banner]];
+    _bannerView.licenseKey = @"";
+    _bannerView.rootViewController = self;
+    _bannerView.delegate = self;
+    [_bannerView load: [self createRequest]];
+}
+
+// MARK: - VponBannerViewDelegate
+
+- (void)bannerViewDidReceiveAd:(VponBannerView *)bannerView {
+    // Invoked if receive Banner Ad successfully
+    
+    NSLog(@"bannerViewDidReceiveAd");
+    
+    for (UIView *view in self.loadBannerView.subviews) {
+        [view removeFromSuperview];
     }
-    _vpadnBanner = [[VpadnBanner alloc]initWithLicenseKey:@"" adSize:VpadnAdSize.banner];
-    _vpadnBanner.delegate = self;
-    [_vpadnBanner loadRequest:[self initialRequest]];
-}
-
-#pragma mark - Vpadn Banner Delegate
-
-/// 通知有廣告可供拉取 call back
-- (void) onVpadnAdLoaded:(VpadnBanner *)banner {
-    [self.loadBannerView addSubview:banner.getVpadnAdView];
+    
+    bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.loadBannerView addSubview:bannerView];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [bannerView.centerXAnchor constraintEqualToAnchor: _loadBannerView.centerXAnchor],
+        [bannerView.centerYAnchor constraintEqualToAnchor: _loadBannerView.centerYAnchor]
+    ]];
+    
     self.requestButton.enabled = YES;
 }
 
-/// 通知拉取廣告失敗 call back
-- (void) onVpadnAd:(VpadnBanner *)banner failedToLoad:(NSError *)error {
+- (void)bannerView:(VponBannerView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
+    // Invoked if received ad fail, check this callback to indicates what type of failure occurred
+    
+    NSLog(@"bannerView didFailToReceiveAdWithError: %@", error.localizedDescription);
     self.requestButton.enabled = YES;
 }
 
-/// 通知即將離開 application
-- (void) onVpadnAdWillLeaveApplication:(VpadnBanner *)banner {
+- (void)bannerViewDidRecordImpression:(VponBannerView *)bannerView {
+    // Invoked if an impression has been recorded for an ad.
     
+    NSLog(@"bannerViewDidRecordImpression");
 }
 
-/// 通知廣告已送出點擊事件
-- (void) onVpadnAdClicked:(VpadnBanner *)banner {
+- (void)bannerViewDidRecordClick:(VponBannerView *)bannerView {
+    // Invoked if an click has been recorded for an ad.
     
-}
-
-/// 通知廣告將自動 refresh
-- (void) onVpadnAdRefreshed:(VpadnBanner *)banner {
-    
+    NSLog(@"bannerViewDidRecordClick");
 }
 
 @end

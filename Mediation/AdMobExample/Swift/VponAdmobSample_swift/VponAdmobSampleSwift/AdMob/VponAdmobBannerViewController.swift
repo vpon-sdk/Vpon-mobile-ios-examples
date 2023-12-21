@@ -23,10 +23,6 @@ class VponAdmobBannerViewController: UIViewController {
         requestButtonDidTouch(requestButton)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: Button Method
     
     @IBAction func requestButtonDidTouch(_ sender: UIButton) {

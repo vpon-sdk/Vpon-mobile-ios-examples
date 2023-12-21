@@ -20,6 +20,8 @@
 		06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */; };
 		06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA8321538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift */; };
 		3F907D3F8D94AC55B2519DAD /* Pods_VponSdkSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */; };
+		D075C4702B283763006F94EE /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D075C46E2B283763006F94EE /* CustomNativeAdView.swift */; };
+		D0864BAE2B29831F00ACBCE9 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +55,8 @@
 		134B9BE4F0AC3885622AFB30 /* Pods-VponSdkSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		5B41417A4A661FF17A351E56 /* Pods-VponSdkSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponSdkSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D075C46E2B283763006F94EE /* CustomNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNativeAdView.swift; sourceTree = "<group>"; };
+		D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				069AD90A1F8387C500166267 /* VponSdkInterstitialViewController.swift */,
 				069AD90C1F8387D000166267 /* VponSdkBannerViewController.swift */,
 				0695763B23EA4D6F00A50668 /* VponSdkNativeViewController.swift */,
+				D075C46E2B283763006F94EE /* CustomNativeAdView.swift */,
+				D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */,
 				06ACFA7D215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift */,
 				06ACFA7F215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift */,
 				06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */,
@@ -142,7 +148,6 @@
 				0647E9561F83431A00B51B9F /* Frameworks */,
 				0647E9571F83431A00B51B9F /* Resources */,
 				D0804DD72A6E1D7200DE2536 /* Embed Frameworks */,
-				F69B721AD4B58EC0ACAC0400 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0647E9671F83431A00B51B9F /* LaunchScreen.storyboard in Resources */,
+				D0864BAE2B29831F00ACBCE9 /* CustomNativeAdView.xib in Resources */,
 				0647E9641F83431A00B51B9F /* Assets.xcassets in Resources */,
 				0647E9621F83431A00B51B9F /* Main.storyboard in Resources */,
 			);
@@ -219,24 +225,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F69B721AD4B58EC0ACAC0400 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VpadnSDK/VpadnSDKAdKit.framework/VpadnSDKAdKit",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VpadnSDKAdKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,6 +235,7 @@
 				06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */,
 				06ACFA7E215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift in Sources */,
 				06ACFA80215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift in Sources */,
+				D075C4702B283763006F94EE /* CustomNativeAdView.swift in Sources */,
 				069AD9081F83870500166267 /* VponMenuTableViewController.swift in Sources */,
 				06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */,
 				0647E95D1F83431A00B51B9F /* AppDelegate.swift in Sources */,
