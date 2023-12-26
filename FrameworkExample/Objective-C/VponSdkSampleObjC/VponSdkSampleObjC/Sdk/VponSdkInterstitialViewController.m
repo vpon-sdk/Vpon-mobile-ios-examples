@@ -56,6 +56,9 @@
                                        request:[self createRequest]
                                     completion:^(VponInterstitialAd *interstitial, NSError *error) {
             
+            self.interstitial = interstitial;
+            self.interstitial.delegate = self;
+            
             if (error != nil) {
                 NSLog(@"Failed to load ad with error: %@", error.localizedDescription);
                 self.actionButton.enabled = YES;

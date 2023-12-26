@@ -20,8 +20,7 @@
 		06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */; };
 		06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ACFA8321538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift */; };
 		3F907D3F8D94AC55B2519DAD /* Pods_VponSdkSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */; };
-		D075C4702B283763006F94EE /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D075C46E2B283763006F94EE /* CustomNativeAdView.swift */; };
-		D0864BAE2B29831F00ACBCE9 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */; };
+		D037B4262B3A775E00920D91 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0864BAC2B29831E00ACBCE9 /* NativeAdView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,8 +54,7 @@
 		134B9BE4F0AC3885622AFB30 /* Pods-VponSdkSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		5B41417A4A661FF17A351E56 /* Pods-VponSdkSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleSwift/Pods-VponSdkSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CC44763625FBE5F080888AE7 /* Pods_VponSdkSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VponSdkSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D075C46E2B283763006F94EE /* CustomNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNativeAdView.swift; sourceTree = "<group>"; };
-		D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
+		D0864BAC2B29831E00ACBCE9 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +107,7 @@
 				069AD90A1F8387C500166267 /* VponSdkInterstitialViewController.swift */,
 				069AD90C1F8387D000166267 /* VponSdkBannerViewController.swift */,
 				0695763B23EA4D6F00A50668 /* VponSdkNativeViewController.swift */,
-				D075C46E2B283763006F94EE /* CustomNativeAdView.swift */,
-				D0864BAC2B29831E00ACBCE9 /* CustomNativeAdView.xib */,
+				D0864BAC2B29831E00ACBCE9 /* NativeAdView.xib */,
 				06ACFA7D215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift */,
 				06ACFA7F215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift */,
 				06ACFA812153890F001F1BCA /* VpadnSdkVastInTableViewController.swift */,
@@ -198,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0647E9671F83431A00B51B9F /* LaunchScreen.storyboard in Resources */,
-				D0864BAE2B29831F00ACBCE9 /* CustomNativeAdView.xib in Resources */,
+				D037B4262B3A775E00920D91 /* NativeAdView.xib in Resources */,
 				0647E9641F83431A00B51B9F /* Assets.xcassets in Resources */,
 				0647E9621F83431A00B51B9F /* Main.storyboard in Resources */,
 			);
@@ -235,7 +232,6 @@
 				06ACFA8421538935001F1BCA /* VpadnSdkVastInTableRepeatViewController.swift in Sources */,
 				06ACFA7E215388DA001F1BCA /* VpadnSdkVastCustomAdViewController.swift in Sources */,
 				06ACFA80215388EF001F1BCA /* VpadnSdkVastInScrollViewController.swift in Sources */,
-				D075C4702B283763006F94EE /* CustomNativeAdView.swift in Sources */,
 				069AD9081F83870500166267 /* VponMenuTableViewController.swift in Sources */,
 				06ACFA822153890F001F1BCA /* VpadnSdkVastInTableViewController.swift in Sources */,
 				0647E95D1F83431A00B51B9F /* AppDelegate.swift in Sources */,
@@ -387,6 +383,7 @@
 					"$(PROJECT_DIR)/VponSdkSampleSwift",
 				);
 				INFOPLIST_FILE = VponSdkSampleSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -412,6 +409,7 @@
 					"$(PROJECT_DIR)/VponSdkSampleSwift",
 				);
 				INFOPLIST_FILE = VponSdkSampleSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

@@ -39,13 +39,12 @@
     sender.enabled = NO;
     
     GADRequest *request = [GADRequest request];
-//    GADExtras *extra = [[GADExtras alloc] init];
-//    extra.additionalParameters = @{
-//        @"contentURL": @"https://www.vpon.com",
-//        @"contentData": @{@"key1": @"Admob - Interstitial", @"key2": @(1.2), @"key3": @(YES)}
-//    };
-//    [request registerAdNetworkExtras:extra];
-//    request.testDevices = @[kGADSimulatorID];
+    GADExtras *extra = [[GADExtras alloc] init];
+    extra.additionalParameters = @{
+        @"contentURL": @"https://www.vpon.com",
+        @"contentData": @{@"key1": @"Admob - Interstitial", @"key2": @(1.2), @"key3": @(YES)}
+    };
+    [request registerAdNetworkExtras:extra];
     
     __block __weak typeof(self) weakSelf = self;
     [GADInterstitialAd loadWithAdUnitID:@""

@@ -55,13 +55,13 @@
     _adLoader.delegate = self;
     
     GADRequest *request = [GADRequest request];
-//    GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
-//    [extra setExtras:@{
-//        @"contentURL": @"https://www.google.com.tw/",
-//        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)},
+    GADCustomEventExtras *extra = [[GADCustomEventExtras alloc] init];
+    [extra setExtras:@{
+        @"contentURL": @"https://www.google.com.tw/",
+        @"contentData": @{@"key1": @(1), @"key2": @(YES), @"key3": @"name", @"key4": @(123.31)}
 //        @"friendlyObstructions": @[@{ @"view": _obstructView, @"purpose": @(2), @"desc": @"not_visible"}]
-//    } forLabel:@"Vpon"];
-//    [request registerAdNetworkExtras:extra];
+    } forLabel:@"Vpon"];
+    [request registerAdNetworkExtras:extra];
     
     [_adLoader loadRequest:request];
 }

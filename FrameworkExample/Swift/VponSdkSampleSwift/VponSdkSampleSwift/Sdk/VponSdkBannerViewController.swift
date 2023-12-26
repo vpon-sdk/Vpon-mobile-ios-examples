@@ -31,6 +31,8 @@ class VponSdkBannerViewController: UIViewController {
         request.setUserInfoBirthday(year: 2000, month: 08, day: 17)                        // 生日
         request.setContentUrl("https://www.google.com.tw/")                                // 內容
         request.setContentData(["key1": 1, "key2": true, "key3": "name", "key4": 123.31])  // 內容鍵值
+        request.addKeyword("keywordA")
+        request.addKeyword("keyword1:value1")
         
         VponAdRequestConfiguration.shared.testDeviceIdentifiers = ([ASIdentifierManager.shared().advertisingIdentifier.uuidString]) // 取得測試廣告
         VponAdRequestConfiguration.shared.tagForChildDirectedTreatment = .notForChildDirectedTreatment // 是否專為兒童投放

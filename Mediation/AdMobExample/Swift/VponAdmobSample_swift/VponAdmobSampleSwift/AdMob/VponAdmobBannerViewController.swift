@@ -34,14 +34,13 @@ class VponAdmobBannerViewController: UIViewController {
         }
         
         let request = GADRequest()
-//        let extra = GADExtras()
-//        extra.additionalParameters = [
-//            "contentURL":"https://www.vpon.com",
-//            "contentData": ["key1": "Admob", "key2": 1.2, "key3": true],
-//            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
-//        ]
-//        request.register(extra)
-//        request.testDevices = [kGADSimulatorID]
+        let extra = GADExtras()
+        extra.additionalParameters = [
+            "contentURL":"https://www.vpon.com",
+            "contentData": ["key1": "Admob", "key2": 1.2, "key3": true],
+            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
+        ]
+        request.register(extra)
         
         gadBannerView = GADBannerView(adSize: GADAdSizeFromCGSize(loadBannerView.frame.size))
 // TODO: set ad unit id

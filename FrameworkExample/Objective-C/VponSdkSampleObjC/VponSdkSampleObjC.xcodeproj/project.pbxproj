@@ -21,8 +21,7 @@
 		06F7AAA31F1DEA9500A74B6D /* VponSdkInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AAA21F1DEA9500A74B6D /* VponSdkInterstitialViewController.m */; };
 		06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F7AAA51F1DEADD00A74B6D /* VponSdkBannerViewController.m */; };
 		5BBBA8A41261D31CC3629A5F /* libPods-VponSdkSampleObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E7520753EFE2BCF9CAEA30 /* libPods-VponSdkSampleObjC.a */; };
-		D0C486EF2B2A9E7600454109 /* CustomNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */; };
-		D0C486F02B2A9E7600454109 /* CustomNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */; };
+		D0C486EF2B2A9E7600454109 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C486ED2B2A9E7600454109 /* NativeAdView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,8 +66,7 @@
 		B82428EECEA3F43B6956D3C9 /* Pods-VponSdkSampleObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VponSdkSampleObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC.release.xcconfig"; sourceTree = "<group>"; };
 		B8E7520753EFE2BCF9CAEA30 /* libPods-VponSdkSampleObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VponSdkSampleObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0864BA32B29819600ACBCE9 /* VponSdkSampleObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VponSdkSampleObjC-Bridging-Header.h"; sourceTree = "<group>"; };
-		D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNativeAdView.xib; sourceTree = "<group>"; };
-		D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNativeAdView.swift; sourceTree = "<group>"; };
+		D0C486ED2B2A9E7600454109 /* NativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +150,7 @@
 				06F7AAA51F1DEADD00A74B6D /* VponSdkBannerViewController.m */,
 				06936BDE23F0ED9E0081D47A /* VponSdkNativeViewController.h */,
 				06936BDF23F0ED9E0081D47A /* VponSdkNativeViewController.m */,
-				D0C486EE2B2A9E7600454109 /* CustomNativeAdView.swift */,
-				D0C486ED2B2A9E7600454109 /* CustomNativeAdView.xib */,
+				D0C486ED2B2A9E7600454109 /* NativeAdView.xib */,
 				0672201321367AB800159ACB /* VponSdkVastCustomAdViewController.h */,
 				0672201421367AB800159ACB /* VponSdkVastCustomAdViewController.m */,
 				0672201821367B7B00159ACB /* VponSdkVastInScrollViewController.h */,
@@ -231,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F7AA961F1DE9BC00A74B6D /* LaunchScreen.storyboard in Resources */,
-				D0C486EF2B2A9E7600454109 /* CustomNativeAdView.xib in Resources */,
+				D0C486EF2B2A9E7600454109 /* NativeAdView.xib in Resources */,
 				06F7AA931F1DE9BC00A74B6D /* Assets.xcassets in Resources */,
 				06F7AA911F1DE9BC00A74B6D /* Main.storyboard in Resources */,
 			);
@@ -271,7 +268,6 @@
 				0672201D21367B8F00159ACB /* VponSdkVastInTableViewController.m in Sources */,
 				0672201A21367B7B00159ACB /* VponSdkVastInScrollViewController.m in Sources */,
 				06F7AAA31F1DEA9500A74B6D /* VponSdkInterstitialViewController.m in Sources */,
-				D0C486F02B2A9E7600454109 /* CustomNativeAdView.swift in Sources */,
 				06F7AA9F1F1DEA3700A74B6D /* VponMenuTableViewController.m in Sources */,
 				06936BE023F0ED9E0081D47A /* VponSdkNativeViewController.m in Sources */,
 				06F7AAA61F1DEADD00A74B6D /* VponSdkBannerViewController.m in Sources */,

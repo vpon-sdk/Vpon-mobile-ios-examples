@@ -27,13 +27,13 @@ class VponAdmobInterstitialViewController: UIViewController {
         sender.isEnabled = false
         
         let request = GADRequest()
-//            let extra = GADExtras()
-//            extra.additionalParameters = [
-//                "contentURL":"https://www.vpon.com",
-//                "contentData": ["key1": "Admob", "key2": 1.2, "key3": true]
-//            ]
-//            request.register(extra)
-//            request.testDevices = [kGADSimulatorID]
+        let extra = GADExtras()
+        extra.additionalParameters = [
+            "contentURL":"https://www.vpon.com",
+            "contentData": ["key1": "Admob", "key2": 1.2, "key3": true],
+            "friendlyObstructions": [["view": UIView(), "purpose": 2, "desc": "not_visible"]]
+        ]
+        request.register(extra)
         
         GADInterstitialAd.load(withAdUnitID: "", request: request) { ad, error in
             if let error = error {

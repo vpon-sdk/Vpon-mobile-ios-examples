@@ -9,20 +9,14 @@
 #import "VponSdkNativeViewController.h"
 #import <VpadnSDKAdKit/VpadnSDKAdKit.h>
 #import <AdSupport/AdSupport.h>
-#import "VponSdkSampleObjC-Swift.h"
-
-@import VpadnSDKAdKit;
-@import AdSupport;
 
 @interface VponSdkNativeViewController () <VponNativeAdLoaderDelegate, VponNativeAdDelegate, VponVideoControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *adContainerView;
-
 @property (strong, nonatomic) VponNativeAdLoader *adLoader;
-
-@property (strong, nonatomic) CustomNativeAdView *customNativeAdView;
-
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
+
+@property(nonatomic, strong) VponNativeAdView *nativeAdView;
 
 @end
 
@@ -32,13 +26,14 @@
     [super viewDidLoad];
     self.title = @"SDK - Native";
     
-    _customNativeAdView = [[CustomNativeAdView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-    [_adContainerView addSubview:_customNativeAdView];
-    _customNativeAdView.translatesAutoresizingMaskIntoConstraints = NO;
+    _nativeAdView = [[NSBundle mainBundle] loadNibNamed:@"NativeAdView" owner:nil options:nil]
+        .firstObject;
+    [_adContainerView addSubview:_nativeAdView];
+    _nativeAdView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [NSLayoutConstraint activateConstraints:@[
-        [_customNativeAdView.heightAnchor constraintEqualToAnchor: _adContainerView.heightAnchor],
-        [_customNativeAdView.widthAnchor constraintEqualToAnchor: _adContainerView.widthAnchor]
+        [_nativeAdView.heightAnchor constraintEqualToAnchor: _adContainerView.heightAnchor],
+        [_nativeAdView.widthAnchor constraintEqualToAnchor: _adContainerView.widthAnchor]
     ]];
     
     [self requestButtonDidTouch:_requestButton];
@@ -80,19 +75,20 @@
     
     nativeAd.delegate = self;
     
-    ((UILabel *)_customNativeAdView.headlineView).text = nativeAd.headline;
-    _customNativeAdView.mediaView.mediaContent = nativeAd.mediaContent;
+    ((UILabel *)_nativeAdView.headlineView).text = nativeAd.headline;
+    _nativeAdView.mediaView.mediaContent = nativeAd.mediaContent;
     
     if (nativeAd.mediaContent.hasVideoContent) {
         nativeAd.mediaContent.videoController.delegate = self;
     }
     
-    ((UILabel *)_customNativeAdView.bodyView).text = nativeAd.body;
-    [((UIButton *)_customNativeAdView.callToActionView) setTitle:nativeAd.callToAction
-                                                 forState:UIControlStateNormal];
-    ((UIImageView *)_customNativeAdView.iconView).image = nativeAd.icon.image;
+    ((UILabel *)_nativeAdView.bodyView).text = nativeAd.body;
+    [((UIButton *)_nativeAdView.callToActionView) setTitle:nativeAd.callToAction
+                                                  forState:UIControlStateNormal];
+    ((UIImageView *)_nativeAdView.iconView).image = nativeAd.icon.image;
     
-    _customNativeAdView.nativeAd = nativeAd;
+    // Necessary to show media content and make it clickable!
+    _nativeAdView.nativeAd = nativeAd;
 }
 
 - (void)adLoader:(VponNativeAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {

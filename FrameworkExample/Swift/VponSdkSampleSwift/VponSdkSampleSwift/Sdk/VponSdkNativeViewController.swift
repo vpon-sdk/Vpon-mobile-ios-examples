@@ -13,21 +13,28 @@ import AdSupport
 class VponSdkNativeViewController: UIViewController {
     
     var adLoader: VponNativeAdLoader? // Must keep a strong reference to VponNativeAdLoader during the ad loading process!
-    var customNativeAdView: CustomNativeAdView!
     
     @IBOutlet weak var adContainer: UIView!
     @IBOutlet weak var requestButton: UIButton!
     
+    var nativeAdView: VponNativeAdView!
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.title = "SDK - Native"
         
-        customNativeAdView = CustomNativeAdView(frame: .init())
-        adContainer.addSubview(customNativeAdView)
-        customNativeAdView.translatesAutoresizingMaskIntoConstraints = false
+        guard let nibObjects = Bundle.main.loadNibNamed("NativeAdView", owner: nil, options: nil),
+              let adView = nibObjects.first as? VponNativeAdView else {
+            fatalError("Could not load nib file for nativeAdView")
+        }
+        
+        nativeAdView = adView
+        adContainer.addSubview(adView)
+        nativeAdView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            customNativeAdView.widthAnchor.constraint(equalTo: adContainer.widthAnchor),
-            customNativeAdView.heightAnchor.constraint(equalTo: adContainer.heightAnchor)
+            nativeAdView.widthAnchor.constraint(equalTo: adContainer.widthAnchor),
+            nativeAdView.heightAnchor.constraint(equalTo: adContainer.heightAnchor)
         ])
         
         requestButtonDidTouch(requestButton)
@@ -67,18 +74,19 @@ extension VponSdkNativeViewController: VponNativeAdLoaderDelegate {
         
         nativeAd.delegate = self
         
-        (customNativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
-        (customNativeAdView.bodyView as? UILabel)?.text = nativeAd.body
-        (customNativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
-        (customNativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
-        customNativeAdView.callToActionView?.isUserInteractionEnabled = false
-        customNativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
+        (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
+        (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
+        (nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
+        (nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
+        nativeAdView.callToActionView?.isUserInteractionEnabled = false
+        nativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
         
         if nativeAd.mediaContent?.hasVideoContent ?? false {
             nativeAd.mediaContent?.videoController?.delegate = self
         }
         
-        customNativeAdView.nativeAd = nativeAd
+        // Necessary to show media content and make it clickable!
+        nativeAdView.nativeAd = nativeAd
     }
     
     func adLoader(_ adLoader: VponNativeAdLoader, didFailToReceiveAdWithError error: Error) {
