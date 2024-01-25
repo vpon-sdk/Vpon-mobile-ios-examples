@@ -6,6 +6,7 @@ Admob Adapter
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.1.0|Google-Mobile-Ads-SDK 10.14.0+, VpadnSDK 5.6.0+|支援 Admob 10.0 版本且改用 Swift 撰寫|
 |2.0.11|Google-Mobile-Ads-SDK 9.2.0+, VpadnSDK 5.5.0+|更新 VpadnSDK 為 Swift 版本|
 |2.0.9|Google-Mobile-Ads-SDK 9.2.0+, VpadnSDK 5.2.0+|修復 Framework 內部低機率閃退的問題|
 |2.0.8|Google-Mobile-Ads-SDK 9.2.0+, VpadnSDK 5.2.0+|支援 Admob 9.0 版本且改以 xcFramework 方式提供。Admob Native 新增 CoverImage 使用 GADNativeImage 串接的解決方案。|

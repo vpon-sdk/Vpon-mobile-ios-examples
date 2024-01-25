@@ -176,6 +176,7 @@
 				06F7AA801F1DE9BC00A74B6D /* Frameworks */,
 				06F7AA811F1DE9BC00A74B6D /* Resources */,
 				D0864BA02B29514D00ACBCE9 /* Embed Frameworks */,
+				13CE19EBC3165437A9FC543F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +238,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13CE19EBC3165437A9FC543F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/VpadnSDK/VpadnSDKAdKit.framework/VpadnSDKAdKit",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VpadnSDKAdKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VponSdkSampleObjC/Pods-VponSdkSampleObjC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2348C27625FE34C36CCC88FB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

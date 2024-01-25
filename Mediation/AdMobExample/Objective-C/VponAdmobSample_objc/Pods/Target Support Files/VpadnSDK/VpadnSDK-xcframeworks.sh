@@ -117,5 +117,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.5.0/VpadnSDKAdKit.xcframework" "VpadnSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.6.0/VpadnSDKAdKit.xcframework" "VpadnSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 
