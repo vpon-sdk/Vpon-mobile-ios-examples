@@ -12,11 +12,7 @@ class VponMenuTableViewController: UITableViewController {
     
     let data = ["SDK - Banner" : "goVponSdkBannerViewController",
                 "SDK - Interstitial" : "goVponSdkInterstitialViewController",
-                "SDK - Native" : "goVponSdkNativeViewController",
-                "SDK - VastCustomAd": "goVponSdkVastCustomAdViewController",
-                "SDK - VastInScroll": "goVponSdkVastInScrollViewController",
-                "SDK - VastInTable": "goVponSdkVastInTableViewController",
-                "SDK - VastInTableRepeat": "goVponSdkVastInTableRepeatViewController"]
+                "SDK - Native" : "goVponSdkNativeViewController"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

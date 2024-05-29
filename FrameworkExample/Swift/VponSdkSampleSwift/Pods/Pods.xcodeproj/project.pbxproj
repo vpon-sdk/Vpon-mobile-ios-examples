@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = F6721818C052B988DB458C4837D36B19 /* Build configuration list for PBXAggregateTarget "VpadnSDK" */;
 			buildPhases = (
-				75FA94C9A8CBBAD326FEF5C3A89B7CB4 /* [CP] Copy XCFrameworks */,
+				66311A5EEB8E2192579EFB39CA5F3D35 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -39,8 +39,8 @@
 		0FFCD9AE4E5D61A1540ADE8591A61E8D /* Pods-VponSdkSampleSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VponSdkSampleSwift-acknowledgements.plist"; sourceTree = "<group>"; };
 		179577C691983CDF99A7BD7D6E902ED5 /* Pods-VponSdkSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VponSdkSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		6ED4FE25A45CA8936A0F596B60B4C4CA /* Pods-VponSdkSampleSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VponSdkSampleSwift.modulemap"; sourceTree = "<group>"; };
+		70DFD4545EB8B0B2C8928EC633B9A330 /* VpadnSDKAdKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = VpadnSDKAdKit.xcframework; path = "VpadnSDKiOS-5.6.2/VpadnSDKAdKit.xcframework"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		81C6154DCBE6CD737CE43FCA5EA75CFA /* VpadnSDKAdKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = VpadnSDKAdKit.xcframework; path = "VpadnSDKiOS-5.6.0/VpadnSDKAdKit.xcframework"; sourceTree = "<group>"; };
 		8793CEED73D5D64FF92C304504AAE7B9 /* Pods-VponSdkSampleSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VponSdkSampleSwift-dummy.m"; sourceTree = "<group>"; };
 		8EC3EACB14D45B26377E45B9B615D099 /* Pods-VponSdkSampleSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VponSdkSampleSwift-Info.plist"; sourceTree = "<group>"; };
 		9162286D76BCC6739394B2671892D6AA /* Pods-VponSdkSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VponSdkSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,10 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E18814C79299047180EF300E2C26FD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70DFD4545EB8B0B2C8928EC633B9A330 /* VpadnSDKAdKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EB6AC34E211CAE2A85B7727967A87B8 /* VpadnSDK */ = {
 			isa = PBXGroup;
 			children = (
-				DAC836F29ADE02DF86DFEC398E3CB86E /* Frameworks */,
+				0E18814C79299047180EF300E2C26FD5 /* Frameworks */,
 				80CD85A9ED3E93298E30D416E3D6C1E8 /* Support Files */,
 			);
 			name = VpadnSDK;
@@ -145,14 +153,6 @@
 				4EB6AC34E211CAE2A85B7727967A87B8 /* VpadnSDK */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		DAC836F29ADE02DF86DFEC398E3CB86E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81C6154DCBE6CD737CE43FCA5EA75CFA /* VpadnSDKAdKit.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DC5C425F412D8C4C40728FC5BCC41013 /* Products */ = {
@@ -235,14 +235,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		75FA94C9A8CBBAD326FEF5C3A89B7CB4 /* [CP] Copy XCFrameworks */ = {
+		66311A5EEB8E2192579EFB39CA5F3D35 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/VpadnSDK/VpadnSDK-xcframeworks.sh",
-				"${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.6.0/VpadnSDKAdKit.xcframework",
+				"${PODS_ROOT}/VpadnSDK/VpadnSDKiOS-5.6.2/VpadnSDKAdKit.xcframework",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputPaths = (

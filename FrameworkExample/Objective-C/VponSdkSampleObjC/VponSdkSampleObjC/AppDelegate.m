@@ -22,6 +22,8 @@
     config.logLevel = VponLogLevelDefault;
     [config initializeSdk];
     
+    NSLog(@"Current Vpon SDK version is %@", VponAdConfiguration.sdkVersion);
+    
     return YES;
 }
 
