@@ -8,9 +8,6 @@
 
 #import "VponMenuTableViewController.h"
 
-#import "VponSdkVastInTableRepeatViewController.h"
-#import "VponSdkVastInTableViewController.h"
-
 @interface VponMenuTableViewController ()
 
 @property (strong, nonatomic) NSDictionary *data;
@@ -28,11 +25,7 @@
     _data = [[NSDictionary alloc] initWithObjectsAndKeys:
                  @"goVponSdkBannerViewController", @"SDK - Banner",
                  @"goVponSdkInterstitialViewController", @"SDK - Interstitial",
-                 @"goVponSdkNativeViewController", @"SDK - Native",
-                 @"goVponSdkVastCustomAdViewController", @"SDK - VastCustomAd",
-                 @"goVponSdkVastInScrollViewController", @"SDK - VastInScroll",
-                 @"goVponSdkVastInTableViewController", @"SDK - VastInTable",
-                 @"goVponSdkVastInTableRepeatViewController", @"SDK - VastInTableRepeat",  nil];
+                 @"goVponSdkNativeViewController", @"SDK - Native",  nil];
     
     _sortKeys = [_data.allKeys sortedArrayUsingDescriptors:@[
         [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]

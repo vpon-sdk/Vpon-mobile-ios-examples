@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.logLevel = .default
         config.initializeSdk()
         
+        print("Current Vpon SDK version is \(VponAdConfiguration.sdkVersion())")
+        
         // Override point for customization after application launch.
         return true
     }
