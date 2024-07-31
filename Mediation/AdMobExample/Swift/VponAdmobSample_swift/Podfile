@@ -8,7 +8,7 @@ target 'VponAdmobSampleSwift' do
   # Pods for VponAdmobSampleSwift
 
   pod 'Google-Mobile-Ads-SDK', '~> 10.14.0'
-  pod 'AdMobMediationAdapterVpadn', '~> 2.1.0'
+  pod 'AdMobMediationAdapterVpadn'
   pod 'VpadnSDK', '~> 5.6.0'
 
 end

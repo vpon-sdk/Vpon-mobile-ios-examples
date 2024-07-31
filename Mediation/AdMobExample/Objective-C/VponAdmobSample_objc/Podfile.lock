@@ -1,5 +1,5 @@
 PODS:
-  - AdMobMediationAdapterVpadn (2.1.0):
+  - AdMobMediationAdapterVpadn (2.1.1):
     - Google-Mobile-Ads-SDK (>= 10.14.0)
     - VpadnSDK (>= 5.6.0)
   - Google-Mobile-Ads-SDK (10.14.0):
@@ -52,7 +52,7 @@ PODS:
   - VpadnSDK (5.6.0)
 
 DEPENDENCIES:
-  - AdMobMediationAdapterVpadn (~> 2.1.0)
+  - AdMobMediationAdapterVpadn (~> 2.1.1)
   - Google-Mobile-Ads-SDK (~> 10.14.0)
   - VpadnSDK (~> 5.6.0)
 
@@ -68,7 +68,7 @@ SPEC REPOS:
     - VpadnSDK
 
 SPEC CHECKSUMS:
-  AdMobMediationAdapterVpadn: 9c0c95bd4473a1c7abce6a2c03b36542954f9527
+  AdMobMediationAdapterVpadn: 47e44f6176ecf4411c35c2ebd538ae9cda83c1fa
   Google-Mobile-Ads-SDK: 8f67a72f88d057335b1ac3f501e2b68ad054116e
   GoogleAppMeasurement: bb3c564c3efb933136af0e94899e0a46167466a8
   GoogleUserMessagingPlatform: dce302b8f1b84d6e945812ee7a15c3f65a102cbf
@@ -77,6 +77,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   VpadnSDK: c2c44db035e93b5c0ee02503c7205db221942bac
 
-PODFILE CHECKSUM: fe1104946812c2249343ebfb7d6f9fdeecf13db3
+PODFILE CHECKSUM: b59c44c0a13ee9be5f93bb69dff212b2ce48483d
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2

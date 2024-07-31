@@ -19,6 +19,19 @@
 		98439CC5200F79F3603B7ACA /* Pods_VponAdmobSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB369A9F95EA7C3B47B8BD2 /* Pods_VponAdmobSampleSwift.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D0306BCD2C576BA700082B31 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		06A33B18251DCCBA00D51B64 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		06BE5A3F1EEE8E9B0003F751 /* VponAdmobSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponAdmobSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +133,7 @@
 				06BE5A3C1EEE8E9B0003F751 /* Frameworks */,
 				06BE5A3D1EEE8E9B0003F751 /* Resources */,
 				F59E1C27E6BE3174A14E0C73 /* [CP] Embed Pods Frameworks */,
+				D0306BCD2C576BA700082B31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
