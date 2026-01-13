@@ -1,0 +1,2833 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GADVpadnNativeAdCustomEvent",
+        "printedName": "GADVpadnNativeAdCustomEvent",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADVpadnNativeAdCustomEvent",
+                "printedName": "AdMobMediationAdapterVpadn.GADVpadnNativeAdCustomEvent",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)init",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventCACycfc",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "headline",
+            "printedName": "headline",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)headline",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC8headlineSSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "headline",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)headline",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC8headlineSSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "headline",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)body",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC4bodySSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "body",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)body",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC4bodySSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "body",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "callToAction",
+            "printedName": "callToAction",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)callToAction",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC12callToActionSSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "callToAction",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)callToAction",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC12callToActionSSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "callToAction",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icon",
+            "printedName": "icon",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GoogleMobileAds.GADNativeAdImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GADNativeAdImage",
+                    "printedName": "GoogleMobileAds.GADNativeAdImage",
+                    "usr": "c:objc(cs)GADNativeAdImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)icon",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC4iconSo09GADNativeA5ImageCSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "icon",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADNativeAdImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADNativeAdImage",
+                        "printedName": "GoogleMobileAds.GADNativeAdImage",
+                        "usr": "c:objc(cs)GADNativeAdImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)icon",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC4iconSo09GADNativeA5ImageCSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "icon",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "images",
+            "printedName": "images",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[GoogleMobileAds.GADNativeAdImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[GoogleMobileAds.GADNativeAdImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADNativeAdImage",
+                        "printedName": "GoogleMobileAds.GADNativeAdImage",
+                        "usr": "c:objc(cs)GADNativeAdImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)images",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC6imagesSaySo09GADNativeA5ImageCGSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "images",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[GoogleMobileAds.GADNativeAdImage]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[GoogleMobileAds.GADNativeAdImage]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADNativeAdImage",
+                            "printedName": "GoogleMobileAds.GADNativeAdImage",
+                            "usr": "c:objc(cs)GADNativeAdImage"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)images",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC6imagesSaySo09GADNativeA5ImageCGSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "images",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mediaView",
+            "printedName": "mediaView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)mediaView",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC9mediaViewSo6UIViewCSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "mediaView",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)mediaView",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC9mediaViewSo6UIViewCSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "mediaView",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasVideoContent",
+            "printedName": "hasVideoContent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)hasVideoContent",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC15hasVideoContentSbvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "hasVideoContent",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)hasVideoContent",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC15hasVideoContentSbvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "hasVideoContent",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "advertiser",
+            "printedName": "advertiser",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)advertiser",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC10advertiserSSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "advertiser",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)advertiser",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC10advertiserSSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "advertiser",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "starRating",
+            "printedName": "starRating",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSDecimalNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDecimalNumber",
+                    "printedName": "Foundation.NSDecimalNumber",
+                    "usr": "c:objc(cs)NSDecimalNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)starRating",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC10starRatingSo15NSDecimalNumberCSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "starRating",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSDecimalNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSDecimalNumber",
+                        "printedName": "Foundation.NSDecimalNumber",
+                        "usr": "c:objc(cs)NSDecimalNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)starRating",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC10starRatingSo15NSDecimalNumberCSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "starRating",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "store",
+            "printedName": "store",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)store",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC5storeSSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "store",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)store",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC5storeSSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "store",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "price",
+            "printedName": "price",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)price",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC5priceSSSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "price",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)price",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC5priceSSSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "price",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "extraAssets",
+            "printedName": "extraAssets",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(py)extraAssets",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC11extraAssetsSDySSypGSgvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "extraAssets",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)extraAssets",
+                "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC11extraAssetsSDySSypGSgvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "extraAssets",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "adapterVersion",
+            "printedName": "adapterVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADVersionNumber",
+                "printedName": "GoogleMobileAds.GADVersionNumber",
+                "usr": "c:@S@GADVersionNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(cm)adapterVersion",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC14adapterVersionSo16GADVersionNumberVyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "adapterVersion",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adSDKVersion",
+            "printedName": "adSDKVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADVersionNumber",
+                "printedName": "GoogleMobileAds.GADVersionNumber",
+                "usr": "c:@S@GADVersionNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(cm)adSDKVersion",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC12adSDKVersionSo16GADVersionNumberVyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "adSDKVersion",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "networkExtrasClass",
+            "printedName": "networkExtrasClass()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GoogleMobileAds.GADAdNetworkExtras.Type?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExistentialMetatype",
+                    "printedName": "GoogleMobileAds.GADAdNetworkExtras.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADAdNetworkExtras",
+                        "printedName": "GoogleMobileAds.GADAdNetworkExtras",
+                        "usr": "c:objc(pl)GADAdNetworkExtras"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(cm)networkExtrasClass",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC18networkExtrasClassSo012GADAdNetworkK0_pXpSgyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "networkExtrasClass",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpWith",
+            "printedName": "setUpWith(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationServerConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationServerConfiguration",
+                "usr": "c:objc(cs)GADMediationServerConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(cm)setUpWithConfiguration:completionHandler:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC9setUpWith_17completionHandlerySo31GADMediationServerConfigurationC_ys5Error_pSgctFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "setUpWithConfiguration:completionHandler:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadNativeAd",
+            "printedName": "loadNativeAd(for:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationNativeAdConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationNativeAdConfiguration",
+                "usr": "c:objc(cs)GADMediationNativeAdConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GoogleMobileAds.GADMediationNativeAd?, Swift.Error?) -> GoogleMobileAds.GADMediationNativeAdEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADMediationNativeAdEventDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADMediationNativeAdEventDelegate",
+                        "printedName": "GoogleMobileAds.GADMediationNativeAdEventDelegate",
+                        "usr": "c:objc(pl)GADMediationNativeAdEventDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(GoogleMobileAds.GADMediationNativeAd?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "GoogleMobileAds.GADMediationNativeAd?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADMediationNativeAd",
+                            "printedName": "GoogleMobileAds.GADMediationNativeAd",
+                            "usr": "c:objc(pl)GADMediationNativeAd"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)loadNativeAdForAdConfiguration:completionHandler:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC04loadgA03for17completionHandlerySo012GADMediationgA13ConfigurationC_So0ngaI8Delegate_pSgSo0ngA0_pSg_s5Error_pSgtctF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "loadNativeAdForAdConfiguration:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handlesUserClicks",
+            "printedName": "handlesUserClicks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)handlesUserClicks",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC17handlesUserClicksSbyF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "handlesUserClicks",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handlesUserImpressions",
+            "printedName": "handlesUserImpressions()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)handlesUserImpressions",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC22handlesUserImpressionsSbyF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "handlesUserImpressions",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didRender",
+            "printedName": "didRender(in:clickableAssetViews:nonclickableAssetViews:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[GoogleMobileAds.GADNativeAssetIdentifier : UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GADNativeAssetIdentifier",
+                    "printedName": "GoogleMobileAds.GADNativeAssetIdentifier",
+                    "usr": "c:GADNativeAdAssetIdentifiers.h@T@GADNativeAssetIdentifier"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[GoogleMobileAds.GADNativeAssetIdentifier : UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GADNativeAssetIdentifier",
+                    "printedName": "GoogleMobileAds.GADNativeAssetIdentifier",
+                    "usr": "c:GADNativeAdAssetIdentifiers.h@T@GADNativeAssetIdentifier"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)didRenderInView:clickableAssetViews:nonclickableAssetViews:viewController:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC9didRender2in19clickableAssetViews012nonclickablenO014viewControllerySo6UIViewC_SDySo09GADNativeN10IdentifieraAJGAMSo0sR0CtF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "didRenderInView:clickableAssetViews:nonclickableAssetViews:viewController:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUntrackView",
+            "printedName": "didUntrackView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)didUntrackView:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC14didUntrackViewyySo6UIViewCSgF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "didUntrackView:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didRecordClickOnAsset",
+            "printedName": "didRecordClickOnAsset(withName:view:viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADNativeAssetIdentifier",
+                "printedName": "GoogleMobileAds.GADNativeAssetIdentifier",
+                "usr": "c:GADNativeAdAssetIdentifiers.h@T@GADNativeAssetIdentifier"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)didRecordClickOnAssetWithName:view:viewController:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC21didRecordClickOnAsset8withName4view0Q10ControllerySo09GADNativeN10Identifiera_So6UIViewCSo0uR0CtF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "didRecordClickOnAssetWithName:view:viewController:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adLoader",
+            "printedName": "adLoader(_:didReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponNativeAdLoader",
+                "printedName": "VpadnSDKAdKit.VponNativeAdLoader",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponNativeAdLoader"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponNativeAd",
+                "printedName": "VpadnSDKAdKit.VponNativeAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)adLoader:didReceive:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC8adLoader_10didReceivey0E8SDKAdKit04VpongaK0C_AF0pgA0CtF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adLoader:didReceive:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adLoader",
+            "printedName": "adLoader(_:didFailToReceiveAdWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponNativeAdLoader",
+                "printedName": "VpadnSDKAdKit.VponNativeAdLoader",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponNativeAdLoader"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)adLoader:didFailToReceiveAdWithError:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC8adLoader_016didFailToReceiveA9WithErrory0E8SDKAdKit04VpongaK0C_s0Q0_ptF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adLoader:didFailToReceiveAdWithError:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeAdDidRecordImpression",
+            "printedName": "nativeAdDidRecordImpression(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponNativeAd",
+                "printedName": "VpadnSDKAdKit.VponNativeAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)nativeAdDidRecordImpression:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC06nativeA19DidRecordImpressionyy0E8SDKAdKit04VpongA0CF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "nativeAdDidRecordImpression:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeAdDidRecordClick",
+            "printedName": "nativeAdDidRecordClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponNativeAd",
+                "printedName": "VpadnSDKAdKit.VponNativeAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponNativeAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent(im)nativeAdDidRecordClick:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC06nativeA14DidRecordClickyy0E8SDKAdKit04VpongA0CF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "nativeAdDidRecordClick:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADVpadnNativeAdCustomEvent",
+        "mangledName": "$s26AdMobMediationAdapterVpadn014GADVpadnNativeA11CustomEventC",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "objc_name": "GADVpadnNativeAdCustomEvent",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VponNativeAdLoaderDelegate",
+            "printedName": "VponNativeAdLoaderDelegate",
+            "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponNativeAdLoaderDelegate",
+            "mangledName": "$s13VpadnSDKAdKit26VponNativeAdLoaderDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VponNativeAdDelegate",
+            "printedName": "VponNativeAdDelegate",
+            "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponNativeAdDelegate",
+            "mangledName": "$s13VpadnSDKAdKit20VponNativeAdDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GADMAdapterVponInterstitialAd",
+        "printedName": "GADMAdapterVponInterstitialAd",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadInterstitial",
+            "printedName": "loadInterstitial(for:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationInterstitialAdConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationInterstitialAdConfiguration",
+                "usr": "c:objc(cs)GADMediationInterstitialAdConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GoogleMobileAds.GADMediationInterstitialAd?, Swift.Error?) -> GoogleMobileAds.GADMediationInterstitialAdEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADMediationInterstitialAdEventDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADMediationInterstitialAdEventDelegate",
+                        "printedName": "GoogleMobileAds.GADMediationInterstitialAdEventDelegate",
+                        "usr": "c:objc(pl)GADMediationInterstitialAdEventDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(GoogleMobileAds.GADMediationInterstitialAd?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "GoogleMobileAds.GADMediationInterstitialAd?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADMediationInterstitialAd",
+                            "printedName": "GoogleMobileAds.GADMediationInterstitialAd",
+                            "usr": "c:objc(pl)GADMediationInterstitialAd"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C04loadH03for17completionHandlerySo012GADMediationhA13ConfigurationC_So0mhA13EventDelegate_pSgSo0mhA0_pSg_s5Error_pSgtctF",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C04loadH03for17completionHandlerySo012GADMediationhA13ConfigurationC_So0mhA13EventDelegate_pSgSo0mhA0_pSg_s5Error_pSgtctF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)presentFromViewController:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C7present4fromySo16UIViewControllerC_tF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "presentFromViewController:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADMAdapterVponInterstitialAd",
+                "printedName": "AdMobMediationAdapterVpadn.GADMAdapterVponInterstitialAd",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)init",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0CACycfc",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "adWillPresentScreen",
+            "printedName": "adWillPresentScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)adWillPresentScreen:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C19adWillPresentScreenyy0E8SDKAdKit0g4Fulll7ContentA0_pF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adWillPresentScreen:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adWillDismissScreen",
+            "printedName": "adWillDismissScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)adWillDismissScreen:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C19adWillDismissScreenyy0E8SDKAdKit0g4Fulll7ContentA0_pF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adWillDismissScreen:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adDidDismissScreen",
+            "printedName": "adDidDismissScreen(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)adDidDismissScreen:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C18adDidDismissScreenyy0E8SDKAdKit0g4Fulll7ContentA0_pF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adDidDismissScreen:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adDidRecordClick",
+            "printedName": "adDidRecordClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)adDidRecordClick:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C16adDidRecordClickyy0E8SDKAdKit0g17FullScreenContentA0_pF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adDidRecordClick:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adDidRecordImpression",
+            "printedName": "adDidRecordImpression(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)adDidRecordImpression:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C21adDidRecordImpressionyy0E8SDKAdKit0g17FullScreenContentA0_pF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "adDidRecordImpression:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "ad",
+            "printedName": "ad(_:didFailToPresentFullScreenContentWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponFullScreenContentAd",
+                "printedName": "VpadnSDKAdKit.VponFullScreenContentAd",
+                "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd(im)ad:didFailToPresentFullScreenContentWithError:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C2ad_42didFailToPresentFullScreenContentWithErrory0E8SDKAdKit0gnopA0_p_s0R0_ptF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "ad:didFailToPresentFullScreenContentWithError:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponInterstitialAd",
+        "mangledName": "$s26AdMobMediationAdapterVpadn027GADMAdapterVponInterstitialA0C",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VponFullScreenContentDelegate",
+            "printedName": "VponFullScreenContentDelegate",
+            "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponFullScreenContentDelegate",
+            "mangledName": "$s13VpadnSDKAdKit29VponFullScreenContentDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GADMAdapterVponBannerAd",
+        "printedName": "GADMAdapterVponBannerAd",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "view",
+            "printedName": "view",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(py)view",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C4viewSo6UIViewCvp",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "view",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)view",
+                "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C4viewSo6UIViewCvg",
+                "moduleName": "AdMobMediationAdapterVpadn",
+                "objc_name": "view",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "loadBannerAd",
+            "printedName": "loadBannerAd(for:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationBannerAdConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationBannerAdConfiguration",
+                "usr": "c:objc(cs)GADMediationBannerAdConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GoogleMobileAds.GADMediationBannerAd?, Swift.Error?) -> GoogleMobileAds.GADMediationBannerAdEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADMediationBannerAdEventDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADMediationBannerAdEventDelegate",
+                        "printedName": "GoogleMobileAds.GADMediationBannerAdEventDelegate",
+                        "usr": "c:objc(pl)GADMediationBannerAdEventDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(GoogleMobileAds.GADMediationBannerAd?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "GoogleMobileAds.GADMediationBannerAd?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADMediationBannerAd",
+                            "printedName": "GoogleMobileAds.GADMediationBannerAd",
+                            "usr": "c:objc(pl)GADMediationBannerAd"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C04loadhA03for17completionHandlerySo012GADMediationhA13ConfigurationC_So0mhA13EventDelegate_pSgSo0mhA0_pSg_s5Error_pSgtctF",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C04loadhA03for17completionHandlerySo012GADMediationhA13ConfigurationC_So0mhA13EventDelegate_pSgSo0mhA0_pSg_s5Error_pSgtctF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADMAdapterVponBannerAd",
+                "printedName": "AdMobMediationAdapterVpadn.GADMAdapterVponBannerAd",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)init",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0CACycfc",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidReceiveAd",
+            "printedName": "bannerViewDidReceiveAd(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponBannerView",
+                "printedName": "VpadnSDKAdKit.VponBannerView",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)bannerViewDidReceiveAd:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C020bannerViewDidReceiveA0yy0E8SDKAdKit0ghJ0CF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "bannerViewDidReceiveAd:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerView",
+            "printedName": "bannerView(_:didFailToReceiveAdWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponBannerView",
+                "printedName": "VpadnSDKAdKit.VponBannerView",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)bannerView:didFailToReceiveAdWithError:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C10bannerView_016didFailToReceiveA9WithErrory0E8SDKAdKit0ghJ0C_s0P0_ptF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "bannerView:didFailToReceiveAdWithError:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidRecordClick",
+            "printedName": "bannerViewDidRecordClick(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponBannerView",
+                "printedName": "VpadnSDKAdKit.VponBannerView",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)bannerViewDidRecordClick:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C24bannerViewDidRecordClickyy0E8SDKAdKit0ghJ0CF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "bannerViewDidRecordClick:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidRecordImpression",
+            "printedName": "bannerViewDidRecordImpression(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VponBannerView",
+                "printedName": "VpadnSDKAdKit.VponBannerView",
+                "usr": "c:@M@VpadnSDKAdKit@objc(cs)VponBannerView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd(im)bannerViewDidRecordImpression:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C29bannerViewDidRecordImpressionyy0E8SDKAdKit0ghJ0CF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "bannerViewDidRecordImpression:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVponBannerAd",
+        "mangledName": "$s26AdMobMediationAdapterVpadn021GADMAdapterVponBannerA0C",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VponBannerViewDelegate",
+            "printedName": "VponBannerViewDelegate",
+            "usr": "c:@M@VpadnSDKAdKit@objc(pl)VponBannerViewDelegate",
+            "mangledName": "$s13VpadnSDKAdKit22VponBannerViewDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "Import",
+        "name": "VpadnSDKAdKit",
+        "printedName": "VpadnSDKAdKit",
+        "declKind": "Import",
+        "moduleName": "AdMobMediationAdapterVpadn"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GADMAdapterVpon",
+        "printedName": "GADMAdapterVpon",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADMAdapterVpon",
+                "printedName": "AdMobMediationAdapterVpadn.GADMAdapterVpon",
+                "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(im)init",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponCACycfc",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "adapterVersion",
+            "printedName": "adapterVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADVersionNumber",
+                "printedName": "GoogleMobileAds.GADVersionNumber",
+                "usr": "c:@S@GADVersionNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(cm)adapterVersion",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC14adapterVersionSo16GADVersionNumberVyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "adapterVersion",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "adSDKVersion",
+            "printedName": "adSDKVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GADVersionNumber",
+                "printedName": "GoogleMobileAds.GADVersionNumber",
+                "usr": "c:@S@GADVersionNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(cm)adSDKVersion",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC12adSDKVersionSo16GADVersionNumberVyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "adSDKVersion",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "networkExtrasClass",
+            "printedName": "networkExtrasClass()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GoogleMobileAds.GADAdNetworkExtras.Type?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExistentialMetatype",
+                    "printedName": "GoogleMobileAds.GADAdNetworkExtras.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADAdNetworkExtras",
+                        "printedName": "GoogleMobileAds.GADAdNetworkExtras",
+                        "usr": "c:objc(pl)GADAdNetworkExtras"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(cm)networkExtrasClass",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC18networkExtrasClassSo012GADAdNetworkI0_pXpSgyFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "networkExtrasClass",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpWith",
+            "printedName": "setUpWith(_:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationServerConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationServerConfiguration",
+                "usr": "c:objc(cs)GADMediationServerConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(cm)setUpWithConfiguration:completionHandler:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC9setUpWith_17completionHandlerySo31GADMediationServerConfigurationC_ys5Error_pSgctFZ",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "static": true,
+            "objc_name": "setUpWithConfiguration:completionHandler:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadBanner",
+            "printedName": "loadBanner(for:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationBannerAdConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationBannerAdConfiguration",
+                "usr": "c:objc(cs)GADMediationBannerAdConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GoogleMobileAds.GADMediationBannerAd?, Swift.Error?) -> GoogleMobileAds.GADMediationBannerAdEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADMediationBannerAdEventDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADMediationBannerAdEventDelegate",
+                        "printedName": "GoogleMobileAds.GADMediationBannerAdEventDelegate",
+                        "usr": "c:objc(pl)GADMediationBannerAdEventDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(GoogleMobileAds.GADMediationBannerAd?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "GoogleMobileAds.GADMediationBannerAd?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADMediationBannerAd",
+                            "printedName": "GoogleMobileAds.GADMediationBannerAd",
+                            "usr": "c:objc(pl)GADMediationBannerAd"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(im)loadBannerForAdConfiguration:completionHandler:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC10loadBanner3for17completionHandlerySo012GADMediationiA13ConfigurationC_So0miA13EventDelegate_pSgSo0miA0_pSg_s5Error_pSgtctF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "loadBannerForAdConfiguration:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadInterstitial",
+            "printedName": "loadInterstitial(for:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GADMediationInterstitialAdConfiguration",
+                "printedName": "GoogleMobileAds.GADMediationInterstitialAdConfiguration",
+                "usr": "c:objc(cs)GADMediationInterstitialAdConfiguration"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(GoogleMobileAds.GADMediationInterstitialAd?, Swift.Error?) -> GoogleMobileAds.GADMediationInterstitialAdEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GoogleMobileAds.GADMediationInterstitialAdEventDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GADMediationInterstitialAdEventDelegate",
+                        "printedName": "GoogleMobileAds.GADMediationInterstitialAdEventDelegate",
+                        "usr": "c:objc(pl)GADMediationInterstitialAdEventDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(GoogleMobileAds.GADMediationInterstitialAd?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "GoogleMobileAds.GADMediationInterstitialAd?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GADMediationInterstitialAd",
+                            "printedName": "GoogleMobileAds.GADMediationInterstitialAd",
+                            "usr": "c:objc(pl)GADMediationInterstitialAd"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon(im)loadInterstitialForAdConfiguration:completionHandler:",
+            "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC16loadInterstitial3for17completionHandlerySo012GADMediationiA13ConfigurationC_So0miA13EventDelegate_pSgSo0miA0_pSg_s5Error_pSgtctF",
+            "moduleName": "AdMobMediationAdapterVpadn",
+            "objc_name": "loadInterstitialForAdConfiguration:completionHandler:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AdMobMediationAdapterVpadn@objc(cs)GADMAdapterVpon",
+        "mangledName": "$s26AdMobMediationAdapterVpadn15GADMAdapterVponC",
+        "moduleName": "AdMobMediationAdapterVpadn",
+        "objc_name": "GADMAdapterVpon",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 7,
+      "value": "\"2.1.5\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 182,
+      "length": 7,
+      "value": "\"5.7.6\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 252,
+      "length": 11,
+      "value": "\"parameter\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 302,
+      "length": 7,
+      "value": "\"pubid\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 340,
+      "length": 19,
+      "value": "\"com.vpon.vpadnsdk\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 447,
+      "length": 6,
+      "value": "\"Vpon\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 511,
+      "length": 12,
+      "value": "\"contentURL\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 583,
+      "length": 13,
+      "value": "\"contentData\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 674,
+      "length": 22,
+      "value": "\"friendlyObstructions\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 762,
+      "length": 6,
+      "value": "\"view\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 840,
+      "length": 9,
+      "value": "\"purpose\""
+    },
+    {
+      "filePath": "\/Users\/ci\/jenkins\/workspace\/vpadn-sdk-ios-admobAdapter\/VponAdapter\/Adapter\/VponAdapterInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 915,
+      "length": 6,
+      "value": "\"desc\""
+    }
+  ]
+}
