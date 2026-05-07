@@ -1,16 +1,16 @@
 PODS:
-  - VpadnSDK (5.6.3)
+  - VpadnSDK (5.7.8-beta)
 
 DEPENDENCIES:
-  - VpadnSDK (= 5.6.3)
+  - VpadnSDK (= 5.7.8-beta)
 
 SPEC REPOS:
-  trunk:
+  http://192.168.100.5:7777/mi/vpon-private-specs.git:
     - VpadnSDK
 
 SPEC CHECKSUMS:
-  VpadnSDK: cf7a3530638de19ade17d3fc1e5ee44ca583fb48
+  VpadnSDK: a8d976fd556a92fed6ed0c49020e59bf382a1c93
 
-PODFILE CHECKSUM: f340514189379a699471eff23d99709e8928ba32
+PODFILE CHECKSUM: 976ed341ec59185f60bc15520f6e059e327549e1
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

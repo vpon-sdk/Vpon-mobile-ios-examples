@@ -8,11 +8,12 @@
 
 import UIKit
 import VpadnSDKAdKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    @objc var window: UIWindow?
 
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -21,7 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         config.logLevel = .defaultLevel
         config.initializeSdk()
         
-        // Override point for customization after application launch.
+        // 初始化 Google Mobile Ads SDK
+        MobileAds.shared.start(completionHandler: nil)
+        
+        // 手動設定 RootViewController 忽略 Storyboard
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: ViewController())
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -102,6 +102,9 @@ playground.xcworkspace
 
 .build/
 
+# Secrets
+Secrets.xcconfig
+
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
@@ -143,5 +146,7 @@ Dependencies/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods,swift,objective-c

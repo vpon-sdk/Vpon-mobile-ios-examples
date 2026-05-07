@@ -1,11 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
+source 'http://192.168.100.5:7777/mi/vpon-private-specs.git'
+source 'https://cdn.cocoapods.org'
 
 target 'VponSdkSampleObjC' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
   # Pods for VponSdkSampleObjC
-  pod 'VpadnSDK'
+  pod 'VpadnSDK', '5.7.8-beta'
 
 end
