@@ -470,10 +470,14 @@
 				CUSTOM_APP_NAME = "Vpon-SPM";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationforadmob.spm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,10 +493,14 @@
 				CUSTOM_APP_NAME = "Vpon-SPM";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpon.tw.mediationforadmob.spm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,7 +516,7 @@
 				CUSTOM_APP_NAME = "Vpon-Pods";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,7 +535,7 @@
 				CUSTOM_APP_NAME = "Vpon-Pods";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

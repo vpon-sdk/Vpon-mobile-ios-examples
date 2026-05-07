@@ -43,6 +43,17 @@ pod install
 
 App 介面上方的 `Mode: Vpon-xxx` 標籤會顯示當前運行的模式。
 
+## 重要實作筆記
+
+### 1. Linker Flag 設定 (`-ObjC`)
+當使用 **SPM** 整合 Vpon SDK 時，必須在 Target 的 `Other Linker Flags` 中手動加入 **`-ObjC`**。
+*   **原因**：Vpon SDK 包含多個 Objective-C Category，若未加入此 Flag，程式會在執行期間（Runtime）因找不到方法而閃退。
+*   **本專案現況**：已在 `VponAdmobSampleSwift` Target 中預設完成此設定。
+
+### 2. 避免重複符號錯誤
+建議不要在同一個專案中混合使用 SPM 與 CocoaPods 來安裝同一個 SDK（例如 VpadnSDK 或 GoogleMobileAds）。
+*   **建議**：若決定轉向 SPM，建議將所有相關依賴一併轉移，以避免 `duplicate-symbol` 編譯錯誤。
+
 ## 廣告版位說明
 目前支援以下格式：
 *   **Banner** (橫幅廣告)
