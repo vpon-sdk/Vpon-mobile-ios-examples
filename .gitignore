@@ -148,5 +148,6 @@ Dependencies/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 .idea/
+.idea/workspace.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods,swift,objective-c
