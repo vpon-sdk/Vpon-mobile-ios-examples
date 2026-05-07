@@ -1,0 +1,106 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AdMobMediationAdapterVpadn
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import Foundation
+import GoogleMobileAds
+import Swift
+import VpadnSDKAdKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc(GADVpadnNativeAdCustomEvent) public class GADVpadnNativeAdCustomEvent : ObjectiveC.NSObject, GoogleMobileAds.GADMediationAdapter, GoogleMobileAds.GADMediationNativeAd {
+  @objc required override dynamic public init()
+  @objc public var headline: Swift.String? {
+    @objc get
+  }
+  @objc public var body: Swift.String? {
+    @objc get
+  }
+  @objc public var callToAction: Swift.String? {
+    @objc get
+  }
+  @objc public var icon: GoogleMobileAds.GADNativeAdImage? {
+    @objc get
+  }
+  @objc public var images: [GoogleMobileAds.GADNativeAdImage]? {
+    @objc get
+  }
+  @objc public var mediaView: UIKit.UIView? {
+    @objc get
+  }
+  @objc public var hasVideoContent: Swift.Bool {
+    @objc get
+  }
+  @objc public var advertiser: Swift.String? {
+    @objc get
+  }
+  @objc public var starRating: Foundation.NSDecimalNumber? {
+    @objc get
+  }
+  @objc public var store: Swift.String? {
+    @objc get
+  }
+  @objc public var price: Swift.String? {
+    @objc get
+  }
+  @objc public var extraAssets: [Swift.String : Any]? {
+    @objc get
+  }
+  @objc public static func adapterVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func adSDKVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func networkExtrasClass() -> (any GoogleMobileAds.GADAdNetworkExtras.Type)?
+  @objc public static func setUpWith(_ configuration: GoogleMobileAds.GADMediationServerConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationAdapterSetUpCompletionBlock)
+  @objc public func loadNativeAd(for adConfiguration: GoogleMobileAds.GADMediationNativeAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationNativeLoadCompletionHandler)
+  @objc public func handlesUserClicks() -> Swift.Bool
+  @objc public func handlesUserImpressions() -> Swift.Bool
+  @objc public func didRender(in view: UIKit.UIView, clickableAssetViews: [GoogleMobileAds.GADNativeAssetIdentifier : UIKit.UIView], nonclickableAssetViews: [GoogleMobileAds.GADNativeAssetIdentifier : UIKit.UIView], viewController: UIKit.UIViewController)
+  @objc public func didUntrackView(_ view: UIKit.UIView?)
+  @objc public func didRecordClickOnAsset(withName assetName: GoogleMobileAds.GADNativeAssetIdentifier, view: UIKit.UIView, viewController: UIKit.UIViewController)
+  @objc deinit
+}
+extension AdMobMediationAdapterVpadn.GADVpadnNativeAdCustomEvent : VpadnSDKAdKit.VponNativeAdLoaderDelegate, VpadnSDKAdKit.VponNativeAdDelegate {
+  @objc dynamic public func adLoader(_ adLoader: VpadnSDKAdKit.VponNativeAdLoader, didReceive nativeAd: VpadnSDKAdKit.VponNativeAd)
+  @objc dynamic public func adLoader(_ adLoader: VpadnSDKAdKit.VponNativeAdLoader, didFailToReceiveAdWithError error: any Swift.Error)
+  @objc dynamic public func nativeAdDidRecordImpression(_ nativeAd: VpadnSDKAdKit.VponNativeAd)
+  @objc dynamic public func nativeAdDidRecordClick(_ nativeAd: VpadnSDKAdKit.VponNativeAd)
+}
+@objc @_inheritsConvenienceInitializers public class GADMAdapterVponInterstitialAd : ObjectiveC.NSObject, GoogleMobileAds.GADMediationInterstitialAd {
+  public func loadInterstitial(for adConfiguration: GoogleMobileAds.GADMediationInterstitialAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationInterstitialLoadCompletionHandler)
+  @objc public func present(from viewController: UIKit.UIViewController)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AdMobMediationAdapterVpadn.GADMAdapterVponInterstitialAd : VpadnSDKAdKit.VponFullScreenContentDelegate {
+  @objc dynamic public func adWillPresentScreen(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd)
+  @objc dynamic public func adWillDismissScreen(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd)
+  @objc dynamic public func adDidDismissScreen(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd)
+  @objc dynamic public func adDidRecordClick(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd)
+  @objc dynamic public func adDidRecordImpression(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd)
+  @objc dynamic public func ad(_ interstitial: any VpadnSDKAdKit.VponFullScreenContentAd, didFailToPresentFullScreenContentWithError error: any Swift.Error)
+}
+@objc @_inheritsConvenienceInitializers public class GADMAdapterVponBannerAd : ObjectiveC.NSObject, GoogleMobileAds.GADMediationBannerAd {
+  @objc public var view: UIKit.UIView {
+    @objc get
+  }
+  public func loadBannerAd(for adConfiguration: GoogleMobileAds.GADMediationBannerAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationBannerLoadCompletionHandler)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AdMobMediationAdapterVpadn.GADMAdapterVponBannerAd : VpadnSDKAdKit.VponBannerViewDelegate {
+  @objc dynamic public func bannerViewDidReceiveAd(_ bannerView: VpadnSDKAdKit.VponBannerView)
+  @objc dynamic public func bannerView(_ bannerView: VpadnSDKAdKit.VponBannerView, didFailToReceiveAdWithError error: any Swift.Error)
+  @objc dynamic public func bannerViewDidRecordClick(_ bannerView: VpadnSDKAdKit.VponBannerView)
+  @objc dynamic public func bannerViewDidRecordImpression(_ bannerView: VpadnSDKAdKit.VponBannerView)
+}
+@_inheritsConvenienceInitializers @objc(GADMAdapterVpon) public class GADMAdapterVpon : ObjectiveC.NSObject, GoogleMobileAds.GADMediationAdapter {
+  @objc required override dynamic public init()
+  @objc public static func adapterVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func adSDKVersion() -> GoogleMobileAds.GADVersionNumber
+  @objc public static func networkExtrasClass() -> (any GoogleMobileAds.GADAdNetworkExtras.Type)?
+  @objc public static func setUpWith(_ configuration: GoogleMobileAds.GADMediationServerConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationAdapterSetUpCompletionBlock)
+  @objc public func loadBanner(for adConfiguration: GoogleMobileAds.GADMediationBannerAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationBannerLoadCompletionHandler)
+  @objc public func loadInterstitial(for adConfiguration: GoogleMobileAds.GADMediationInterstitialAdConfiguration, completionHandler: @escaping GoogleMobileAds.GADMediationInterstitialLoadCompletionHandler)
+  @objc deinit
+}

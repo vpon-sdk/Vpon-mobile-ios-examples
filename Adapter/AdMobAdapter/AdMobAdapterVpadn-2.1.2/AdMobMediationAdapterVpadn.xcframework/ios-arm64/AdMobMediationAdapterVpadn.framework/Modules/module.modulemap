@@ -1,4 +1,0 @@
-framework module AdMobMediationAdapterVpadn {
-  header "AdMobMediationAdapterVpadn-Swift.h"
-  requires objc
-}

@@ -1,0 +1,42 @@
+{
+  "originHash" : "f630912ee099734c4763cc8c5c6d13cba96cc52fa1b4e8e17a758449b172789d",
+  "pins" : [
+    {
+      "identity" : "admobmediationadaptervpadn-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vpon-sdk/AdMobMediationAdapterVpadn-iOS-SPM",
+      "state" : {
+        "revision" : "2924ceb4c93d559460ee9ed55a0e2de76efb7ab6",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
+      "state" : {
+        "revision" : "1239c23464503053c17d37ee5daa70de3455e9c8",
+        "version" : "12.14.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    },
+    {
+      "identity" : "vpadnsdk-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vpon-sdk/VpadnSDK-iOS-SPM",
+      "state" : {
+        "revision" : "fa966e0d3254253c58452fabeb0a07f27bdec55c",
+        "version" : "5.8.0"
+      }
+    }
+  ],
+  "version" : 3
+}
