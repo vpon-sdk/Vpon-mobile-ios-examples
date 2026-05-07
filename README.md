@@ -22,10 +22,3 @@ Admob Adapter
 |1.1.5|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 4.9.1+|因為 4.9.4 調整 BannerView 的 Class 造成 stopBeingDelegate removeFromSuperView 會 Crash 的問題，故調整 stopBeingDelegate 的實作。|
 |1.1.4|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 4.9.1+|前版使用 Xcode11-Beta，造成 Archive 會有 Reader 的問題，改以舊版 Xcode 封裝。|
 |1.1.3|Google-Mobile-Ads-SDK 7.47.0+, VpadnSDK 4.9.1+|修復 Call To Action 因 AdmobSDK CustomEvent 調整而無法被點擊的問題。優化部分函式的執行效能。|
-
-Smaato Plugin
-===========================
-
-|版本號碼|版本限制|改版紀錄|
-|----|----------------|----------------|
-|1.0.0|SmaatoSDK 10+, VpadnSDK 5.0.2+|此版本使用Vpon SDK 5.0.0的Interface。|
