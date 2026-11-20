@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vpon-sdk/AdMobMediationAdapterVpadn-iOS-SPM",
       "state" : {
-        "revision" : "2924ceb4c93d559460ee9ed55a0e2de76efb7ab6",
-        "version" : "2.2.0"
+        "revision" : "67d6f4fd42415eb8583ae29f907c1b59926ddede",
+        "version" : "2.2.1"
       }
     },
     {

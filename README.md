@@ -6,6 +6,7 @@ Admob Adapter
 
 |版本號碼|版本限制|改版紀錄|
 |----|----------------|----------------|
+|2.2.1|Google-Mobile-Ads-SDK 12.x, VpadnSDK 5.8.0（僅提供 SPM）|限制 VpadnSDK 的版本範圍，避免解析到需要 iOS 16.0 以上的 VpadnSDK 版本；程式碼與 2.2.0 相同|
 |2.2.0|Google-Mobile-Ads-SDK 12+, VpadnSDK 5.7.6+|支援 Google Mobile Ads SDK v12|
 | 2.1.5    | Google-Mobile-Ads-SDK 10.14.0+, VpadnSDK 5.7.6+ | 修復廣告 callback 未被觸發的問題；修復 content data 未傳入的問題。 |
 |2.1.1|Google-Mobile-Ads-SDK 10.14.0+, VpadnSDK 5.6.0+|修復 Interstitial 相關 callback 未被觸發的問題|
