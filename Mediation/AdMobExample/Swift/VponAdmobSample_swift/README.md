@@ -62,4 +62,4 @@ App 介面上方的 `Mode: Vpon-xxx` 標籤會顯示當前運行的模式。
 *   **Native Ad** (原生廣告)
 
 ## 聯絡我們
-如有任何問題，請聯繫 [Vpon SDK Support](mailto:sdk-support@vpon.com)。
+如有任何問題，請聯繫 [Vpon SDK Support](mailto:fae@vpon.com)。
