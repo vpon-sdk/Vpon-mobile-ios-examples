@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             }
         }
         
-        logToConsole("App Ready. Swift 5 Mode (SDK v12 Optimized).")
+        logToConsole("App Ready.")
     }
 
     private func setupUI() {
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         )
         view.addSubview(actionButton)
 
-        infoLabel.text = "Select format to test (SDK v12 Native Names)"
+        infoLabel.text = "Select format to test"
         infoLabel.font = .systemFont(ofSize: 13)
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(infoLabel)

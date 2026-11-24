@@ -5,15 +5,15 @@
 ## 說明
 
 *   **架構**：
-    *   **Target: `VponAdmobSampleSwift`**：使用 **Swift Package Manager (SPM)** 管理依賴。
+    *   **Target: `VponAdmobSampleSwift`**：使用 **Swift Package Manager (SPM)** 管理依賴（Adapter 3.0.0）。
     *   **Target: `VponAdmobSampleSwiftPods`**：使用 **CocoaPods** 管理依賴。
         *   CocoaPods 只提供到 Adapter **2.2.0**（最後一版）；2.2.1 之後只提供 SPM。這個 Target 保留作為 CocoaPods 2.2.0 的參考，新的整合請使用 SPM（`VponAdmobSampleSwift`）。
 *   **安全配置管理**：使用 `.xcconfig` 檔案隔離測試 ID 與正式 ID，
 
 ## 環境需求
 
-*   **iOS 13.0+**
-*   Xcode 15.0+
+*   **iOS 16.0+**（SPM Target，Adapter 3.0.0）；**iOS 13.0+**（Pods Target，Adapter 2.2.0）
+*   Xcode：本專案以 Xcode 27.2 建置確認
 *   CocoaPods (若需測試 Pods 版本)
 
 ## 快速開始

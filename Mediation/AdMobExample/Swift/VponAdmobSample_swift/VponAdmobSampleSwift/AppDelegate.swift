@@ -13,8 +13,6 @@ import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    @objc var window: UIWindow?
-
 
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -25,10 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 初始化 Google Mobile Ads SDK
         MobileAds.shared.start(completionHandler: nil)
         
-        // 手動設定 RootViewController 忽略 Storyboard
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        window?.makeKeyAndVisible()
+        // window 在 SceneDelegate 建立（UIScene 生命週期）
         
         return true
     }

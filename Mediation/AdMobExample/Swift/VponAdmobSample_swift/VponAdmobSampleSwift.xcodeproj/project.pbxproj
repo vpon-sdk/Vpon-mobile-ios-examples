@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		06BE5A431EEE8E9B0003F751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE5A421EEE8E9B0003F751 /* AppDelegate.swift */; };
+		A8C0DE022FC4000000A1B2C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0DE012FC4000000A1B2C3 /* SceneDelegate.swift */; };
+		A8C0DE032FC4000000A1B2C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C0DE012FC4000000A1B2C3 /* SceneDelegate.swift */; };
 		06BE5A481EEE8E9B0003F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A461EEE8E9B0003F751 /* Main.storyboard */; };
 		06BE5A4A1EEE8E9B0003F751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A491EEE8E9B0003F751 /* Assets.xcassets */; };
 		06BE5A4D1EEE8E9B0003F751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BE5A4B1EEE8E9B0003F751 /* LaunchScreen.storyboard */; };
@@ -48,6 +50,7 @@
 /* Begin PBXFileReference section */
 		06BE5A3F1EEE8E9B0003F751 /* VponAdmobSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VponAdmobSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BE5A421EEE8E9B0003F751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8C0DE012FC4000000A1B2C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		06BE5A471EEE8E9B0003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06BE5A491EEE8E9B0003F751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06BE5A4C1EEE8E9B0003F751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 			children = (
 				A8188E4D2FAC27EF008E3272 /* ViewController.swift */,
 				06BE5A421EEE8E9B0003F751 /* AppDelegate.swift */,
+				A8C0DE012FC4000000A1B2C3 /* SceneDelegate.swift */,
 				06BE5A461EEE8E9B0003F751 /* Main.storyboard */,
 				06BE5A491EEE8E9B0003F751 /* Assets.xcassets */,
 				06BE5A4B1EEE8E9B0003F751 /* LaunchScreen.storyboard */,
@@ -330,6 +334,7 @@
 			files = (
 				A8188E4E2FAC27EF008E3272 /* ViewController.swift in Sources */,
 				06BE5A431EEE8E9B0003F751 /* AppDelegate.swift in Sources */,
+				A8C0DE022FC4000000A1B2C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 			files = (
 				A8188E872FAC375F008E3272 /* ViewController.swift in Sources */,
 				A8188E882FAC375F008E3272 /* AppDelegate.swift in Sources */,
+				A8C0DE032FC4000000A1B2C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +476,7 @@
 				CUSTOM_APP_NAME = "Vpon-SPM";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +499,7 @@
 				CUSTOM_APP_NAME = "Vpon-SPM";
 				DEVELOPMENT_TEAM = 55Z8U5LW3G;
 				INFOPLIST_FILE = VponAdmobSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +590,7 @@
 			repositoryURL = "https://github.com/vpon-sdk/AdMobMediationAdapterVpadn-iOS-SPM";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

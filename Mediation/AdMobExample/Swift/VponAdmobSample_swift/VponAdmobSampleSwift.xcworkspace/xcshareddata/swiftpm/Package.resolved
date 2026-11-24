@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vpon-sdk/AdMobMediationAdapterVpadn-iOS-SPM",
       "state" : {
-        "revision" : "67d6f4fd42415eb8583ae29f907c1b59926ddede",
-        "version" : "2.2.1"
+        "revision" : "3b8a7599a6360d39ff25f17dede6ec59afc353c9",
+        "version" : "3.0.0"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
       "state" : {
-        "revision" : "1239c23464503053c17d37ee5daa70de3455e9c8",
-        "version" : "12.14.0"
+        "revision" : "1e305d74a0edcc8d74f7f2cae7a267e36d722ca2",
+        "version" : "13.13.0"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vpon-sdk/VpadnSDK-iOS-SPM",
       "state" : {
-        "revision" : "fa966e0d3254253c58452fabeb0a07f27bdec55c",
-        "version" : "5.8.0"
+        "revision" : "47c41bf2c68deb9c61763e33360174141a008340",
+        "version" : "5.8.2"
       }
     }
   ],
