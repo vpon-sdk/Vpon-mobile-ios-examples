@@ -1,5 +1,7 @@
 # Vpon iOS 範例程式
 
+[English](README.en.md) | 繁體中文
+
 Vpon iOS SDK（VpadnSDK）與 AdMob 中介 adapter 的範例程式。
 
 | 資料夾 | 內容 |

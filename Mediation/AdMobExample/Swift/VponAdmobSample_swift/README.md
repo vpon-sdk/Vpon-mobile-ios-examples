@@ -1,5 +1,7 @@
 # Vpon AdMob Mediation Sample (Swift)
 
+[English](README.en.md) | 繁體中文
+
 本專案展示了如何使用 **Vpon AdMob Mediation Adapter** 在 Swift 環境中整合 Vpon 廣告。
 
 ## 說明
@@ -8,7 +10,7 @@
     *   **Target: `VponAdmobSampleSwift`**：使用 **Swift Package Manager (SPM)** 管理依賴（Adapter 3.0.0）。
     *   **Target: `VponAdmobSampleSwiftPods`**：使用 **CocoaPods** 管理依賴。
         *   CocoaPods 只提供到 Adapter **2.2.0**（最後一版）；2.2.1 之後只提供 SPM。這個 Target 保留作為 CocoaPods 2.2.0 的參考，新的整合請使用 SPM（`VponAdmobSampleSwift`）。
-*   **安全配置管理**：使用 `.xcconfig` 檔案隔離測試 ID 與正式 ID，
+*   **安全配置管理**：使用 `.xcconfig` 檔案隔離測試 ID 與正式 ID。
 
 ## 環境需求
 
@@ -32,7 +34,7 @@
     ```
 
 ### 2. 安裝依賴 (僅 Pods 版本需要)
-若要執行 `VponAdmobSampleSwiftPods` Scheme，請先執行：
+若要執行 `VponAdmobSamplePods` Scheme，請先執行：
 ```bash
 pod install
 ```
@@ -40,7 +42,7 @@ pod install
 ### 3. 執行與測試
 在 Xcode 中選擇對應的 **Scheme**：
 *   **`VponAdmobSampleSwift`**：測試 SPM 整合。
-*   **`VponAdmobSampleSwiftPods`**：測試 CocoaPods 整合。
+*   **`VponAdmobSamplePods`**：測試 CocoaPods 整合。
 
 App 介面上方的 `Mode: Vpon-xxx` 標籤會顯示當前運行的模式。
 
