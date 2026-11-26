@@ -7,8 +7,6 @@ Vpon iOS SDK（VpadnSDK）與 AdMob 中介 adapter 的範例程式。
 | 資料夾 | 內容 |
 |---|---|
 | `FrameworkExample/` | VpadnSDK 整合範例：Banner、插頁、Native（Swift、Objective-C；以 CocoaPods 安裝 VpadnSDK） |
-| `FundamentalExample/` | VpadnSDK 基本範例（Swift：Banner、插頁；Objective-C：另含 Native、Splash） |
-| `DMP/` | DMP 範例（Objective-C） |
 | `Mediation/AdMobExample/` | AdMob 中介範例（Swift），說明見該資料夾的 README |
 | `Mediation/flutterexample/` | Flutter 範例（舊版，未維護） |
 | `Adapter/AdMobAdapter/` | 舊版 binary adapter 2.1.5（手動安裝用，已不再提供新版） |

@@ -7,8 +7,6 @@ Sample apps for the Vpon iOS SDK (VpadnSDK) and the AdMob mediation adapter.
 | Folder | Contents |
 |---|---|
 | `FrameworkExample/` | VpadnSDK integration samples: banner, interstitial, native (Swift, Objective-C; VpadnSDK installed with CocoaPods) |
-| `FundamentalExample/` | Basic VpadnSDK samples (Swift: banner, interstitial; Objective-C: also native and splash) |
-| `DMP/` | DMP sample (Objective-C) |
 | `Mediation/AdMobExample/` | AdMob mediation sample (Swift); see the README in that folder |
 | `Mediation/flutterexample/` | Flutter sample (old, not maintained) |
 | `Adapter/AdMobAdapter/` | Old binary adapter 2.1.5 for manual installation (no longer updated) |
